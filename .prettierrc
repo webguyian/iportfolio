@@ -1,0 +1,17 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "parser": "babel",
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss",
+        "printWidth": 100,
+        "cursorOffset": -1,
+        "singleQuote": false
+      }
+    }
+  ]
+}

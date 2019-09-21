@@ -1,0 +1,42 @@
+.iportfolio-app-device {
+  margin: 2em auto;
+
+  .device-content {
+    background: linear-gradient(320deg, rgba(205, 238, 35, 1) 0%, rgba(116, 191, 130, 1) 40%, rgba(11, 158, 238, 1) 60%, rgba(0, 86, 255, 1) 100%);
+    overflow: hidden;
+  }
+
+  .device-header-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .device-header-bars {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      width: 60px;
+      margin-top: 10px;
+
+      &--time {
+        margin-left: 15px;
+      }
+
+      &--icons {
+        margin-right: 3px;
+      }
+
+      .device-time-label,
+      .fas {
+        font-size: $font-size-s;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

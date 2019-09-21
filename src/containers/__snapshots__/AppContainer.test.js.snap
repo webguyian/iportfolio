@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppContainer /> renders correctly 1`] = `
+<div
+  className="iportfolio-app"
+>
+  <div
+    className="iportfolio-app-device device device-iphone-x device-black"
+  >
+    <div
+      className="device-frame"
+    >
+      <div
+        className="device-content"
+      >
+        <div
+          className="device-header-container"
+        >
+          <div
+            className="device-header-bars"
+          >
+            <div
+              className="device-header-bars-block device-header-bars-block--time"
+            >
+              <span
+                className="device-time-label"
+              >
+                IMAC
+              </span>
+            </div>
+            <div
+              className="device-header-bars-block device-header-bars-block--icons"
+            >
+              <i
+                className="fas fa-signal"
+              />
+              <i
+                className="fas fa-wifi"
+              />
+              <i
+                className="fas fa-battery-full"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h1
+            className="ui-clock"
+          >
+            5:33
+          </h1>
+          <h1
+            className="ui-date"
+          >
+            Saturday, September 21
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      className="device-stripe"
+    />
+    <div
+      className="device-header"
+    />
+    <div
+      className="device-sensors"
+    />
+    <div
+      className="device-btns"
+    />
+    <div
+      className="device-power"
+    />
+  </div>
+</div>
+`;

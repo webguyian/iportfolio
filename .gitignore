@@ -1,0 +1,26 @@
+# Environment
+.env
+.vscode/
+
+# Caches
+.npm
+.eslintcache
+
+# Dependencies
+node_modules/
+
+# Distribution
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage
+
+# OS generated files
+._*
+.DS_Store
+.Trashes
+Thumbs.db

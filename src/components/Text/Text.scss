@@ -1,0 +1,18 @@
+.ui-text {
+  &--body {
+    @include body-type;
+  }
+
+  &--display {
+    @include display-type;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--bold {
+    font-weight: $font-weight-bold;
+  }
+}

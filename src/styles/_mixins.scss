@@ -1,0 +1,21 @@
+/* stylelint-disable property-blacklist */
+
+@mixin body-type {
+  font-family: $body-type;
+  font-size: $font-size-default;
+  font-weight: $font-weight-regular;
+}
+
+@mixin display-type {
+  font-family: $display-type;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+@mixin number-type {
+  color: $white;
+  font-family: $body-type;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-light;
+}

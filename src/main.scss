@@ -1,0 +1,14 @@
+// Vendor styles
+@import "styles/devices";
+
+// Global styles
+@import "styles/variables";
+@import "styles/mixins";
+@import "styles/global";
+
+// Component styles
+@import "components/DeviceFrame/DeviceFrame";
+@import "components/Text/Text";
+
+// Container styles
+@import "containers/AppContainer";
