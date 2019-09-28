@@ -1,0 +1,45 @@
+.ui-toggle-switch {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: rgba($black, 0.5);
+  text-align: center;
+  cursor: grab;
+
+  &-checkbox {
+    @include accessibly-hidden;
+  }
+
+  &-slider {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s transform;
+    border-radius: 50%;
+    background-color: $white;
+    content: "";
+
+    .ui-toggle-switch--active & {
+      transform: translateX(170px);
+    }
+  }
+
+  &-label {
+    display: inline-block;
+    padding: 10px 40px;
+    transform: translateX(10px);
+    transition: color 0.6s, transform 0.3s;
+    color: $gray;
+    font-size: $font-size-l;
+    font-weight: $font-weight-light;
+
+    .ui-toggle-switch--active & {
+      transform: translateX(-10px);
+      color: $white;
+    }
+  }
+}

@@ -5,15 +5,4 @@
     margin: 0 auto;
     text-align: center;
   }
-
-  .ui-clock {
-    @include number-type;
-    margin-bottom: 0;
-  }
-
-  .ui-date {
-    margin-top: 0;
-    font-size: $font-size-l;
-    font-weight: $font-weight-light;
-  }
 }

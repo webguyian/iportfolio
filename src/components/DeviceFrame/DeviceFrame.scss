@@ -2,11 +2,13 @@
   margin: 2em auto;
 
   .device-content {
-    background: linear-gradient(320deg, rgba(205, 238, 35, 1) 0%, rgba(116, 191, 130, 1) 40%, rgba(11, 158, 238, 1) 60%, rgba(0, 86, 255, 1) 100%);
+    background-color: $black;
     overflow: hidden;
   }
 
   .device-header-container {
+    position: absolute;
+    left: 5%;
     width: 90%;
     margin: 0 auto;
   }
@@ -33,7 +35,7 @@
       }
 
       .device-time-label,
-      .fas {
+      .icon {
         font-size: $font-size-s;
         font-weight: $font-weight-bold;
       }

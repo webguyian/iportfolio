@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import Icon from 'components/Icon/Icon';
+
 class DeviceFrame extends Component {
   static propTypes = {
     className: PropTypes.string,
@@ -25,9 +27,9 @@ class DeviceFrame extends Component {
             <span className="device-time-label">IMAC</span>
           </div>
           <div className={`${blockClass} ${blockClass}--icons`}>
-            <i className="fas fa-signal" />
-            <i className="fas fa-wifi" />
-            <i className="fas fa-battery-full" />
+            <Icon name="signal" />
+            <Icon name="wifi" />
+            <Icon name="battery-full" />
           </div>
         </div>
       </div>

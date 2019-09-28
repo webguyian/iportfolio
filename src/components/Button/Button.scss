@@ -1,0 +1,14 @@
+.ui-btn {
+  padding: 5px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid $blue-light;
+  }
+
+  > .icon {
+    pointer-events: none;
+  }
+}

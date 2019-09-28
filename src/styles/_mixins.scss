@@ -1,4 +1,4 @@
-/* stylelint-disable property-blacklist */
+/* stylelint-disable declaration-no-important, property-blacklist */
 
 @mixin body-type {
   font-family: $body-type;
@@ -18,4 +18,13 @@
   font-family: $body-type;
   font-size: $font-size-xxl;
   font-weight: $font-weight-light;
+}
+
+@mixin accessibly-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }

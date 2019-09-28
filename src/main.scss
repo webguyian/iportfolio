@@ -7,8 +7,11 @@
 @import "styles/global";
 
 // Component styles
+@import "components/Button/Button";
 @import "components/DeviceFrame/DeviceFrame";
 @import "components/Text/Text";
+@import "components/ToggleSwitch/ToggleSwitch";
 
 // Container styles
 @import "containers/AppContainer";
+@import "containers/Lockscreen/Lockscreen";

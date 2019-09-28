@@ -1,0 +1,30 @@
+.iportfolio-lockscreen {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 50px;
+  transition: 0.4s transform cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: linear-gradient(320deg, $yellow 0%, $green 40%, $blue-light 60%, $blue 100%);
+
+  &--unlocked {
+    transform: translateX(110%);
+  }
+
+  &-header {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 50px;
+
+    .ui-clock {
+      @include number-type;
+      margin: 0;
+    }
+
+    .ui-date {
+      margin-top: 0;
+      font-size: $font-size-l;
+      font-weight: $font-weight-light;
+    }
+  }
+}
