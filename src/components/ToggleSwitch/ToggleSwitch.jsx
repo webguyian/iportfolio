@@ -7,7 +7,12 @@ import Text from 'components/Text/Text';
 
 class ToggleSwitch extends Component {
   static propTypes = {
+    label: PropTypes.string,
     onUpdate: PropTypes.func.isRequired
+  };
+
+  static defaultProps = {
+    label: 'slide to unlock'
   };
 
   constructor(props) {
@@ -27,7 +32,7 @@ class ToggleSwitch extends Component {
   }
 
   render() {
-    const { onUpdate } = this.props;
+    const { label, onUpdate } = this.props;
     const { checked } = this.state;
     const baseClass = 'ui-toggle-switch';
     const activeClass = checked ? `${baseClass}--active` : false;
@@ -42,7 +47,7 @@ class ToggleSwitch extends Component {
         />
         <Button className={`${baseClass}-slider`} onTransitionEnd={onUpdate} />
         <Text className={`${baseClass}-label`} type="display">
-          Slide to unlock
+          {label}
         </Text>
       </label>
     );

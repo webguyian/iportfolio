@@ -1,6 +1,7 @@
 $size: 65px;
 
 .ui-app-icon {
+  @include body-type;
   position: relative;
   flex-shrink: 0;
   width: $size;
@@ -8,7 +9,24 @@ $size: 65px;
   margin: 0 0 50px 20px;
   border-radius: 20%;
   background-color: $white;
+  text-align: cener;
   overflow: visible;
+
+  &-weekday,
+  &-day {
+    display: block;
+  }
+
+  &-weekday {
+    color: $red;
+    font-size: $font-size-s;
+  }
+
+  &-day {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-light;
+    line-height: 1;
+  }
 
   &-label {
     display: inline-block;
@@ -17,5 +35,6 @@ $size: 65px;
     left: 0;
     width: $size;
     color: $white;
+    font-size: $font-size-xs;
   }
 }
