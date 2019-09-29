@@ -37,7 +37,8 @@ export default {
   plugins,
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
-    modules: ['node_modules', 'src']
+    modules: ['node_modules', 'src'],
+    alias: { 'react-dom': '@hot-loader/react-dom' }
   },
   optimization
 };
