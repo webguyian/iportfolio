@@ -1,0 +1,32 @@
+.iportfolio-homescreen {
+  @include background-carbon-fibre;
+  @include flex-column;
+  height: 100%;
+}
+
+.iportfolio-grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-top: $gutter-top;
+  padding: 0 10px;
+}
+
+.iportfolio-dock {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 350px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba($black, 0.75);
+
+  > .ui-app-icon {
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

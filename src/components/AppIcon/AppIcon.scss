@@ -1,0 +1,21 @@
+$size: 65px;
+
+.ui-app-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: $size;
+  height: $size;
+  margin: 0 0 50px 20px;
+  border-radius: 20%;
+  background-color: $white;
+  overflow: visible;
+
+  &-label {
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: $size;
+    color: $white;
+  }
+}

@@ -19,7 +19,7 @@ export class AppContainer extends Component {
   render() {
     return (
       <div className="iportfolio-app">
-        <DeviceFrame className="iportfolio-app-device">
+        <DeviceFrame className="iportfolio-app-device" unlocked>
           {this.routes}
         </DeviceFrame>
       </div>
