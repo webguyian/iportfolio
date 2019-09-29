@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Redirect } from 'react-router-dom';
 
 import DateTime from 'components/DateTime/DateTime';
 import Icon from 'components/Icon/Icon';
@@ -8,6 +8,10 @@ import Text from 'components/Text/Text';
 import ToggleSwitch from 'components/ToggleSwitch/ToggleSwitch';
 
 class Lockscreen extends Component {
+  static propTypes = {
+    history: PropTypes.object
+  };
+
   constructor(props) {
     super(props);
 
@@ -21,9 +25,9 @@ class Lockscreen extends Component {
   }
 
   handleRedirect() {
-    this.setState(() => ({
-      redirect: true
-    }));
+    const { history } = this.props;
+
+    history.push('/home');
   }
 
   handleUnlock() {
@@ -33,7 +37,7 @@ class Lockscreen extends Component {
   }
 
   render() {
-    const { redirect, unlocked } = this.state;
+    const { unlocked } = this.state;
     const baseClass = 'iportfolio-lockscreen';
     const unlockedClass = unlocked && `${baseClass}--unlocked`;
 
@@ -52,7 +56,6 @@ class Lockscreen extends Component {
           </Text>
         </header>
         <ToggleSwitch onUpdate={this.handleUnlock} />
-        {redirect && <Redirect to="/home" />}
       </div>
     );
   }

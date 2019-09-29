@@ -27,18 +27,25 @@
       margin-top: 10px;
 
       &--time {
-        margin-left: 15px;
+        justify-content: center;
       }
 
       &--icons {
         margin-right: 3px;
       }
+    }
 
-      .device-time-label,
-      .icon {
-        font-size: $font-size-s;
-        font-weight: $font-weight-bold;
-      }
+    .icon {
+      color: $white;
+      font-size: $font-size-s;
+    }
+  }
+
+  .device-time-label {
+    > .ui-btn {
+      margin-left: 10px;
+      padding: 0;
+      transform: translateY(-2px);
     }
   }
 }

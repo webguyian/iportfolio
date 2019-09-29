@@ -7,7 +7,7 @@ import AppContainer from 'containers/AppContainer';
 
 class App extends Component {
   render() {
-    return <Route component={() => <AppContainer />} />;
+    return <Route component={AppContainer} />;
   }
 }
 

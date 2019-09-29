@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import Button from 'components/Button/Button';
+import DateTime from 'components/DateTime/DateTime';
 import Icon from 'components/Icon/Icon';
 
 class DeviceFrame extends Component {
@@ -9,22 +11,34 @@ class DeviceFrame extends Component {
     className: PropTypes.string,
     children: PropTypes.node,
     color: PropTypes.string,
-    device: PropTypes.string
+    device: PropTypes.string,
+    history: PropTypes.object,
+    unlocked: PropTypes.bool
   };
 
   static defaultProps = {
     color: 'black',
-    device: 'iphone-x'
+    device: 'iphone-x',
+    unlocked: false
   };
 
+  constructor(props) {
+    super(props);
+
+    this.handleLock = this.handleLock.bind(this);
+  }
+
   get header() {
+    const { unlocked } = this.props;
     const blockClass = 'device-header-bars-block';
 
     return (
       <div className="device-header-container">
         <div className="device-header-bars">
           <div className={`${blockClass} ${blockClass}--time`}>
-            <span className="device-time-label">IMAC</span>
+            <span className="device-time-label">
+              {unlocked ? this.time : 'IMAC'}
+            </span>
           </div>
           <div className={`${blockClass} ${blockClass}--icons`}>
             <Icon name="signal" />
@@ -34,6 +48,21 @@ class DeviceFrame extends Component {
         </div>
       </div>
     );
+  }
+
+  get time() {
+    return (
+      <Fragment>
+        <DateTime format="H:mm" />
+        <Button icon="lock-open" onClick={this.handleLock} />
+      </Fragment>
+    );
+  }
+
+  handleLock() {
+    const { history } = this.props;
+
+    history.goBack();
   }
 
   render() {

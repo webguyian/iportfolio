@@ -33,7 +33,7 @@ $size: 65px;
     position: absolute;
     bottom: -20px;
     left: 0;
-    width: $size;
+    width: $size + 3px;
     color: $white;
     font-size: $font-size-xs;
   }

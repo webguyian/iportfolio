@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 
 import DeviceFrame from 'components/DeviceFrame/DeviceFrame';
 
 import routes from 'routes';
 
-export class AppContainer extends Component {
+class AppContainer extends Component {
+  static propTypes = {
+    location: PropTypes.object.isRequired
+  };
+
   get routes() {
     return (
       <Switch>
@@ -17,9 +22,16 @@ export class AppContainer extends Component {
   }
 
   render() {
+    const { location } = this.props;
+    const unlocked = location.pathname !== '/';
+
     return (
       <div className="iportfolio-app">
-        <DeviceFrame className="iportfolio-app-device" unlocked>
+        <DeviceFrame
+          className="iportfolio-app-device"
+          unlocked={unlocked}
+          {...this.props}
+        >
           {this.routes}
         </DeviceFrame>
       </div>
