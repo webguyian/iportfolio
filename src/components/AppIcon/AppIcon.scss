@@ -9,7 +9,7 @@ $size: 65px;
   margin: 0 0 50px 20px;
   border-radius: 20%;
   background-color: $white;
-  text-align: cener;
+  text-align: center;
   overflow: visible;
 
   &-weekday,
@@ -18,8 +18,9 @@ $size: 65px;
   }
 
   &-weekday {
+    margin-top: 2px;
     color: $red;
-    font-size: $font-size-s;
+    font-size: $font-size-xs;
   }
 
   &-day {
@@ -36,5 +37,10 @@ $size: 65px;
     width: $size + 3px;
     color: $white;
     font-size: $font-size-xs;
+  }
+
+  &--clock {
+    padding: 0;
+    background-color: $black;
   }
 }
