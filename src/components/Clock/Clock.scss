@@ -1,0 +1,26 @@
+.ui-clock-face {
+  width: 58px;
+  height: 58px;
+  min-height: 58px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: $white;
+
+  .ui-hour-hand,
+  .ui-minute-hand {
+    stroke: $black;
+  }
+
+  .ui-hour-hand {
+    stroke-width: 2px;
+  }
+
+  .ui-minute-hand {
+    stroke-width: 2px;
+  }
+
+  .ui-second-hand {
+    stroke-width: 1px;
+    stroke: $red;
+  }
+}

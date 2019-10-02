@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 class DateTime extends Component {
   static propTypes = {
-    format: PropTypes.string
+    format: PropTypes.string,
+    onUpdate: PropTypes.func
   };
 
   constructor(props) {
@@ -12,21 +13,28 @@ class DateTime extends Component {
     this.tick = this.tick.bind(this);
 
     this.state = {
-      date: new Date()
+      millis: Date.now(),
+      request: 0
     };
   }
 
   componentDidMount() {
-    this.intervalId = setInterval(this.tick, 1000);
+    this.setState({
+      request: requestAnimationFrame(this.tick)
+    });
   }
 
   componentWillUnmount() {
-    clearInterval(this.intervalId);
+    const { request } = this.state;
+
+    cancelAnimationFrame(request);
   }
 
   get date() {
     const { format } = this.props;
-    const { date } = this.state;
+    const { millis } = this.state;
+    const date = new Date(millis);
+    const second = format.endsWith(':ss') ? '2-digit' : undefined;
     const options = {
       weekday: 'long',
       month: 'long',
@@ -34,6 +42,7 @@ class DateTime extends Component {
       year: 'numeric',
       hour: 'numeric',
       minute: '2-digit',
+      second,
       hour12: true
     };
     const fullDate = date.toLocaleString('en-US', options);
@@ -41,6 +50,7 @@ class DateTime extends Component {
 
     switch (format) {
       case 'H:mm':
+      case 'H:mm:ss':
         return time.split(' ')[0];
       case 'dddd':
         return weekday;
@@ -56,9 +66,17 @@ class DateTime extends Component {
   }
 
   tick() {
-    this.setState(() => ({
-      date: new Date()
-    }));
+    const { onUpdate } = this.props;
+    const millis = Date.now();
+
+    this.setState({
+      millis,
+      request: requestAnimationFrame(this.tick)
+    });
+
+    if (onUpdate) {
+      onUpdate(millis);
+    }
   }
 
   render() {
