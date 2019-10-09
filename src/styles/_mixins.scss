@@ -44,3 +44,9 @@
   flex-flow: column wrap;
   justify-content: space-between;
 }
+
+@mixin responsive($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

@@ -1,8 +1,8 @@
 .iportfolio-app {
-  margin-top: 5vh;
+  text-align: center;
 
-  &-device {
-    margin: 0 auto;
-    text-align: center;
+  @include responsive($width-medium) {
+    height: auto;
+    margin-top: 5vh;
   }
 }

@@ -1,9 +1,18 @@
 .iportfolio-app-device {
-  margin: 2em auto;
+  margin: 0 auto;
+
+  @include responsive($width-medium) {
+    margin: 30px auto;
+  }
 
   .device-content {
+    height: 100vh;
     background-color: $black-dark;
     overflow: hidden;
+
+    @include responsive($width-medium) {
+      height: 100%;
+    }
   }
 
   .device-header-container {

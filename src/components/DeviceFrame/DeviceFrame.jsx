@@ -8,6 +8,7 @@ import Icon from 'components/Icon/Icon';
 
 class DeviceFrame extends Component {
   static propTypes = {
+    breakpoint: PropTypes.number,
     className: PropTypes.string,
     children: PropTypes.node,
     color: PropTypes.string,
@@ -17,6 +18,7 @@ class DeviceFrame extends Component {
   };
 
   static defaultProps = {
+    breakpoint: 480,
     color: 'black',
     device: 'iphone-x',
     unlocked: false
@@ -26,6 +28,19 @@ class DeviceFrame extends Component {
     super(props);
 
     this.handleLock = this.handleLock.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+
+    this.state = {
+      isMobile: this.isMobile
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
   }
 
   get header() {
@@ -50,6 +65,12 @@ class DeviceFrame extends Component {
     );
   }
 
+  get isMobile() {
+    const { breakpoint } = this.props;
+
+    return window.matchMedia(`(max-width: ${breakpoint}px)`).matches;
+  }
+
   get time() {
     return (
       <Fragment>
@@ -65,11 +86,29 @@ class DeviceFrame extends Component {
     history.goBack();
   }
 
+  handleResize() {
+    this.setState(() => ({
+      isMobile: this.isMobile
+    }));
+  }
+
   render() {
     const { className, children, color, device } = this.props;
+    const { isMobile } = this.state;
     const baseClass = 'device';
     const deviceClass = `${baseClass}-${device}`;
     const colorClass = `${baseClass}-${color}`;
+
+    if (isMobile) {
+      return (
+        <div className={className}>
+          <div className="device-content">
+            {this.header}
+            {children}
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div
