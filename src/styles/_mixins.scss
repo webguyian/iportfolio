@@ -13,10 +13,10 @@
   text-transform: uppercase;
 }
 
-@mixin number-type {
+@mixin number-type($font-size: $font-size-xxl) {
   color: $white;
   font-family: $body-type;
-  font-size: $font-size-xxl;
+  font-size: $font-size;
   font-weight: $font-weight-light;
 }
 

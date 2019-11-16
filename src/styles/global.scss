@@ -24,7 +24,3 @@ body {
   color: $white;
   font-family: $body-type;
 }
-
-.ui-accessible-label {
-  @include accessibly-hidden;
-}

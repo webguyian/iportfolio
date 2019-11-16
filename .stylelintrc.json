@@ -350,8 +350,7 @@
         "sh-waqar/declaration-use-variable": [
             [
                 "color",
-                "font-weight",
-                "font-size"
+                "font-weight"
             ],
             {
                 "severity": "error"

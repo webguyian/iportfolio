@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import Icon from 'components/Icon/Icon';
+import Text from 'components/Text/Text';
 
 class Button extends Component {
   static propTypes = {
@@ -29,7 +30,7 @@ class Button extends Component {
         {...props}
       >
         {icon ? <Icon name={icon} size={size} /> : children}
-        {icon ? <span className="ui-accessible-label">{children}</span> : null}
+        {icon ? <Text type="accessible">{children}</Text> : null}
       </button>
     );
   }

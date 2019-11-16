@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Homescreen from 'containers/Homescreen/Homescreen';
 
-class HomescreenView extends Component {
-  render() {
-    return <Homescreen {...this.props} />;
-  }
-}
+const HomescreenView = props => {
+  return <Homescreen {...props} />;
+};
 
 export default HomescreenView;

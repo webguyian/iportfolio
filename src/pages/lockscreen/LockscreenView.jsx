@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Lockscreen from 'containers/Lockscreen/Lockscreen';
 
-class LockscreenView extends Component {
-  render() {
-    return <Lockscreen {...this.props} />;
-  }
-}
+const LockscreenView = props => {
+  return <Lockscreen {...props} />;
+};
 
 export default LockscreenView;

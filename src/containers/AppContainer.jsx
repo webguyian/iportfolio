@@ -1,42 +1,59 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 
+import Button from 'components/Button/Button';
+import DateTime from 'components/DateTime/DateTime';
 import DeviceFrame from 'components/DeviceFrame/DeviceFrame';
 
 import routes from 'routes';
 
-class AppContainer extends Component {
-  static propTypes = {
-    location: PropTypes.object.isRequired
+const LeftIndicator = () => {
+  const history = useHistory();
+  const { pathname } = history.location;
+  const home = 'home';
+  const homeRoute = `/${home}`;
+  const icon = pathname === homeRoute ? 'lock-open' : home;
+
+  const redirect = () => {
+    const route = icon === home ? homeRoute : '/';
+
+    history.push(route);
   };
 
-  get routes() {
+  if (pathname !== '/') {
     return (
-      <Switch>
-        {routes.map(route => (
-          <Route key={route.pathKey} exact {...route} />
-        ))}
-      </Switch>
+      <span className="device-time-label">
+        <DateTime format="H:mm" />
+        <Button icon={icon} onClick={redirect}>
+          Unlocked
+        </Button>
+      </span>
     );
   }
 
-  render() {
-    const { location } = this.props;
-    const unlocked = location.pathname !== '/';
+  return 'IMAC';
+};
 
-    return (
-      <div className="iportfolio-app">
-        <DeviceFrame
-          className="iportfolio-app-device"
-          unlocked={unlocked}
-          {...this.props}
-        >
-          {this.routes}
-        </DeviceFrame>
-      </div>
-    );
-  }
-}
+const AppContainer = () => {
+  return (
+    <div className="iportfolio-app">
+      <DeviceFrame
+        className="iportfolio-app-device"
+        leftIndicator={<LeftIndicator />}
+      >
+        <Switch>
+          {routes.map(route => (
+            <Route key={route.pathKey} exact {...route} />
+          ))}
+        </Switch>
+      </DeviceFrame>
+    </div>
+  );
+};
+
+AppContainer.propTypes = {
+  location: PropTypes.object.isRequired
+};
 
 export default AppContainer;

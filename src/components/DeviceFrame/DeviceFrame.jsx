@@ -1,9 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import Button from 'components/Button/Button';
-import DateTime from 'components/DateTime/DateTime';
 import Icon from 'components/Icon/Icon';
 
 class DeviceFrame extends Component {
@@ -13,21 +11,18 @@ class DeviceFrame extends Component {
     children: PropTypes.node,
     color: PropTypes.string,
     device: PropTypes.string,
-    history: PropTypes.object,
-    unlocked: PropTypes.bool
+    leftIndicator: PropTypes.element
   };
 
   static defaultProps = {
     breakpoint: 480,
     color: 'black',
-    device: 'iphone-x',
-    unlocked: false
+    device: 'iphone-x'
   };
 
   constructor(props) {
     super(props);
 
-    this.handleLock = this.handleLock.bind(this);
     this.handleResize = this.handleResize.bind(this);
 
     this.state = {
@@ -44,16 +39,14 @@ class DeviceFrame extends Component {
   }
 
   get header() {
-    const { unlocked } = this.props;
+    const { leftIndicator } = this.props;
     const blockClass = 'device-header-bars-block';
 
     return (
       <div className="device-header-container">
         <div className="device-header-bars">
           <div className={`${blockClass} ${blockClass}--time`}>
-            <span className="device-time-label">
-              {unlocked ? this.time : 'IMAC'}
-            </span>
+            {leftIndicator}
           </div>
           <div className={`${blockClass} ${blockClass}--icons`}>
             <Icon name="signal" />
@@ -69,21 +62,6 @@ class DeviceFrame extends Component {
     const { breakpoint } = this.props;
 
     return window.matchMedia(`(max-width: ${breakpoint}px)`).matches;
-  }
-
-  get time() {
-    return (
-      <Fragment>
-        <DateTime format="H:mm" />
-        <Button icon="lock-open" onClick={this.handleLock} />
-      </Fragment>
-    );
-  }
-
-  handleLock() {
-    const { history } = this.props;
-
-    history.goBack();
   }
 
   handleResize() {

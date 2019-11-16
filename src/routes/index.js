@@ -1,3 +1,4 @@
+import CalculatorView from 'pages/calculator/CalculatorView';
 import HomescreenView from 'pages/homescreen/HomescreenView';
 import LockscreenView from 'pages/lockscreen/LockscreenView';
 
@@ -11,6 +12,11 @@ const routes = [
     path: '/home',
     pathKey: 'home',
     component: HomescreenView
+  },
+  {
+    path: '/calculator',
+    pathKey: 'calculator',
+    component: CalculatorView
   }
 ];
 

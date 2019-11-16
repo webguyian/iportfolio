@@ -5,4 +5,10 @@
     height: auto;
     margin-top: 5vh;
   }
+
+  &-view {
+    height: 100%;
+    padding-top: 30px;
+    background-color: $gray-dark;
+  }
 }

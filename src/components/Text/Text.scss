@@ -1,4 +1,8 @@
 .ui-text {
+  &--accessible {
+    @include accessibly-hidden;
+  }
+
   &--body {
     @include body-type;
   }

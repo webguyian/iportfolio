@@ -6,7 +6,7 @@ class Text extends Component {
   static propTypes = {
     element: PropTypes.string,
     modifier: PropTypes.oneOf(['block', 'bold']),
-    type: PropTypes.oneOf(['body', 'display'])
+    type: PropTypes.oneOf(['accessible', 'body', 'display'])
   };
 
   static defaultProps = {
