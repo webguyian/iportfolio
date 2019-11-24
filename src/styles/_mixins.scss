@@ -1,8 +1,8 @@
 /* stylelint-disable declaration-no-important, property-blacklist */
 
-@mixin body-type {
+@mixin body-type($font-size: $font-size-default) {
   font-family: $body-type;
-  font-size: $font-size-default;
+  font-size: $font-size;
   font-weight: $font-weight-regular;
 }
 
@@ -43,6 +43,12 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
 }
 
 @mixin responsive($breakpoint) {

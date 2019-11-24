@@ -25,6 +25,7 @@ module.exports = {
     'babel.config.js',
     'jest.config.js',
     '<rootDir>/src/index.js',
+    '<rootDir>/src/pages',
     '_snapshots_'
   ],
   coverageReporters: ['html']

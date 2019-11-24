@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders correctly 1`] = `
+<button
+  className="ui-btn"
+  type="button"
+/>
+`;
+
+exports[`<Button /> renders correctly with children 1`] = `
+<button
+  className="ui-btn"
+  type="button"
+>
+  Button text
+</button>
+`;
+
+exports[`<Button /> renders correctly with custom className 1`] = `
+<button
+  className="ui-btn custom-btn"
+  type="button"
+/>
+`;
+
+exports[`<Button /> renders correctly with icon 1`] = `
+<button
+  className="ui-btn ui-btn--with-icon"
+  type="button"
+>
+  <i
+    className="fas icon icon-plus-circle fa-plus-circle"
+  />
+  <span
+    className="ui-text ui-text--accessible"
+  >
+    Add
+  </span>
+</button>
+`;
+
+exports[`<Button /> renders correctly with icon and label 1`] = `
+<button
+  className="ui-btn ui-btn--with-icon"
+  type="button"
+>
+  <i
+    className="fas icon icon-plus-circle fa-plus-circle"
+  />
+  <span
+    className="ui-btn-label"
+  >
+    Add
+  </span>
+</button>
+`;

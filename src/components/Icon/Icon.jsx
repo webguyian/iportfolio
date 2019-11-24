@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-class Icon extends Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    size: PropTypes.string
-  };
+const Icon = props => {
+  const { name, size } = props;
+  const baseClass = `fas icon icon-${name}`;
+  const iconClass = `fa-${name}`;
+  const sizeClass = size ? `fa-${size}` : false;
 
-  render() {
-    const { name, size } = this.props;
-    const baseClass = `fas icon icon-${name}`;
-    const iconClass = `fa-${name}`;
-    const sizeClass = size ? `fa-${size}` : false;
+  return <i className={classNames(baseClass, iconClass, sizeClass)} />;
+};
 
-    return <i className={classNames(baseClass, iconClass, sizeClass)} />;
-  }
-}
+Icon.propTypes = {
+  name: PropTypes.string.isRequired,
+  size: PropTypes.string
+};
 
 export default Icon;

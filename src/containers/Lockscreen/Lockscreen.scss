@@ -12,7 +12,7 @@
   &-header {
     display: flex;
     flex-flow: column wrap;
-    margin-top: $gutter-top;
+    margin-top: $gutter-l;
 
     .ui-clock {
       @include number-type;

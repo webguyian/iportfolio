@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Lockscreen /> handles unlock 1`] = `
+<div
+  className="iportfolio-lockscreen iportfolio-lockscreen--unlocked"
+  onTransitionEnd={[Function]}
+>
+  <header
+    className="iportfolio-lockscreen-header"
+  >
+    <i
+      className="fas icon icon-lock fa-lock fa-2x"
+    />
+    <h1
+      className="ui-clock"
+    >
+      11:11
+    </h1>
+    <h1
+      className="ui-date"
+    >
+      Tuesday, October 1
+    </h1>
+  </header>
+  <label
+    className="ui-toggle-switch"
+  >
+    <input
+      checked={false}
+      className="ui-toggle-switch-checkbox"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <button
+      className="ui-btn ui-toggle-switch-slider"
+      onTransitionEnd={[Function]}
+      type="button"
+    />
+    <span
+      className="ui-toggle-switch-label"
+    >
+      slide to unlock
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<Lockscreen /> renders correctly 1`] = `
+<div
+  className="iportfolio-lockscreen"
+  onTransitionEnd={[Function]}
+>
+  <header
+    className="iportfolio-lockscreen-header"
+  >
+    <i
+      className="fas icon icon-lock fa-lock fa-2x"
+    />
+    <h1
+      className="ui-clock"
+    >
+      11:11
+    </h1>
+    <h1
+      className="ui-date"
+    >
+      Tuesday, October 1
+    </h1>
+  </header>
+  <label
+    className="ui-toggle-switch"
+  >
+    <input
+      checked={false}
+      className="ui-toggle-switch-checkbox"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <button
+      className="ui-btn ui-toggle-switch-slider"
+      onTransitionEnd={[Function]}
+      type="button"
+    />
+    <span
+      className="ui-toggle-switch-label"
+    >
+      slide to unlock
+    </span>
+  </label>
+</div>
+`;

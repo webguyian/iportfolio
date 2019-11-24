@@ -113,7 +113,7 @@ export const useCalculatorRef = (ref = null) => {
       // Add focus to wrapper element
       element.focus();
     }
-  }, []);
+  }, [calculatorEl]);
 
   return calculatorEl;
 };

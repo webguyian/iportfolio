@@ -11,7 +11,7 @@ $green: #74bf82;
 $orange: #ffb824;
 $purple: #3d228a;
 $purple-dark: #2e1a69;
-$red: #ea3f33;
+$red: #e94741;
 $white: #fff;
 $yellow: #cdee23;
 
@@ -26,7 +26,7 @@ $font-size-l: 22px;
 $font-size-m: 18px;
 $font-size-default: 16px;
 $font-size-s: 13px;
-$font-size-xs: 10.5px;
+$font-size-xs: 10px;
 
 // Font weights
 $font-weight-light: 300;
@@ -34,6 +34,8 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 // Offsets
-$gutter-top: 60px;
+$gutter: 15px;
+$gutter-m: $gutter * 2;
+$gutter-l: $gutter * 4;
 
 $width-medium: 481px;

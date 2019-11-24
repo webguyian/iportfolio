@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config config/webpack.config.babel.js",
     "start": "cross-env NODE_ENV=debug webpack-dev-server --config config/webpack.config.babel.js",
-    "stylelint": "stylelint src/**/**/*.scss --fix",
+    "stylelint": "stylelint src/**/**/**/*.scss --fix",
     "test": "jest --coverage --watchAll"
   },
   "keywords": [],
@@ -21,7 +21,8 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-hot-loader": "4.12.18",
-    "react-router-dom": "5.1.2"
+    "react-router-dom": "5.1.2",
+    "react-swipeable": "^5.5.0"
   },
   "devDependencies": {
     "@babel/core": "7.7.2",
@@ -91,12 +92,8 @@
         "prettier --single-quote --write",
         "git add"
       ],
-      "*.scss:": [
-        "stylelint --fix",
-        "prettier --write",
-        "git add"
-      ],
-      "*.{json}": [
+      "*.{scss,json}": [
+        "stylelint src/**/**/**/*.scss --fix",
         "prettier --write",
         "git add"
       ]

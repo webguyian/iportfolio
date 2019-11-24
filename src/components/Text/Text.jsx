@@ -1,33 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-class Text extends Component {
-  static propTypes = {
-    element: PropTypes.string,
-    modifier: PropTypes.oneOf(['block', 'bold']),
-    type: PropTypes.oneOf(['accessible', 'body', 'display'])
-  };
+const Text = props => {
+  const { element, modifier, type, ...otherProps } = props;
+  const baseClass = `ui-text ui-text--${type}`;
+  const modifierClass = modifier && `ui-text--${modifier}`;
 
-  static defaultProps = {
-    element: 'span',
-    type: 'body'
-  };
+  return React.createElement(element, {
+    className: classNames(baseClass, modifierClass),
+    ...otherProps
+  });
+};
 
-  get element() {
-    const { element, modifier, type, ...props } = this.props;
-    const baseClass = `ui-text ui-text--${type}`;
-    const modifierClass = modifier && `ui-text--${modifier};`;
+Text.propTypes = {
+  element: PropTypes.string,
+  modifier: PropTypes.oneOf(['block', 'bold']),
+  type: PropTypes.oneOf(['accessible', 'body', 'display'])
+};
 
-    return React.createElement(element, {
-      className: classNames(baseClass, modifierClass),
-      ...props
-    });
-  }
-
-  render() {
-    return this.element;
-  }
-}
+Text.defaultProps = {
+  element: 'span',
+  type: 'body'
+};
 
 export default Text;

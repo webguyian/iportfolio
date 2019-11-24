@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> renders correctly 1`] = `
+<i
+  className="fas icon icon-lock fa-lock"
+/>
+`;
+
+exports[`<Icon /> renders correctly with size prop 1`] = `
+<i
+  className="fas icon icon-lock fa-lock fa-2x"
+/>
+`;

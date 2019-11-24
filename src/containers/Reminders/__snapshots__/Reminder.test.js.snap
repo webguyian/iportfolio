@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Reminder /> renders correctly 1`] = `
+<form
+  className="reminder"
+  onMouseDown={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="reminder-field"
+  >
+    <input
+      checked={false}
+      className="reminder-checkbox"
+      id="reminder-1569942660000"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="reminder-label"
+      htmlFor="reminder-1569942660000"
+    >
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        Toggle checkbox
+      </span>
+    </label>
+    <input
+      className="reminder-input"
+      onChange={[Function]}
+      type="text"
+      value="Add tests"
+    />
+  </div>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</form>
+`;
+
+exports[`<Reminder /> renders correctly with checked prop 1`] = `
+<form
+  className="reminder reminder--checked"
+  onMouseDown={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="reminder-field"
+  >
+    <input
+      checked={true}
+      className="reminder-checkbox"
+      id="reminder-1569942660000"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="reminder-label"
+      htmlFor="reminder-1569942660000"
+    >
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        Toggle checkbox
+      </span>
+    </label>
+    <input
+      className="reminder-input"
+      onChange={[Function]}
+      type="text"
+      value="Add tests"
+    />
+  </div>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</form>
+`;
+
+exports[`<Reminder /> renders correctly with swipe offset 1`] = `
+<form
+  className="reminder reminder--swiped"
+  onSubmit={[Function]}
+>
+  <div
+    className="reminder-field"
+  >
+    <input
+      checked={false}
+      className="reminder-checkbox"
+      id="reminder-1569942660000"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="reminder-label"
+      htmlFor="reminder-1569942660000"
+    >
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        Toggle checkbox
+      </span>
+    </label>
+    <input
+      className="reminder-input"
+      onChange={[Function]}
+      type="text"
+      value="Add tests"
+    />
+  </div>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</form>
+`;
+
+exports[`<Reminder /> renders correctly with swipe offset greater than 80 1`] = `
+<form
+  className="reminder reminder--swiped reminder--swiping"
+  onSubmit={[Function]}
+>
+  <div
+    className="reminder-field"
+  >
+    <input
+      checked={false}
+      className="reminder-checkbox"
+      id="reminder-1569942660000"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="reminder-label"
+      htmlFor="reminder-1569942660000"
+    >
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        Toggle checkbox
+      </span>
+    </label>
+    <input
+      className="reminder-input"
+      onChange={[Function]}
+      type="text"
+      value="Add tests"
+    />
+  </div>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</form>
+`;

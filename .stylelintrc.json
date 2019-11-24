@@ -309,12 +309,7 @@
         "a11y/media-prefers-reduced-motion": null,
         "a11y/no-outline-none": true,
         "a11y/selector-pseudo-class-focus": true,
-        "a11y/content-property-no-static-value": [
-            true,
-            {
-                "severity": "warning"
-            }
-        ],
+        "a11y/content-property-no-static-value": null,
         "a11y/font-size-is-readable": [
             true,
             {

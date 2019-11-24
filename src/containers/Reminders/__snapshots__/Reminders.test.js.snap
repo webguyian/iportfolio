@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Reminders /> renders correctly 1`] = `
+<div
+  className="reminders-app"
+>
+  <h1
+    className="ui-text ui-text--display"
+  >
+    Reminders
+  </h1>
+  <p
+    className="ui-text ui-text--body"
+  >
+    No Reminders
+  </p>
+  <button
+    className="ui-btn ui-btn--with-icon"
+    onClick={[Function]}
+    type="button"
+  >
+    <i
+      className="fas icon icon-plus-circle fa-plus-circle"
+    />
+    <span
+      className="ui-btn-label"
+    >
+      New Reminder
+    </span>
+  </button>
+</div>
+`;
