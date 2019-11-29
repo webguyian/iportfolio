@@ -12,7 +12,7 @@ const settings = {
   // API server uses this as it's root
   API_DIR: path.join(__dirname, '../src/api'),
   // Path to output files to during production
-  OUTPUT_DIR: path.join(__dirname, '../public/dist'),
+  OUTPUT_DIR: path.join(__dirname, '../dist'),
   // Domain to use for webpack's dev server and mock API server
   LOCAL_DOMAIN: 'localhost',
   // Used with LOCAL_DOMAIN to determine URL of webpack's dev server

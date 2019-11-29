@@ -20,11 +20,11 @@ module.exports = {
     './api',
     './config',
     './coverage',
+    './dist',
     '.eslintrc.js',
     'babel.config.js',
     'jest.config.js',
     '<rootDir>/src/index.js',
-    './public',
     '_snapshots_'
   ],
   coverageReporters: ['html']

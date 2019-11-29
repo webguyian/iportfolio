@@ -24,7 +24,7 @@ export default {
     port: settings.APP_PORT,
     proxy: settings.API_PROXY_CONFIG()
   },
-  devtool: devMode ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
+  devtool: devMode ? 'cheap-module-eval-source-map' : 'source-map',
   module: {
     rules
   },

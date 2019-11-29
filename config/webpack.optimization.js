@@ -5,12 +5,9 @@ const optimization = {
   minimizer: [
     new TerserPlugin({
       cache: true,
+      extractComments: false,
       parallel: true,
-      sourceMap: true,
-      terserOptions: {
-        /* eslint-disable camelcase */
-        keep_fnames: true
-      }
+      sourceMap: true
     }),
     new OptimizeCSSAssetsPlugin({})
   ],
@@ -20,8 +17,7 @@ const optimization = {
         name: 'vendor',
         chunks: 'all',
         enforce: true,
-        reuseExistingChunk: true,
-        test: /[\\/]node_modules[\\/].*\.js$/
+        reuseExistingChunk: true
       }
     }
   }
