@@ -1,20 +1,15 @@
 {
-  "name": "react-redux-template",
-  "version": "1.0.0",
-  "description": "A boilerplate template for creating React-Redux applications",
-  "main": "./public/dist/index.js",
+  "name": "iportfolio",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config config/webpack.config.babel.js",
     "start": "cross-env NODE_ENV=debug webpack-dev-server --config config/webpack.config.babel.js",
     "stylelint": "stylelint src/**/**/*.scss --fix",
     "test": "jest --coverage --watchAll"
   },
-  "keywords": [
-    "react",
-    "babel",
-    "webpack",
-    "jest"
-  ],
+  "keywords": [],
   "author": "Ian McPhail",
   "license": "ISC",
   "dependencies": {
