@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Calculator /> renders correctly 1`] = `
+<div
+  className="calculator-app"
+>
+  <output
+    className="calculator-app-output calculator-app-output--1"
+    onClick={[Function]}
+  >
+    0
+  </output>
+  <div
+    className="calculator-app-input"
+    onKeyUp={[Function]}
+    tabIndex={-1}
+  >
+    <div
+      className="calculator-app-row calculator-app-row--1"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        AC
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          All clear
+        </span>
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        +/-
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Positive/negative
+        </span>
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        %
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Percent
+        </span>
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        ÷
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Divide
+        </span>
+      </button>
+    </div>
+    <div
+      className="calculator-app-row calculator-app-row--2"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        7
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        8
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        9
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        ×
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Multiply
+        </span>
+      </button>
+    </div>
+    <div
+      className="calculator-app-row calculator-app-row--3"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        4
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        5
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        6
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        -
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Subtract
+        </span>
+      </button>
+    </div>
+    <div
+      className="calculator-app-row calculator-app-row--4"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        1
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        2
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        3
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        +
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Add
+        </span>
+      </button>
+    </div>
+    <div
+      className="calculator-app-row calculator-app-row--5"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        0
+        <span
+          className="ui-text ui-text--accessible"
+        />
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        .
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Decimal
+        </span>
+      </button>
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        =
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Equals
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

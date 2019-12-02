@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
 import Button from 'components/Button/Button';
@@ -50,10 +49,6 @@ const AppContainer = () => {
       </DeviceFrame>
     </div>
   );
-};
-
-AppContainer.propTypes = {
-  location: PropTypes.object.isRequired
 };
 
 export default AppContainer;

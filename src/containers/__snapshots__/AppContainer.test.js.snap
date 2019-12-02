@@ -22,38 +22,64 @@ exports[`<AppContainer /> renders correctly 1`] = `
             <div
               className="device-header-bars-block device-header-bars-block--time"
             >
-              <span
-                className="device-time-label"
-              >
-                IMAC
-              </span>
+              IMAC
             </div>
             <div
               className="device-header-bars-block device-header-bars-block--icons"
             >
               <i
-                className="fas fa-signal"
+                className="fas icon icon-signal fa-signal"
               />
               <i
-                className="fas fa-wifi"
+                className="fas icon icon-wifi fa-wifi"
               />
               <i
-                className="fas fa-battery-full"
+                className="fas icon icon-battery-full fa-battery-full"
               />
             </div>
           </div>
         </div>
-        <div>
-          <h1
-            className="ui-clock"
+        <div
+          className="iportfolio-lockscreen"
+          onTransitionEnd={[Function]}
+        >
+          <header
+            className="iportfolio-lockscreen-header"
           >
-            5:33
-          </h1>
-          <h1
-            className="ui-date"
+            <i
+              className="fas icon icon-lock fa-lock fa-2x"
+            />
+            <h1
+              className="ui-clock"
+            >
+              11:11
+            </h1>
+            <h1
+              className="ui-date"
+            >
+              Tuesday, October 1
+            </h1>
+          </header>
+          <label
+            className="ui-toggle-switch"
           >
-            Saturday, September 21
-          </h1>
+            <input
+              checked={false}
+              className="ui-toggle-switch-checkbox"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <button
+              className="ui-btn ui-toggle-switch-slider"
+              onTransitionEnd={[Function]}
+              type="button"
+            />
+            <span
+              className="ui-toggle-switch-label"
+            >
+              slide to unlock
+            </span>
+          </label>
         </div>
       </div>
     </div>
