@@ -3,7 +3,7 @@
   flex-flow: column wrap;
 
   &-output {
-    @include number-type(9vw);
+    @include type-number(9vw);
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
@@ -25,10 +25,7 @@
   }
 
   &-input {
-    // stylelint-disable-next-line a11y/no-outline-none
-    &:focus {
-      outline: 0;
-    }
+    @include no-outline;
   }
 
   &-row {

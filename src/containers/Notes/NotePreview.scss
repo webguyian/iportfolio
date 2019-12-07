@@ -1,0 +1,60 @@
+.note-preview {
+  display: block;
+  position: relative;
+  margin: 0 25px;
+  padding: 10px 0;
+  border-top: 1px solid $gray-medium;
+
+  &-title-display,
+  &-text-display {
+    @include truncate;
+  }
+
+  &-title-display {
+    font-size: $font-size-default;
+  }
+
+  &-body {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-date-display {
+    display: inline-block;
+    min-width: 85px;
+    color: $gray-light;
+  }
+
+  &-text-display {
+    color: $gray-medium;
+  }
+
+  > .ui-btn--delete {
+    position: absolute;
+    top: 0;
+    right: -45px;
+    width: 0;
+    height: 100%;
+    padding: 10px;
+    transition: width 0.4s linear;
+    background-color: $red;
+    color: $white;
+  }
+
+  &--swiped {
+    > .ui-btn--delete {
+      right: -25px;
+      width: 80px;
+    }
+  }
+
+  &--swiping {
+    .reminder-input {
+      outline: none;
+    }
+
+    > .ui-btn--delete {
+      width: 115%;
+    }
+  }
+}

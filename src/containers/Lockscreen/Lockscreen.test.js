@@ -5,10 +5,6 @@ import Lockscreen from './Lockscreen';
 import ToggleSwitch from 'components/ToggleSwitch/ToggleSwitch';
 
 describe('<Lockscreen />', () => {
-  const timestamp = Number(new Date('2019-10-01T11:11:00'));
-
-  Date.now = jest.fn(() => timestamp);
-
   const props = {
     history: { push: jest.fn() }
   };

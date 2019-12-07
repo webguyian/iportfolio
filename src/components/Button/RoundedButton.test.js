@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 
 import RoundedButton from './RoundedButton';
 
 describe('<RoundedButton />', () => {
   it('renders correctly', () => {
-    const component = renderer.create(<RoundedButton />);
+    const component = create(<RoundedButton />);
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();

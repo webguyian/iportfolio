@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Text = props => {
-  const { element, modifier, type, ...otherProps } = props;
+  const { className, element, modifier, type, ...otherProps } = props;
   const baseClass = `ui-text ui-text--${type}`;
   const modifierClass = modifier && `ui-text--${modifier}`;
 
   return React.createElement(element, {
-    className: classNames(baseClass, modifierClass),
+    className: classNames(baseClass, modifierClass, className),
     ...otherProps
   });
 };
 
 Text.propTypes = {
+  className: PropTypes.string,
   element: PropTypes.string,
   modifier: PropTypes.oneOf(['block', 'bold']),
   type: PropTypes.oneOf(['accessible', 'body', 'display'])

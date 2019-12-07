@@ -28,13 +28,13 @@ exports[`<AppContainer /> renders correctly 1`] = `
               className="device-header-bars-block device-header-bars-block--icons"
             >
               <i
-                className="fas icon icon-signal fa-signal"
+                className="ui-icon ui-icon-signal fas fa-signal"
               />
               <i
-                className="fas icon icon-wifi fa-wifi"
+                className="ui-icon ui-icon-wifi fas fa-wifi"
               />
               <i
-                className="fas icon icon-battery-full fa-battery-full"
+                className="ui-icon ui-icon-battery-full fas fa-battery-full"
               />
             </div>
           </div>
@@ -47,15 +47,15 @@ exports[`<AppContainer /> renders correctly 1`] = `
             className="iportfolio-lockscreen-header"
           >
             <i
-              className="fas icon icon-lock fa-lock fa-2x"
+              className="ui-icon ui-icon-lock fas fa-lock fa-2x"
             />
             <h1
-              className="ui-clock"
+              className="ui-text ui-text--body ui-clock"
             >
               11:11
             </h1>
             <h1
-              className="ui-date"
+              className="ui-text ui-text--body ui-date"
             >
               Tuesday, October 1
             </h1>
@@ -75,7 +75,7 @@ exports[`<AppContainer /> renders correctly 1`] = `
               type="button"
             />
             <span
-              className="ui-toggle-switch-label"
+              className="ui-text ui-text--body ui-toggle-switch-label"
             >
               slide to unlock
             </span>

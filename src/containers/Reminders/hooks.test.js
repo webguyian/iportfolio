@@ -2,6 +2,7 @@ import React from 'react';
 import { act, create } from 'react-test-renderer';
 import * as hooks from 'react-swipeable';
 
+import { TestComponent, mockTime } from 'utilities/test';
 import {
   useLocalStorage,
   useRefFocus,
@@ -15,12 +16,16 @@ describe('Reminders hooks', () => {
 
   hooks.useSwipeable = jest.fn();
 
-  const timestamp = Number(new Date('2019-10-01T11:11:00'));
-
-  const TestComponent = ({ callback }) => {
-    callback();
-    return null;
+  const localStorageMock = {
+    getItem: jest.fn(),
+    setItem: jest.fn(),
+    clear: jest.fn()
   };
+
+  Object.defineProperty(window, 'localStorage', {
+    value: localStorageMock
+  });
+
   const ref = {
     id: 'ref',
     focus: jest.fn()
@@ -33,16 +38,6 @@ describe('Reminders hooks', () => {
       createNodeMock
     });
   };
-
-  const localStorageMock = {
-    getItem: jest.fn(),
-    setItem: jest.fn(),
-    clear: jest.fn()
-  };
-
-  Object.defineProperty(window, 'localStorage', {
-    value: localStorageMock
-  });
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -60,7 +55,7 @@ describe('Reminders hooks', () => {
 
       expect(reminders).toEqual([]);
       const updatedReminders = [
-        { id: timestamp, checked: false, value: 'Add tests' }
+        { id: mockTime, checked: false, value: 'Add tests' }
       ];
 
       act(() => {
@@ -76,7 +71,7 @@ describe('Reminders hooks', () => {
       });
 
       const updatedReminders = [
-        { id: timestamp, checked: false, value: 'Add tests' }
+        { id: mockTime, checked: false, value: 'Add tests' }
       ];
 
       act(() => {
@@ -100,7 +95,7 @@ describe('Reminders hooks', () => {
       });
 
       const updatedReminders = [
-        { id: timestamp, checked: false, value: 'Add tests' }
+        { id: mockTime, checked: false, value: 'Add tests' }
       ];
 
       act(() => {
@@ -119,7 +114,7 @@ describe('Reminders hooks', () => {
       });
 
       const updatedReminders = [
-        { id: timestamp, checked: false, value: 'Add tests' }
+        { id: mockTime, checked: false, value: 'Add tests' }
       ];
 
       act(() => {
@@ -215,8 +210,8 @@ describe('Reminders hooks', () => {
 
   describe('useReminders', () => {
     const reminders = [
-      { id: timestamp, checked: false, value: 'Add tests' },
-      { id: timestamp + 1, checked: false, value: '' }
+      { id: mockTime, checked: false, value: 'Add tests' },
+      { id: mockTime + 1, checked: false, value: '' }
     ];
     const setReminders = jest.fn();
     let remindersRef;

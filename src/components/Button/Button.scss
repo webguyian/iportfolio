@@ -1,6 +1,5 @@
 .ui-btn {
-  @include body-type($font-size-s);
-  padding: 5px;
+  padding: 0;
   border: 0;
   background: none;
   cursor: pointer;
@@ -9,18 +8,22 @@
     outline: 2px solid $blue-light;
   }
 
-  > .icon {
+  > .ui-icon {
     pointer-events: none;
   }
 
   &--rounded {
-    @include number-type($font-size-l);
+    @include type-number($font-size-l);
     width: 80px;
     height: 80px;
     margin: 5px;
     padding: 14px;
     border-radius: 50%;
     background: $gray-medium;
+  }
+
+  &--with-icon {
+    padding: 2px;
   }
 
   &-label {

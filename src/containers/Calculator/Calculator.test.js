@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer, { act } from 'react-test-renderer';
+import { act, create } from 'react-test-renderer';
 
 import Calculator from './Calculator';
 
@@ -24,14 +24,14 @@ describe('<Calculator />', () => {
   });
 
   it('renders correctly', () => {
-    const component = renderer.create(<Calculator />);
+    const component = create(<Calculator />);
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('handles output clicks', () => {
-    const component = renderer.create(<Calculator />, {
+    const component = create(<Calculator />, {
       createNodeMock
     }).root;
     const output = component.findByType('output');
@@ -46,7 +46,7 @@ describe('<Calculator />', () => {
       value: { writeText: jest.fn() }
     });
 
-    const component = renderer.create(<Calculator />, {
+    const component = create(<Calculator />, {
       createNodeMock
     }).root;
     const output = component.findByType('output');
@@ -60,7 +60,7 @@ describe('<Calculator />', () => {
   });
 
   it('handles keypress for unknown key', () => {
-    const component = renderer.create(<Calculator />, {
+    const component = create(<Calculator />, {
       createNodeMock
     }).root;
     const input = component.findByProps({ tabIndex: -1 });
@@ -72,7 +72,7 @@ describe('<Calculator />', () => {
   });
 
   it('handles keypress for Backspace key', () => {
-    const component = renderer.create(<Calculator />, {
+    const component = create(<Calculator />, {
       createNodeMock
     }).root;
     const input = component.findByProps({ tabIndex: -1 });
@@ -84,7 +84,7 @@ describe('<Calculator />', () => {
   });
 
   it('handles keypress for Enter key', () => {
-    const component = renderer.create(<Calculator />, {
+    const component = create(<Calculator />, {
       createNodeMock
     }).root;
     const input = component.findByProps({ tabIndex: -1 });
@@ -98,7 +98,7 @@ describe('<Calculator />', () => {
   it('handles keypress for + key', () => {
     hooks.useCalculator.mockImplementation(() => ['0', setKey]);
 
-    const component = renderer.create(<Calculator />, {
+    const component = create(<Calculator />, {
       createNodeMock
     }).root;
     const input = component.findByProps({ tabIndex: -1 });

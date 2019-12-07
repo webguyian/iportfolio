@@ -44,6 +44,7 @@
   }
 
   &-input {
+    @include no-outline;
     min-width: 320px;
     min-height: 35px;
     padding: 4px 80px 4px 4px;
@@ -51,10 +52,6 @@
     background: none;
     color: $white;
     font-size: $font-size-default;
-
-    &:focus {
-      outline: 0;
-    }
   }
 
   > .ui-btn--delete {

@@ -1,0 +1,9 @@
+.ui-link {
+  color: $white;
+  text-decoration: none;
+
+  &--back {
+    margin-right: auto;
+    color: $yellow;
+  }
+}

@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotePreview /> renders correctly 1`] = `
+<div
+  className="note-preview"
+  onMouseDown={[Function]}
+>
+  <Link
+    onClick={[Function]}
+    to={
+      Object {
+        "pathname": "/notes/k17zbp9c",
+        "state": Object {
+          "id": "k17zbp9c",
+        },
+      }
+    }
+  >
+    <h2
+      className="ui-text ui-text--display note-preview-title-display"
+    >
+      Hello
+    </h2>
+    <div
+      className="note-preview-body"
+    >
+      <span
+        className="ui-text ui-text--body note-preview-date-display"
+      >
+        11:11 AM
+      </span>
+      <span
+        className="ui-text ui-text--body note-preview-text-display"
+      >
+        This is a note
+      </span>
+    </div>
+  </Link>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</div>
+`;
+
+exports[`<NotePreview /> renders correctly with swipe offset 1`] = `
+<div
+  className="note-preview note-preview--swiped"
+>
+  <Link
+    onClick={[Function]}
+    to={
+      Object {
+        "pathname": "/notes/k17zbp9c",
+        "state": Object {
+          "id": "k17zbp9c",
+        },
+      }
+    }
+  >
+    <h2
+      className="ui-text ui-text--display note-preview-title-display"
+    >
+      Hello
+    </h2>
+    <div
+      className="note-preview-body"
+    >
+      <span
+        className="ui-text ui-text--body note-preview-date-display"
+      >
+        11:11 AM
+      </span>
+      <span
+        className="ui-text ui-text--body note-preview-text-display"
+      >
+        This is a note
+      </span>
+    </div>
+  </Link>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</div>
+`;
+
+exports[`<NotePreview /> renders correctly with swipe offset greater than 80 1`] = `
+<div
+  className="note-preview note-preview--swiped note-preview--swiping"
+>
+  <Link
+    onClick={[Function]}
+    to={
+      Object {
+        "pathname": "/notes/k17zbp9c",
+        "state": Object {
+          "id": "k17zbp9c",
+        },
+      }
+    }
+  >
+    <h2
+      className="ui-text ui-text--display note-preview-title-display"
+    >
+      Hello
+    </h2>
+    <div
+      className="note-preview-body"
+    >
+      <span
+        className="ui-text ui-text--body note-preview-date-display"
+      >
+        11:11 AM
+      </span>
+      <span
+        className="ui-text ui-text--body note-preview-text-display"
+      >
+        This is a note
+      </span>
+    </div>
+  </Link>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</div>
+`;
+
+exports[`<NotePreview /> renders correctly without title or text 1`] = `
+<div
+  className="note-preview"
+  onMouseDown={[Function]}
+>
+  <Link
+    onClick={[Function]}
+    to={
+      Object {
+        "pathname": "/notes/k17zbp9c",
+        "state": Object {
+          "id": "k17zbp9c",
+        },
+      }
+    }
+  >
+    <h2
+      className="ui-text ui-text--display note-preview-title-display"
+    >
+      New Note
+    </h2>
+    <div
+      className="note-preview-body"
+    >
+      <span
+        className="ui-text ui-text--body note-preview-date-display"
+      >
+        11:11 AM
+      </span>
+      <span
+        className="ui-text ui-text--body note-preview-text-display"
+      >
+        No additional text
+      </span>
+    </div>
+  </Link>
+  <button
+    className="ui-btn ui-btn--delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
+</div>
+`;

@@ -2,12 +2,12 @@
 
 exports[`<Icon /> renders correctly 1`] = `
 <i
-  className="fas icon icon-lock fa-lock"
+  className="ui-icon ui-icon-lock fas fa-lock"
 />
 `;
 
 exports[`<Icon /> renders correctly with size prop 1`] = `
 <i
-  className="fas icon icon-lock fa-lock fa-2x"
+  className="ui-icon ui-icon-lock fas fa-lock fa-2x"
 />
 `;

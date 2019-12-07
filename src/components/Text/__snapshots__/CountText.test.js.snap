@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CountText /> renders correctly 1`] = `
+<span
+  className="ui-text ui-text--body"
+>
+  No Reminders
+</span>
+`;
+
+exports[`<CountText /> renders correctly with custom emptyLabel 1`] = `
+<span
+  className="ui-text ui-text--body"
+>
+  Zero Reminders
+</span>
+`;
+
+exports[`<CountText /> renders correctly with multiple items 1`] = `
+<span
+  className="ui-text ui-text--body"
+>
+  12 Reminders
+</span>
+`;
+
+exports[`<CountText /> renders correctly with one item 1`] = `
+<span
+  className="ui-text ui-text--body"
+>
+  1 Reminder
+</span>
+`;

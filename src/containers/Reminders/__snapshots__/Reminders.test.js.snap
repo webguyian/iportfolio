@@ -20,10 +20,10 @@ exports[`<Reminders /> renders correctly 1`] = `
     type="button"
   >
     <i
-      className="fas icon icon-plus-circle fa-plus-circle"
+      className="ui-icon ui-icon-plus-circle fas fa-plus-circle"
     />
     <span
-      className="ui-btn-label"
+      className="ui-text ui-text--body ui-btn-label"
     >
       New Reminder
     </span>

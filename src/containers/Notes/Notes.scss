@@ -1,0 +1,50 @@
+.notes-app {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  text-align: left;
+
+  > .ui-text--display {
+    @include type-title;
+  }
+
+  &-list {
+    width: 100%;
+    max-height: 645px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &-item {
+      padding: 0;
+    }
+  }
+
+  &-bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 10px 20px;
+
+    > .ui-text--body {
+      flex-grow: 1;
+      margin: 0;
+      font-size: $font-size-s;
+      text-align: center;
+    }
+
+    > .ui-btn--with-icon {
+      margin-left: auto;
+      padding: 2px;
+      font-size: $font-size-m;
+
+      > .ui-icon-edit {
+        color: $yellow;
+      }
+    }
+  }
+}

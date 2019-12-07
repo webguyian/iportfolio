@@ -1,13 +1,15 @@
-import CalculatorView from 'pages/calculator/CalculatorView';
-import HomescreenView from 'pages/homescreen/HomescreenView';
-import LockscreenView from 'pages/lockscreen/LockscreenView';
-import RemindersView from 'pages/reminders/RemindersView';
+import CalculatorView from 'views/calculator/CalculatorView';
+import HomescreenView from 'views/homescreen/HomescreenView';
+import LockscreenView from 'views/lockscreen/LockscreenView';
+import NotesView from 'views/notes/NotesView';
+import RemindersView from 'views/reminders/RemindersView';
 
 const routes = [
   {
     path: '/',
     pathKey: 'lock',
-    component: LockscreenView
+    component: LockscreenView,
+    exact: true
   },
   {
     path: '/home',
@@ -23,6 +25,12 @@ const routes = [
     path: '/reminders',
     pathKey: 'reminders',
     component: RemindersView
+  },
+  {
+    path: '/notes',
+    pathKey: 'notes',
+    component: NotesView,
+    exact: false
   }
 ];
 

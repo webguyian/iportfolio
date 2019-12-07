@@ -8,6 +8,7 @@ $size: 65px;
   margin: 0 0 20px 20px;
 
   &-button {
+    @include type-body($font-size-s);
     width: $size;
     height: $size;
     margin-bottom: 5px;
@@ -19,7 +20,7 @@ $size: 65px;
   }
 
   &-label {
-    @include body-type;
+    @include type-body;
     width: $size + 3px;
     color: $white;
     font-size: $font-size-xs;

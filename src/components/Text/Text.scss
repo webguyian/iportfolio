@@ -4,11 +4,11 @@
   }
 
   &--body {
-    @include body-type;
+    @include type-body;
   }
 
   &--display {
-    @include display-type;
+    @include type-display;
   }
 
   &--block {

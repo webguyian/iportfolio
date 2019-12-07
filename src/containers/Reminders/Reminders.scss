@@ -10,9 +10,7 @@
   }
 
   > .ui-text--display {
-    margin: $gutter;
-    color: $orange;
-    text-transform: none;
+    @include type-title($orange);
   }
 
   > .ui-text--body {

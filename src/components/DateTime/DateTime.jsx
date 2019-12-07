@@ -1,10 +1,21 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { format as formatDate, isToday, isYesterday } from 'date-fns';
 
 class DateTime extends Component {
   static propTypes = {
+    children: PropTypes.node,
     format: PropTypes.string,
-    onUpdate: PropTypes.func
+    fromNow: PropTypes.bool,
+    onUpdate: PropTypes.func,
+    relativeFormat: PropTypes.string,
+    yesterdayLabel: PropTypes.string
+  };
+
+  static defaultProps = {
+    fromNow: false,
+    relativeFormat: 'M/d/yy',
+    yesterdayLabel: 'Yesterday'
   };
 
   constructor(props) {
@@ -13,15 +24,19 @@ class DateTime extends Component {
     this.tick = this.tick.bind(this);
 
     this.state = {
-      millis: Date.now(),
+      millis: props.children || Date.now(),
       request: 0
     };
   }
 
   componentDidMount() {
-    this.setState({
-      request: requestAnimationFrame(this.tick)
-    });
+    const { children } = this.props;
+
+    if (!children) {
+      this.setState({
+        request: requestAnimationFrame(this.tick)
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -31,38 +46,21 @@ class DateTime extends Component {
   }
 
   get date() {
-    const { format } = this.props;
+    const { format, fromNow, relativeFormat, yesterdayLabel } = this.props;
     const { millis } = this.state;
     const date = new Date(millis);
-    const second = format.endsWith(':ss') ? '2-digit' : undefined;
-    const options = {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit',
-      second,
-      hour12: true
-    };
-    const fullDate = date.toLocaleString('en-US', options);
-    const [weekday, monthAndDay, year, time] = fullDate.split(', ');
 
-    switch (format) {
-      case 'H:mm':
-      case 'H:mm:ss':
-        return time.split(' ')[0];
-      case 'dddd':
-        return weekday;
-      case 'D':
-        return monthAndDay.split(' ')[1];
-      case 'YYYY':
-        return year;
-      case 'dddd, MMMM D':
-        return `${weekday}, ${monthAndDay}`;
-      default:
-        return fullDate;
+    if (fromNow) {
+      if (isYesterday(date)) {
+        return yesterdayLabel;
+      }
+
+      const updatedFormat = isToday(date) ? format : relativeFormat;
+
+      return formatDate(date, updatedFormat);
     }
+
+    return formatDate(date, format);
   }
 
   tick() {

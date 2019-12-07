@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Note /> renders correctly 1`] = `
+<div
+  className="note"
+>
+  <div
+    className="note-top-bar"
+  >
+    <Link
+      back={true}
+      onClick={[MockFunction]}
+      to="/notes"
+    />
+  </div>
+  <div
+    className="note-body"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="ui-text ui-text--body note-timestamp"
+    >
+      October 1, 2019 at 11:11 AM
+    </span>
+    <input
+      className="note-input note-input--title"
+      onChange={[Function]}
+      onKeyUp={[Function]}
+      value="Example note"
+    />
+    <textarea
+      className="note-input note-input--text"
+      onChange={[Function]}
+      value="This is a note"
+    />
+  </div>
+  <div
+    className="note-bottom-bar"
+  >
+    <button
+      className="ui-btn ui-btn--with-icon"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <i
+        className="ui-icon ui-icon-trash fas fa-trash"
+      />
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        Delete note
+      </span>
+    </button>
+    <button
+      className="ui-btn ui-btn--with-icon"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <i
+        className="ui-icon ui-icon-edit fas fa-edit"
+      />
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        New note
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Note /> renders correctly with swipe offset 1`] = `
+<div
+  className="note"
+>
+  <div
+    className="note-top-bar"
+  >
+    <Link
+      back={true}
+      onClick={[MockFunction]}
+      to="/notes"
+    />
+  </div>
+  <div
+    className="note-body note-body--offset"
+  >
+    <span
+      className="ui-text ui-text--body note-timestamp"
+    >
+      October 1, 2019 at 11:11 AM
+    </span>
+    <input
+      className="note-input note-input--title"
+      onChange={[Function]}
+      onKeyUp={[Function]}
+      value="Example note"
+    />
+    <textarea
+      className="note-input note-input--text"
+      onChange={[Function]}
+      value="This is a note"
+    />
+  </div>
+  <div
+    className="note-bottom-bar"
+  >
+    <button
+      className="ui-btn ui-btn--with-icon"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <i
+        className="ui-icon ui-icon-trash fas fa-trash"
+      />
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        Delete note
+      </span>
+    </button>
+    <button
+      className="ui-btn ui-btn--with-icon"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <i
+        className="ui-icon ui-icon-edit fas fa-edit"
+      />
+      <span
+        className="ui-text ui-text--accessible"
+      >
+        New note
+      </span>
+    </button>
+  </div>
+</div>
+`;

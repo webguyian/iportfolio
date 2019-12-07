@@ -29,7 +29,7 @@ exports[`<Button /> renders correctly with icon 1`] = `
   type="button"
 >
   <i
-    className="fas icon icon-plus-circle fa-plus-circle"
+    className="ui-icon ui-icon-plus-circle fas fa-plus-circle"
   />
   <span
     className="ui-text ui-text--accessible"
@@ -45,10 +45,10 @@ exports[`<Button /> renders correctly with icon and label 1`] = `
   type="button"
 >
   <i
-    className="fas icon icon-plus-circle fa-plus-circle"
+    className="ui-icon ui-icon-plus-circle fas fa-plus-circle"
   />
   <span
-    className="ui-btn-label"
+    className="ui-text ui-text--body ui-btn-label"
   >
     Add
   </span>

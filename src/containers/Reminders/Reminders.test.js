@@ -1,16 +1,13 @@
 import React from 'react';
-import renderer, { act } from 'react-test-renderer';
+import { act, create } from 'react-test-renderer';
 
+import { mockTime } from 'utilities/test';
 import Reminder from 'containers/Reminders/Reminder';
 import Reminders from './Reminders';
 
 import * as hooks from './hooks';
 
 describe('<Reminders />', () => {
-  const timestamp = Number(new Date('2019-10-01T11:11:00'));
-
-  Date.now = jest.fn(() => timestamp);
-
   const useLocalStorageHook = hooks.useLocalStorage;
   const useRefFocusHook = hooks.useRefFocus;
   const useRemindersHook = hooks.useReminders;
@@ -36,14 +33,14 @@ describe('<Reminders />', () => {
   });
 
   it('renders correctly', () => {
-    const component = renderer.create(<Reminders />);
+    const component = create(<Reminders />);
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('handles add reminders', () => {
-    const component = renderer.create(<Reminders />, { createNodeMock });
+    const component = create(<Reminders />, { createNodeMock });
     const button = component.root.find(el => el.type === 'button');
 
     expect(hooks.useRefFocus).toHaveBeenCalled();
@@ -62,20 +59,20 @@ describe('<Reminders />', () => {
     const [reminders] = hooks.useLocalStorage.mock.results[1].value;
 
     expect(reminders).toHaveLength(1);
-    expect(reminders[0]).toEqual({ checked: false, id: timestamp, value: '' });
+    expect(reminders[0]).toEqual({ checked: false, id: mockTime, value: '' });
   });
 
   it('handles update reminders', () => {
-    const component = renderer.create(<Reminders />, { createNodeMock });
+    const component = create(<Reminders />, { createNodeMock });
     const ReminderComponent = component.root.findByType(Reminder);
 
     const [reminders] = hooks.useLocalStorage.mock.results[0].value;
 
-    expect(reminders[0]).toEqual({ checked: false, id: timestamp, value: '' });
-    expect(ReminderComponent.props.id).toEqual(timestamp);
+    expect(reminders[0]).toEqual({ checked: false, id: mockTime, value: '' });
+    expect(ReminderComponent.props.id).toEqual(mockTime);
 
     act(() => {
-      const updated = { id: timestamp, checked: true, value: 'Add tests' };
+      const updated = { id: mockTime, checked: true, value: 'Add tests' };
 
       ReminderComponent.props.onUpdate({
         id: 'noMatch',
@@ -90,22 +87,22 @@ describe('<Reminders />', () => {
     expect(updatedReminders).toHaveLength(1);
     expect(updatedReminders[0]).toEqual({
       checked: true,
-      id: timestamp,
+      id: mockTime,
       value: 'Add tests'
     });
   });
 
   it('handles delete reminders', () => {
-    const component = renderer.create(<Reminders />, { createNodeMock });
+    const component = create(<Reminders />, { createNodeMock });
     const ReminderComponent = component.root.findByType(Reminder);
 
     const [reminders] = hooks.useLocalStorage.mock.results[0].value;
 
     expect(reminders).toHaveLength(1);
-    expect(ReminderComponent.props.id).toEqual(timestamp);
+    expect(ReminderComponent.props.id).toEqual(mockTime);
 
     act(() => {
-      ReminderComponent.props.onDelete(timestamp);
+      ReminderComponent.props.onDelete(mockTime);
     });
 
     const [emptyReminders] = hooks.useLocalStorage.mock.results[1].value;

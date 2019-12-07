@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> renders correctly 1`] = `
+<Link
+  className="ui-link"
+  to="/"
+>
+  Go home
+</Link>
+`;
+
+exports[`<Link /> renders correctly as back link 1`] = `
+<Link
+  className="ui-link ui-link--back"
+  to="/"
+>
+  <i
+    className="ui-icon ui-icon-chevron-left fas fa-chevron-left"
+  />
+   
+  Back
+</Link>
+`;

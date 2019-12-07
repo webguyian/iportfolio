@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config config/webpack.config.babel.js",
     "start": "cross-env NODE_ENV=debug webpack-dev-server --config config/webpack.config.babel.js",
-    "stylelint": "stylelint src/**/**/**/*.scss --fix",
+    "stylelint": "stylelint src/**/**/*.scss --fix",
     "test": "jest --coverage --watchAll"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "@babel/polyfill": "7.7.0",
     "@babel/runtime": "7.7.2",
     "classnames": "2.2.6",
+    "date-fns": "^2.8.1",
     "lodash": "4.17.15",
     "prop-types": "15.7.2",
     "react": "16.12.0",
@@ -93,7 +94,7 @@
         "git add"
       ],
       "*.{scss,json}": [
-        "stylelint src/**/**/**/*.scss --fix",
+        "stylelint src/**/**/*.scss --fix",
         "prettier --write",
         "git add"
       ]

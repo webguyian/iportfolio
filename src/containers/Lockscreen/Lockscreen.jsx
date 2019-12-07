@@ -29,11 +29,11 @@ const Lockscreen = props => {
     >
       <header className={`${baseClass}-header`}>
         <Icon name="lock" size="2x" />
-        <Text className="ui-clock" element="h1" type="display">
-          <DateTime format="H:mm" />
+        <Text className="ui-clock" element="h1">
+          <DateTime format="h:mm" />
         </Text>
-        <Text className="ui-date" element="h1" type="display">
-          <DateTime format="dddd, MMMM D" />
+        <Text className="ui-date" element="h1">
+          <DateTime format="EEEE, MMMM d" />
         </Text>
       </header>
       <ToggleSwitch onUpdate={handleUnlock} />

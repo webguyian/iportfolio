@@ -9,15 +9,15 @@ exports[`<Lockscreen /> handles unlock 1`] = `
     className="iportfolio-lockscreen-header"
   >
     <i
-      className="fas icon icon-lock fa-lock fa-2x"
+      className="ui-icon ui-icon-lock fas fa-lock fa-2x"
     />
     <h1
-      className="ui-clock"
+      className="ui-text ui-text--body ui-clock"
     >
       11:11
     </h1>
     <h1
-      className="ui-date"
+      className="ui-text ui-text--body ui-date"
     >
       Tuesday, October 1
     </h1>
@@ -37,7 +37,7 @@ exports[`<Lockscreen /> handles unlock 1`] = `
       type="button"
     />
     <span
-      className="ui-toggle-switch-label"
+      className="ui-text ui-text--body ui-toggle-switch-label"
     >
       slide to unlock
     </span>
@@ -54,15 +54,15 @@ exports[`<Lockscreen /> renders correctly 1`] = `
     className="iportfolio-lockscreen-header"
   >
     <i
-      className="fas icon icon-lock fa-lock fa-2x"
+      className="ui-icon ui-icon-lock fas fa-lock fa-2x"
     />
     <h1
-      className="ui-clock"
+      className="ui-text ui-text--body ui-clock"
     >
       11:11
     </h1>
     <h1
-      className="ui-date"
+      className="ui-text ui-text--body ui-date"
     >
       Tuesday, October 1
     </h1>
@@ -82,7 +82,7 @@ exports[`<Lockscreen /> renders correctly 1`] = `
       type="button"
     />
     <span
-      className="ui-toggle-switch-label"
+      className="ui-text ui-text--body ui-toggle-switch-label"
     >
       slide to unlock
     </span>

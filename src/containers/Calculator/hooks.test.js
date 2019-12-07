@@ -1,12 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
+
+import { TestComponent } from 'utilities/test';
 import { useCalculator, useCalculatorRef } from './hooks';
 
 describe('Calculator hooks', () => {
-  const TestComponent = ({ callback }) => {
-    callback();
-    return null;
-  };
   const calculatorEl = {
     id: 'ref',
     focus: jest.fn()
@@ -15,7 +13,7 @@ describe('Calculator hooks', () => {
     return calculatorEl;
   };
   const testHook = callback => {
-    renderer.create(<TestComponent callback={callback} />, { createNodeMock });
+    create(<TestComponent callback={callback} />, { createNodeMock });
   };
 
   let calculatorRef, display, setKey;
@@ -65,7 +63,7 @@ describe('Calculator hooks', () => {
       };
 
       const emptyTestHook = callback => {
-        renderer.create(<TestComponent callback={callback} />, {
+        create(<TestComponent callback={callback} />, {
           createNodeMock: nullNodeMock
         });
       };

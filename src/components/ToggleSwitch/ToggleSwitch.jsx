@@ -46,9 +46,7 @@ class ToggleSwitch extends Component {
           onChange={this.handleChange}
         />
         <Button className={`${baseClass}-slider`} onTransitionEnd={onUpdate} />
-        <Text className={`${baseClass}-label`} type="display">
-          {label}
-        </Text>
+        <Text className={`${baseClass}-label`}>{label}</Text>
       </label>
     );
   }

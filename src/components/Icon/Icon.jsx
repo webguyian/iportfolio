@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 const Icon = props => {
   const { name, size } = props;
-  const baseClass = `fas icon icon-${name}`;
-  const iconClass = `fa-${name}`;
+  const baseClass = `ui-icon ui-icon-${name}`;
+  const iconClass = `fas fa-${name}`;
   const sizeClass = size ? `fa-${size}` : false;
 
   return <i className={classNames(baseClass, iconClass, sizeClass)} />;

@@ -1,23 +1,29 @@
-/* stylelint-disable declaration-no-important, property-blacklist */
+/* stylelint-disable declaration-no-important, property-blacklist, a11y/no-outline-none */
 
-@mixin body-type($font-size: $font-size-default) {
-  font-family: $body-type;
+@mixin type-body($font-size: $font-size-default) {
+  font-family: $type-body;
   font-size: $font-size;
   font-weight: $font-weight-regular;
 }
 
-@mixin display-type {
-  font-family: $display-type;
+@mixin type-display {
+  margin: 0;
+  font-family: $type-display;
+  font-size: 30px;
   font-weight: $font-weight-bold;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+  letter-spacing: 0.025em;
 }
 
-@mixin number-type($font-size: $font-size-xxl) {
+@mixin type-number($font-size: $font-size-xxl) {
   color: $white;
-  font-family: $body-type;
+  font-family: $type-body;
   font-size: $font-size;
   font-weight: $font-weight-light;
+}
+
+@mixin type-title($color: $white) {
+  margin: $gutter $gutter + 5px;
+  color: $color;
 }
 
 @mixin accessibly-hidden {
@@ -51,8 +57,20 @@
   border-radius: 50%;
 }
 
+@mixin truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 @mixin responsive($breakpoint) {
   @media (min-width: $breakpoint) {
     @content;
+  }
+}
+
+@mixin no-outline {
+  &:focus {
+    outline: 0;
   }
 }

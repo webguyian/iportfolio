@@ -41,10 +41,10 @@ class Homescreen extends Component {
     return (
       <AppIcon name="Calendar">
         <Text className="ui-app-icon-weekday">
-          <DateTime format="dddd" />
+          <DateTime format="EEEE" />
         </Text>
         <Text className="ui-app-icon-day">
-          <DateTime format="D" />
+          <DateTime format="d" />
         </Text>
       </AppIcon>
     );
