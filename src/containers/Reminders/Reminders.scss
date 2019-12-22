@@ -1,8 +1,5 @@
 .reminders-app {
-  display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  text-align: left;
+  @include stretch-column;
 
   &-list {
     overflow-x: hidden;

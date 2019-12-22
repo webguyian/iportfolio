@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import AppIcon from 'components/AppIcon/AppIcon';
-import Clock from 'components/Clock/Clock';
+import Clockface from 'components/Clockface/Clockface';
 import DateTime from 'components/DateTime/DateTime';
 import Text from 'components/Text/Text';
 
@@ -53,7 +53,7 @@ class Homescreen extends Component {
   get clockIcon() {
     return (
       <AppIcon name="Clock">
-        <Clock />
+        <Clockface />
       </AppIcon>
     );
   }

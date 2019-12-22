@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Clock /> renders correctly 1`] = `
+exports[`<Clockface /> renders correctly 1`] = `
 <svg
   className="ui-clock-face"
   viewBox="0 0 60 60"
@@ -12,7 +12,7 @@ exports[`<Clock /> renders correctly 1`] = `
   <g>
     <line
       className="ui-hour-hand"
-      transform="rotate(695.5 30 30)"
+      transform="rotate(1025.5 30 30)"
       x1={30}
       x2={30}
       y1={30}

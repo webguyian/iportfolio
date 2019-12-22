@@ -14,10 +14,10 @@
 
   &--rounded {
     @include type-number($font-size-l);
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 5px;
-    padding: 14px;
+    padding: 10px;
     border-radius: 50%;
     background: $gray-medium;
   }

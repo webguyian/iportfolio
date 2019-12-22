@@ -1,0 +1,52 @@
+$pi: 22/7;
+$radius: 175;
+$circumference: 2 * $pi * $radius;
+$circle-size: #{$radius * 2}px;
+$stroke-width: 8px;
+
+.countdown {
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 358px;
+  height: 358px;
+  border: $stroke-width solid $gray-dark;
+  border-radius: 50%;
+
+  &-text {
+    @include type-number-display(8vw);
+    margin: 0;
+
+    &--with-hours {
+      font-size: 7vw;
+    }
+  }
+
+  &-svg {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: $circle-size;
+    height: $circle-size;
+    transform: translateX(-50%) rotateY(-180deg) rotateZ(-90deg);
+    overflow: visible;
+
+    > circle {
+      stroke-dasharray: $circumference;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      stroke-width: $stroke-width;
+      stroke: $orange;
+      fill: none;
+      animation: countdown 10s linear infinite forwards;
+    }
+  }
+}
+
+@keyframes countdown {
+  to {
+    stroke-dashoffset: $circumference;
+  }
+}

@@ -1,8 +1,15 @@
+import React from 'react';
+import { create } from 'react-test-renderer';
+
 export const mockTime = Number(new Date('2019-10-01T11:11:00'));
 
 export const TestComponent = ({ callback }) => {
   callback();
   return null;
+};
+
+export const testHook = (callback = () => {}) => {
+  return create(<TestComponent callback={callback} />);
 };
 
 Date.now = jest.fn(() => mockTime);

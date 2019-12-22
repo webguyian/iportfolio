@@ -30,7 +30,7 @@ const Lockscreen = props => {
       <header className={`${baseClass}-header`}>
         <Icon name="lock" size="2x" />
         <Text className="ui-clock" element="h1">
-          <DateTime format="h:mm" />
+          <DateTime />
         </Text>
         <Text className="ui-date" element="h1">
           <DateTime format="EEEE, MMMM d" />

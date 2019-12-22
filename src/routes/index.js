@@ -1,4 +1,5 @@
 import CalculatorView from 'views/calculator/CalculatorView';
+import ClockView from 'views/clock/ClockView';
 import HomescreenView from 'views/homescreen/HomescreenView';
 import LockscreenView from 'views/lockscreen/LockscreenView';
 import NotesView from 'views/notes/NotesView';
@@ -20,6 +21,12 @@ const routes = [
     path: '/calculator',
     pathKey: 'calculator',
     component: CalculatorView
+  },
+  {
+    path: '/clock',
+    pathKey: 'clock',
+    component: ClockView,
+    exact: false
   },
   {
     path: '/reminders',

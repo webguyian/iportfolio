@@ -6,15 +6,19 @@ class DateTime extends Component {
   static propTypes = {
     children: PropTypes.node,
     format: PropTypes.string,
+    fromDate: PropTypes.object,
     fromNow: PropTypes.bool,
     onUpdate: PropTypes.func,
     relativeFormat: PropTypes.string,
+    stopped: PropTypes.bool,
     yesterdayLabel: PropTypes.string
   };
 
   static defaultProps = {
+    format: 'h:mm',
     fromNow: false,
     relativeFormat: 'M/d/yy',
+    stopped: false,
     yesterdayLabel: 'Yesterday'
   };
 
@@ -30,9 +34,24 @@ class DateTime extends Component {
   }
 
   componentDidMount() {
-    const { children } = this.props;
+    const { children, stopped } = this.props;
 
-    if (!children) {
+    if (!children && !stopped) {
+      this.setState({
+        request: requestAnimationFrame(this.tick)
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const { children, stopped } = this.props;
+    const { request } = this.state;
+
+    if (stopped && !prevProps.stopped) {
+      cancelAnimationFrame(request);
+    }
+
+    if (!children && !stopped && prevProps.stopped) {
       this.setState({
         request: requestAnimationFrame(this.tick)
       });
@@ -46,7 +65,13 @@ class DateTime extends Component {
   }
 
   get date() {
-    const { format, fromNow, relativeFormat, yesterdayLabel } = this.props;
+    const {
+      format,
+      fromDate,
+      fromNow,
+      relativeFormat,
+      yesterdayLabel
+    } = this.props;
     const { millis } = this.state;
     const date = new Date(millis);
 
@@ -58,6 +83,10 @@ class DateTime extends Component {
       const updatedFormat = isToday(date) ? format : relativeFormat;
 
       return formatDate(date, updatedFormat);
+    }
+
+    if (fromDate) {
+      return formatDate(fromDate, format);
     }
 
     return formatDate(date, format);

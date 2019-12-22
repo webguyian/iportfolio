@@ -1,19 +1,14 @@
 .notes-app {
-  display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  text-align: left;
+  @include stretch-column;
 
   > .ui-text--display {
     @include type-title;
   }
 
   &-list {
+    @include unstyled-list;
     width: 100%;
     max-height: 645px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     overflow-x: hidden;
     overflow-y: scroll;
 

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import DateTime from 'components/DateTime/DateTime';
 import Hand from './Hand';
 
-const Clock = () => {
+const Clockface = () => {
   const [time, setTime] = useState(Date.now());
 
   const getAngle = cycleTime => {
@@ -22,7 +22,7 @@ const Clock = () => {
       <g>
         <Hand
           className="ui-hour-hand"
-          angle={getAngle(43200000) + 600}
+          angle={getAngle(43200000) + 930}
           length={15}
         />
         <Hand
@@ -37,4 +37,4 @@ const Clock = () => {
   );
 };
 
-export default Clock;
+export default Clockface;

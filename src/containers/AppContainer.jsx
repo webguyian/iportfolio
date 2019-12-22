@@ -23,7 +23,7 @@ const LeftIndicator = () => {
   if (pathname !== '/') {
     return (
       <span className="device-time-label">
-        <DateTime format="h:mm" />
+        <DateTime />
         <Button icon={icon} onClick={redirect}>
           Unlocked
         </Button>

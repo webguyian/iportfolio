@@ -1,0 +1,74 @@
+.timer {
+  @include stretch-column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  .picker-container {
+    margin-bottom: $gutter;
+  }
+
+  .picker-item {
+    width: 75px;
+    height: 36px;
+    line-height: 36px; // stylelint-disable-line
+  }
+
+  &-controls {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 $gutter;
+  }
+
+  &-control {
+    padding: 3px;
+    border-radius: 50%;
+    background-color: $gray-medium;
+
+    &--start {
+      background-color: rgba($green, 0.2);
+
+      > .ui-btn--rounded {
+        background-color: rgba($green, 0.2);
+        color: $green-light;
+      }
+    }
+
+    &--stop {
+      background-color: rgba($red, 0.2);
+
+      > .ui-btn--rounded {
+        background-color: rgba($red, 0.2);
+        color: $red-light;
+      }
+    }
+
+    &--pause {
+      background-color: rgba($yellow, 0.2);
+
+      > .ui-btn--rounded {
+        background-color: rgba($yellow, 0.2);
+        color: $yellow-light;
+      }
+    }
+
+    &--disabled {
+      background-color: lighten($black-dark, 5%);
+    }
+
+    > .ui-btn--rounded {
+      margin: 0;
+      border: 3px solid $black-dark;
+      font-size: $font-size-default;
+
+      &[disabled] {
+        background-color: lighten($black-dark, 5%);
+        color: $gray;
+        cursor: default;
+      }
+    }
+  }
+}

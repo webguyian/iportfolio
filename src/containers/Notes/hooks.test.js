@@ -15,7 +15,6 @@ describe('Notes hooks', () => {
     focus: jest.fn()
   };
   const createNodeMock = () => {
-    console.log('ref', ref);
     return ref;
   };
   const testHook = callback => {

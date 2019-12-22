@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Clock /> renders correctly 1`] = `
+<div
+  className="clock-app"
+>
+  <nav
+    className="ui-tab-navigation"
+  >
+    <ul
+      className="ui-tab-navigation-list"
+    >
+      <li
+        className="ui-tab-navigation-list-item"
+      >
+        <a
+          aria-current={null}
+          className="ui-tab-navigation-link ui-link"
+          href="/clock/stopwatch"
+          onClick={[Function]}
+        >
+          <i
+            className="ui-icon ui-icon-stopwatch fas fa-stopwatch fa-3x"
+          />
+          <span
+            className="ui-text ui-text--body ui-tab-navigation-link-label"
+          >
+            Stopwatch
+          </span>
+        </a>
+      </li>
+      <li
+        className="ui-tab-navigation-list-item"
+      >
+        <a
+          aria-current={null}
+          className="ui-tab-navigation-link ui-link"
+          href="/clock/timer"
+          onClick={[Function]}
+        >
+          <i
+            className="ui-icon ui-icon-clock fas fa-clock fa-3x"
+          />
+          <span
+            className="ui-text ui-text--body ui-tab-navigation-link-label"
+          >
+            Timer
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -1,25 +1,29 @@
 /* stylelint-disable color-no-hex */
 // Colors
 $black: #000;
-$black-dark: #222;
+$black-dark: #151515;
+$black-medium: #222;
 $blue-light: #0b9eee;
 $blue: #0056ff;
 $gray-dark: #282828;
 $gray-medium: #4d4d4d;
 $gray-light: #a7a7a7;
 $gray: #a7a7a7;
-$green: #74bf82;
+$green: #2f582e;
+$green-light: lighten($green, 30%);
 $orange: #ffb824;
 $purple: #3d228a;
 $purple-dark: #2e1a69;
 $red: #e94741;
+$red-light: lighten($red, 20%);
 $white: #fff;
 $yellow: #c99528;
-$yellow-green: #cdee23;
+$yellow-light: lighten($yellow, 20%);
 
 // Font families
 $type-body: "Work Sans", "Helvetica Neue", "Helvetica", sans-serif;
 $type-display: "Montserrat", "Verdana", sans-serif;
+$type-fixed: "Inconsolata", monospace;
 
 // Font sizes
 $font-size-xxl: 80px;

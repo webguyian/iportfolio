@@ -1,11 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import Clock from './Clock';
+import Clockface from './Clockface';
 
-describe('<Clock />', () => {
+describe('<Clockface />', () => {
   it('renders correctly', () => {
-    const component = create(<Clock />);
+    const component = create(<Clockface />);
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Countdown /> renders correctly 1`] = `
+<div
+  className="countdown"
+>
+  <svg
+    className="countdown-svg"
+  >
+    <circle
+      cx={175}
+      cy={175}
+      r={175}
+      style={
+        Object {
+          "animationDuration": "180s",
+          "animationPlayState": "paused",
+          "strokeDashoffset": 0,
+        }
+      }
+    />
+  </svg>
+  <h2
+    className="ui-text ui-text--body countdown-text"
+  >
+    03:00
+  </h2>
+</div>
+`;
+
+exports[`<Countdown /> renders correctly with hours 1`] = `
+<div
+  className="countdown"
+>
+  <svg
+    className="countdown-svg"
+  >
+    <circle
+      cx={175}
+      cy={175}
+      r={175}
+      style={
+        Object {
+          "animationDuration": "4830s",
+          "animationPlayState": "running",
+          "strokeDashoffset": 0,
+        }
+      }
+    />
+  </svg>
+  <h2
+    className="ui-text ui-text--body countdown-text countdown-text--with-hours"
+  >
+    1:20:30
+  </h2>
+</div>
+`;

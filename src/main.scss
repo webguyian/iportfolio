@@ -10,14 +10,20 @@
 @import "components/Button/Button";
 @import "components/Link/Link";
 @import "components/Text/Text";
-@import "components/Clock/Clock";
+@import "components/Clockface/Clockface";
 @import "components/AppIcon/AppIcon";
 @import "components/DeviceFrame/DeviceFrame";
+@import "components/Picker/Picker";
+@import "components/TabNavigation/TabNavigation";
 @import "components/ToggleSwitch/ToggleSwitch";
 
 // Container styles
 @import "containers/AppContainer";
 @import "containers/Calculator/Calculator";
+@import "containers/Clock/Clock";
+@import "containers/Clock/Countdown/Countdown";
+@import "containers/Clock/Stopwatch/Laps";
+@import "containers/Clock/Timer/Timer";
 @import "containers/Homescreen/Homescreen";
 @import "containers/Lockscreen/Lockscreen";
 @import "containers/Notes/Notes";

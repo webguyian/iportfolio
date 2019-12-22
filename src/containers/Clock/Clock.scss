@@ -1,0 +1,18 @@
+.clock-app,
+.stopwatch {
+  @include stretch-column;
+}
+
+.stopwatch {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: $black-dark;
+
+  &-text {
+    @include type-number-display;
+    margin: auto 0 100px;
+    text-align: center;
+  }
+}

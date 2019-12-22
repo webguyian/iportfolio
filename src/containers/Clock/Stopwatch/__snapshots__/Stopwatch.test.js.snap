@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stopwatch /> renders correctly 1`] = `
+<div
+  className="stopwatch"
+>
+  <span
+    className="ui-text ui-text--body stopwatch-text"
+  >
+    00:00.00
+  </span>
+  <div
+    className="timer-controls"
+  >
+    <div
+      className="timer-control timer-control--disabled"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Lap
+      </button>
+    </div>
+    <div
+      className="timer-control timer-control--start"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        Start
+      </button>
+    </div>
+  </div>
+  <ul
+    className="lap-list"
+  >
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+  </ul>
+</div>
+`;
+
+exports[`<Stopwatch /> renders correctly with timer 1`] = `
+<div
+  className="stopwatch"
+>
+  <span
+    className="ui-text ui-text--body stopwatch-text"
+  >
+    00:01.00
+  </span>
+  <div
+    className="timer-controls"
+  >
+    <div
+      className="timer-control"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Lap
+      </button>
+    </div>
+    <div
+      className="timer-control timer-control--stop"
+    >
+      <button
+        className="ui-btn ui-btn--rounded"
+        onClick={[MockFunction]}
+        type="button"
+      >
+        Stop
+      </button>
+    </div>
+  </div>
+  <ul
+    className="lap-list"
+  >
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+    <li
+      className="lap-list-item"
+    />
+  </ul>
+</div>
+`;

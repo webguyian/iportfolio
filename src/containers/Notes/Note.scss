@@ -20,13 +20,13 @@
   }
 
   &-input {
+    @include no-appearance;
     @include no-outline;
     width: 100%;
     padding: $gutter;
     border: 0;
     background: none;
     color: $white;
-    appearance: none;
 
     &--text {
       @include type-body;
@@ -51,7 +51,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
-    background-color: $gray-dark;
+    background-color: $black-dark;
   }
 
   &-bottom-bar {
