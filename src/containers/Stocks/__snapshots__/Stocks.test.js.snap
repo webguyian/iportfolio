@@ -1,0 +1,882 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stocks /> handles deleting stocks 1`] = `
+<div
+  className="stocks-app"
+>
+  <header
+    className="stocks-app-header"
+  >
+    <div
+      className="stocks-app-header-content"
+    >
+      <h1
+        className="ui-text ui-text--display stocks-app-title"
+      >
+        Stocks
+      </h1>
+      <h2
+        className="ui-text ui-text--display stocks-app-date"
+      >
+        October 1
+      </h2>
+    </div>
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Edit
+    </button>
+  </header>
+  <form
+    className="stock-search"
+  >
+    <i
+      className="ui-icon ui-icon-search fas fa-search"
+    />
+    <input
+      aria-label="Search"
+      className="stock-search-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Search"
+      value=""
+    />
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </form>
+  <ul
+    className="stocks-app-list"
+  >
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AAPL
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            APPLE INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AMZN
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            AMAZON.COM INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            FB
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            FACEBOOK INC-CLASS A
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            GOOG
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            ALPHABET INC-CL C
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            MSFT
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+  <StockNews
+    draggable={true}
+  />
+</div>
+`;
+
+exports[`<Stocks /> handles toggling edit 1`] = `
+<div
+  className="stocks-app stocks-app--with-detail"
+>
+  <header
+    className="stocks-app-header"
+  >
+    <div
+      className="stocks-app-header-content"
+    >
+      <h1
+        className="ui-text ui-text--display stocks-app-title"
+      >
+        Stocks
+      </h1>
+      <h2
+        className="ui-text ui-text--display stocks-app-date"
+      >
+        October 1
+      </h2>
+    </div>
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Done
+    </button>
+  </header>
+  <form
+    className="stock-search"
+  >
+    <i
+      className="ui-icon ui-icon-search fas fa-search"
+    />
+    <input
+      aria-label="Search"
+      className="stock-search-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Search"
+      value=""
+    />
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </form>
+  <ul
+    className="stocks-app-list"
+  >
+    <li
+      className="stock stock--swiped"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AAPL
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            APPLE INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock stock--swiped"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AMZN
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            AMAZON.COM INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock stock--swiped"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            FB
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            FACEBOOK INC-CLASS A
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock stock--swiped"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            GOOG
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            ALPHABET INC-CL C
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock stock--swiped"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            MSFT
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+  <StockNews
+    draggable={true}
+  />
+</div>
+`;
+
+exports[`<Stocks /> renders correctly 1`] = `
+<div
+  className="stocks-app"
+>
+  <header
+    className="stocks-app-header"
+  >
+    <div
+      className="stocks-app-header-content"
+    >
+      <h1
+        className="ui-text ui-text--display stocks-app-title"
+      >
+        Stocks
+      </h1>
+      <h2
+        className="ui-text ui-text--display stocks-app-date"
+      >
+        October 1
+      </h2>
+    </div>
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Edit
+    </button>
+  </header>
+  <form
+    className="stock-search"
+  >
+    <i
+      className="ui-icon ui-icon-search fas fa-search"
+    />
+    <input
+      aria-label="Search"
+      className="stock-search-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Search"
+      value=""
+    />
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </form>
+  <ul
+    className="stocks-app-list"
+  >
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AAPL
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            APPLE INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AMZN
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            AMAZON.COM INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            FB
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            FACEBOOK INC-CLASS A
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            GOOG
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            ALPHABET INC-CL C
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            MSFT
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+  <StockNews
+    draggable={true}
+  />
+</div>
+`;
+
+exports[`<Stocks /> renders correctly with search term 1`] = `
+<div
+  className="stocks-app stocks-app--with-search"
+>
+  <header
+    className="stocks-app-header"
+  >
+    <div
+      className="stocks-app-header-content"
+    >
+      <h1
+        className="ui-text ui-text--display stocks-app-title"
+      >
+        Stocks
+      </h1>
+      <h2
+        className="ui-text ui-text--display stocks-app-date"
+      >
+        October 1
+      </h2>
+    </div>
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Edit
+    </button>
+  </header>
+  <form
+    className="stock-search"
+  >
+    <i
+      className="ui-icon ui-icon-search fas fa-search"
+    />
+    <input
+      aria-label="Search"
+      className="stock-search-input"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onFocus={[MockFunction]}
+      placeholder="Search"
+      value="aa"
+    />
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </form>
+  <ul
+    className="stocks-app-list"
+  />
+  <StockNews
+    draggable={true}
+  />
+</div>
+`;
+
+exports[`<Stocks /> renders correctly with stock detail 1`] = `
+<div
+  className="stocks-app stocks-app--with-detail stocks-app--with-search"
+>
+  <header
+    className="stocks-app-header"
+  >
+    <div
+      className="stocks-app-header-content"
+    >
+      <h1
+        className="ui-text ui-text--display stocks-app-title"
+      >
+        Stocks
+      </h1>
+      <h2
+        className="ui-text ui-text--display stocks-app-date"
+      >
+        October 1
+      </h2>
+    </div>
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[Function]}
+      type="button"
+    >
+      Edit
+    </button>
+  </header>
+  <form
+    className="stock-search"
+  >
+    <i
+      className="ui-icon ui-icon-search fas fa-search"
+    />
+    <input
+      aria-label="Search"
+      className="stock-search-input"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onFocus={[MockFunction]}
+      placeholder="Search"
+      value="aa"
+    />
+    <button
+      className="ui-btn ui-btn--anchor"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </form>
+  <ul
+    className="stocks-app-list"
+  />
+  <StockTicker
+    onClick={[MockFunction]}
+    stocks={
+      Array [
+        Object {
+          "description": "APPLE INC",
+          "displaySymbol": "AAPL",
+          "symbol": "AAPL",
+        },
+        Object {
+          "description": "AMAZON.COM INC",
+          "displaySymbol": "AMZN",
+          "symbol": "AMZN",
+        },
+        Object {
+          "description": "FACEBOOK INC-CLASS A",
+          "displaySymbol": "FB",
+          "symbol": "FB",
+        },
+        Object {
+          "description": "ALPHABET INC-CL C",
+          "displaySymbol": "GOOG",
+          "symbol": "GOOG",
+        },
+        Object {
+          "description": "MICROSOFT CORP",
+          "displaySymbol": "MSFT",
+          "symbol": "MSFT",
+        },
+      ]
+    }
+  />
+  <div
+    className="stock-detail"
+  >
+    <header
+      className="stock-detail-header"
+    >
+      <span
+        className="ui-text ui-text--body ui-text--bold stock-detail-symbol"
+      >
+        AAPL
+      </span>
+      <span
+        className="ui-text ui-text--body stock-detail-description"
+      >
+        APPLE INC
+      </span>
+      <button
+        className="ui-btn ui-btn--with-icon stock-detail-close-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="ui-icon ui-icon-times-circle fas fa-times-circle fa-2x"
+        />
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Close detail view
+        </span>
+      </button>
+    </header>
+    <div
+      className="stock-detail-content"
+    >
+      <div
+        className="stock-detail-value"
+      >
+        <span
+          className="ui-text ui-text--body stock-detail-price"
+        >
+          
+        </span>
+        <span
+          className="ui-text ui-text--body stock-detail-difference stock-detail-difference--down"
+        />
+      </div>
+      <StockChart
+        stock={
+          Object {
+            "description": "APPLE INC",
+            "displaySymbol": "AAPL",
+            "symbol": "AAPL",
+          }
+        }
+      />
+      <StockNews
+        category="AAPL"
+        displayCount={5}
+      />
+    </div>
+  </div>
+  <StockNews
+    draggable={true}
+  />
+</div>
+`;

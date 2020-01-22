@@ -1,9 +1,9 @@
 /* stylelint-disable declaration-no-important, property-blacklist, a11y/no-outline-none */
 
-@mixin type-body($font-size: $font-size-default) {
+@mixin type-body($font-size: $font-size-default, $font-weight: $font-weight-regular) {
   font-family: $type-body;
   font-size: $font-size;
-  font-weight: $font-weight-regular;
+  font-weight: $font-weight;
 }
 
 @mixin type-body-bold($color: $white, $font-size: $font-size-default) {
@@ -36,6 +36,7 @@
 }
 
 @mixin type-title($color: $white) {
+  display: block;
   margin: $gutter $gutter + 5px;
   color: $color;
 }
@@ -98,6 +99,12 @@
 @mixin responsive($breakpoint) {
   @media (min-width: $breakpoint) {
     @content;
+  }
+}
+
+@mixin focus-outline {
+  &:focus {
+    outline: 2px solid $blue-light;
   }
 }
 

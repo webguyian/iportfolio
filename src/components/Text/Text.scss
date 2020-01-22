@@ -9,6 +9,7 @@
 
   &--display {
     @include type-display;
+    display: block;
   }
 
   &--block {

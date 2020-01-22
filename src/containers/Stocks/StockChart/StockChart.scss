@@ -1,0 +1,22 @@
+.stock-chart {
+  &-controls {
+    @include unstyled-list;
+    display: flex;
+
+    .ui-btn {
+      padding: 8px;
+      border-radius: 4px;
+      color: $white;
+    }
+  }
+
+  &-control {
+    margin: 0 $gutter;
+
+    &--active {
+      > .ui-btn {
+        background-color: $gray-medium;
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-export const mockTime = Number(new Date('2019-10-01T11:11:00'));
+export const mockDate = new Date('2019-10-01 11:11:00 GMT-0400');
+export const mockTime = Number(mockDate);
 
 export const TestComponent = ({ callback }) => {
   callback();
@@ -13,6 +14,14 @@ export const testHook = (callback = () => {}) => {
 };
 
 Date.now = jest.fn(() => mockTime);
+
+window.fetch = jest.fn().mockResolvedValue({ json: () => Promise.resolve({}) });
+
+export const createMockResponse = data => {
+  return Promise.resolve({
+    json: () => data
+  });
+};
 
 window.matchMedia = jest.fn().mockImplementation(media => {
   return {

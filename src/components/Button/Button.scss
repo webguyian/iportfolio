@@ -1,15 +1,18 @@
 .ui-btn {
+  @include focus-outline;
   padding: 0;
   border: 0;
   background: none;
   cursor: pointer;
 
-  &:focus {
-    outline: 2px solid $blue-light;
-  }
-
   > .ui-icon {
     pointer-events: none;
+  }
+
+  &--anchor {
+    @include type-body;
+    padding: 4px 8px;
+    color: $blue-light;
   }
 
   &--rounded {

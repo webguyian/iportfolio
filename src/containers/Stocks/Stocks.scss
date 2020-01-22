@@ -1,0 +1,57 @@
+.stocks-app {
+  @include stretch-column;
+  position: relative;
+  flex-wrap: nowrap;
+  padding: $gutter;
+  transition: transform 0.3s ease;
+
+  &--with-search {
+    padding-top: 70px;
+    transform: translateY(-70px);
+
+    .stocks-app-header {
+      display: none;
+    }
+
+    .stocks-app-list {
+      max-height: none;
+    }
+  }
+
+  &--with-detail {
+    padding-top: $gutter;
+    transform: none;
+
+    > .stock-news {
+      transform: translateY(110%);
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 $gutter-s;
+  }
+
+  &-title,
+  &-date {
+    font-size: $font-size-l;
+  }
+
+  &-date {
+    color: $gray;
+  }
+
+  &-edit-btn {
+    @include type-body;
+    padding: 4px $gutter;
+    color: $blue-light;
+  }
+
+  &-list {
+    @include unstyled-list;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+}

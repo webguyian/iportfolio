@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StockNews /> handles slide up 1`] = `
+<aside
+  className="stock-news stock-news--visible"
+>
+  <button
+    aria-labelledby="stock-news"
+    className="ui-btn stock-news-drag-handle"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ui-text ui-text--accessible"
+    >
+      drag down
+    </span>
+  </button>
+  <header
+    className="stock-news-header"
+    id="stock-news"
+  >
+    <h1
+      className="ui-text ui-text--display stock-news-title"
+    >
+      Business News
+    </h1>
+    <h2
+      className="ui-text ui-text--body stock-news-author"
+    >
+      from Finnhub
+    </h2>
+  </header>
+  <ul
+    className="stock-news-list"
+  >
+    <li
+      className="stock-news-list-item"
+    >
+      <Link
+        external={true}
+        to="https://www.reuters.com/article/us-people-bryant/kobe-bryants-wife-vanessa-wishes-this-nightmare-would-be-over-idUSKBN20507K"
+      >
+        <div
+          className="ui-media-block ui-media-block--right"
+        >
+          <div
+            className="ui-media-block-content"
+          >
+            <span
+              className="ui-text ui-text--display stock-news-source"
+            >
+              Reuters
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-headline"
+            >
+              Kobe Bryant's wife Vanessa wishes 'this nightmare would be over'
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-timestamp"
+            >
+              4 months ago
+            </span>
+          </div>
+          <img
+            className="ui-media-block-image"
+            src="https://s4.reutersmedia.net/resources/r/?m=02&d=20200211&t=2&i=1488599576&w=1200&r=LYNXMPEG1A07U"
+          />
+        </div>
+      </Link>
+    </li>
+    <li
+      className="stock-news-list-item"
+    >
+      <Link
+        external={true}
+        to="https://www.reuters.com/article/us-china-health-usa-sandiego/coronavirus-case-confirmed-in-california-takes-u-s-total-to-13-idUSKBN20505I"
+      >
+        <div
+          className="ui-media-block ui-media-block--right"
+        >
+          <div
+            className="ui-media-block-content"
+          >
+            <span
+              className="ui-text ui-text--display stock-news-source"
+            >
+              Reuters
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-headline"
+            >
+              Coronavirus case confirmed in California, takes U.S. total to 13
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-timestamp"
+            >
+              4 months ago
+            </span>
+          </div>
+          <img
+            className="ui-media-block-image"
+            src="https://s4.reutersmedia.net/resources_v2/images/rcom-default.png"
+          />
+        </div>
+      </Link>
+    </li>
+  </ul>
+</aside>
+`;
+
+exports[`<StockNews /> renders correctly with news 1`] = `
+<aside
+  className="stock-news"
+>
+  <button
+    aria-labelledby="stock-news"
+    className="ui-btn stock-news-drag-handle"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ui-text ui-text--accessible"
+    >
+      drag up
+    </span>
+  </button>
+  <header
+    className="stock-news-header"
+    id="stock-news"
+  >
+    <h1
+      className="ui-text ui-text--display stock-news-title"
+    >
+      Business News
+    </h1>
+    <h2
+      className="ui-text ui-text--body stock-news-author"
+    >
+      from Finnhub
+    </h2>
+  </header>
+  <ul
+    className="stock-news-list"
+  >
+    <li
+      className="stock-news-list-item"
+    >
+      <Link
+        external={true}
+        to="https://www.reuters.com/article/us-people-bryant/kobe-bryants-wife-vanessa-wishes-this-nightmare-would-be-over-idUSKBN20507K"
+      >
+        <div
+          className="ui-media-block ui-media-block--right"
+        >
+          <div
+            className="ui-media-block-content"
+          >
+            <span
+              className="ui-text ui-text--display stock-news-source"
+            >
+              Reuters
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-headline"
+            >
+              Kobe Bryant's wife Vanessa wishes 'this nightmare would be over'
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-timestamp"
+            >
+              4 months ago
+            </span>
+          </div>
+          <img
+            className="ui-media-block-image"
+            src="https://s4.reutersmedia.net/resources/r/?m=02&d=20200211&t=2&i=1488599576&w=1200&r=LYNXMPEG1A07U"
+          />
+        </div>
+      </Link>
+    </li>
+    <li
+      className="stock-news-list-item"
+    >
+      <Link
+        external={true}
+        to="https://www.reuters.com/article/us-china-health-usa-sandiego/coronavirus-case-confirmed-in-california-takes-u-s-total-to-13-idUSKBN20505I"
+      >
+        <div
+          className="ui-media-block ui-media-block--right"
+        >
+          <div
+            className="ui-media-block-content"
+          >
+            <span
+              className="ui-text ui-text--display stock-news-source"
+            >
+              Reuters
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-headline"
+            >
+              Coronavirus case confirmed in California, takes U.S. total to 13
+            </span>
+            <span
+              className="ui-text ui-text--body stock-news-timestamp"
+            >
+              4 months ago
+            </span>
+          </div>
+          <img
+            className="ui-media-block-image"
+            src="https://s4.reutersmedia.net/resources_v2/images/rcom-default.png"
+          />
+        </div>
+      </Link>
+    </li>
+  </ul>
+</aside>
+`;
+
+exports[`<StockNews /> renders correctly without news 1`] = `null`;

@@ -1,0 +1,440 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StockTicker /> renders correctly 1`] = `null`;
+
+exports[`<StockTicker /> renders correctly with stockData 1`] = `
+<div
+  className="stock-ticker"
+>
+  <ul
+    className="stock-ticker-list"
+  >
+    <li
+      className="stock-tick"
+    >
+      <button
+        className="ui-btn stock-tick-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-tick-content"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-tick-symbol"
+          >
+            AAPL
+          </span>
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-tick-price"
+          >
+            320.90
+          </span>
+          <span
+            className="ui-text ui-text--body stock-tick-difference stock-tick-difference--up"
+          >
+            +0.27%
+          </span>
+        </div>
+        <div
+          className="stock-chart"
+        >
+          <div
+            className="react-stockchart"
+            onClick={[Function]}
+            style={
+              Object {
+                "height": 200,
+                "position": "relative",
+                "width": 345,
+              }
+            }
+          >
+            <svg
+              className="react-stockchart"
+              height={200}
+              style={
+                Object {
+                  "position": "absolute",
+                  "zIndex": 6,
+                }
+              }
+              width={345}
+            >
+              <style
+                type="text/css"
+              >
+                
+	.react-stockcharts-grabbing-cursor {
+		pointer-events: all;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+	.react-stockcharts-crosshair-cursor {
+		pointer-events: all;
+		cursor: crosshair;
+	}
+	.react-stockcharts-tooltip-hover {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-avoid-interaction {
+		pointer-events: none;
+	}
+	.react-stockcharts-enable-interaction {
+		pointer-events: all;
+	}
+	.react-stockcharts-tooltip {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-default-cursor {
+		cursor: default;
+	}
+	.react-stockcharts-move-cursor {
+		cursor: move;
+	}
+	.react-stockcharts-pointer-cursor {
+		cursor: pointer;
+	}
+	.react-stockcharts-ns-resize-cursor {
+		cursor: ns-resize;
+	}
+	.react-stockcharts-ew-resize-cursor {
+		cursor: ew-resize;
+	}
+              </style>
+              <defs>
+                <clipPath
+                  id="chart-area-clip"
+                >
+                  <rect
+                    height={140}
+                    width={280}
+                    x="0"
+                    y="0"
+                  />
+                </clipPath>
+                <clipPath
+                  id="chart-area-clip-320.9"
+                >
+                  <rect
+                    height={140}
+                    width={280}
+                    x="0"
+                    y="0"
+                  />
+                </clipPath>
+              </defs>
+              <g
+                transform="translate(15.5, 10.5)"
+              >
+                <rect
+                  className=""
+                  height={140}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  onWheel={[Function]}
+                  style={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                  width={280}
+                />
+                <g
+                  className="react-stockcharts-avoid-interaction"
+                >
+                  <g
+                    transform="translate(0, 0)"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="gradient-AAPL-no-controls"
+                        x1="0"
+                        x2="0"
+                        y1="100%"
+                        y2="0%"
+                      >
+                        <stop
+                          offset="0%"
+                          stopColor="#6eb26d"
+                          stopOpacity={0.2}
+                        />
+                        <stop
+                          offset="70%"
+                          stopColor="#6eb26d"
+                          stopOpacity={0.4}
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="#6eb26d"
+                          stopOpacity={0.8}
+                        />
+                      </linearGradient>
+                    </defs>
+                    <g
+                      className="react-stockcharts-area"
+                    >
+                      <g
+                        style={
+                          Object {
+                            "clipPath": "url(#chart-area-clip-320.9)",
+                          }
+                        }
+                      >
+                        <path
+                          className="line "
+                          d="MNaN,140LNaN,52LNaN,28LNaN,0LNaN,0LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140Z"
+                          fill="url(#gradient-AAPL-no-controls)"
+                          stroke="none"
+                        />
+                      </g>
+                      <g
+                        style={
+                          Object {
+                            "clipPath": "url(#chart-area-clip-320.9)",
+                          }
+                        }
+                      >
+                        <path
+                          className="line  "
+                          d="MNaN,140LNaN,52LNaN,28LNaN,0LNaN,0"
+                          fill="none"
+                          stroke="#6eb26d"
+                          strokeDasharray="none"
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li
+      className="stock-tick"
+    >
+      <button
+        className="ui-btn stock-tick-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-tick-content"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-tick-symbol"
+          >
+            AMZN
+          </span>
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-tick-price"
+          >
+            2140.00
+          </span>
+          <span
+            className="ui-text ui-text--body stock-tick-difference stock-tick-difference--up"
+          >
+            +2.84%
+          </span>
+        </div>
+        <div
+          className="stock-chart"
+        >
+          <div
+            className="react-stockchart"
+            onClick={[Function]}
+            style={
+              Object {
+                "height": 200,
+                "position": "relative",
+                "width": 345,
+              }
+            }
+          >
+            <svg
+              className="react-stockchart"
+              height={200}
+              style={
+                Object {
+                  "position": "absolute",
+                  "zIndex": 6,
+                }
+              }
+              width={345}
+            >
+              <style
+                type="text/css"
+              >
+                
+	.react-stockcharts-grabbing-cursor {
+		pointer-events: all;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+	.react-stockcharts-crosshair-cursor {
+		pointer-events: all;
+		cursor: crosshair;
+	}
+	.react-stockcharts-tooltip-hover {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-avoid-interaction {
+		pointer-events: none;
+	}
+	.react-stockcharts-enable-interaction {
+		pointer-events: all;
+	}
+	.react-stockcharts-tooltip {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-default-cursor {
+		cursor: default;
+	}
+	.react-stockcharts-move-cursor {
+		cursor: move;
+	}
+	.react-stockcharts-pointer-cursor {
+		cursor: pointer;
+	}
+	.react-stockcharts-ns-resize-cursor {
+		cursor: ns-resize;
+	}
+	.react-stockcharts-ew-resize-cursor {
+		cursor: ew-resize;
+	}
+              </style>
+              <defs>
+                <clipPath
+                  id="chart-area-clip"
+                >
+                  <rect
+                    height={140}
+                    width={280}
+                    x="0"
+                    y="0"
+                  />
+                </clipPath>
+                <clipPath
+                  id="chart-area-clip-2138.8"
+                >
+                  <rect
+                    height={140}
+                    width={280}
+                    x="0"
+                    y="0"
+                  />
+                </clipPath>
+              </defs>
+              <g
+                transform="translate(15.5, 10.5)"
+              >
+                <rect
+                  className=""
+                  height={140}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  onWheel={[Function]}
+                  style={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                  width={280}
+                />
+                <g
+                  className="react-stockcharts-avoid-interaction"
+                >
+                  <g
+                    transform="translate(0, 0)"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="gradient-AMZN-no-controls"
+                        x1="0"
+                        x2="0"
+                        y1="100%"
+                        y2="0%"
+                      >
+                        <stop
+                          offset="0%"
+                          stopColor="#6eb26d"
+                          stopOpacity={0.2}
+                        />
+                        <stop
+                          offset="70%"
+                          stopColor="#6eb26d"
+                          stopOpacity={0.4}
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="#6eb26d"
+                          stopOpacity={0.8}
+                        />
+                      </linearGradient>
+                    </defs>
+                    <g
+                      className="react-stockcharts-area"
+                    >
+                      <g
+                        style={
+                          Object {
+                            "clipPath": "url(#chart-area-clip-2138.8)",
+                          }
+                        }
+                      >
+                        <path
+                          className="line "
+                          d="MNaN,140LNaN,140LNaN,122LNaN,90LNaN,0LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140Z"
+                          fill="url(#gradient-AMZN-no-controls)"
+                          stroke="none"
+                        />
+                      </g>
+                      <g
+                        style={
+                          Object {
+                            "clipPath": "url(#chart-area-clip-2138.8)",
+                          }
+                        }
+                      >
+                        <path
+                          className="line  "
+                          d="MNaN,140LNaN,140LNaN,122LNaN,90LNaN,0"
+                          fill="none"
+                          stroke="#6eb26d"
+                          strokeDasharray="none"
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<StockTicker /> renders correctly without stockData 1`] = `null`;
+
+exports[`<StockTicker /> renders correctly without stocks 1`] = `null`;

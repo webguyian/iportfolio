@@ -1,0 +1,30 @@
+.ui-media-block {
+  display: flex;
+  padding: $gutter;
+
+  &-image {
+    flex-grow: 0;
+    align-self: flex-start;
+    max-width: 120px;
+    margin-right: $gutter;
+  }
+
+  &-content {
+    display: flex;
+    flex: 1;
+    flex-flow: column wrap;
+
+    > .ui-text {
+      &:first-child {
+        line-height: 1;
+      }
+    }
+  }
+
+  &--right {
+    .ui-media-block-image {
+      margin-right: 0;
+      margin-left: $gutter;
+    }
+  }
+}

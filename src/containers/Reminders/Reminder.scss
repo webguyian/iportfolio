@@ -47,7 +47,7 @@
     @include no-outline;
     min-width: 320px;
     min-height: 35px;
-    padding: 4px 80px 4px 4px;
+    padding: 4px;
     border: 0;
     background: none;
     color: $white;
@@ -65,6 +65,10 @@
   }
 
   &--swiped {
+    .reminder-input {
+      padding-right: 80px;
+    }
+
     > .ui-btn--delete {
       right: $gutter;
       width: 80px;

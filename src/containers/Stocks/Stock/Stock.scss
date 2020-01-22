@@ -1,0 +1,73 @@
+.stock {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: $gutter 2px;
+  border-bottom: 1px solid $gray-dark;
+
+  &-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 $gutter-s;
+    color: $white;
+    text-align: left;
+  }
+
+  > .ui-btn--delete {
+    position: absolute;
+    top: 0;
+    right: -45px;
+    width: 0;
+    height: 100%;
+    padding: 10px;
+    transition: width 0.4s linear;
+    background-color: $red;
+    color: $white;
+  }
+
+  .ui-text {
+    display: block;
+  }
+
+  &-description {
+    color: $gray;
+  }
+
+  &-symbol,
+  &-price {
+    margin-bottom: 4px;
+  }
+
+  &-difference {
+    min-width: 50px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: $font-size-s;
+
+    &--down {
+      background-color: $red;
+    }
+
+    &--up {
+      background-color: $green-light;
+    }
+  }
+
+  &-value {
+    text-align: right;
+  }
+
+  &--swiped {
+    > .ui-btn--delete {
+      right: 0;
+      width: 80px;
+    }
+  }
+
+  &--swiping {
+    > .ui-btn--delete {
+      width: 100%;
+    }
+  }
+}

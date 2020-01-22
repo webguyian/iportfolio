@@ -6,7 +6,15 @@ import { Link as RouterLink } from 'react-router-dom';
 import Icon from 'components/Icon/Icon';
 
 const Link = forwardRef((props, ref) => {
-  const { back, backLabel, children, className, to, ...otherProps } = props;
+  const {
+    back,
+    backLabel,
+    children,
+    className,
+    external,
+    to,
+    ...otherProps
+  } = props;
   const baseClass = 'ui-link';
   const backLinkClass = `${baseClass}--back`;
 
@@ -20,6 +28,19 @@ const Link = forwardRef((props, ref) => {
       >
         <Icon name="chevron-left" /> {backLabel}
       </RouterLink>
+    );
+  }
+
+  if (external) {
+    return (
+      <a
+        href={to}
+        className={baseClass}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
     );
   }
 
@@ -42,11 +63,13 @@ Link.propTypes = {
   backLabel: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
+  external: PropTypes.bool,
   to: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
 };
 
 Link.defaultProps = {
   back: false,
+  external: false,
   backLabel: 'Back'
 };
 

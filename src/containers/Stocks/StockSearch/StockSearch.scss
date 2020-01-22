@@ -1,0 +1,42 @@
+.stock-search {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin: $gutter-s $gutter-s 0;
+
+  .stocks-app--with-search & {
+    margin: $gutter-s 4px 0;
+  }
+
+  > .ui-icon-search {
+    position: absolute;
+    left: 0;
+    padding: 7px $gutter-s;
+    color: $gray;
+  }
+
+  &-input {
+    @include focus-outline;
+    @include type-body($font-weight: $font-weight-light);
+    flex: 1;
+    min-height: 30px;
+    padding: 4px $gutter 4px 30px;
+    border: 0;
+    border-radius: 4px;
+    background-color: $gray-dark;
+    color: $white;
+    letter-spacing: 0.025em;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  > .ui-btn--anchor {
+    display: none;
+
+    .stocks-app--with-search & {
+      display: block;
+    }
+  }
+}

@@ -9,6 +9,7 @@
 // Component styles
 @import "components/Button/Button";
 @import "components/Link/Link";
+@import "components/MediaBlock/MediaBlock";
 @import "components/Text/Text";
 @import "components/Clockface/Clockface";
 @import "components/AppIcon/AppIcon";
@@ -29,5 +30,12 @@
 @import "containers/Notes/Notes";
 @import "containers/Notes/Note";
 @import "containers/Notes/NotePreview";
+@import "containers/Stocks/Stocks";
+@import "containers/Stocks/Stock/Stock";
+@import "containers/Stocks/StockChart/StockChart";
+@import "containers/Stocks/StockSearch/StockSearch";
+@import "containers/Stocks/StockNews/StockNews";
+@import "containers/Stocks/StockTicker/StockTicker";
+@import "containers/Stocks/Stock/StockDetail";
 @import "containers/Reminders/Reminders";
 @import "containers/Reminders/Reminder";

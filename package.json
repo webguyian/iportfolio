@@ -16,6 +16,7 @@
     "@babel/polyfill": "7.7.0",
     "@babel/runtime": "7.7.2",
     "classnames": "2.2.6",
+    "d3-scale": "^3.2.1",
     "date-fns": "2.9.0",
     "lodash": "4.17.15",
     "prop-types": "15.7.2",
@@ -23,6 +24,7 @@
     "react-dom": "16.12.0",
     "react-hot-loader": "4.12.18",
     "react-router-dom": "5.1.2",
+    "react-stockcharts": "^0.7.8",
     "react-swipeable": "5.5.0"
   },
   "devDependencies": {
@@ -55,7 +57,7 @@
     "jest": "24.8.0",
     "lint-staged": "8.1.5",
     "mini-css-extract-plugin": "0.7.0",
-    "node-sass": "4.12.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",

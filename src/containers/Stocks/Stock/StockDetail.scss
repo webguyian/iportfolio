@@ -1,0 +1,93 @@
+.stock-detail {
+  z-index: 9;
+  position: absolute;
+  top: 65px;
+  width: 345px;
+  height: 100%;
+  background-color: $gray-dark;
+
+  &-header {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    padding: $gutter;
+    border-bottom: 1px solid $gray-medium;
+  }
+
+  &-value {
+    display: flex;
+    align-items: flex-end;
+    padding: $gutter-s $gutter;
+  }
+
+  &-symbol {
+    margin-right: $gutter-s;
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  &-description {
+    color: $gray;
+    font-size: $font-size-s;
+  }
+
+  &-close-btn {
+    margin-left: auto;
+    color: $gray;
+  }
+
+  &-price,
+  &-difference {
+    font-weight: $font-weight-bold;
+  }
+
+  &-price {
+    margin-right: $gutter;
+  }
+
+  &-difference {
+    font-size: $font-size-s;
+
+    &--down {
+      color: $red;
+    }
+
+    &--up {
+      color: $green-light;
+    }
+  }
+
+  &-add-btn {
+    @include type-body($font-size-s);
+    margin-left: auto;
+    padding: 4px 12px;
+    border-radius: 10px;
+    background: $blue-light;
+    color: $gray-dark;
+  }
+
+  &-content {
+    max-height: 650px;
+    overflow-y: auto;
+  }
+
+  &-chart {
+    min-height: 300px;
+    margin-bottom: $gutter;
+    padding: 0 $gutter;
+    background-color: $gray;
+  }
+
+  .stock-news {
+    position: static;
+    width: 100%;
+    margin: 0;
+    transform: none;
+    background: none;
+
+    &-header {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}

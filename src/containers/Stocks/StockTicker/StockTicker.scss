@@ -1,0 +1,85 @@
+.stock-ticker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding-left: 10%;
+  background-color: $black-dark;
+
+  &::before,
+  &::after {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $gutter;
+    height: 70px;
+    background-color: $black-dark;
+    content: "";
+  }
+
+  &::after {
+    left: 360px;
+  }
+
+  &-list {
+    @include unstyled-list;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 $gutter;
+    animation: marquee 30s linear infinite;
+  }
+
+  .stock-tick {
+    &-btn {
+      position: relative;
+      width: 100%;
+      min-width: 200px;
+      padding: $gutter-s;
+      color: $white;
+      text-align: left;
+    }
+
+    &-content {
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .stock-chart {
+      position: absolute;
+      top: -60px;
+      left: -30px;
+      transform: scale(0.4);
+    }
+
+    &-symbol,
+    &-price {
+      font-size: $font-size-s;
+    }
+
+    &-price {
+      margin-bottom: 4px;
+    }
+
+    &-difference {
+      &--down {
+        color: $red;
+      }
+
+      &--up {
+        color: $green-light;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-80%);
+  }
+}

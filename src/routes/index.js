@@ -4,6 +4,7 @@ import HomescreenView from 'views/homescreen/HomescreenView';
 import LockscreenView from 'views/lockscreen/LockscreenView';
 import NotesView from 'views/notes/NotesView';
 import RemindersView from 'views/reminders/RemindersView';
+import StocksView from 'views/stocks/StocksView';
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     pathKey: 'notes',
     component: NotesView,
     exact: false
+  },
+  {
+    path: '/stocks',
+    pathKey: 'stocks',
+    component: StocksView
   }
 ];
 

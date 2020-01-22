@@ -1,0 +1,760 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StockChart /> renders correctly 1`] = `
+<div
+  className="stock-chart"
+>
+  <ul
+    className="stock-chart-controls"
+  >
+    <li
+      className="stock-chart-control stock-chart-control--active"
+    >
+      <button
+        className="ui-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        1D
+      </button>
+    </li>
+    <li
+      className="stock-chart-control"
+    >
+      <button
+        className="ui-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        1W
+      </button>
+    </li>
+    <li
+      className="stock-chart-control"
+    >
+      <button
+        className="ui-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        1M
+      </button>
+    </li>
+    <li
+      className="stock-chart-control"
+    >
+      <button
+        className="ui-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        3M
+      </button>
+    </li>
+    <li
+      className="stock-chart-control"
+    >
+      <button
+        className="ui-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        6M
+      </button>
+    </li>
+  </ul>
+  <div
+    className="react-stockchart"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 200,
+        "position": "relative",
+        "width": 345,
+      }
+    }
+  >
+    <svg
+      className="react-stockchart"
+      height={200}
+      style={
+        Object {
+          "position": "absolute",
+          "zIndex": 6,
+        }
+      }
+      width={345}
+    >
+      <style
+        type="text/css"
+      >
+        
+	.react-stockcharts-grabbing-cursor {
+		pointer-events: all;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+	.react-stockcharts-crosshair-cursor {
+		pointer-events: all;
+		cursor: crosshair;
+	}
+	.react-stockcharts-tooltip-hover {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-avoid-interaction {
+		pointer-events: none;
+	}
+	.react-stockcharts-enable-interaction {
+		pointer-events: all;
+	}
+	.react-stockcharts-tooltip {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-default-cursor {
+		cursor: default;
+	}
+	.react-stockcharts-move-cursor {
+		cursor: move;
+	}
+	.react-stockcharts-pointer-cursor {
+		cursor: pointer;
+	}
+	.react-stockcharts-ns-resize-cursor {
+		cursor: ns-resize;
+	}
+	.react-stockcharts-ew-resize-cursor {
+		cursor: ew-resize;
+	}
+      </style>
+      <defs>
+        <clipPath
+          id="chart-area-clip"
+        >
+          <rect
+            height={140}
+            width={280}
+            x="0"
+            y="0"
+          />
+        </clipPath>
+        <clipPath
+          id="chart-area-clip-189.68"
+        >
+          <rect
+            height={140}
+            width={280}
+            x="0"
+            y="0"
+          />
+        </clipPath>
+      </defs>
+      <g
+        transform="translate(15.5, 10.5)"
+      >
+        <rect
+          className=""
+          height={140}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseDown={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          onWheel={[Function]}
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+          width={280}
+        />
+        <g
+          className="react-stockcharts-avoid-interaction"
+        >
+          <g
+            transform="translate(0, 0)"
+          >
+            <defs>
+              <linearGradient
+                id="gradient-MSFT"
+                x1="0"
+                x2="0"
+                y1="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  stopColor="#6eb26d"
+                  stopOpacity={0.2}
+                />
+                <stop
+                  offset="70%"
+                  stopColor="#6eb26d"
+                  stopOpacity={0.4}
+                />
+                <stop
+                  offset="100%"
+                  stopColor="#6eb26d"
+                  stopOpacity={0.8}
+                />
+              </linearGradient>
+            </defs>
+            <g
+              transform="translate(0, 140)"
+            >
+              <rect
+                className="react-stockcharts-enable-interaction react-stockcharts-default-cursor react-stockcharts-x-axis"
+                height={25}
+                onContextMenu={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+                opacity={0}
+                width={280}
+                x={0}
+                y={0}
+              />
+              <g
+                style={null}
+              >
+                <g
+                  className="react-stockcharts-x-axis"
+                >
+                  <g />
+                  <path
+                    className="react-stockcharts-axis-domain"
+                    d="M0,0V0H280V0"
+                    fill="none"
+                    opacity={1}
+                    stroke="#000000"
+                    strokeWidth={1}
+                  />
+                </g>
+              </g>
+            </g>
+            <g
+              transform="translate(280, 0)"
+            >
+              <rect
+                className="react-stockcharts-enable-interaction react-stockcharts-default-cursor react-stockcharts-y-axis"
+                height={140}
+                onContextMenu={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+                opacity={0}
+                width={40}
+                x={0}
+                y={0}
+              />
+              <g
+                style={null}
+              >
+                <g
+                  className="react-stockcharts-y-axis"
+                >
+                  <g>
+                    <g
+                      className="tick"
+                    >
+                      <line
+                        opacity={1}
+                        shapeRendering="crispEdges"
+                        stroke="#FFFFFF"
+                        strokeDasharray="none"
+                        x1={0}
+                        x2={5}
+                        y1={128}
+                        y2={128}
+                      />
+                      <text
+                        dy=".32em"
+                        fill="#FFFFFF"
+                        fontFamily="Helvetica Neue, Helvetica, Arial, sans-serif"
+                        fontSize={12}
+                        fontWeight={400}
+                        textAnchor="start"
+                        x={11}
+                        y={128}
+                      >
+                        184
+                      </text>
+                    </g>
+                    <g
+                      className="tick"
+                    >
+                      <line
+                        opacity={1}
+                        shapeRendering="crispEdges"
+                        stroke="#FFFFFF"
+                        strokeDasharray="none"
+                        x1={0}
+                        x2={5}
+                        y1={70}
+                        y2={70}
+                      />
+                      <text
+                        dy=".32em"
+                        fill="#FFFFFF"
+                        fontFamily="Helvetica Neue, Helvetica, Arial, sans-serif"
+                        fontSize={12}
+                        fontWeight={400}
+                        textAnchor="start"
+                        x={11}
+                        y={70}
+                      >
+                        184
+                      </text>
+                    </g>
+                    <g
+                      className="tick"
+                    >
+                      <line
+                        opacity={1}
+                        shapeRendering="crispEdges"
+                        stroke="#FFFFFF"
+                        strokeDasharray="none"
+                        x1={0}
+                        x2={5}
+                        y1={12}
+                        y2={12}
+                      />
+                      <text
+                        dy=".32em"
+                        fill="#FFFFFF"
+                        fontFamily="Helvetica Neue, Helvetica, Arial, sans-serif"
+                        fontSize={12}
+                        fontWeight={400}
+                        textAnchor="start"
+                        x={11}
+                        y={12}
+                      >
+                        184
+                      </text>
+                    </g>
+                  </g>
+                  <path
+                    className="react-stockcharts-axis-domain"
+                    d="M0,0H0V140H0"
+                    fill="none"
+                    opacity={1}
+                    stroke="#FFFFFF"
+                    strokeWidth={1}
+                  />
+                </g>
+              </g>
+            </g>
+            <g
+              className="react-stockcharts-area"
+            >
+              <g
+                style={
+                  Object {
+                    "clipPath": "url(#chart-area-clip-189.68)",
+                  }
+                }
+              >
+                <path
+                  className="line "
+                  d="MNaN,128LNaN,140LNaN,99LNaN,61LNaN,0LNaN,53LNaN,32LNaN,26LNaN,70LNaN,99LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140Z"
+                  fill="url(#gradient-MSFT)"
+                  stroke="none"
+                />
+              </g>
+              <g
+                style={
+                  Object {
+                    "clipPath": "url(#chart-area-clip-189.68)",
+                  }
+                }
+              >
+                <path
+                  className="line  "
+                  d="MNaN,128LNaN,140LNaN,99LNaN,61LNaN,0LNaN,53LNaN,32LNaN,26LNaN,70LNaN,99"
+                  fill="none"
+                  stroke="#6eb26d"
+                  strokeDasharray="none"
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<StockChart /> renders correctly with downgrade 1`] = `
+<div
+  className="stock-chart"
+>
+  <div
+    className="react-stockchart"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 200,
+        "position": "relative",
+        "width": 345,
+      }
+    }
+  >
+    <svg
+      className="react-stockchart"
+      height={200}
+      style={
+        Object {
+          "position": "absolute",
+          "zIndex": 6,
+        }
+      }
+      width={345}
+    >
+      <style
+        type="text/css"
+      >
+        
+	.react-stockcharts-grabbing-cursor {
+		pointer-events: all;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+	.react-stockcharts-crosshair-cursor {
+		pointer-events: all;
+		cursor: crosshair;
+	}
+	.react-stockcharts-tooltip-hover {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-avoid-interaction {
+		pointer-events: none;
+	}
+	.react-stockcharts-enable-interaction {
+		pointer-events: all;
+	}
+	.react-stockcharts-tooltip {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-default-cursor {
+		cursor: default;
+	}
+	.react-stockcharts-move-cursor {
+		cursor: move;
+	}
+	.react-stockcharts-pointer-cursor {
+		cursor: pointer;
+	}
+	.react-stockcharts-ns-resize-cursor {
+		cursor: ns-resize;
+	}
+	.react-stockcharts-ew-resize-cursor {
+		cursor: ew-resize;
+	}
+      </style>
+      <defs>
+        <clipPath
+          id="chart-area-clip"
+        >
+          <rect
+            height={140}
+            width={280}
+            x="0"
+            y="0"
+          />
+        </clipPath>
+        <clipPath
+          id="chart-area-clip-180"
+        >
+          <rect
+            height={140}
+            width={280}
+            x="0"
+            y="0"
+          />
+        </clipPath>
+      </defs>
+      <g
+        transform="translate(15.5, 10.5)"
+      >
+        <rect
+          className=""
+          height={140}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseDown={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          onWheel={[Function]}
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+          width={280}
+        />
+        <g
+          className="react-stockcharts-avoid-interaction"
+        >
+          <g
+            transform="translate(0, 0)"
+          >
+            <defs>
+              <linearGradient
+                id="gradient-MSFT-no-controls"
+                x1="0"
+                x2="0"
+                y1="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  stopColor="#e94741"
+                  stopOpacity={0.2}
+                />
+                <stop
+                  offset="70%"
+                  stopColor="#e94741"
+                  stopOpacity={0.4}
+                />
+                <stop
+                  offset="100%"
+                  stopColor="#e94741"
+                  stopOpacity={0.8}
+                />
+              </linearGradient>
+            </defs>
+            <g
+              className="react-stockcharts-area"
+            >
+              <g
+                style={
+                  Object {
+                    "clipPath": "url(#chart-area-clip-180)",
+                  }
+                }
+              >
+                <path
+                  className="line "
+                  d="MNaN,128LNaN,140LNaN,99LNaN,61LNaN,0LNaN,53LNaN,32LNaN,26LNaN,70LNaN,99LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140Z"
+                  fill="url(#gradient-MSFT-no-controls)"
+                  stroke="none"
+                />
+              </g>
+              <g
+                style={
+                  Object {
+                    "clipPath": "url(#chart-area-clip-180)",
+                  }
+                }
+              >
+                <path
+                  className="line  "
+                  d="MNaN,128LNaN,140LNaN,99LNaN,61LNaN,0LNaN,53LNaN,32LNaN,26LNaN,70LNaN,99"
+                  fill="none"
+                  stroke="#e94741"
+                  strokeDasharray="none"
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<StockChart /> renders correctly without chartData 1`] = `null`;
+
+exports[`<StockChart /> renders correctly without controls 1`] = `
+<div
+  className="stock-chart"
+>
+  <div
+    className="react-stockchart"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 200,
+        "position": "relative",
+        "width": 345,
+      }
+    }
+  >
+    <svg
+      className="react-stockchart"
+      height={200}
+      style={
+        Object {
+          "position": "absolute",
+          "zIndex": 6,
+        }
+      }
+      width={345}
+    >
+      <style
+        type="text/css"
+      >
+        
+	.react-stockcharts-grabbing-cursor {
+		pointer-events: all;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+	.react-stockcharts-crosshair-cursor {
+		pointer-events: all;
+		cursor: crosshair;
+	}
+	.react-stockcharts-tooltip-hover {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-avoid-interaction {
+		pointer-events: none;
+	}
+	.react-stockcharts-enable-interaction {
+		pointer-events: all;
+	}
+	.react-stockcharts-tooltip {
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.react-stockcharts-default-cursor {
+		cursor: default;
+	}
+	.react-stockcharts-move-cursor {
+		cursor: move;
+	}
+	.react-stockcharts-pointer-cursor {
+		cursor: pointer;
+	}
+	.react-stockcharts-ns-resize-cursor {
+		cursor: ns-resize;
+	}
+	.react-stockcharts-ew-resize-cursor {
+		cursor: ew-resize;
+	}
+      </style>
+      <defs>
+        <clipPath
+          id="chart-area-clip"
+        >
+          <rect
+            height={140}
+            width={280}
+            x="0"
+            y="0"
+          />
+        </clipPath>
+        <clipPath
+          id="chart-area-clip-189.68"
+        >
+          <rect
+            height={140}
+            width={280}
+            x="0"
+            y="0"
+          />
+        </clipPath>
+      </defs>
+      <g
+        transform="translate(15.5, 10.5)"
+      >
+        <rect
+          className=""
+          height={140}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseDown={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          onWheel={[Function]}
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+          width={280}
+        />
+        <g
+          className="react-stockcharts-avoid-interaction"
+        >
+          <g
+            transform="translate(0, 0)"
+          >
+            <defs>
+              <linearGradient
+                id="gradient-MSFT-no-controls"
+                x1="0"
+                x2="0"
+                y1="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  stopColor="#6eb26d"
+                  stopOpacity={0.2}
+                />
+                <stop
+                  offset="70%"
+                  stopColor="#6eb26d"
+                  stopOpacity={0.4}
+                />
+                <stop
+                  offset="100%"
+                  stopColor="#6eb26d"
+                  stopOpacity={0.8}
+                />
+              </linearGradient>
+            </defs>
+            <g
+              className="react-stockcharts-area"
+            >
+              <g
+                style={
+                  Object {
+                    "clipPath": "url(#chart-area-clip-189.68)",
+                  }
+                }
+              >
+                <path
+                  className="line "
+                  d="MNaN,128LNaN,140LNaN,99LNaN,61LNaN,0LNaN,53LNaN,32LNaN,26LNaN,70LNaN,99LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140LNaN,140Z"
+                  fill="url(#gradient-MSFT-no-controls)"
+                  stroke="none"
+                />
+              </g>
+              <g
+                style={
+                  Object {
+                    "clipPath": "url(#chart-area-clip-189.68)",
+                  }
+                }
+              >
+                <path
+                  className="line  "
+                  d="MNaN,128LNaN,140LNaN,99LNaN,61LNaN,0LNaN,53LNaN,32LNaN,26LNaN,70LNaN,99"
+                  fill="none"
+                  stroke="#6eb26d"
+                  strokeDasharray="none"
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+`;
