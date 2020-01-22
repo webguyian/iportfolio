@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import AppIcon from 'components/AppIcon/AppIcon';
 import Clockface from 'components/Clockface/Clockface';
 import DateTime from 'components/DateTime/DateTime';
 import Text from 'components/Text/Text';
 
-class Homescreen extends Component {
-  get calculatorIcon() {
+const Homescreen = () => {
+  const calculatorIcon = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
         <defs>
@@ -35,9 +35,9 @@ class Homescreen extends Component {
         <circle cx="79" cy="93" r="6" fill="#fe9500" />
       </svg>
     );
-  }
+  };
 
-  get calendarIcon() {
+  const calendarIcon = () => {
     return (
       <AppIcon name="Calendar">
         <Text className="ui-app-icon-weekday">
@@ -48,52 +48,17 @@ class Homescreen extends Component {
         </Text>
       </AppIcon>
     );
-  }
+  };
 
-  get clockIcon() {
+  const clockIcon = () => {
     return (
       <AppIcon name="Clock">
         <Clockface />
       </AppIcon>
     );
-  }
+  };
 
-  get dock() {
-    return (
-      <div className="iportfolio-dock">
-        <AppIcon name="phone" noLabel>
-          {this.phoneIcon}
-        </AppIcon>
-        <AppIcon name="safari" noLabel>
-          {this.safariIcon}
-        </AppIcon>
-        <AppIcon name="mail" noLabel>
-          {this.mailIcon}
-        </AppIcon>
-        <AppIcon name="messages" noLabel>
-          {this.messengerIcon}
-        </AppIcon>
-      </div>
-    );
-  }
-
-  get grid() {
-    return (
-      <div className="iportfolio-grid">
-        {this.calendarIcon}
-        {this.clockIcon}
-        <AppIcon name="Google Maps">{this.mapIcon}</AppIcon>
-        <AppIcon name="Weather">{this.weatherIcon}</AppIcon>
-        <AppIcon name="Reminders">{this.remindersIcon}</AppIcon>
-        <AppIcon name="Notes">{this.notesIcon}</AppIcon>
-        <AppIcon name="Calculator">{this.calculatorIcon}</AppIcon>
-        <AppIcon name="Stocks">{this.stocksIcon}</AppIcon>
-        <AppIcon name="Settings">{this.settingsIcon}</AppIcon>
-      </div>
-    );
-  }
-
-  get mailIcon() {
+  const mailIcon = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
         <defs>
@@ -120,9 +85,9 @@ class Homescreen extends Component {
         />
       </svg>
     );
-  }
+  };
 
-  get mapIcon() {
+  const mapIcon = () => {
     return (
       <svg
         viewBox="0 0 100 100"
@@ -216,9 +181,9 @@ class Homescreen extends Component {
         </defs>
       </svg>
     );
-  }
+  };
 
-  get messengerIcon() {
+  const messengerIcon = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
         <defs>
@@ -240,9 +205,9 @@ class Homescreen extends Component {
         />
       </svg>
     );
-  }
+  };
 
-  get notesIcon() {
+  const notesIcon = () => {
     return (
       <svg
         viewBox="0 0 65 65"
@@ -306,9 +271,9 @@ class Homescreen extends Component {
         </defs>
       </svg>
     );
-  }
+  };
 
-  get phoneIcon() {
+  const phoneIcon = () => {
     return (
       <svg
         viewBox="0 0 65 65"
@@ -342,9 +307,9 @@ class Homescreen extends Component {
         </defs>
       </svg>
     );
-  }
+  };
 
-  get remindersIcon() {
+  const remindersIcon = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
         <defs>
@@ -382,9 +347,9 @@ class Homescreen extends Component {
         />
       </svg>
     );
-  }
+  };
 
-  get safariIcon() {
+  const safariIcon = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <linearGradient
@@ -411,9 +376,9 @@ class Homescreen extends Component {
         <path fill="#ACACAC" d="M21 106.7l48.9-36.8-6-6z" />
       </svg>
     );
-  }
+  };
 
-  get settingsIcon() {
+  const settingsIcon = () => {
     return (
       <svg
         viewBox="0 0 65 65"
@@ -478,9 +443,9 @@ class Homescreen extends Component {
         </defs>
       </svg>
     );
-  }
+  };
 
-  get stocksIcon() {
+  const stocksIcon = () => {
     return (
       <svg
         viewBox="0 0 65 65"
@@ -533,9 +498,9 @@ class Homescreen extends Component {
         </defs>
       </svg>
     );
-  }
+  };
 
-  get weatherIcon() {
+  const weatherIcon = () => {
     return (
       <svg
         viewBox="0 0 65 65"
@@ -583,16 +548,49 @@ class Homescreen extends Component {
         </defs>
       </svg>
     );
-  }
+  };
 
-  render() {
+  const grid = () => {
     return (
-      <div className="iportfolio-homescreen">
-        {this.grid}
-        {this.dock}
+      <div className="iportfolio-grid">
+        {calendarIcon()}
+        {clockIcon()}
+        <AppIcon name="Google Maps">{mapIcon()}</AppIcon>
+        <AppIcon name="Weather">{weatherIcon()}</AppIcon>
+        <AppIcon name="Reminders">{remindersIcon()}</AppIcon>
+        <AppIcon name="Notes">{notesIcon()}</AppIcon>
+        <AppIcon name="Calculator">{calculatorIcon()}</AppIcon>
+        <AppIcon name="Stocks">{stocksIcon()}</AppIcon>
+        <AppIcon name="Settings">{settingsIcon()}</AppIcon>
       </div>
     );
-  }
-}
+  };
+
+  const dock = () => {
+    return (
+      <div className="iportfolio-dock">
+        <AppIcon name="phone" noLabel>
+          {phoneIcon()}
+        </AppIcon>
+        <AppIcon name="safari" noLabel>
+          {safariIcon()}
+        </AppIcon>
+        <AppIcon name="mail" noLabel>
+          {mailIcon()}
+        </AppIcon>
+        <AppIcon name="messages" noLabel>
+          {messengerIcon()}
+        </AppIcon>
+      </div>
+    );
+  };
+
+  return (
+    <div className="iportfolio-homescreen">
+      {grid()}
+      {dock()}
+    </div>
+  );
+};
 
 export default Homescreen;

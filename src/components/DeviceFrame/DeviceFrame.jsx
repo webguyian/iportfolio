@@ -1,45 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import { useBreakpoint } from 'hooks';
+
 import Icon from 'components/Icon/Icon';
 
-class DeviceFrame extends Component {
-  static propTypes = {
-    breakpoint: PropTypes.number,
-    className: PropTypes.string,
-    children: PropTypes.node,
-    color: PropTypes.string,
-    device: PropTypes.string,
-    leftIndicator: PropTypes.element
-  };
+const DeviceFrame = props => {
+  const {
+    breakpoint,
+    className,
+    children,
+    color,
+    device,
+    leftIndicator
+  } = props;
+  const isMobile = useBreakpoint(breakpoint);
+  const baseClass = 'device';
+  const deviceClass = `${baseClass}-${device}`;
+  const colorClass = `${baseClass}-${color}`;
 
-  static defaultProps = {
-    breakpoint: 480,
-    color: 'black',
-    device: 'iphone-x'
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.handleResize = this.handleResize.bind(this);
-
-    this.state = {
-      isMobile: this.isMobile
-    };
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-
-  get header() {
-    const { leftIndicator } = this.props;
+  const header = () => {
     const blockClass = 'device-header-bars-block';
 
     return (
@@ -56,56 +37,49 @@ class DeviceFrame extends Component {
         </div>
       </div>
     );
-  }
+  };
 
-  get isMobile() {
-    const { breakpoint } = this.props;
-
-    return window.matchMedia(`(max-width: ${breakpoint}px)`).matches;
-  }
-
-  handleResize() {
-    this.setState(() => ({
-      isMobile: this.isMobile
-    }));
-  }
-
-  render() {
-    const { className, children, color, device } = this.props;
-    const { isMobile } = this.state;
-    const baseClass = 'device';
-    const deviceClass = `${baseClass}-${device}`;
-    const colorClass = `${baseClass}-${color}`;
-
-    if (isMobile) {
-      return (
-        <div className={className}>
-          <div className="device-content">
-            {this.header}
-            {children}
-          </div>
-        </div>
-      );
-    }
-
+  if (isMobile) {
     return (
-      <div
-        className={classNames(className, baseClass, deviceClass, colorClass)}
-      >
-        <div className="device-frame">
-          <div className="device-content">
-            {this.header}
-            {children}
-          </div>
+      <div className={className}>
+        <div className="device-content">
+          {header()}
+          {children}
         </div>
-        <div className="device-stripe" />
-        <div className="device-header" />
-        <div className="device-sensors" />
-        <div className="device-btns" />
-        <div className="device-power" />
       </div>
     );
   }
-}
+
+  return (
+    <div className={classNames(className, baseClass, deviceClass, colorClass)}>
+      <div className="device-frame">
+        <div className="device-content">
+          {header()}
+          {children}
+        </div>
+      </div>
+      <div className="device-stripe" />
+      <div className="device-header" />
+      <div className="device-sensors" />
+      <div className="device-btns" />
+      <div className="device-power" />
+    </div>
+  );
+};
+
+DeviceFrame.propTypes = {
+  breakpoint: PropTypes.number,
+  className: PropTypes.string,
+  children: PropTypes.node,
+  color: PropTypes.string,
+  device: PropTypes.string,
+  leftIndicator: PropTypes.element
+};
+
+DeviceFrame.defaultProps = {
+  breakpoint: 480,
+  color: 'black',
+  device: 'iphone-x'
+};
 
 export default DeviceFrame;

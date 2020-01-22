@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleSwitch /> handles change 1`] = `
+<label
+  className="ui-toggle-switch ui-toggle-switch--active"
+>
+  <input
+    checked={true}
+    className="ui-toggle-switch-checkbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <button
+    className="ui-btn ui-toggle-switch-slider"
+    onTransitionEnd={[MockFunction]}
+    type="button"
+  />
+  <span
+    className="ui-text ui-text--body ui-toggle-switch-label"
+  >
+    slide to unlock
+  </span>
+</label>
+`;
+
+exports[`<ToggleSwitch /> renders correctly 1`] = `
+<label
+  className="ui-toggle-switch"
+>
+  <input
+    checked={false}
+    className="ui-toggle-switch-checkbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <button
+    className="ui-btn ui-toggle-switch-slider"
+    onTransitionEnd={[MockFunction]}
+    type="button"
+  />
+  <span
+    className="ui-text ui-text--body ui-toggle-switch-label"
+  >
+    slide to unlock
+  </span>
+</label>
+`;
