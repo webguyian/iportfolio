@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherList /> renders correctly 1`] = `
+<ul
+  className="weather-list"
+>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Austin",
+              "coordinates": Object {
+                "lat": 30.2672,
+                "lon": -97.7431,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Austin
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Cupertino",
+              "coordinates": Object {
+                "lat": 37.323,
+                "lon": -122.0322,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Cupertino
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Orlando",
+              "coordinates": Object {
+                "lat": 28.5383,
+                "lon": -81.3792,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Orlando
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Philadelphia",
+              "coordinates": Object {
+                "lat": 39.9526,
+                "lon": -75.1652,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Philadelphia
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Juneau",
+              "coordinates": Object {
+                "lat": 58.3019,
+                "lon": -134.4197,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Juneau
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+</ul>
+`;
+
+exports[`<WeatherList /> renders correctly with current city 1`] = `
+<ul
+  className="weather-list"
+>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to="/weather"
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        New York City
+         
+        <i
+          className="ui-icon ui-icon-location-arrow fas fa-location-arrow"
+        />
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      >
+        43°
+      </span>
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Austin",
+              "coordinates": Object {
+                "lat": 30.2672,
+                "lon": -97.7431,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Austin
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Cupertino",
+              "coordinates": Object {
+                "lat": 37.323,
+                "lon": -122.0322,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Cupertino
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Orlando",
+              "coordinates": Object {
+                "lat": 28.5383,
+                "lon": -81.3792,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Orlando
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Philadelphia",
+              "coordinates": Object {
+                "lat": 39.9526,
+                "lon": -75.1652,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Philadelphia
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+  <li
+    className="weather-list-item"
+  >
+    <Link
+      to={
+        Object {
+          "pathname": "/weather",
+          "state": Object {
+            "data": Object {
+              "city": "Juneau",
+              "coordinates": Object {
+                "lat": 58.3019,
+                "lon": -134.4197,
+              },
+            },
+          },
+        }
+      }
+    >
+      <span
+        className="ui-text ui-text--body"
+      >
+        Juneau
+      </span>
+      <span
+        className="ui-text ui-text--body"
+      />
+    </Link>
+  </li>
+</ul>
+`;

@@ -74,6 +74,11 @@
   text-align: left;
 }
 
+@mixin stretch-column-nowrap {
+  @include stretch-column;
+  flex-wrap: nowrap;
+}
+
 @mixin circle($size) {
   width: $size;
   height: $size;

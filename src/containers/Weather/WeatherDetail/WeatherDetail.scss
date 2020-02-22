@@ -1,0 +1,97 @@
+$border: 1px solid rgba($white, 0.25);
+
+.weather-detail {
+  padding: 70px $gutter 0;
+
+  &-header {
+    width: 100%;
+    margin-bottom: $gutter-l;
+    text-align: center;
+
+    &-location {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    &-description {
+      margin-top: 0;
+      font-size: $font-size-m;
+    }
+
+    &-temperature {
+      @include type-number;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+
+  &-body {
+    width: 100%;
+    transition: transform 0.2s;
+  }
+
+  &-daily {
+    max-height: 340px;
+    padding-bottom: $gutter;
+    overflow-y: auto;
+  }
+
+  &-today {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px $gutter;
+    text-align: left;
+
+    &-day-label {
+      margin-left: 8px;
+      font-size: $font-size-m;
+      font-variant: small-caps;
+      text-transform: lowercase;
+    }
+
+    &-temperature {
+      > .ui-text--body {
+        display: inline-block;
+        width: 20px;
+      }
+
+      &-low {
+        margin-left: $gutter;
+        color: $gray;
+      }
+    }
+  }
+
+  &-hourly {
+    padding-bottom: 20px;
+    overflow-x: auto;
+
+    &-list {
+      @include unstyled-list;
+      display: flex;
+    }
+  }
+
+  &-daily-list {
+    @include unstyled-list;
+    padding: 8px;
+  }
+}
+
+.weather-hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+
+  &-time {
+    font-variant: small-caps;
+    text-transform: lowercase;
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    fill: $yellow;
+  }
+}

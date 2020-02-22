@@ -1,7 +1,6 @@
 .stocks-app {
-  @include stretch-column;
+  @include stretch-column-nowrap;
   position: relative;
-  flex-wrap: nowrap;
   padding: $gutter;
   transition: transform 0.3s ease;
 

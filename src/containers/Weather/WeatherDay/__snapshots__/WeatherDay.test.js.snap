@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherDay /> renders correctly 1`] = `
+<li
+  className="weather-day"
+>
+  <span
+    className="ui-text ui-text--body weather-day-name"
+  >
+    Monday
+  </span>
+  <svg
+    className="ui-icon ui-icon-clear-day weather-day-icon"
+    focusable="false"
+    role="presentation"
+  >
+    <use
+      height="100%"
+      width="100%"
+      xlinkHref="#clear-day"
+    />
+  </svg>
+  <div
+    className="weather-day-temperature"
+  >
+    <span
+      className="ui-text ui-text--body"
+    >
+      69
+    </span>
+    <span
+      className="ui-text ui-text--body"
+    >
+      51
+    </span>
+  </div>
+</li>
+`;

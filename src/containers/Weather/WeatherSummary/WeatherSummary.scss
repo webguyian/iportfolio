@@ -1,0 +1,33 @@
+.weather-summary {
+  &-description {
+    margin-bottom: 8px;
+    padding: $gutter 8px;
+    border-top: $border;
+    border-bottom: $border;
+
+    > .ui-text--body {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &-table {
+    &-row {
+      display: flex;
+      flex-flow: row nowrap;
+      text-align: left;
+    }
+
+    &-cell {
+      flex: 0 1 50%;
+      padding: 8px;
+    }
+
+    .ui-text--muted {
+      margin: 0;
+      color: rgba($white, 0.5); // stylelint-disable-line
+      font-size: $font-size-s;
+      text-transform: uppercase;
+    }
+  }
+}

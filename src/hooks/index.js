@@ -50,8 +50,10 @@ export const useStorageCache = (key, currentValue, deleteFn) => {
         window.localStorage.removeItem(key);
       } else {
         if (typeof nextValue === 'object' && !(nextValue instanceof Array)) {
-          // Include timestamp on objects
-          nextValue.timestamp = Date.now();
+          if (nextValue !== storedValue) {
+            // Include timestamp on objects
+            nextValue.timestamp = Date.now();
+          }
         }
 
         // Update value in local storage

@@ -1,0 +1,31 @@
+.weather-list {
+  @include unstyled-list;
+
+  &-item {
+    > .ui-link {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: $gutter-m;
+      border-bottom: $border;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $yellow;
+      }
+
+      > .ui-text {
+        font-size: $font-size-l;
+      }
+    }
+
+    .ui-icon-location-arrow {
+      margin-top: 4px;
+      font-size: $font-size-xs;
+      vertical-align: top;
+    }
+  }
+}

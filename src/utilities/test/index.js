@@ -15,7 +15,7 @@ export const testHook = (callback = () => {}) => {
 
 Date.now = jest.fn(() => mockTime);
 
-window.fetch = jest.fn().mockResolvedValue({ json: () => Promise.resolve({}) });
+global.fetch = jest.fn().mockResolvedValue({ json: () => Promise.resolve({}) });
 
 export const createMockResponse = data => {
   return Promise.resolve({
@@ -23,12 +23,25 @@ export const createMockResponse = data => {
   });
 };
 
-window.matchMedia = jest.fn().mockImplementation(media => {
+global.matchMedia = jest.fn().mockImplementation(media => {
   return {
     matches: false,
     media
   };
 });
+
+global.navigator.geolocation = {
+  getCurrentPosition: jest.fn().mockImplementation(success =>
+    Promise.resolve(
+      success({
+        coords: {
+          latitude: 10,
+          longitude: 10
+        }
+      })
+    )
+  )
+};
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

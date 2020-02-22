@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherHour /> renders correctly 1`] = `
+<li
+  className="weather-hour"
+>
+  <span
+    className="ui-text ui-text--body weather-hour-time"
+  >
+    12AM
+  </span>
+  <svg
+    className="ui-icon ui-icon-clear-day weather-hour-icon"
+    focusable="false"
+    role="presentation"
+  >
+    <use
+      height="100%"
+      width="100%"
+      xlinkHref="#clear-day"
+    />
+  </svg>
+  <span
+    className="ui-text ui-text--body weather-hour-temperature"
+  >
+    NaN°
+  </span>
+</li>
+`;

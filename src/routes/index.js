@@ -5,6 +5,7 @@ import LockscreenView from 'views/lockscreen/LockscreenView';
 import NotesView from 'views/notes/NotesView';
 import RemindersView from 'views/reminders/RemindersView';
 import StocksView from 'views/stocks/StocksView';
+import WeatherView from 'views/weather/WeatherView';
 
 const routes = [
   {
@@ -44,6 +45,12 @@ const routes = [
     path: '/stocks',
     pathKey: 'stocks',
     component: StocksView
+  },
+  {
+    path: '/weather',
+    pathKey: 'weather',
+    component: WeatherView,
+    exact: false
   }
 ];
 

@@ -1,0 +1,71 @@
+/* stylelint-disable color-no-hex */
+$border: 1px solid rgba($white, 0.25);
+
+.weather-app {
+  @include stretch-column-nowrap;
+  padding: 0;
+
+  .ui-text--loading {
+    margin-top: auto;
+    font-size: $font-size-l;
+    text-align: center;
+    animation: fade-in-out 2s linear infinite;
+  }
+
+  &-bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 8px $gutter-m;
+    line-height: 0;
+    text-align: center;
+
+    .weather-app--detail & {
+      justify-content: space-between;
+    }
+
+    > .ui-link {
+      font-size: $font-size-m;
+
+      &:hover,
+      &:focus {
+        > .ui-icon-list {
+          color: $white;
+        }
+      }
+
+      > .ui-icon-list {
+        transition: color 0.2s;
+        color: $gray-medium;
+      }
+    }
+
+    .ui-icon-dark-sky {
+      width: 20px;
+      height: 20px;
+      fill: $gray-medium;
+      transition: fill 0.2s;
+
+      &:hover,
+      &:focus {
+        fill: $white;
+      }
+    }
+
+    &-footer {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}

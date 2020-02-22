@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherSummary /> renders correctly 1`] = `
+<div
+  className="weather-summary"
+>
+  <div
+    className="weather-summary-description"
+  >
+    <p
+      className="ui-text ui-text--body"
+    >
+      Today: 
+      Clear throughout the day.
+    </p>
+  </div>
+  <div
+    className="weather-summary-table"
+  >
+    <div
+      className="weather-summary-table-row"
+    >
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Sunrise
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          7:23AM
+        </span>
+      </div>
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Sunset
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          7:01PM
+        </span>
+      </div>
+    </div>
+    <div
+      className="weather-summary-table-row"
+    >
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Chance of rain
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          3%
+        </span>
+      </div>
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Humidity
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          53%
+        </span>
+      </div>
+    </div>
+    <div
+      className="weather-summary-table-row"
+    >
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Wind
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          WSW
+           
+          6
+           mph
+        </span>
+      </div>
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Feels like
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          41°
+        </span>
+      </div>
+    </div>
+    <div
+      className="weather-summary-table-row"
+    >
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Precipitation
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          0
+           in
+        </span>
+      </div>
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Pressure
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          30.46
+           inHg
+        </span>
+      </div>
+    </div>
+    <div
+      className="weather-summary-table-row"
+    >
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Visibility
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          10
+           mi
+        </span>
+      </div>
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          UX index
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          5
+        </span>
+      </div>
+    </div>
+    <div
+      className="weather-summary-table-row"
+    >
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Dew Point
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          25°
+        </span>
+      </div>
+      <div
+        className="weather-summary-table-cell"
+      >
+        <h3
+          className="ui-text ui-text--body ui-text--muted"
+        >
+          Ozone
+        </h3>
+        <span
+          className="ui-text ui-text--body"
+        >
+          342
+           DU
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
