@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MapSearch /> renders correctly 1`] = `
+<form
+  className="map-search"
+  onSubmit={[Function]}
+>
+  <input
+    className="map-search-input"
+    placeholder="Search here"
+  />
+  <button
+    className="ui-btn ui-btn--with-icon map-search-btn"
+    type="submit"
+  >
+    <i
+      className="ui-icon ui-icon-search fas fa-search"
+    />
+    <span
+      className="ui-text ui-text--accessible"
+    >
+      Search
+    </span>
+  </button>
+</form>
+`;

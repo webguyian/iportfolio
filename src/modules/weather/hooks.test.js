@@ -2,7 +2,6 @@ import React from 'react';
 import { act } from 'react-test-renderer';
 
 import { TestComponent, createMockResponse, testHook } from 'utilities/test';
-import { GEOCODE_REVERSE_API, WEATHER_API } from './constants';
 
 import * as browserHooks from 'modules/browser/hooks';
 import * as helpers from './helpers';

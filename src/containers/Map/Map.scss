@@ -1,0 +1,88 @@
+/* stylelint-disable color-no-hex */
+$map-bg-color: #f2f3f4;
+$map-height: 92%;
+
+.map-app {
+  @include stretch-column-nowrap;
+  position: relative;
+  background-color: $map-bg-color;
+
+  &-container {
+    @include stretch-column;
+    z-index: 1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: $map-height;
+
+    > .ui-text--loading {
+      color: $gray-dark;
+    }
+  }
+
+  &-bottom-bar {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5px;
+    border-top: 1px solid $gray-light;
+
+    > .ui-btn--with-icon {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      min-width: 100px;
+      padding: 5px $gutter;
+      color: $gray-medium;
+
+      > .ui-btn-label {
+        margin-top: 2px;
+        margin-left: 0;
+      }
+    }
+
+    > .ui-btn--active {
+      color: $blue;
+    }
+  }
+}
+
+.map-search {
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 90%;
+
+  .map-app--street-view & {
+    display: none;
+  }
+
+  &-input {
+    @include type-body($font-size-s);
+    position: relative;
+    width: 100%;
+    min-height: 35px;
+    margin: 0 auto;
+    padding: 8px 30px 8px 8px;
+    border: 0;
+    box-shadow: 0 2px 1px 1px rgba($black, 0.2);
+
+    &::placeholder {
+      color: $gray-medium;
+    }
+  }
+
+  &-btn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    padding: 4px;
+    color: $gray-medium;
+    font-size: $font-size-default;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
 import Button from 'components/Button/Button';
@@ -34,12 +35,16 @@ const LeftIndicator = () => {
   return 'IMAC';
 };
 
-const AppContainer = () => {
+const AppContainer = props => {
+  const { location } = props;
+  const invertIconColor = location.pathname.startsWith('/map');
+
   return (
     <div className="iportfolio-app">
       <DeviceFrame
         className="iportfolio-app-device"
         leftIndicator={<LeftIndicator />}
+        invertIconColor={invertIconColor}
       >
         <Switch>
           {routes.map(route => (
@@ -49,6 +54,10 @@ const AppContainer = () => {
       </DeviceFrame>
     </div>
   );
+};
+
+AppContainer.propTypes = {
+  location: PropTypes.object.isRequired
 };
 
 export default AppContainer;

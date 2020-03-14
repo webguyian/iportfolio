@@ -9,5 +9,9 @@
   &-view {
     height: 100%;
     padding-top: $gutter-m;
+
+    &--no-padding {
+      padding-top: 0;
+    }
   }
 }

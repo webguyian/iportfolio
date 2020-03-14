@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useStorageCache } from 'hooks';
+import { useStorageCache } from 'modules/browser/hooks';
 import { API_EXCHANGE, API_TOKEN } from 'containers/Stocks/constants';
 import {
   getCandlestickEndpoint,

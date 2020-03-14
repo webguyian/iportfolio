@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { useStorageCache } from 'hooks';
+import { DEFAULT_COORDINATES } from './constants';
 import { isExpired } from './helpers';
 
 export const useFetch = (endpoint, options) => {
@@ -45,6 +45,64 @@ export const useFetchAll = urls => {
   }, [urls]);
 
   return responses;
+};
+
+export const useStorageCache = (key, currentValue, deleteFn) => {
+  const getValue = () => {
+    try {
+      // Get item from local storage with key
+      const item = window.localStorage.getItem(key);
+
+      // Parse stored JSON or if none return undefined
+      return item ? JSON.parse(item) : undefined;
+    } catch (error) {
+      // If error return undefined
+      return undefined;
+    }
+  };
+
+  const value = getValue();
+  const localRef = useRef(value);
+  const [storedValue, setStoredValue] = useState(value);
+
+  const setValue = nextValue => {
+    try {
+      // Save to state and local storage
+      setStoredValue(nextValue);
+
+      if (deleteFn && deleteFn(nextValue)) {
+        // Remove item from local storage
+        window.localStorage.removeItem(key);
+      } else {
+        if (typeof nextValue === 'object' && !(nextValue instanceof Array)) {
+          if (nextValue !== storedValue) {
+            // Include timestamp on objects
+            nextValue.timestamp = Date.now();
+          }
+        }
+
+        // Update value in local storage
+        window.localStorage.setItem(key, JSON.stringify(nextValue));
+      }
+    } catch (error) {
+      // Drop error
+    }
+  };
+
+  useEffect(() => {
+    // Update local value
+    localRef.current = currentValue || storedValue;
+  }, [currentValue, storedValue]);
+
+  useEffect(() => {
+    return () => {
+      if (key && localRef.current) {
+        setValue(localRef.current);
+      }
+    };
+  }, []);
+
+  return localRef.current;
 };
 
 export const useFetchAndCache = (url, key, expiration) => {
@@ -104,9 +162,16 @@ export const useGeolocation = () => {
 
   useEffect(() => {
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(position => {
-        setCoordinates(position.coords);
-      });
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          setCoordinates(position.coords);
+        },
+        () => {
+          setCoordinates(DEFAULT_COORDINATES);
+        }
+      );
+    } else {
+      setCoordinates(DEFAULT_COORDINATES);
     }
   }, []);
 

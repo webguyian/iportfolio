@@ -13,6 +13,7 @@ const DeviceFrame = props => {
     children,
     color,
     device,
+    invertIconColor,
     leftIndicator
   } = props;
   const isMobile = useBreakpoint(breakpoint);
@@ -21,11 +22,13 @@ const DeviceFrame = props => {
   const colorClass = `${baseClass}-${color}`;
 
   const header = () => {
-    const blockClass = 'device-header-bars-block';
+    const headerBarsClass = 'device-header-bars';
+    const invertedClass = invertIconColor && `${headerBarsClass}--inverted`;
+    const blockClass = `${headerBarsClass}-block`;
 
     return (
       <div className="device-header-container">
-        <div className="device-header-bars">
+        <div className={classNames(headerBarsClass, invertedClass)}>
           <div className={`${blockClass} ${blockClass}--time`}>
             {leftIndicator}
           </div>
@@ -73,13 +76,15 @@ DeviceFrame.propTypes = {
   children: PropTypes.node,
   color: PropTypes.string,
   device: PropTypes.string,
+  invertIconColor: PropTypes.bool,
   leftIndicator: PropTypes.element
 };
 
 DeviceFrame.defaultProps = {
   breakpoint: 480,
   color: 'black',
-  device: 'iphone-x'
+  device: 'iphone-x',
+  invertIconColor: false
 };
 
 export default DeviceFrame;

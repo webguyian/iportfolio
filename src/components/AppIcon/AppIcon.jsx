@@ -8,12 +8,12 @@ import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
 
 const AppIcon = props => {
-  const { children, name, noLabel } = props;
+  const { children, id, name, noLabel } = props;
   const baseClass = 'ui-app-icon';
-  const id = kebabCase(name);
-  const nameClass = `${baseClass}--${id}`;
+  const nameId = kebabCase(name);
+  const nameClass = `${baseClass}--${nameId}`;
   const history = useHistory();
-  const redirect = () => history.push(`/${id}`);
+  const redirect = () => history.push(`/${id || nameId}`);
 
   return (
     <div className={classNames(baseClass, nameClass)}>
@@ -27,6 +27,7 @@ const AppIcon = props => {
 
 AppIcon.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string,
   name: PropTypes.string.isRequired,
   noLabel: PropTypes.bool
 };

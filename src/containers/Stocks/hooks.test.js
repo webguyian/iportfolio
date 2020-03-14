@@ -5,22 +5,22 @@ import { TestComponent, createMockResponse, testHook } from 'utilities/test';
 import { initialStocks } from './constants';
 
 import * as helpers from './helpers';
-import * as commonHooks from 'hooks';
+import * as browserHooks from 'modules/browser/hooks';
 import * as hooks from './hooks';
 
 describe('Stocks hooks', () => {
-  const useStorageCacheHook = commonHooks.useStorageCache;
+  const useStorageCacheHook = browserHooks.useStorageCache;
   const isExpired = helpers.isExpired;
   const isExpiredNews = helpers.isExpiredNews;
 
-  commonHooks.useStorageCache = jest.fn();
+  browserHooks.useStorageCache = jest.fn();
   helpers.isExpired = jest.fn();
   helpers.isExpiredNews = jest.fn();
 
   beforeEach(() => {
     jest.clearAllMocks();
     // Reset to original implementation before each test
-    commonHooks.useStorageCache.mockImplementation(useStorageCacheHook);
+    browserHooks.useStorageCache.mockImplementation(useStorageCacheHook);
     helpers.isExpired.mockImplementation(isExpired);
     helpers.isExpiredNews.mockImplementation(isExpiredNews);
   });
@@ -286,7 +286,7 @@ describe('Stocks hooks', () => {
       global.fetch
         .mockReturnValueOnce(exchangeResponse)
         .mockReturnValue(stockResponse);
-      commonHooks.useStorageCache.mockReturnValue({
+      browserHooks.useStorageCache.mockReturnValue({
         stocks: initialStocks.slice(0, 2)
       });
 
@@ -546,7 +546,7 @@ describe('Stocks hooks', () => {
     it('returns news from cache', () => {
       let news;
 
-      commonHooks.useStorageCache.mockReturnValue({
+      browserHooks.useStorageCache.mockReturnValue({
         news: generalNews.slice(0, 2)
       });
       helpers.isExpiredNews.mockReturnValue(false);
@@ -568,7 +568,7 @@ describe('Stocks hooks', () => {
     it('returns news not from cache when expired', async () => {
       let news;
 
-      commonHooks.useStorageCache.mockReturnValue({
+      browserHooks.useStorageCache.mockReturnValue({
         news: generalNews.slice(0, 2)
       });
       helpers.isExpiredNews.mockReturnValue(true);
@@ -751,7 +751,7 @@ describe('Stocks hooks', () => {
         chartData: helpers.updateChartData(amazonChartData, '1D')
       };
 
-      commonHooks.useStorageCache.mockReturnValue({
+      browserHooks.useStorageCache.mockReturnValue({
         charts: [appleResponse, amazonResponse]
       });
       helpers.isExpired.mockReturnValue(false);
@@ -806,7 +806,7 @@ describe('Stocks hooks', () => {
         .mockReturnValueOnce(createMockResponse(appleChartData))
         .mockReturnValueOnce(createMockResponse(amazonChartData));
 
-      commonHooks.useStorageCache.mockReturnValue({
+      browserHooks.useStorageCache.mockReturnValue({
         charts: [appleResponse]
       });
       helpers.isExpired.mockReturnValue(true);

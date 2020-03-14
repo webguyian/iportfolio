@@ -38,6 +38,7 @@ const Link = forwardRef((props, ref) => {
         className={baseClass}
         target="_blank"
         rel="noopener noreferrer"
+        {...otherProps}
       >
         {children}
       </a>

@@ -43,6 +43,34 @@ global.navigator.geolocation = {
   )
 };
 
+const boundsInstance = {
+  union: jest.fn(),
+  extend: jest.fn()
+};
+
+const mapInstance = {
+  getCenter: jest.fn()
+};
+const searchInstance = {
+  addListener: jest.fn(),
+  getPlaces: jest.fn(() => []),
+  setBounds: jest.fn()
+};
+
+global.google = {
+  maps: {
+    event: {
+      addListener: jest.fn()
+    },
+    places: {
+      SearchBox: jest.fn(() => searchInstance)
+    },
+    LatLngBounds: jest.fn(() => boundsInstance),
+    Map: jest.fn(() => mapInstance),
+    Marker: jest.fn(() => ({ setMap: jest.fn() }))
+  }
+};
+
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   Link: 'Link'

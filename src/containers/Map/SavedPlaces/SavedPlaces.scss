@@ -1,0 +1,54 @@
+/* stylelint-disable color-no-hex */
+$map-bg-color: #f2f3f4;
+
+.saved-places {
+  @include stretch-column-nowrap;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: $map-height;
+  padding: 40px 0 $gutter;
+  background-color: $map-bg-color;
+  color: $gray-dark;
+
+  > .ui-text--display {
+    margin: $gutter;
+  }
+
+  &-list {
+    @include unstyled-list;
+
+    &-item {
+      &:nth-child(odd) {
+        background: $gray-light;
+      }
+
+      &-btn {
+        display: block;
+        width: 100%;
+        padding: $gutter;
+        text-align: left;
+
+        > .ui-text {
+          margin: 0 0 5px;
+        }
+
+        > .ui-link {
+          @include type-body;
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &-empty-message {
+    min-height: 40%;
+    margin: auto $gutter;
+    text-align: center;
+
+    > .ui-text--body {
+      font-size: $font-size-l;
+      line-height: 1.5;
+    }
+  }
+}

@@ -60,4 +60,13 @@ $size: 65px;
       padding: 2px;
     }
   }
+
+  &--google-maps {
+    > .ui-app-icon-button {
+      > svg {
+        width: 55px;
+        margin-top: 2px;
+      }
+    }
+  }
 }

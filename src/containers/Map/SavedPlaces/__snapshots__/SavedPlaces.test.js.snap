@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SavedPlaces /> renders correctly 1`] = `
+<div
+  className="saved-places"
+>
+  <h1
+    className="ui-text ui-text--display"
+  >
+    Saved
+  </h1>
+  <ul
+    className="saved-places-list"
+  >
+    <li
+      className="saved-places-list-item"
+    >
+      <button
+        className="ui-btn saved-places-list-item-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <h2
+          className="ui-text ui-text--body ui-text--bold"
+        >
+          Place A
+        </h2>
+        <span
+          className="ui-text ui-text--body ui-text--block"
+        >
+          123 Apple Road
+        </span>
+      </button>
+    </li>
+    <li
+      className="saved-places-list-item"
+    >
+      <button
+        className="ui-btn saved-places-list-item-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <h2
+          className="ui-text ui-text--body ui-text--bold"
+        >
+          Place B
+        </h2>
+        <span
+          className="ui-text ui-text--body ui-text--block"
+        >
+          456 Cherry Lane
+        </span>
+        <Link
+          external={true}
+          onClick={[Function]}
+          to="http://theplace.to.b"
+        >
+          View website
+        </Link>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<SavedPlaces /> renders correctly without places 1`] = `
+<div
+  className="saved-places"
+>
+  <h1
+    className="ui-text ui-text--display"
+  >
+    Saved
+  </h1>
+  <div
+    className="saved-places-empty-message"
+  >
+    <p
+      className="ui-text ui-text--body"
+    >
+      You have no saved places.
+    </p>
+    <p
+      className="ui-text ui-text--body"
+    >
+      Explore the map by searching and star your favorites.
+    </p>
+  </div>
+</div>
+`;

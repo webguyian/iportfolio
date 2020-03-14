@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Map /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="map-app"
+  >
+    <div
+      class="map-app-container"
+    >
+      <h2
+        class="ui-text ui-text--body ui-text--loading"
+      >
+        Loading...
+      </h2>
+    </div>
+    <div
+      class="map-app-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon ui-btn--active"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-map-marker-alt fas fa-map-marker-alt fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Explore
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-bookmark fas fa-bookmark fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Saved
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Map /> renders correctly with map 1`] = `
+<DocumentFragment>
+  <div
+    class="map-app"
+  >
+    <div>
+      Map search goes here
+    </div>
+    <div
+      class="map-app-container"
+    >
+      <h2
+        class="ui-text ui-text--body ui-text--loading"
+      >
+        Loading...
+      </h2>
+    </div>
+    <div
+      class="map-app-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon ui-btn--active"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-map-marker-alt fas fa-map-marker-alt fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Explore
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-bookmark fas fa-bookmark fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Saved
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Map /> renders correctly with saved view 1`] = `
+<DocumentFragment>
+  <div
+    class="map-app"
+  >
+    <div
+      class="map-app-container"
+    >
+      <h2
+        class="ui-text ui-text--body ui-text--loading"
+      >
+        Loading...
+      </h2>
+    </div>
+    <div
+      class="saved-places"
+    >
+      <h1
+        class="ui-text ui-text--display"
+      >
+        Saved
+      </h1>
+      <div
+        class="saved-places-empty-message"
+      >
+        <p
+          class="ui-text ui-text--body"
+        >
+          You have no saved places.
+        </p>
+        <p
+          class="ui-text ui-text--body"
+        >
+          Explore the map by searching and star your favorites.
+        </p>
+      </div>
+    </div>
+    <div
+      class="map-app-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-map-marker-alt fas fa-map-marker-alt fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Explore
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon ui-btn--active"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-bookmark fas fa-bookmark fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Saved
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Map /> renders correctly with street view 1`] = `
+<DocumentFragment>
+  <div
+    class="map-app map-app--street-view"
+  >
+    <div
+      class="map-app-container"
+    >
+      <h2
+        class="ui-text ui-text--body ui-text--loading"
+      >
+        Loading...
+      </h2>
+    </div>
+    <div
+      class="map-app-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon ui-btn--active"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-map-marker-alt fas fa-map-marker-alt fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Explore
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-bookmark fas fa-bookmark fa-2x"
+        />
+        <span
+          class="ui-text ui-text--body ui-btn-label"
+        >
+          Saved
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

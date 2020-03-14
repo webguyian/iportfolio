@@ -15,9 +15,11 @@ const TabNavigation = props => {
 
   return (
     <Fragment>
-      {tabs.map(tab => (
-        <Route key={tab.icon} path={tab.path} component={tab.component} />
-      ))}
+      {tabs.map(tab =>
+        tab.component ? (
+          <Route key={tab.icon} path={tab.path} component={tab.component} />
+        ) : null
+      )}
       <nav className={baseClass}>
         <ul className={`${baseClass}-list`}>
           {tabs.map(tab => (

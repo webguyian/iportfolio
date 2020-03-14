@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 export const useBreakpoint = breakpoint => {
@@ -20,64 +20,6 @@ export const useBreakpoint = breakpoint => {
   }, [breakpoint]);
 
   return matchesBreakpoint;
-};
-
-export const useStorageCache = (key, currentValue, deleteFn) => {
-  const getValue = () => {
-    try {
-      // Get item from local storage with key
-      const item = window.localStorage.getItem(key);
-
-      // Parse stored JSON or if none return undefined
-      return item ? JSON.parse(item) : undefined;
-    } catch (error) {
-      // If error return undefined
-      return undefined;
-    }
-  };
-
-  const value = getValue();
-  const localRef = useRef(value);
-  const [storedValue, setStoredValue] = useState(value);
-
-  const setValue = nextValue => {
-    try {
-      // Save to state and local storage
-      setStoredValue(nextValue);
-
-      if (deleteFn && deleteFn(nextValue)) {
-        // Remove item from local storage
-        window.localStorage.removeItem(key);
-      } else {
-        if (typeof nextValue === 'object' && !(nextValue instanceof Array)) {
-          if (nextValue !== storedValue) {
-            // Include timestamp on objects
-            nextValue.timestamp = Date.now();
-          }
-        }
-
-        // Update value in local storage
-        window.localStorage.setItem(key, JSON.stringify(nextValue));
-      }
-    } catch (error) {
-      // Drop error
-    }
-  };
-
-  useEffect(() => {
-    // Update local value
-    localRef.current = currentValue || storedValue;
-  }, [currentValue, storedValue]);
-
-  useEffect(() => {
-    return () => {
-      if (key && localRef.current) {
-        setValue(localRef.current);
-      }
-    };
-  }, []);
-
-  return localRef.current;
 };
 
 export const useSwipeOffset = (callback, initial = 0) => {

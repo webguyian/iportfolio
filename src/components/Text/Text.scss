@@ -20,4 +20,20 @@
   &--bold {
     font-weight: $font-weight-bold;
   }
+
+  &--loading {
+    font-size: $font-size-l;
+    text-align: center;
+    animation: fade-in-out 2s linear infinite;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
 }

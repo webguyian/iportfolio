@@ -11,6 +11,8 @@
   }
 
   .device-header {
+    z-index: 2;
+
     &::after {
       background: radial-gradient(circle at bottom left, transparent 0, transparent 75%, $black-dark 75%, $black-dark 100%);
     }
@@ -39,6 +41,8 @@
 
   .device-header-bars {
     display: flex;
+    z-index: 3;
+    position: relative;
     justify-content: space-between;
     width: 100%;
     margin-right: auto;
@@ -62,6 +66,14 @@
     .ui-icon {
       color: $white;
       font-size: $font-size-s;
+    }
+
+    &--inverted {
+      color: $black-dark;
+
+      .ui-icon {
+        color: $black-dark;
+      }
     }
   }
 
