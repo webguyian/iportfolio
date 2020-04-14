@@ -1,4 +1,5 @@
 import CalculatorView from 'views/calculator/CalculatorView';
+import CalendarView from 'views/calendar/CalendarView';
 import ClockView from 'views/clock/ClockView';
 import HomescreenView from 'views/homescreen/HomescreenView';
 import LockscreenView from 'views/lockscreen/LockscreenView';
@@ -26,21 +27,31 @@ const routes = [
     component: CalculatorView
   },
   {
+    path: '/calendar',
+    pathKey: 'calendar',
+    component: CalendarView
+  },
+  {
     path: '/clock',
     pathKey: 'clock',
     component: ClockView,
     exact: false
   },
   {
-    path: '/reminders',
-    pathKey: 'reminders',
-    component: RemindersView
+    path: '/map',
+    pathKey: 'map',
+    component: MapView
   },
   {
     path: '/notes',
     pathKey: 'notes',
     component: NotesView,
     exact: false
+  },
+  {
+    path: '/reminders',
+    pathKey: 'reminders',
+    component: RemindersView
   },
   {
     path: '/stocks',
@@ -51,12 +62,6 @@ const routes = [
     path: '/weather',
     pathKey: 'weather',
     component: WeatherView,
-    exact: false
-  },
-  {
-    path: '/map',
-    pathKey: 'map',
-    component: MapView,
     exact: false
   }
 ];

@@ -7,14 +7,14 @@ $size: 65px;
   flex-shrink: 0;
   margin: 0 0 20px 20px;
 
-  &-button {
+  &-link {
     @include type-body($font-size-s);
     width: $size;
     height: $size;
     margin-bottom: 5px;
-    padding: 0;
     border-radius: 25%;
     background-color: $white;
+    color: $black-dark;
     text-align: center;
     overflow: hidden;
   }
@@ -32,7 +32,7 @@ $size: 65px;
   }
 
   &-weekday {
-    margin-top: 2px;
+    margin-top: 8px;
     color: $red;
     font-size: $font-size-xs;
   }
@@ -44,25 +44,28 @@ $size: 65px;
   }
 
   &--clock {
-    > .ui-app-icon-button {
+    > .ui-app-icon-link {
+      padding-top: 3px;
       background-color: $black;
     }
   }
 
   &--stocks {
-    > .ui-app-icon-button {
+    > .ui-app-icon-link {
       background-color: $black;
     }
   }
 
   &--safari {
-    > .ui-app-icon-button {
-      padding: 2px;
+    > .ui-app-icon-link {
+      padding: 3px;
     }
   }
 
   &--google-maps {
-    > .ui-app-icon-button {
+    > .ui-app-icon-link {
+      padding-top: 3px;
+
       > svg {
         width: 55px;
         margin-top: 2px;

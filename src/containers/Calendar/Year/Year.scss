@@ -1,0 +1,27 @@
+.ui-year {
+  margin-bottom: $gutter;
+
+  &-title {
+    margin: 0 $gutter $gutter-s;
+    padding: $gutter-s 0 4px;
+    border-bottom: 1px solid $gray-dark;
+    color: $red;
+  }
+
+  &-list {
+    @include unstyled-list;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+    height: 100%;
+
+    > li {
+      width: 100%;
+
+      .calendar-app--year-view & {
+        width: 33%;
+      }
+    }
+  }
+}

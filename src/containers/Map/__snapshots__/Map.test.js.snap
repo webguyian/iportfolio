@@ -5,6 +5,9 @@ exports[`<Map /> renders correctly 1`] = `
   <div
     class="map-app"
   >
+    <div>
+      Map search goes here
+    </div>
     <div
       class="map-app-container"
     >
@@ -104,6 +107,9 @@ exports[`<Map /> renders correctly with saved view 1`] = `
   <div
     class="map-app"
   >
+    <div>
+      Map search goes here
+    </div>
     <div
       class="map-app-container"
     >
@@ -175,6 +181,9 @@ exports[`<Map /> renders correctly with street view 1`] = `
   <div
     class="map-app map-app--street-view"
   >
+    <div>
+      Map search goes here
+    </div>
     <div
       class="map-app-container"
     >

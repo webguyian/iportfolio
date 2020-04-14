@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
 import classNames from 'classnames';
 import kebabCase from 'lodash/kebabCase';
 
-import Button from 'components/Button/Button';
+import Link from 'components/Link/Link';
 import Text from 'components/Text/Text';
 
 const AppIcon = props => {
@@ -12,14 +11,12 @@ const AppIcon = props => {
   const baseClass = 'ui-app-icon';
   const nameId = kebabCase(name);
   const nameClass = `${baseClass}--${nameId}`;
-  const history = useHistory();
-  const redirect = () => history.push(`/${id || nameId}`);
 
   return (
     <div className={classNames(baseClass, nameClass)}>
-      <Button className={`${baseClass}-button`} onClick={redirect}>
+      <Link className={`${baseClass}-link`} to={`/${id || nameId}`}>
         {children}
-      </Button>
+      </Link>
       {!noLabel && <Text className={`${baseClass}-label`}>{name}</Text>}
     </div>
   );
