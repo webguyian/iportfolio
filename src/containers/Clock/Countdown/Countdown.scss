@@ -13,7 +13,7 @@ $stroke-width: 8px;
   width: 358px;
   height: 358px;
   border: $stroke-width solid $gray-dark;
-  border-radius: 50%;
+  border-radius: $border-radius-round;
 
   &-text {
     @include type-number-display(8vw);

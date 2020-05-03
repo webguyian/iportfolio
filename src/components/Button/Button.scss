@@ -10,10 +10,18 @@
     cursor: pointer;
   }
 
-  &--anchor {
+  &--anchor,
+  &--anchor-block {
     @include type-body;
     padding: 4px 8px;
     color: $blue-light;
+  }
+
+  &--anchor-block {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
   }
 
   &--rounded {
@@ -22,7 +30,7 @@
     height: 90px;
     margin: 5px;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: $border-radius-round;
     background: $gray-medium;
   }
 

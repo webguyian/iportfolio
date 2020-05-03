@@ -5,7 +5,7 @@
   width: 100%;
   height: 70px;
   padding-left: 10%;
-  background-color: $black-dark;
+  background-color: $black-darker;
 
   &::before,
   &::after {
@@ -15,7 +15,7 @@
     left: 0;
     width: $gutter;
     height: 70px;
-    background-color: $black-dark;
+    background-color: $black-darker;
     content: "";
   }
 

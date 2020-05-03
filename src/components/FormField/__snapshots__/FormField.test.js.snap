@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormField /> renders correctly 1`] = `
+<div
+  className="ui-form-field"
+>
+  <label
+    className="ui-form-field-label"
+    htmlFor="field"
+  >
+    Field label
+  </label>
+  <input
+    autoComplete="off"
+    className="ui-form-field-input"
+    disabled={false}
+    id="field"
+    onChange={[Function]}
+    readOnly={false}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`<FormField /> renders correctly as textarea 1`] = `
+<div
+  className="ui-form-field"
+>
+  <textarea
+    className="ui-form-field-textarea"
+    id="field"
+    onChange={[Function]}
+    value=""
+  />
+</div>
+`;
+
+exports[`<FormField /> renders correctly when disabled 1`] = `
+<div
+  className="ui-form-field"
+>
+  <label
+    className="ui-form-field-label"
+    htmlFor="field"
+  >
+    Field label
+  </label>
+  <input
+    autoComplete="off"
+    className="ui-form-field-input"
+    disabled={true}
+    id="field"
+    onChange={[Function]}
+    readOnly={false}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`<FormField /> renders correctly without onChange prop 1`] = `
+<div
+  className="ui-form-field"
+>
+  <label
+    className="ui-form-field-label"
+    htmlFor="field"
+  >
+    Field label
+  </label>
+  <input
+    autoComplete="off"
+    className="ui-form-field-input"
+    disabled={false}
+    id="field"
+    onChange={[Function]}
+    readOnly={true}
+    type="text"
+    value=""
+  />
+</div>
+`;

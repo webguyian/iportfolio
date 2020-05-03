@@ -48,7 +48,7 @@ const Stocks = () => {
             <DateTime format="MMMM d" />
           </Text>
         </div>
-        <Button className="ui-btn--anchor" onClick={handleEdit}>
+        <Button modifier="anchor" onClick={handleEdit}>
           {actionLabel}
         </Button>
       </header>

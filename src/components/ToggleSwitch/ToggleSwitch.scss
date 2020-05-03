@@ -19,7 +19,7 @@
     width: 30px;
     height: 30px;
     transition: 0.3s transform;
-    border-radius: 50%;
+    border-radius: $border-radius-round;
     background-color: $white;
     content: "";
 

@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Mail /> renders correctly 1`] = `
+<form
+  className="mail-app"
+  onSubmit={[Function]}
+>
+  <button
+    aria-labelledby="mail-app"
+    className="ui-btn mail-app-drag-handle"
+    type="button"
+  >
+    <span
+      className="ui-text ui-text--accessible"
+    >
+      Drag down to close
+    </span>
+  </button>
+  <div
+    className="mail-app-top-bar"
+  >
+    <Link
+      onClick={[Function]}
+      to="/home"
+    >
+      Cancel
+    </Link>
+  </div>
+  <div
+    className="mail-app-header"
+  >
+    <div
+      className="mail-app-header-title"
+    >
+      <span
+        className="ui-text ui-text--display"
+        size="l"
+      >
+        New Message
+      </span>
+      <button
+        className="ui-btn ui-btn--with-icon"
+        disabled={false}
+        type="submit"
+      >
+        <i
+          className="ui-icon ui-icon-arrow-up fas fa-arrow-up fa-2x"
+        />
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Send
+        </span>
+      </button>
+    </div>
+    <div
+      className="mail-app-header-fields"
+    >
+      <div
+        className="ui-form-field"
+      >
+        <label
+          className="ui-form-field-label"
+          htmlFor="to"
+        >
+          To:
+        </label>
+        <input
+          autoComplete="off"
+          className="ui-form-field-input"
+          disabled={true}
+          id="to"
+          onChange={[Function]}
+          readOnly={false}
+          type="text"
+          value="hello@webguyian.com"
+        />
+      </div>
+      <div
+        className="ui-form-field"
+      >
+        <label
+          className="ui-form-field-label"
+          htmlFor="from"
+        >
+          From:
+        </label>
+        <input
+          autoComplete="off"
+          className="ui-form-field-input"
+          disabled={false}
+          id="from"
+          onChange={[Function]}
+          placeholder="your@email.com"
+          readOnly={false}
+          type="email"
+          value=""
+        />
+      </div>
+      <div
+        className="ui-form-field"
+      >
+        <label
+          className="ui-form-field-label"
+          htmlFor="subject"
+        >
+          Subject:
+        </label>
+        <input
+          autoComplete="off"
+          className="ui-form-field-input"
+          disabled={false}
+          id="subject"
+          maxLength={35}
+          onChange={[Function]}
+          readOnly={false}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="ui-form-field mail-app-body"
+  >
+    <textarea
+      className="ui-form-field-textarea"
+      id="body"
+      onChange={[Function]}
+      value="
+
+Sent from iPortfolio"
+    />
+  </div>
+  <div
+    className="mail-app-controls"
+  >
+    <button
+      className="ui-btn ui-btn--anchor-block"
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Draft
+    </button>
+    <Link
+      className="ui-btn--anchor-block"
+      to="/home"
+    >
+      Save Draft
+    </Link>
+    <button
+      className="ui-btn ui-btn--anchor-block"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<Mail /> renders correctly with controls 1`] = `
+<form
+  className="mail-app"
+  onSubmit={[MockFunction]}
+>
+  <div
+    className="mail-app-overlay"
+  />
+  <button
+    aria-labelledby="mail-app"
+    className="ui-btn mail-app-drag-handle"
+    type="button"
+  >
+    <span
+      className="ui-text ui-text--accessible"
+    >
+      Drag down to close
+    </span>
+  </button>
+  <div
+    className="mail-app-top-bar"
+  >
+    <Link
+      onClick={[MockFunction]}
+      to="/home"
+    >
+      Cancel
+    </Link>
+  </div>
+  <div
+    className="mail-app-header"
+  >
+    <div
+      className="mail-app-header-title"
+    >
+      <span
+        className="ui-text ui-text--display"
+        size="l"
+      >
+        Testing...
+      </span>
+      <button
+        className="ui-btn ui-btn--with-icon"
+        disabled={false}
+        type="submit"
+      >
+        <i
+          className="ui-icon ui-icon-arrow-up fas fa-arrow-up fa-2x"
+        />
+        <span
+          className="ui-text ui-text--accessible"
+        >
+          Send
+        </span>
+      </button>
+    </div>
+    <div
+      className="mail-app-header-fields"
+    >
+      <div
+        className="ui-form-field"
+      >
+        <label
+          className="ui-form-field-label"
+          htmlFor="to"
+        >
+          To:
+        </label>
+        <input
+          autoComplete="off"
+          className="ui-form-field-input"
+          disabled={true}
+          id="to"
+          onChange={[Function]}
+          readOnly={false}
+          type="text"
+          value="hello@webguyian.com"
+        />
+      </div>
+      <div
+        className="ui-form-field"
+      >
+        <label
+          className="ui-form-field-label"
+          htmlFor="from"
+        >
+          From:
+        </label>
+        <input
+          autoComplete="off"
+          className="ui-form-field-input"
+          disabled={false}
+          id="from"
+          onChange={[Function]}
+          placeholder="your@email.com"
+          readOnly={false}
+          type="email"
+          value="test@tester.com"
+        />
+      </div>
+      <div
+        className="ui-form-field"
+      >
+        <label
+          className="ui-form-field-label"
+          htmlFor="subject"
+        >
+          Subject:
+        </label>
+        <input
+          autoComplete="off"
+          className="ui-form-field-input"
+          disabled={false}
+          id="subject"
+          maxLength={35}
+          onChange={[Function]}
+          readOnly={false}
+          type="text"
+          value="Testing..."
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="ui-form-field mail-app-body"
+  >
+    <textarea
+      className="ui-form-field-textarea"
+      id="body"
+      onChange={[Function]}
+      value="This is a test"
+    />
+  </div>
+  <div
+    className="mail-app-controls mail-app-controls--show"
+  >
+    <button
+      className="ui-btn ui-btn--anchor-block"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Delete Draft
+    </button>
+    <Link
+      className="ui-btn--anchor-block"
+      to="/home"
+    >
+      Save Draft
+    </Link>
+    <button
+      className="ui-btn ui-btn--anchor-block"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</form>
+`;

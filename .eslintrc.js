@@ -162,6 +162,8 @@ module.exports = {
       process.env.NODE_ENV === 'debug' ? 0 : 2,
       { allow: ['warn', 'error'] }
     ],
-    'no-debugger': process.env.NODE_ENV === 'debug' ? 0 : 2
+    'no-debugger': process.env.NODE_ENV === 'debug' ? 0 : 2,
+    'react-hooks/rules-of-hooks': 'warn',
+    'react-hooks/exhaustive-deps': 0
   }
 };

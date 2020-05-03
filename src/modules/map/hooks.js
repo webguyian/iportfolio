@@ -51,7 +51,7 @@ export const useGoogleMaps = () => {
     const icon = {
       path: `M-10,0a10,10 0 1,0 20,0a10,10 0 1,0 -20,0`,
       scale: 1,
-      fillColor: '#0056ff',
+      fillColor: '#0077ff',
       fillOpacity: 0.9,
       strokeWeight: 4,
       strokeColor: '#fefefe'

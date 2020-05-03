@@ -2,7 +2,7 @@
   @include stretch-column;
 
   > .ui-text--display {
-    @include type-title;
+    @include type-title($yellow);
   }
 
   &-list {

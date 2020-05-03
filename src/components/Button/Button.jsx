@@ -6,13 +6,22 @@ import Icon from 'components/Icon/Icon';
 import Text from 'components/Text/Text';
 
 const Button = forwardRef((props, ref) => {
-  const { children, className, icon, size, withLabel, ...otherProps } = props;
+  const {
+    children,
+    className,
+    icon,
+    modifier,
+    size,
+    withLabel,
+    ...otherProps
+  } = props;
   const baseClass = 'ui-btn';
   const iconClass = icon ? `${baseClass}--with-icon` : false;
+  const modifierClass = modifier && `${baseClass}--${modifier}`;
 
   return (
     <button
-      className={classNames(baseClass, iconClass, className)}
+      className={classNames(baseClass, iconClass, modifierClass, className)}
       ref={ref}
       {...otherProps}
     >
@@ -29,6 +38,7 @@ Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   icon: PropTypes.string,
+  modifier: PropTypes.oneOf(['anchor', 'anchor-block']),
   size: PropTypes.string,
   type: PropTypes.string,
   withLabel: PropTypes.bool

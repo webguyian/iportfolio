@@ -1,11 +1,11 @@
 /* stylelint-disable color-no-hex */
 // Colors
 $black: #000;
-$black-dark: #151515;
+$black-dark: #1c1c1e;
 $black-darker: #0c0c0c;
 $black-medium: #222;
 $blue-light: #0b9eee;
-$blue: #0056ff;
+$blue: #07f;
 $gray-dark: #282828;
 $gray-medium: #4d4d4d;
 $gray-light: #e4e4e4;
@@ -20,6 +20,12 @@ $red-light: lighten($red, 20%);
 $white: #fff;
 $yellow: #c99528;
 $yellow-light: lighten($yellow, 20%);
+
+// Border radius
+$border-radius-s: 2px;
+$border-radius-m: 4px;
+$border-radius-l: 10px;
+$border-radius-round: 50%;
 
 // Font families
 $type-body: "Work Sans", "Helvetica Neue", "Helvetica", sans-serif;

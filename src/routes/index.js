@@ -3,6 +3,7 @@ import CalendarView from 'views/calendar/CalendarView';
 import ClockView from 'views/clock/ClockView';
 import HomescreenView from 'views/homescreen/HomescreenView';
 import LockscreenView from 'views/lockscreen/LockscreenView';
+import MailView from 'views/mail/MailView';
 import MapView from 'views/map/MapView';
 import NotesView from 'views/notes/NotesView';
 import RemindersView from 'views/reminders/RemindersView';
@@ -36,6 +37,11 @@ const routes = [
     pathKey: 'clock',
     component: ClockView,
     exact: false
+  },
+  {
+    path: '/mail',
+    pathKey: 'mail',
+    component: MailView
   },
   {
     path: '/map',

@@ -17,7 +17,7 @@ const StockSearch = props => {
         placeholder="Search"
         {...inputHandlers}
       />
-      <Button className="ui-btn--anchor" onClick={onCancel}>
+      <Button className="anchor" onClick={onCancel}>
         Cancel
       </Button>
     </form>

@@ -42,7 +42,7 @@
   &-difference {
     min-width: 50px;
     padding: 2px 4px;
-    border-radius: 2px;
+    border-radius: $border-radius-s;
     font-size: $font-size-s;
 
     &--down {

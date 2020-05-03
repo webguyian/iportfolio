@@ -7,24 +7,24 @@
 
   .device-frame,
   .device-header {
-    background-color: $black-dark;
+    background-color: $black-darker;
   }
 
   .device-header {
     z-index: 2;
 
     &::after {
-      background: radial-gradient(circle at bottom left, transparent 0, transparent 75%, $black-dark 75%, $black-dark 100%);
+      background: radial-gradient(circle at bottom left, transparent 0, transparent 75%, $black-darker 75%, $black-darker 100%);
     }
 
     &::before {
-      background: radial-gradient(circle at bottom right, transparent 0, transparent 75%, $black-dark 75%, $black-dark 100%);
+      background: radial-gradient(circle at bottom right, transparent 0, transparent 75%, $black-darker 75%, $black-darker 100%);
     }
   }
 
   .device-content {
     height: 100vh;
-    background-color: $black-dark;
+    background-color: $black-darker;
     overflow: hidden;
 
     @include responsive($width-medium) {
@@ -69,10 +69,10 @@
     }
 
     &--inverted {
-      color: $black-dark;
+      color: $black-darker;
 
       .ui-icon {
-        color: $black-dark;
+        color: $black-darker;
       }
     }
   }

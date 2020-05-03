@@ -2,9 +2,11 @@
   z-index: 9;
   position: absolute;
   top: 65px;
-  width: 345px;
+  left: 0;
   height: 100%;
-  background-color: $gray-dark;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: $black-dark;
 
   &-header {
     display: flex;
@@ -63,7 +65,7 @@
     padding: 4px 12px;
     border-radius: 10px;
     background: $blue-light;
-    color: $gray-dark;
+    color: $black-dark;
   }
 
   &-content {

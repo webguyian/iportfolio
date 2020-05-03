@@ -1,0 +1,128 @@
+.mail-app {
+  @include stretch-column-nowrap;
+  position: relative;
+  top: $gutter;
+  transition: top 0.4s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: $black-dark;
+  text-align: left;
+  animation: slide-up 0.4s linear;
+
+  &-drag-handle {
+    display: block;
+    width: 40px;
+    margin: $gutter-s auto;
+    padding: 3px;
+    border-radius: $border-radius-m;
+    background-color: $gray-medium;
+  }
+
+  &-top-bar {
+    padding: 0 $gutter;
+
+    > .ui-link {
+      color: $blue;
+    }
+  }
+
+  &-header {
+    padding: $gutter 0 8px $gutter;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $gutter;
+
+      > .ui-text--display {
+        word-break: break-word;
+      }
+
+      > .ui-btn--with-icon {
+        @include circle(36px);
+        flex-shrink: 0;
+        margin-right: $gutter;
+        background-color: $blue;
+
+        &[disabled] {
+          background-color: $gray-medium;
+          color: $black-dark;
+          cursor: default;
+        }
+      }
+    }
+
+    .ui-form-field {
+      padding-left: 0;
+      border-bottom: 1px solid $gray-dark;
+
+      &-label {
+        color: $gray;
+      }
+
+      &-input[disabled] {
+        color: $blue;
+      }
+    }
+  }
+
+  &-body {
+    height: 100%;
+    max-height: 515px;
+    overflow-y: auto;
+  }
+
+  &-overlay {
+    position: fixed;
+    left: 28px;
+    width: 375px;
+    height: 760px;
+    background: linear-gradient(180deg, rgba($black-dark, 0.8) 55%, rgba($black-dark, 0.5) 95%, rgba($black-dark, 0) 100%);
+  }
+
+  &-controls {
+    position: relative;
+    bottom: 30px;
+    padding: 0 8px;
+    transform: translateY(110%);
+    transition: transform 0.4s;
+
+    &--show {
+      transform: translateY(0);
+    }
+
+    > .ui-btn--anchor-block {
+      transition: background-color 0.2s;
+      background-color: $gray-dark;
+      color: $blue;
+
+      &:hover,
+      &:focus {
+        background-color: darken($gray-dark, 2%);
+      }
+
+      &:first-child {
+        border-bottom: 1px solid $black-dark;
+        border-top-left-radius: $border-radius-l;
+        border-top-right-radius: $border-radius-l;
+        color: $red;
+      }
+
+      &:nth-child(2) {
+        border-bottom-left-radius: $border-radius-l;
+        border-bottom-right-radius: $border-radius-l;
+      }
+
+      &:last-child {
+        margin-top: 8px;
+        border-radius: $border-radius-l;
+      }
+    }
+  }
+}
+
+@keyframes slide-up {
+  from {
+    top: 550px;
+  }
+}
