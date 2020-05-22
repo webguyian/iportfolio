@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Icon = props => {
-  const { className, name, size, svg } = props;
+  const { className, label, name, size, svg } = props;
   const baseClass = `ui-icon ui-icon-${name}`;
   const iconClass = `fas fa-${name}`;
   const sizeClass = size ? `fa-${size}` : false;
@@ -21,12 +21,16 @@ const Icon = props => {
   }
 
   return (
-    <i className={classNames(baseClass, iconClass, sizeClass, className)} />
+    <i
+      className={classNames(baseClass, iconClass, sizeClass, className)}
+      title={label}
+    />
   );
 };
 
 Icon.propTypes = {
   className: PropTypes.string,
+  label: PropTypes.string,
   name: PropTypes.string.isRequired,
   size: PropTypes.string,
   svg: PropTypes.bool

@@ -1,7 +1,7 @@
 import React from 'react';
 import { act, create } from 'react-test-renderer';
 
-import * as hooks from 'containers/Stocks/hooks';
+import * as hooks from 'modules/stocks/hooks';
 import StockNews from './StockNews';
 
 describe('<StockNews />', () => {

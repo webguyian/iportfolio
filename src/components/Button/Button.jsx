@@ -17,7 +17,7 @@ const Button = forwardRef((props, ref) => {
   } = props;
   const baseClass = 'ui-btn';
   const iconClass = icon ? `${baseClass}--with-icon` : false;
-  const modifierClass = modifier && `${baseClass}--${modifier}`;
+  const modifierClass = modifier ? `${baseClass}--${modifier}` : false;
 
   return (
     <button

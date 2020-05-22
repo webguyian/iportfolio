@@ -6,12 +6,10 @@ export const initialStocks = [
   { symbol: 'MSFT', displaySymbol: 'MSFT', description: 'MICROSOFT CORP' }
 ];
 
-export const API_CANDLESTICK = 'https://finnhub.io/api/v1/stock/candle';
+export const API_CANDLESTICK = '/api/stocks/candlestick';
 
-export const API_NEWS = 'https://finnhub.io/api/v1/news';
+export const API_EXCHANGE = '/api/stocks/exchange';
 
-export const API_QUOTE = 'https://finnhub.io/api/v1/quote';
+export const API_NEWS = '/api/stocks/news';
 
-export const API_TOKEN = 'bojsah7rh5rcji5m4udg';
-
-export const API_EXCHANGE = `https://finnhub.io/api/v1/stock/symbol?exchange=US&token=${API_TOKEN}`;
+export const API_QUOTE = '/api/stocks/quote';

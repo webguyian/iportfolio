@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { formatTimestamp } from 'containers/Stocks/helpers';
-import { useStockNews } from 'containers/Stocks/hooks';
+import { formatTimestamp } from 'modules/stocks/helpers';
+import { useStockNews } from 'modules/stocks/hooks';
 
 import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';

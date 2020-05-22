@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { useStockTicker } from 'containers/Stocks/hooks';
+import { useStockTicker } from 'modules/stocks/hooks';
 import Stock from 'containers/Stocks/StockTicker/Stock';
 
 const StockTicker = props => {
   const { onClick, stocks } = props;
-  const baseClass = 'stock-ticker';
-
-  if (!stocks || !stocks.length) {
-    return null;
-  }
-
   const stockData = useStockTicker(stocks);
+  const baseClass = 'stock-ticker';
 
   if (!stockData || !stockData.length) {
     return null;

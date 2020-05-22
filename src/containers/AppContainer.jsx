@@ -5,6 +5,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
 import DeviceFrame from 'components/DeviceFrame/DeviceFrame';
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 
 import routes from 'routes';
 
@@ -46,11 +47,13 @@ const AppContainer = props => {
         leftIndicator={<LeftIndicator />}
         invertIconColor={invertIconColor}
       >
-        <Switch>
-          {routes.map(route => (
-            <Route key={route.pathKey} exact {...route} />
-          ))}
-        </Switch>
+        <ErrorBoundary>
+          <Switch>
+            {routes.map(route => (
+              <Route key={route.pathKey} exact {...route} />
+            ))}
+          </Switch>
+        </ErrorBoundary>
       </DeviceFrame>
     </div>
   );

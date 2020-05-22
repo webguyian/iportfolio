@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { formatPrice, getPercentage } from 'containers/Stocks/helpers';
+import { formatPrice, getPercentage } from 'modules/stocks/helpers';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
@@ -32,7 +32,13 @@ const Stock = props => {
             {getPercentage(price, previousPrice)}
           </Text>
         </div>
-        <StockChart hideControls stock={stock} />
+        <StockChart
+          hideControls
+          stock={stock}
+          mouseMoveEvent={false}
+          panEvent={false}
+          zoomEvent={false}
+        />
       </Button>
     </li>
   );

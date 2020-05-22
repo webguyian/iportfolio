@@ -1,14 +1,12 @@
+/* eslint-disable no-sync */
+import fs from 'fs';
+import path from 'path';
 import optimization from './webpack.optimization';
 import plugins from './webpack.plugins';
 import rules from './webpack.rules';
 import settings from './app-settings';
 
 const devMode = process.env.NODE_ENV !== 'production';
-
-// Start API Server
-if (devMode) {
-  settings.start();
-}
 
 export default {
   mode: devMode ? 'development' : 'production',
@@ -18,7 +16,11 @@ export default {
     compress: true,
     contentBase: settings.ROOT_DIR,
     historyApiFallback: true,
+    host: settings.HOST,
     hot: true,
+    https: true,
+    key: fs.readFileSync(path.join(__dirname, 'key.pem')),
+    cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
     open: true,
     overlay: true,
     port: settings.APP_PORT,

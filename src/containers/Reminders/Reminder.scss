@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   &-field {
     display: flex;
@@ -56,7 +56,7 @@
 
   > .ui-btn--delete {
     position: absolute;
-    right: -10px;
+    right: -20px;
     width: 0;
     padding: 10px;
     transition: width 0.4s linear;

@@ -36,15 +36,9 @@ export const DEFAULT_LOCATIONS = [
   }
 ];
 
-export const GEOCODE_API_KEY = '9ed6e9d552b2a5be5de65e5baa5b5ac59e65255';
+export const GEOCODE_API = '/api/location';
 
-export const GEOCODE_API = `https://api.geocod.io/v1.4/geocode?api_key=${GEOCODE_API_KEY}`;
-
-export const GEOCODE_REVERSE_API = `https://api.geocod.io/v1.4/reverse?api_key=${GEOCODE_API_KEY}`;
-
-export const WEATHER_API_KEY = '90272d28d9358ad1046f2d7162e37eeb';
-
-export const WEATHER_API = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${WEATHER_API_KEY}`;
+export const WEATHER_API = '/api/weather';
 
 export const WIND_DIRECTIONS = [
   'N',

@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import isEqual from 'lodash/isEqual';
 
-import { useStorageCache } from 'modules/browser/hooks';
-import { defaultBody, initialValues } from './constants';
+import { useFetchWithData, useStorageCache } from 'modules/browser/hooks';
+import { API_MAIL, defaultBody, initialValues } from './constants';
 
 export const useFields = initial => {
   const [fields, setFields] = useState(initial);
@@ -17,9 +17,11 @@ export const useFields = initial => {
   return [fields, setFields, setField];
 };
 
-export const useEventHandlers = (pristine, setFields, setControls) => {
+export const useEventHandlers = (pristine, fields, setFields, setControls) => {
+  const [data, setData] = useState();
   const [redirect, setRedirect] = useState(false);
   const history = useHistory();
+  const response = useFetchWithData(API_MAIL, data);
   const onCancel = useCallback(
     event => {
       if (!pristine) {
@@ -31,6 +33,7 @@ export const useEventHandlers = (pristine, setFields, setControls) => {
   );
   const onSubmit = event => {
     event.preventDefault();
+    setData(fields);
   };
   const onDelete = () => {
     setFields(initialValues);
@@ -49,6 +52,14 @@ export const useEventHandlers = (pristine, setFields, setControls) => {
     }
   }, [redirect]);
 
+  useEffect(() => {
+    if (response) {
+      // Reset data
+      setData();
+      onDelete();
+    }
+  }, [response]);
+
   return eventHandlers;
 };
 
@@ -57,7 +68,12 @@ export const useMail = () => {
   const [invalid, setInvalid] = useState(false);
   const [pristine, setPristine] = useState(true);
   const [showControls, setControls] = useState(false);
-  const eventHandlers = useEventHandlers(pristine, setFields, setControls);
+  const eventHandlers = useEventHandlers(
+    pristine,
+    fields,
+    setFields,
+    setControls
+  );
   const cache = useStorageCache('mail', { fields }, res =>
     isEqual(res.fields, initialValues)
   );

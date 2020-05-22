@@ -12,12 +12,7 @@ import {
   subMonths
 } from 'date-fns';
 
-import {
-  API_CANDLESTICK,
-  API_NEWS,
-  API_QUOTE,
-  API_TOKEN
-} from 'containers/Stocks/constants';
+import { API_CANDLESTICK, API_NEWS, API_QUOTE } from 'modules/stocks/constants';
 
 export const formatDateTick = (range, date) => {
   switch (range) {
@@ -113,27 +108,19 @@ export const getResolution = range => {
 export const getCandlestickEndpoint = (symbol, range, date) => {
   const [startTime, endTime] = getUnixDates(range, date);
   const resolution = getResolution(range);
-  const endpoint = `${API_CANDLESTICK}?symbol=${symbol}&resolution=${resolution}&from=${startTime}&to=${endTime}&token=${API_TOKEN}`;
+  const endpoint = `${API_CANDLESTICK}?symbol=${symbol}&resolution=${resolution}&from=${startTime}&to=${endTime}`;
 
   return endpoint;
 };
 
-export const getCandlestickEndpoints = (stocks, range, date) => {
-  const endpoints = stocks.map(stock =>
-    getCandlestickEndpoint(stock.symbol, range, date)
-  );
-
-  return endpoints;
-};
-
 export const getStockEndpoint = stock => {
-  return `${API_QUOTE}?symbol=${stock.symbol}&token=${API_TOKEN}`;
+  return `${API_QUOTE}/${stock.symbol}`;
 };
 
-export const getStockNewsEndpoint = category => {
-  const topic = category ? `/${category}?` : `?category=general&`;
+export const getStockNewsEndpoint = company => {
+  const topic = company ? `/${company}` : '';
 
-  return `${API_NEWS}${topic}token=${API_TOKEN}`;
+  return `${API_NEWS}${topic}`;
 };
 
 export const isExpired = (date, startDate = new Date()) => {

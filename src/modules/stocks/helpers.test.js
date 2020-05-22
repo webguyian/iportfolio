@@ -125,17 +125,6 @@ describe('Stocks helpers', () => {
     });
   });
 
-  describe('handles getCandlestickEndpoints', () => {
-    const stocks = [{ symbol: 'AAPL' }, { symbol: 'AMZN' }];
-
-    it('gets candlestick endpoints', () => {
-      expect(helpers.getCandlestickEndpoints(stocks, '1D', mockDate)).toEqual([
-        'https://finnhub.io/api/v1/stock/candle?symbol=AAPL&resolution=1&from=1569856260&to=1569942660&token=bojsah7rh5rcji5m4udg',
-        'https://finnhub.io/api/v1/stock/candle?symbol=AMZN&resolution=1&from=1569856260&to=1569942660&token=bojsah7rh5rcji5m4udg'
-      ]);
-    });
-  });
-
   describe('handles isExpired', () => {
     it('gets isExpired', () => {
       expect(helpers.isExpired(new Date('2019-09-28'), mockDate)).toEqual(true);

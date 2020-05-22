@@ -1,61 +1,26 @@
 import { useEffect, useState } from 'react';
 
-import { useStorageCache } from 'modules/browser/hooks';
-import { API_EXCHANGE, API_TOKEN } from 'containers/Stocks/constants';
+import {
+  useFetch,
+  useFetchWithData,
+  useStorageCache
+} from 'modules/browser/hooks';
+import {
+  API_CANDLESTICK,
+  API_EXCHANGE,
+  API_QUOTE
+} from 'modules/stocks/constants';
 import {
   getCandlestickEndpoint,
-  getCandlestickEndpoints,
+  getResolution,
   getStockEndpoint,
   getStockNewsEndpoint,
+  getUnixDates,
   isExpired,
   isExpiredNews,
   updateChartData,
   rehydrateChartData
-} from 'containers/Stocks/helpers';
-
-export const useFetch = endpoint => {
-  const [data, setData] = useState(null);
-  const fetchData = async () => {
-    const response = await fetch(endpoint);
-    const result = await response.json();
-
-    setData(result);
-  };
-
-  useEffect(() => {
-    if (!endpoint) {
-      return;
-    }
-
-    fetchData();
-  }, [endpoint]);
-
-  return data;
-};
-
-export const useFetchAll = urls => {
-  const [responses, setResponses] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const results = await Promise.all(
-        urls.map(async url => {
-          const response = await fetch(url);
-
-          return response.json();
-        })
-      );
-
-      setResponses(results);
-    };
-
-    if (urls.length) {
-      fetchData();
-    }
-  }, [urls]);
-
-  return responses;
-};
+} from 'modules/stocks/helpers';
 
 export const useSearch = () => {
   const [value, setValue] = useState('');
@@ -117,13 +82,27 @@ export const useStockSearch = (allStocks, searchTerm) => {
   return filteredStocks;
 };
 
-export const useStocks = initialStocks => {
-  const [endpoints, setEndpoints] = useState([]);
-  const [stocks, setStocks] = useState([]);
+export const useStockExchange = () => {
   const [allStocks, setAllStocks] = useState([]);
-  const [activeStocks, setActiveStocks] = useState([]);
   const exchangeResponse = useFetch(API_EXCHANGE);
-  const response = useFetchAll(endpoints);
+
+  useEffect(() => {
+    if (!exchangeResponse) {
+      // Exit early if no response
+      return;
+    }
+
+    setAllStocks(exchangeResponse);
+  }, [exchangeResponse]);
+
+  return allStocks;
+};
+
+export const useStocks = initialStocks => {
+  const [stocks, setStocks] = useState([]);
+  const [activeStocks, setActiveStocks] = useState([]);
+  const [data, setData] = useState();
+  const response = useFetchWithData(API_QUOTE, data);
   const cache = useStorageCache(
     'stocks',
     { stocks },
@@ -143,37 +122,24 @@ export const useStocks = initialStocks => {
   }, []);
 
   useEffect(() => {
-    if (!exchangeResponse) {
-      // Exit early if no response
-      return;
-    }
-
-    const symbols = activeStocks.map(stock => stock.symbol);
-    const currentStocks = exchangeResponse.filter(stock =>
-      symbols.includes(stock.symbol)
-    );
-
-    setEndpoints(currentStocks.map(getStockEndpoint));
-    setAllStocks(exchangeResponse);
-  }, [exchangeResponse]);
-
-  useEffect(() => {
     if (activeStocks.length) {
-      setEndpoints(activeStocks.map(getStockEndpoint));
+      const symbols = activeStocks.map(s => s.symbol);
+
+      setData({ symbols });
     }
   }, [activeStocks]);
 
   useEffect(() => {
-    if (!response.length || !activeStocks.length) {
+    if (!response || !activeStocks.length) {
       return;
     }
 
-    const updatedStocks = response.map((result, index) => {
-      const stock = activeStocks[index];
+    const updatedStocks = activeStocks.map(stock => {
+      const result = response[stock.symbol] || {};
 
       return {
-        ...result,
         ...stock,
+        ...result,
         price: result.c,
         previousPrice: result.pc
       };
@@ -182,7 +148,7 @@ export const useStocks = initialStocks => {
     setStocks(updatedStocks);
   }, [response, activeStocks]);
 
-  return [stocks, setStocks, allStocks];
+  return [stocks, setStocks];
 };
 
 export const useStockDetail = () => {
@@ -190,8 +156,6 @@ export const useStockDetail = () => {
   const [activeStock, setActiveStock] = useState(null);
   const [stock, setStockDetail] = useState(activeStock);
   const response = useFetch(endpoint);
-  const getStock = symbol =>
-    `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${API_TOKEN}`;
 
   useEffect(() => {
     setStockDetail(activeStock);
@@ -201,7 +165,7 @@ export const useStockDetail = () => {
     }
 
     if (!activeStock.price) {
-      setEndpoint(getStock(activeStock.symbol));
+      setEndpoint(getStockEndpoint(activeStock));
     }
   }, [activeStock]);
 
@@ -278,12 +242,12 @@ export const useStockChart = (symbol, range) => {
 };
 
 export const useStockTicker = (stocks, range = '1D') => {
-  const [endpoints, setEndpoints] = useState([]);
-  const [updatedResponse, setResponse] = useState([]);
-  const response = useFetchAll(endpoints);
+  const [data, setData] = useState();
+  const [charts, setCharts] = useState([]);
+  const candlestickData = useFetchWithData(API_CANDLESTICK, data);
   const cache = useStorageCache(
     'stock-charts',
-    { charts: updatedResponse },
+    { charts },
     res => !res.charts.length
   );
 
@@ -295,7 +259,7 @@ export const useStockTicker = (stocks, range = '1D') => {
       const [head] = updated;
       const expired = isExpired(head.chartData.endDate);
 
-      setResponse(updated);
+      setCharts(updated);
 
       if (!expired) {
         // Exit early when cache is not expired
@@ -303,31 +267,48 @@ export const useStockTicker = (stocks, range = '1D') => {
       }
     }
 
+    if (!stocks || !stocks.length) {
+      return;
+    }
+
+    const symbols = stocks.map(stock => stock.symbol);
+    const [from, to] = getUnixDates(range);
+    const resolution = getResolution(range);
+    const requestData = {
+      symbols,
+      resolution,
+      from,
+      to
+    };
+
     // Trigger fetch for candlestick data
-    setEndpoints(getCandlestickEndpoints(stocks, range));
+    setData(requestData);
   }, [stocks.length]);
 
   useEffect(() => {
-    if (response.length) {
-      const updated = response.map((res, index) => {
-        if (res.s !== 'ok') {
-          return null;
-        }
-
-        const stock = stocks[index];
-        const chartData = updateChartData(res, range);
-
-        return {
-          ...stock,
-          chartData
-        };
-      });
-
-      if (updated[0] !== null) {
-        setResponse(updated);
-      }
+    if (!candlestickData) {
+      return;
     }
-  }, [response]);
 
-  return updatedResponse;
+    const updated = stocks.map(stock => {
+      const result = candlestickData[stock.symbol] || {};
+
+      if (result.s !== 'ok') {
+        return null;
+      }
+
+      const chartData = updateChartData(result, range);
+
+      return {
+        ...stock,
+        chartData
+      };
+    });
+
+    if (updated[0] !== null) {
+      setCharts(updated);
+    }
+  }, [candlestickData]);
+
+  return charts;
 };

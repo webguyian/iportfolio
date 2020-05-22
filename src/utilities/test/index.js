@@ -1,5 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 
 export const mockDate = new Date('2019-10-01 11:11:00 GMT-0400');
 export const mockTime = Number(mockDate);
@@ -11,6 +12,14 @@ export const TestComponent = ({ callback }) => {
 
 export const testHook = (callback = () => {}) => {
   return create(<TestComponent callback={callback} />);
+};
+
+export const testHookWithRouter = (callback = () => {}) => {
+  return create(
+    <MemoryRouter>
+      <TestComponent callback={callback} />
+    </MemoryRouter>
+  );
 };
 
 Date.now = jest.fn(() => mockTime);

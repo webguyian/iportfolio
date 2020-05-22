@@ -1,10 +1,11 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import { act } from 'react-test-renderer';
 
 import { TestComponent, createMockResponse, testHook } from 'utilities/test';
 
+import { MOCK_TOKEN } from 'modules/browser/constants';
 import * as browserHooks from 'modules/browser/hooks';
-import * as helpers from './helpers';
 import * as hooks from './hooks';
 
 describe('Weather hooks', () => {
@@ -18,8 +19,6 @@ describe('Weather hooks', () => {
   browserHooks.useFetchAndCache = jest.fn();
   browserHooks.useFetchAllAndCache = jest.fn();
 
-  helpers.getWeatherEndpoint = jest.fn(() => 'http://weather.endpoint');
-
   beforeEach(() => {
     jest.clearAllMocks();
 
@@ -31,6 +30,29 @@ describe('Weather hooks', () => {
   });
 
   describe('useLocation', () => {
+    const data = {
+      address_components: {
+        number: '10000',
+        predirectional: 'N',
+        street: 'De Anza',
+        suffix: 'Blvd',
+        formatted_street: 'N De Anza Blvd',
+        city: 'Cupertino',
+        county: 'Santa Clara County',
+        state: 'CA',
+        zip: '95014',
+        country: 'US'
+      },
+      formatted_address: '10000 N De Anza Blvd, Cupertino, CA 95014',
+      location: {
+        lat: 37.323171,
+        lng: -122.032396
+      },
+      accuracy: 0.99,
+      accuracy_type: 'rooftop',
+      source: 'City of Palo Alto'
+    };
+
     it('returns null without coodinates', () => {
       let response;
 
@@ -68,36 +90,12 @@ describe('Weather hooks', () => {
         response = hooks.useLocation(coordinates);
       });
 
-      const data = {
-        results: [
-          {
-            address_components: {
-              number: '10000',
-              predirectional: 'N',
-              street: 'De Anza',
-              suffix: 'Blvd',
-              formatted_street: 'N De Anza Blvd',
-              city: 'Cupertino',
-              county: 'Santa Clara County',
-              state: 'CA',
-              zip: '95014',
-              country: 'US'
-            },
-            formatted_address: '10000 N De Anza Blvd, Cupertino, CA 95014',
-            location: {
-              lat: 37.323171,
-              lng: -122.032396
-            },
-            accuracy: 0.99,
-            accuracy_type: 'rooftop',
-            source: 'City of Palo Alto'
-          }
-        ]
-      };
-
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const mockResponse = createMockResponse(data);
 
-      global.fetch.mockReturnValueOnce(mockResponse);
+      global.fetch
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(mockResponse);
 
       await act(async () => {
         const callback = () => {
@@ -107,7 +105,7 @@ describe('Weather hooks', () => {
         Component.update(<TestComponent callback={callback} />);
       });
 
-      expect(response).toEqual(data.results[0].address_components);
+      expect(response).toEqual(data.address_components);
     });
 
     it('returns location with key', async () => {
@@ -120,36 +118,12 @@ describe('Weather hooks', () => {
         response = hooks.useLocation(coordinates, 'city');
       });
 
-      const data = {
-        results: [
-          {
-            address_components: {
-              number: '10000',
-              predirectional: 'N',
-              street: 'De Anza',
-              suffix: 'Blvd',
-              formatted_street: 'N De Anza Blvd',
-              city: 'Cupertino',
-              county: 'Santa Clara County',
-              state: 'CA',
-              zip: '95014',
-              country: 'US'
-            },
-            formatted_address: '10000 N De Anza Blvd, Cupertino, CA 95014',
-            location: {
-              lat: 37.323171,
-              lng: -122.032396
-            },
-            accuracy: 0.99,
-            accuracy_type: 'rooftop',
-            source: 'City of Palo Alto'
-          }
-        ]
-      };
-
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const mockResponse = createMockResponse(data);
 
-      global.fetch.mockReturnValueOnce(mockResponse);
+      global.fetch
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(mockResponse);
 
       await act(async () => {
         const callback = () => {
@@ -159,25 +133,20 @@ describe('Weather hooks', () => {
         Component.update(<TestComponent callback={callback} />);
       });
 
-      expect(response).toEqual(data.results[0].address_components.city);
-    });
-  });
-
-  describe('useCurrentWeather', () => {
-    it('returns null values', () => {
-      let response;
-
-      testHook(() => {
-        response = hooks.useCurrentWeather();
-      });
-
-      expect(response).toEqual([null, null]);
+      expect(response).toEqual(data.address_components.city);
     });
   });
 
   describe('useWeatherLocations', () => {
-    it('returns empty values', () => {
+    it('returns empty values', async () => {
       let response;
+
+      const mockToken = createMockResponse(MOCK_TOKEN);
+      const mockResponse = createMockResponse([]);
+
+      global.fetch
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(mockResponse);
 
       testHook(() => {
         response = hooks.useWeatherLocations([]);
@@ -186,7 +155,7 @@ describe('Weather hooks', () => {
       expect(response).toEqual([]);
     });
 
-    it('returns values', () => {
+    it('returns values', async () => {
       let response;
       const locations = [
         {
@@ -223,8 +192,11 @@ describe('Weather hooks', () => {
       ];
 
       browserHooks.useFetchAllAndCache.mockReturnValueOnce(locationResponse);
-      testHook(() => {
-        response = hooks.useWeatherLocations(locations);
+
+      await act(async () => {
+        testHook(() => {
+          response = hooks.useWeatherLocations(locations);
+        });
       });
 
       expect(response).toEqual(

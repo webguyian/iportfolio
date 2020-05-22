@@ -1,5 +1,5 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { act, create } from 'react-test-renderer';
 
 import StockChart from './StockChart';
 
@@ -78,30 +78,42 @@ describe('<StockChart />', () => {
     }
   };
 
-  it('renders correctly', () => {
-    const component = create(<StockChart stock={stock} />);
+  it('renders correctly', async () => {
+    let component;
+
+    await act(async () => {
+      component = create(<StockChart stock={stock} />);
+    });
 
     expect(component).toMatchSnapshot();
   });
 
-  it('renders correctly without controls', () => {
-    const component = create(<StockChart stock={stock} hideControls />);
+  it('renders correctly without controls', async () => {
+    let component;
+
+    await act(async () => {
+      component = create(<StockChart stock={stock} hideControls />);
+    });
 
     expect(component).toMatchSnapshot();
   });
 
-  it('renders correctly without chartData', () => {
+  it('renders correctly without chartData', async () => {
     const noData = {
       ...stock,
       chartData: null
     };
 
-    const component = create(<StockChart stock={noData} hideControls />);
+    let component;
+
+    await act(async () => {
+      component = create(<StockChart stock={noData} hideControls />);
+    });
 
     expect(component).toMatchSnapshot();
   });
 
-  it('renders correctly with downgrade', () => {
+  it('renders correctly with downgrade', async () => {
     const downStock = {
       ...stock,
       chartData: {
@@ -110,7 +122,11 @@ describe('<StockChart />', () => {
       }
     };
 
-    const component = create(<StockChart stock={downStock} hideControls />);
+    let component;
+
+    await act(async () => {
+      component = create(<StockChart stock={downStock} hideControls />);
+    });
 
     expect(component).toMatchSnapshot();
   });

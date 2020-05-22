@@ -1,5 +1,5 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { act, create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
 import * as hooks from 'modules/mail/hooks';
@@ -33,22 +33,26 @@ describe('<Mail />', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('renders correctly with controls', () => {
+  it('renders correctly with controls', async () => {
     const fields = {
       to: 'hello@webguyian.com',
       from: 'test@tester.com',
       subject: 'Testing...',
       body: 'This is a test'
     };
-    hooks.useMail.mockReturnValueOnce([
-      fields,
-      jest.fn(),
-      {
-        invalid: false,
-        showControls: true
-      },
-      eventHandlers
-    ]);
+
+    await act(async () => {
+      hooks.useMail.mockReturnValueOnce([
+        fields,
+        jest.fn(),
+        {
+          invalid: false,
+          showControls: true
+        },
+        eventHandlers
+      ]);
+    });
+
     const component = create(
       <MemoryRouter>
         <Mail />

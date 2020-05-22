@@ -54,9 +54,8 @@ export const getTemp = location => {
 
 export const getWeatherEndpoint = location => {
   const { lat, lon } = location.coordinates;
-  const excluded = 'minutely,alerts,flags';
 
-  return `${WEATHER_API}/${lat},${lon}?exclude=${excluded}`;
+  return `${WEATHER_API}/${lat},${lon}`;
 };
 
 export const getWindDirection = bearing => {

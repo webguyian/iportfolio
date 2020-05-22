@@ -162,11 +162,8 @@ Sent from iPortfolio"
 exports[`<Mail /> renders correctly with controls 1`] = `
 <form
   className="mail-app"
-  onSubmit={[MockFunction]}
+  onSubmit={[Function]}
 >
-  <div
-    className="mail-app-overlay"
-  />
   <button
     aria-labelledby="mail-app"
     className="ui-btn mail-app-drag-handle"
@@ -182,7 +179,7 @@ exports[`<Mail /> renders correctly with controls 1`] = `
     className="mail-app-top-bar"
   >
     <Link
-      onClick={[MockFunction]}
+      onClick={[Function]}
       to="/home"
     >
       Cancel
@@ -198,7 +195,7 @@ exports[`<Mail /> renders correctly with controls 1`] = `
         className="ui-text ui-text--display"
         size="l"
       >
-        Testing...
+        New Message
       </span>
       <button
         className="ui-btn ui-btn--with-icon"
@@ -256,7 +253,7 @@ exports[`<Mail /> renders correctly with controls 1`] = `
           placeholder="your@email.com"
           readOnly={false}
           type="email"
-          value="test@tester.com"
+          value=""
         />
       </div>
       <div
@@ -277,7 +274,7 @@ exports[`<Mail /> renders correctly with controls 1`] = `
           onChange={[Function]}
           readOnly={false}
           type="text"
-          value="Testing..."
+          value=""
         />
       </div>
     </div>
@@ -289,15 +286,17 @@ exports[`<Mail /> renders correctly with controls 1`] = `
       className="ui-form-field-textarea"
       id="body"
       onChange={[Function]}
-      value="This is a test"
+      value="
+
+Sent from iPortfolio"
     />
   </div>
   <div
-    className="mail-app-controls mail-app-controls--show"
+    className="mail-app-controls"
   >
     <button
       className="ui-btn ui-btn--anchor-block"
-      onClick={[MockFunction]}
+      onClick={[Function]}
       type="button"
     >
       Delete Draft
@@ -310,7 +309,7 @@ exports[`<Mail /> renders correctly with controls 1`] = `
     </Link>
     <button
       className="ui-btn ui-btn--anchor-block"
-      onClick={[MockFunction]}
+      onClick={[Function]}
       type="button"
     >
       Cancel

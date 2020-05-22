@@ -2,10 +2,11 @@ import React from 'react';
 import { act } from 'react-test-renderer';
 
 import { TestComponent, createMockResponse, testHook } from 'utilities/test';
-import { initialStocks } from './constants';
 
-import * as helpers from './helpers';
+import { MOCK_TOKEN } from 'modules/browser/constants';
 import * as browserHooks from 'modules/browser/hooks';
+import { initialStocks } from './constants';
+import * as helpers from './helpers';
 import * as hooks from './hooks';
 
 describe('Stocks hooks', () => {
@@ -23,75 +24,6 @@ describe('Stocks hooks', () => {
     browserHooks.useStorageCache.mockImplementation(useStorageCacheHook);
     helpers.isExpired.mockImplementation(isExpired);
     helpers.isExpiredNews.mockImplementation(isExpiredNews);
-  });
-
-  describe('useFetch', () => {
-    it('does not fetch data with empty endpoint', () => {
-      let response;
-
-      testHook(() => {
-        response = hooks.useFetch('');
-      });
-
-      expect(response).toEqual(null);
-    });
-
-    it('fetches data', async () => {
-      const endpoint = 'http://example.endpoint';
-      const responseData = { data: [10, 20, 30] };
-      let response;
-      const Component = testHook(() => {
-        response = hooks.useFetch(endpoint);
-      });
-
-      const mockResponse = createMockResponse(responseData);
-
-      global.fetch.mockReturnValueOnce(mockResponse);
-
-      await act(async () => {
-        const callback = () => {
-          response = hooks.useFetch(endpoint);
-        };
-
-        Component.update(<TestComponent callback={callback} />);
-      });
-
-      expect(response).toEqual(responseData);
-    });
-  });
-
-  describe('useFetchAll', () => {
-    it('does not fetch data with empty endpoints', () => {
-      let response;
-
-      testHook(() => {
-        response = hooks.useFetchAll([]);
-      });
-
-      expect(response).toEqual([]);
-    });
-
-    it('fetches data', async () => {
-      const endpoints = ['http://example.endpoint', 'http://example.endpoint'];
-      const responseData = { data: [10, 20, 30] };
-      const mockResponse = createMockResponse(responseData);
-      let response;
-
-      global.fetch.mockReturnValue(mockResponse);
-      const Component = testHook(() => {
-        response = hooks.useFetchAll(endpoints);
-      });
-
-      await act(async () => {
-        const callback = () => {
-          response = hooks.useFetchAll(endpoints);
-        };
-
-        Component.update(<TestComponent callback={callback} />);
-      });
-
-      expect(response).toEqual([responseData, responseData]);
-    });
   });
 
   describe('useSearch', () => {
@@ -246,14 +178,57 @@ describe('Stocks hooks', () => {
   });
 
   describe('useStocks', () => {
+    const response = {
+      AAPL: {
+        c: 317.94,
+        h: 321.15,
+        l: 316.47,
+        o: 319.25,
+        pc: 318.25,
+        t: 1590887588
+      },
+      AMZN: {
+        c: 2442.37,
+        h: 2442.37,
+        l: 2398.1973,
+        o: 2415.94,
+        pc: 2401.1,
+        t: 1590887588
+      },
+      FB: {
+        c: 225.09,
+        h: 227.49,
+        l: 222.88,
+        o: 225.2,
+        pc: 225.46,
+        t: 1590887588
+      },
+      GOOG: {
+        c: 1428.92,
+        h: 1432.57,
+        l: 1413.35,
+        o: 1416.94,
+        pc: 1416.73,
+        t: 1590887588
+      },
+      MSFT: {
+        c: 183.25,
+        h: 184.27,
+        l: 180.41,
+        o: 182.73,
+        pc: 181.4,
+        t: 1590887588
+      }
+    };
+
     it('returns useStocks response', async () => {
-      const exchangeResponse = createMockResponse(initialStocks);
-      const stockResponse = createMockResponse({ data: [10, 20, 30] });
+      const mockToken = createMockResponse(MOCK_TOKEN);
+      const stockResponse = createMockResponse(response);
 
       let stocks;
 
       global.fetch
-        .mockReturnValueOnce(exchangeResponse)
+        .mockReturnValueOnce(mockToken)
         .mockReturnValue(stockResponse);
 
       const Component = testHook(() => {
@@ -269,22 +244,26 @@ describe('Stocks hooks', () => {
       });
 
       expect(stocks).toEqual(
-        initialStocks.map(stock => ({
-          ...stock,
-          data: [10, 20, 30],
-          previousPrice: undefined,
-          price: undefined
-        }))
+        initialStocks.map(stock => {
+          const result = response[stock.symbol] || {};
+
+          return {
+            ...stock,
+            ...result,
+            price: result.c,
+            previousPrice: result.pc
+          };
+        })
       );
     });
 
     it('returns useStocks from cache', async () => {
-      const exchangeResponse = createMockResponse(initialStocks);
-      const stockResponse = createMockResponse({ data: [10, 20, 30] });
+      const mockToken = createMockResponse(MOCK_TOKEN);
+      const stockResponse = createMockResponse(response);
       let stocks;
 
       global.fetch
-        .mockReturnValueOnce(exchangeResponse)
+        .mockReturnValueOnce(mockToken)
         .mockReturnValue(stockResponse);
       browserHooks.useStorageCache.mockReturnValue({
         stocks: initialStocks.slice(0, 2)
@@ -303,12 +282,16 @@ describe('Stocks hooks', () => {
       });
 
       expect(stocks).toEqual(
-        initialStocks.slice(0, 2).map(stock => ({
-          ...stock,
-          data: [10, 20, 30],
-          previousPrice: undefined,
-          price: undefined
-        }))
+        initialStocks.slice(0, 2).map(stock => {
+          const result = response[stock.symbol] || {};
+
+          return {
+            ...stock,
+            ...result,
+            price: result.c,
+            previousPrice: result.pc
+          };
+        })
       );
     });
   });
@@ -316,6 +299,10 @@ describe('Stocks hooks', () => {
   describe('useStockDetail', () => {
     it('returns null stock detail', async () => {
       let stock;
+
+      const mockToken = createMockResponse(MOCK_TOKEN);
+
+      global.fetch.mockReturnValueOnce(mockToken);
 
       testHook(() => {
         [stock] = hooks.useStockDetail();
@@ -332,9 +319,10 @@ describe('Stocks hooks', () => {
         pc: 90
       };
 
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const response = createMockResponse(stockData);
 
-      global.fetch.mockReturnValueOnce(response);
+      global.fetch.mockReturnValueOnce(mockToken).mockReturnValueOnce(response);
 
       const Component = testHook(() => {
         [stock, setActiveStock] = hooks.useStockDetail();
@@ -447,6 +435,9 @@ describe('Stocks hooks', () => {
 
     it('returns empty stock news', () => {
       let news;
+      const mockToken = createMockResponse(MOCK_TOKEN);
+
+      global.fetch.mockReturnValueOnce(mockToken);
 
       testHook(() => {
         news = hooks.useStockNews();
@@ -460,9 +451,11 @@ describe('Stocks hooks', () => {
       const Component = testHook(() => {
         news = hooks.useStockNews();
       });
+
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const response = createMockResponse(generalNews);
 
-      global.fetch.mockReturnValueOnce(response);
+      global.fetch.mockReturnValueOnce(mockToken).mockReturnValueOnce(response);
 
       await act(async () => {
         const callback = () => {
@@ -528,9 +521,10 @@ describe('Stocks hooks', () => {
         }
       ];
 
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const response = createMockResponse(newsData);
 
-      global.fetch.mockReturnValueOnce(response);
+      global.fetch.mockReturnValueOnce(mockToken).mockReturnValueOnce(response);
 
       await act(async () => {
         const callback = () => {
@@ -543,7 +537,7 @@ describe('Stocks hooks', () => {
       expect(news).toEqual(newsData);
     });
 
-    it('returns news from cache', () => {
+    it('returns news from cache', async () => {
       let news;
 
       browserHooks.useStorageCache.mockReturnValue({
@@ -554,7 +548,7 @@ describe('Stocks hooks', () => {
         news = hooks.useStockNews();
       });
 
-      act(() => {
+      await act(async () => {
         const callback = () => {
           news = hooks.useStockNews();
         };
@@ -572,9 +566,10 @@ describe('Stocks hooks', () => {
         news: generalNews.slice(0, 2)
       });
       helpers.isExpiredNews.mockReturnValue(true);
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const response = createMockResponse(generalNews);
 
-      global.fetch.mockReturnValueOnce(response);
+      global.fetch.mockReturnValueOnce(mockToken).mockReturnValueOnce(response);
       const Component = testHook(() => {
         news = hooks.useStockNews();
       });
@@ -594,9 +589,12 @@ describe('Stocks hooks', () => {
   describe('useStockChart', () => {
     it('returns null chart data', async () => {
       let response;
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const chartResponse = createMockResponse({});
 
-      global.fetch.mockReturnValueOnce(chartResponse);
+      global.fetch
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(chartResponse);
 
       const Component = testHook(() => {
         response = hooks.useStockChart('AAPL', '1D');
@@ -625,9 +623,12 @@ describe('Stocks hooks', () => {
         v: [121991, 118024, 144862]
       };
 
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const chartResponse = createMockResponse(stockData);
 
-      global.fetch.mockReturnValueOnce(chartResponse);
+      global.fetch
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(chartResponse);
 
       const Component = testHook(() => {
         response = hooks.useStockChart('AAPL', '1D');
@@ -649,10 +650,11 @@ describe('Stocks hooks', () => {
     it('returns empty ticker data', async () => {
       const stocks = initialStocks.slice(0, 2);
       let response;
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const tickerResponse = createMockResponse({});
 
       global.fetch
-        .mockReturnValueOnce(tickerResponse)
+        .mockReturnValueOnce(mockToken)
         .mockReturnValueOnce(tickerResponse);
 
       const Component = testHook(() => {
@@ -673,6 +675,7 @@ describe('Stocks hooks', () => {
     it('returns ticker data', async () => {
       const stocks = initialStocks.slice(0, 2);
       let response;
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const appleChartData = {
         c: [325, 325.3, 325.3423],
         h: [325.29, 325.43, 325.55],
@@ -691,10 +694,14 @@ describe('Stocks hooks', () => {
         t: [1581605220, 1581605280, 1581605340],
         v: [16312, 9738, 14310]
       };
+      const chartData = {
+        AAPL: appleChartData,
+        AMZN: amazonChartData
+      };
 
       global.fetch
-        .mockReturnValueOnce(createMockResponse(appleChartData))
-        .mockReturnValueOnce(createMockResponse(amazonChartData));
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(createMockResponse(chartData));
 
       const Component = testHook(() => {
         response = hooks.useStockTicker(stocks);
@@ -720,7 +727,7 @@ describe('Stocks hooks', () => {
       expect(response).toEqual([appleResponse, amazonResponse]);
     });
 
-    it('returns ticker data from cache', () => {
+    it('returns ticker data from cache', async () => {
       const stocks = initialStocks.slice(0, 2);
       let response;
       const appleChartData = {
@@ -760,7 +767,7 @@ describe('Stocks hooks', () => {
         response = hooks.useStockTicker(stocks);
       });
 
-      act(() => {
+      await act(async () => {
         const callback = () => {
           response = hooks.useStockTicker(stocks);
         };
@@ -774,6 +781,7 @@ describe('Stocks hooks', () => {
     it('returns ticker data not from cache when expired', async () => {
       const stocks = initialStocks.slice(0, 2);
       let response;
+      const mockToken = createMockResponse(MOCK_TOKEN);
       const appleChartData = {
         c: [325, 325.3, 325.3423],
         h: [325.29, 325.43, 325.55],
@@ -801,10 +809,14 @@ describe('Stocks hooks', () => {
         ...initialStocks[1],
         chartData: helpers.updateChartData(amazonChartData, '1D')
       };
+      const chartData = {
+        AAPL: appleChartData,
+        AMZN: amazonChartData
+      };
 
       global.fetch
-        .mockReturnValueOnce(createMockResponse(appleChartData))
-        .mockReturnValueOnce(createMockResponse(amazonChartData));
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(createMockResponse(chartData));
 
       browserHooks.useStorageCache.mockReturnValue({
         charts: [appleResponse]

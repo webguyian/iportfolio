@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-import { initialStocks } from './constants';
-import { useSearch, useStockSearch, useStocks, useStockDetail } from './hooks';
+import { initialStocks } from 'modules/stocks/constants';
+import {
+  useSearch,
+  useStockSearch,
+  useStockExchange,
+  useStocks,
+  useStockDetail
+} from 'modules/stocks/hooks';
 
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
@@ -14,8 +20,9 @@ import StockSearch from 'containers/Stocks/StockSearch/StockSearch';
 import StockNews from 'containers/Stocks/StockNews/StockNews';
 
 const Stocks = () => {
-  const [stocks, setStocks, allStocks] = useStocks(initialStocks);
+  const [stocks, setStocks] = useStocks(initialStocks);
   const [searchTerm, searchHandlers, hasSearch] = useSearch();
+  const allStocks = useStockExchange();
   const filteredStocks = useStockSearch(allStocks, searchTerm);
   const [activeStock, setActiveStock] = useStockDetail();
   const [isEdit, setEdit] = useState(false);
@@ -35,6 +42,13 @@ const Stocks = () => {
   };
   const handleEdit = () => {
     setEdit(edit => !edit);
+  };
+  const handleStockClick = stock => {
+    setActiveStock(null);
+
+    setTimeout(() => {
+      setActiveStock(stock);
+    }, 0);
   };
 
   return (
@@ -68,7 +82,7 @@ const Stocks = () => {
         stock={activeStock}
         stocks={stocks}
         onAdd={handleAddStock}
-        onClick={setActiveStock}
+        onClick={handleStockClick}
         onClose={setActiveStock.bind(null, null)}
       />
       <StockNews draggable />

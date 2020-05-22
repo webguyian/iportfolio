@@ -1,8 +1,8 @@
 import React from 'react';
 import { act, create } from 'react-test-renderer';
 
-import { initialStocks } from 'containers/Stocks/constants';
-import * as hooks from 'containers/Stocks/hooks';
+import { initialStocks } from 'modules/stocks/constants';
+import * as hooks from 'modules/stocks/hooks';
 import StockDetail from 'containers/Stocks/Stock/StockDetail';
 import Stocks from './Stocks';
 
@@ -12,10 +12,12 @@ jest.mock('containers/Stocks/StockTicker/StockTicker', () => 'StockTicker');
 
 describe('<Stocks />', () => {
   const useStocksHook = hooks.useStocks;
+  const useStockExchange = hooks.useStockExchange;
   const useSearchHook = hooks.useSearch;
   const useStockDetailHook = hooks.useStockDetail;
 
   hooks.useStocks = jest.fn();
+  hooks.useStockExchange = jest.fn();
   hooks.useSearch = jest.fn();
   hooks.useStockDetail = jest.fn();
 
@@ -31,42 +33,56 @@ describe('<Stocks />', () => {
     jest.clearAllMocks();
     // Reset to original implementation before each test
     hooks.useStocks.mockImplementation(useStocksHook);
+    hooks.useStockExchange.mockImplementation(useStockExchange);
     hooks.useSearch.mockImplementation(useSearchHook);
     hooks.useStockDetail.mockImplementation(useStockDetailHook);
   });
 
-  it('renders correctly', () => {
-    hooks.useStocks.mockReturnValue([initialStocks, jest.fn(), initialStocks]);
+  it('renders correctly', async () => {
+    let component;
 
-    const component = create(<Stocks />);
-
-    expect(component).toMatchSnapshot();
-  });
-
-  it('renders correctly with search term', () => {
-    hooks.useStocks.mockReturnValue([initialStocks, jest.fn(), initialStocks]);
-    hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
-    const component = create(<Stocks />);
+    await act(async () => {
+      hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
+      hooks.useStockExchange.mockReturnValue(initialStocks);
+      component = create(<Stocks />);
+    });
 
     expect(component).toMatchSnapshot();
   });
 
-  it('renders correctly with stock detail', () => {
+  it('renders correctly with search term', async () => {
+    let component;
+
+    await act(async () => {
+      hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
+      hooks.useStockExchange.mockReturnValue(initialStocks);
+      hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
+      component = create(<Stocks />);
+    });
+
+    expect(component).toMatchSnapshot();
+  });
+
+  it('renders correctly with stock detail', async () => {
     const activeStock = {
       symbol: 'AAPL',
       displaySymbol: 'AAPL',
       description: 'APPLE INC'
     };
 
-    hooks.useStocks.mockReturnValue([initialStocks, jest.fn(), initialStocks]);
-    hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
-    hooks.useStockDetail.mockReturnValue([activeStock, jest.fn()]);
+    await act(async () => {
+      hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
+      hooks.useStockExchange.mockReturnValue(initialStocks);
+      hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
+      hooks.useStockDetail.mockReturnValue([activeStock, jest.fn()]);
+    });
+
     const component = create(<Stocks />);
 
     expect(component).toMatchSnapshot();
   });
 
-  it('handles adding stocks', () => {
+  it('handles adding stocks', async () => {
     const activeStock = {
       symbol: 'AAPL',
       displaySymbol: 'AAPL',
@@ -77,41 +93,51 @@ describe('<Stocks />', () => {
       activeStocks = stocks;
     };
 
-    hooks.useStocks.mockReturnValue([activeStocks, setStocks, initialStocks]);
-    hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
-    hooks.useStockDetail.mockReturnValue([activeStock, jest.fn()]);
+    await act(async () => {
+      hooks.useStocks.mockReturnValue([activeStocks, setStocks]);
+      hooks.useStockExchange.mockReturnValue(initialStocks);
+      hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
+      hooks.useStockDetail.mockReturnValue([activeStock, jest.fn()]);
+    });
+
     const component = create(<Stocks />);
     const detail = component.root.findByType(StockDetail);
 
     expect(activeStocks.length).toEqual(5);
     expect(searchHandlers.onCancel).not.toHaveBeenCalled();
-    act(() => {
+    await act(async () => {
       detail.props.onAdd();
     });
     expect(searchHandlers.onCancel).toHaveBeenCalled();
     expect(activeStocks.length).toEqual(6);
   });
 
-  it('handles deleting stocks', () => {
-    hooks.useStocks.mockReturnValue([initialStocks, jest.fn(), initialStocks]);
+  it('handles deleting stocks', async () => {
+    hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
+    hooks.useStockExchange.mockReturnValue(initialStocks);
+
     const component = create(<Stocks />);
     const stock = component.root.findByProps({ symbol: 'AAPL' });
 
-    act(() => {
+    await act(async () => {
       stock.props.onDelete();
     });
 
     expect(component).toMatchSnapshot();
   });
 
-  it('handles toggling edit', () => {
-    hooks.useStocks.mockReturnValue([initialStocks, jest.fn(), initialStocks]);
-    const component = create(<Stocks />);
-    const [button] = component.root.findAllByProps({
-      className: 'ui-btn--anchor'
+  it('handles toggling edit', async () => {
+    await act(async () => {
+      hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
+      hooks.useStockExchange.mockReturnValue(initialStocks);
     });
 
-    act(() => {
+    const component = create(<Stocks />);
+    const [button] = component.root.findAllByProps({
+      modifier: 'anchor'
+    });
+
+    await act(async () => {
       button.props.onClick();
     });
 

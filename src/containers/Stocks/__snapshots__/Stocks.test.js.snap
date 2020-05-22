@@ -783,7 +783,7 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
     className="stocks-app-list"
   />
   <StockTicker
-    onClick={[MockFunction]}
+    onClick={[Function]}
     stocks={
       Array [
         Object {

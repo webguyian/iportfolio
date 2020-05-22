@@ -5,13 +5,13 @@ import { XAxis, YAxis } from 'react-stockcharts/lib/axes';
 import { AreaSeries } from 'react-stockcharts/lib/series';
 import { scaleTime } from 'd3-scale';
 
-import { formatDateTick } from 'containers/Stocks/helpers';
-import { useStockChart } from 'containers/Stocks/hooks';
+import { formatDateTick } from 'modules/stocks/helpers';
+import { useStockChart } from 'modules/stocks/hooks';
 
 import StockChartControls from './StockChartControls';
 
 const StockChart = props => {
-  const { height, hideControls, ratio, stock, width } = props;
+  const { height, hideControls, ratio, stock, width, ...otherProps } = props;
   const symbol = stock.symbol;
   const [range, setRange] = useState('1D');
   const chartData = stock.chartData || useStockChart(symbol, range);
@@ -49,6 +49,7 @@ const StockChart = props => {
         displayXAccessor={dateAccessor}
         xScale={scaleTime()}
         xExtents={[chartData.startDate, chartData.endDate]}
+        {...otherProps}
       >
         <Chart id={chartData.end} yExtents={d => d.close}>
           <defs>

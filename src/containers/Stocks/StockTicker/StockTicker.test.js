@@ -1,8 +1,8 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import { initialStocks } from 'containers/Stocks/constants';
-import * as hooks from 'containers/Stocks/hooks';
+import { initialStocks } from 'modules/stocks/constants';
+import * as hooks from 'modules/stocks/hooks';
 import StockTicker from './StockTicker';
 
 describe('<StockTicker />', () => {

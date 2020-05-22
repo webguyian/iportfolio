@@ -50,7 +50,7 @@ describe('Weather helpers', () => {
     };
 
     expect(helpers.getWeatherEndpoint(location)).toEqual(
-      `${WEATHER_API}/37.323,-122.0322?exclude=minutely,alerts,flags`
+      `${WEATHER_API}/37.323,-122.0322`
     );
   });
 

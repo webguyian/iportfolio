@@ -1,0 +1,14 @@
+.ui-error {
+  @include stretch-column;
+  justify-content: center;
+  background-color: $blue-bright;
+  text-align: center;
+
+  &-btn {
+    color: $white;
+  }
+
+  &-heading {
+    margin-top: $gutter;
+  }
+}
