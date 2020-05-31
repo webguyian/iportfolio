@@ -6,4 +6,9 @@
     margin-right: auto;
     color: $yellow;
   }
+
+  > .ui-icon {
+    pointer-events: none;
+    cursor: pointer;
+  }
 }

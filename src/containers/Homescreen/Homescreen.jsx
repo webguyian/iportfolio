@@ -489,7 +489,7 @@ const Homescreen = () => {
       <div className="iportfolio-grid">
         {calendarIcon()}
         {clockIcon()}
-        <AppIcon id="map" name="Google Maps">
+        <AppIcon id="map" name="Google Maps" theme="light">
           {mapIcon()}
         </AppIcon>
         <AppIcon name="Weather">{weatherIcon()}</AppIcon>
@@ -505,7 +505,7 @@ const Homescreen = () => {
   const dock = () => {
     return (
       <div className="iportfolio-dock">
-        <AppIcon name="phone" noLabel>
+        <AppIcon name="phone" noLabel theme="black-dark">
           {phoneIcon()}
         </AppIcon>
         <AppIcon name="safari" noLabel>

@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: $gutter-s;
 
   &-field {
     display: flex;

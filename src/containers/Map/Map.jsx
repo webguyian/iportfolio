@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import Button from 'components/Button/Button';
@@ -8,8 +9,10 @@ import SavedPlaces from './SavedPlaces/SavedPlaces';
 
 import { useGoogleMaps, usePlacesSearch } from 'modules/map/hooks';
 
-const Map = () => {
-  const [mapRef, map] = useGoogleMaps();
+const Map = props => {
+  const { location } = props;
+  const center = location && location.state && location.state.center;
+  const [mapRef, map] = useGoogleMaps(center);
   const inputRef = useRef();
   const [savedPlaces, onPlaceClick, showSavedView, view] = usePlacesSearch(
     inputRef,
@@ -52,6 +55,10 @@ const Map = () => {
       </div>
     </div>
   );
+};
+
+Map.propTypes = {
+  location: PropTypes.object
 };
 
 export default Map;

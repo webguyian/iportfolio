@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Phone /> renders correctly 1`] = `
+<div
+  className="phone-app"
+>
+  <header>
+    <figure
+      className="phone-app-image"
+    >
+      <div
+        className="ui-flip-container"
+      >
+        <div
+          className="ui-flip"
+        >
+          <div
+            className="ui-flip-front"
+          >
+            <div
+              className="ui-avatar"
+            >
+              <img
+                alt="Ian Mac"
+                className="ui-avatar-image"
+                src="https://github.com/webguyian.png?size=150"
+              />
+            </div>
+          </div>
+          <div
+            className="ui-flip-back"
+          >
+            <div
+              className="ui-avatar"
+            >
+              <span
+                className="ui-text ui-text--body ui-text--light ui-avatar-text"
+              >
+                IM
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption
+        className="phone-app-image-caption"
+      >
+        <h1
+          className="ui-text ui-text--body"
+        >
+          Ian Mac
+        </h1>
+      </figcaption>
+    </figure>
+    <ul
+      className="phone-app-actions"
+    >
+      <li>
+        <Link
+          icon="comment"
+          iconSize="lg"
+          to="#message"
+          withLabel={true}
+        >
+          message
+        </Link>
+      </li>
+      <li>
+        <Link
+          icon="phone-alt"
+          iconSize="lg"
+          to="#call"
+          withLabel={true}
+        >
+          call
+        </Link>
+      </li>
+      <li>
+        <Link
+          icon="envelope"
+          iconSize="lg"
+          to="/mail"
+          withLabel={true}
+        >
+          mail
+        </Link>
+      </li>
+    </ul>
+  </header>
+  <div
+    className="phone-app-info"
+  >
+    <div
+      className="phone-app-info-row"
+    >
+      <h2
+        className="ui-text ui-text--body phone-app-info-label"
+      >
+        Email
+      </h2>
+      <Link
+        className="phone-app-info-value"
+        data-hover="hello@webguyian.com"
+        external={true}
+        to="mailto:hello@webguyian.com"
+      >
+        hello@webguyian.com
+      </Link>
+    </div>
+    <div
+      className="phone-app-info-row"
+    >
+      <h2
+        className="ui-text ui-text--body phone-app-info-label"
+      >
+        Website
+      </h2>
+      <Link
+        className="phone-app-info-value"
+        data-hover="webguyian.com"
+        external={true}
+        to="https://webguyian.com"
+      >
+        webguyian.com
+      </Link>
+    </div>
+    <div
+      className="phone-app-info-row"
+    >
+      <h2
+        className="ui-text ui-text--body phone-app-info-label"
+      >
+        Github
+      </h2>
+      <Link
+        className="phone-app-info-value"
+        data-hover="github.com/webguyian"
+        external={true}
+        to="https://github.com/webguyian"
+      >
+        github.com/webguyian
+      </Link>
+    </div>
+    <div
+      className="phone-app-info-row"
+    >
+      <h2
+        className="ui-text ui-text--body phone-app-info-label"
+      >
+        Location
+      </h2>
+      <Link
+        className="phone-app-info-map-link"
+        state={
+          Object {
+            "center": Object {
+              "lat": 39.952583,
+              "lng": -75.165222,
+            },
+            "theme": "light",
+          }
+        }
+        to="/map"
+      >
+        <span
+          className="ui-text ui-text--body phone-app-info-map-link-text"
+        >
+          <i
+            className="ui-icon ui-icon-map-marker-alt fas fa-map-marker-alt"
+          />
+           View Map
+        </span>
+        <img
+          alt="Philadelphia, PA"
+          src="https://maps.googleapis.com/maps/api/staticmap?center=Philadelphia,PA&zoom=13&size=330x100&maptype=roadmap&key=AIzaSyDTktXdm9hB4VtMG6BL8LshRPac__Zv7mQ&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels%7Cvisibility:off"
+        />
+      </Link>
+    </div>
+  </div>
+</div>
+`;

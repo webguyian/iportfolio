@@ -1,0 +1,19 @@
+.ui-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: $border-radius-round;
+  background-color: $gray-medium;
+  text-align: center;
+
+  &-image {
+    border-radius: $border-radius-round;
+  }
+
+  &-text {
+    margin: 0;
+    font-size: 60px;
+  }
+}

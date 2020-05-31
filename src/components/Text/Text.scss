@@ -21,6 +21,10 @@
     font-weight: $font-weight-bold;
   }
 
+  &--light {
+    font-weight: $font-weight-light;
+  }
+
   &--loading {
     font-size: $font-size-l;
     text-align: center;

@@ -6,6 +6,7 @@ import LockscreenView from 'views/lockscreen/LockscreenView';
 import MailView from 'views/mail/MailView';
 import MapView from 'views/map/MapView';
 import NotesView from 'views/notes/NotesView';
+import PhoneView from 'views/phone/PhoneView';
 import RemindersView from 'views/reminders/RemindersView';
 import StocksView from 'views/stocks/StocksView';
 import WeatherView from 'views/weather/WeatherView';
@@ -53,6 +54,11 @@ const routes = [
     pathKey: 'notes',
     component: NotesView,
     exact: false
+  },
+  {
+    path: '/phone',
+    pathKey: 'phone',
+    component: PhoneView
   },
   {
     path: '/reminders',

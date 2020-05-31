@@ -13,8 +13,10 @@
 @import "components/Text/Text";
 @import "components/Clockface/Clockface";
 @import "components/AppIcon/AppIcon";
+@import "components/Avatar/Avatar";
 @import "components/DeviceFrame/DeviceFrame";
 @import "components/ErrorBoundary/ErrorBoundary";
+@import "components/Flip/Flip";
 @import "components/FormField/FormField";
 @import "components/Picker/Picker";
 @import "components/TabNavigation/TabNavigation";
@@ -38,6 +40,7 @@
 @import "containers/Notes/Notes";
 @import "containers/Notes/Note";
 @import "containers/Notes/NotePreview";
+@import "containers/Phone/Phone";
 @import "containers/Stocks/Stocks";
 @import "containers/Stocks/Stock/Stock";
 @import "containers/Stocks/StockChart/StockChart";

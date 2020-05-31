@@ -1,7 +1,7 @@
 .weather-summary {
   &-description {
-    margin-bottom: 8px;
-    padding: $gutter 8px;
+    margin-bottom: $gutter-s;
+    padding: $gutter $gutter-s;
     border-top: $border;
     border-bottom: $border;
 
@@ -20,7 +20,7 @@
 
     &-cell {
       flex: 0 1 50%;
-      padding: 8px;
+      padding: $gutter-s;
     }
 
     .ui-text--muted {

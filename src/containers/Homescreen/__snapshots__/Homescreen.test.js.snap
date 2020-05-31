@@ -88,6 +88,11 @@ exports[`<Homescreen /> renders correctly 1`] = `
     >
       <Link
         className="ui-app-icon-link"
+        state={
+          Object {
+            "theme": "light",
+          }
+        }
         to="/map"
       >
         <svg
@@ -775,6 +780,11 @@ exports[`<Homescreen /> renders correctly 1`] = `
     >
       <Link
         className="ui-app-icon-link"
+        state={
+          Object {
+            "theme": "black-dark",
+          }
+        }
         to="/phone"
       >
         <svg

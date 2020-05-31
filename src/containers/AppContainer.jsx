@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, useHistory } from 'react-router-dom';
+import classNames from 'classnames';
 
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
@@ -37,15 +38,18 @@ const LeftIndicator = () => {
 };
 
 const AppContainer = props => {
-  const { location } = props;
-  const invertIconColor = location.pathname.startsWith('/map');
+  const {
+    location: { state }
+  } = props;
+  const baseClass = 'iportfolio-app';
+  const deviceClass = `${baseClass}-device`;
+  const themeClass = state && state.theme && `${deviceClass}--${state.theme}`;
 
   return (
-    <div className="iportfolio-app">
+    <div className={baseClass}>
       <DeviceFrame
-        className="iportfolio-app-device"
+        className={classNames(deviceClass, themeClass)}
         leftIndicator={<LeftIndicator />}
-        invertIconColor={invertIconColor}
       >
         <ErrorBoundary>
           <Switch>

@@ -16,7 +16,7 @@ const Text = props => {
 Text.propTypes = {
   className: PropTypes.string,
   element: PropTypes.string,
-  modifier: PropTypes.oneOf(['block', 'bold']),
+  modifier: PropTypes.oneOf(['block', 'bold', 'light']),
   type: PropTypes.oneOf(['accessible', 'body', 'display'])
 };
 

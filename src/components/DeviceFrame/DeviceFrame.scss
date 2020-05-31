@@ -67,14 +67,6 @@
       color: $white;
       font-size: $font-size-s;
     }
-
-    &--inverted {
-      color: $black-darker;
-
-      .ui-icon {
-        color: $black-darker;
-      }
-    }
   }
 
   .device-time-label {
@@ -83,6 +75,23 @@
     > .ui-btn {
       margin-left: 6px;
       transform: translateY(-1px);
+    }
+  }
+}
+
+// THEMES =======================================
+.iportfolio-app-device--black-dark {
+  .device-content {
+    background-color: $black-dark;
+  }
+}
+
+.iportfolio-app-device--light {
+  .device-header-bars {
+    color: $black-darker;
+
+    .ui-icon {
+      color: $black-darker;
     }
   }
 }

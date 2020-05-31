@@ -6,6 +6,7 @@
   &-input,
   &-textarea {
     @include type-body;
+    @include focus-outline;
     color: $white;
   }
 

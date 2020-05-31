@@ -1,0 +1,150 @@
+.phone-app {
+  @include stretch-column-nowrap;
+  align-items: center;
+  padding: $gutter;
+  background-color: $black-dark;
+
+  &-image {
+    margin: $gutter-m auto;
+    text-align: center;
+
+    &-caption {
+      margin-top: $gutter-s;
+
+      > .ui-text {
+        margin: 0;
+        font-size: $font-size-l;
+      }
+    }
+  }
+
+  &-actions {
+    @include unstyled-list;
+    display: flex;
+
+    .ui-link--with-icon,
+    .ui-icon {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ui-link--with-icon {
+      min-width: 55px;
+      margin: 0 $gutter;
+      transition: color 0.4s ease-in;
+      color: $white;
+
+      > .ui-icon {
+        @include circle(44px);
+        transition: background-color 0.4s ease-in;
+        background-color: $blue;
+        line-height: 1.65;
+      }
+
+      > .ui-link-label {
+        margin: $gutter-s 0 0;
+        transition: color 0.4s ease-in;
+        color: $blue;
+        font-size: $font-size-s;
+      }
+
+      &:hover,
+      &:focus {
+        color: $blue;
+
+        > .ui-icon {
+          background-color: $white;
+        }
+
+        > .ui-link-label {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-info {
+    width: 100%;
+    margin-top: $gutter;
+
+    &-row {
+      padding: $gutter $gutter-s;
+      border-top: 1px solid $gray-medium;
+    }
+
+    &-label {
+      margin-top: 0;
+    }
+
+    &-value {
+      position: relative;
+      transition: color 0.4s ease-in;
+      color: $blue;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 0;
+        transition: width 0.4s;
+        color: $white;
+        white-space: nowrap;
+        content: attr(data-hover);
+        overflow: hidden;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    &-map-link {
+      display: block;
+      position: relative;
+      max-height: 100px;
+
+      &-text {
+        @include type-body($font-size-l);
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        transition: opacity 0.8s ease-in;
+        text-align: center;
+        opacity: 0;
+
+        > .ui-icon {
+          margin-right: $gutter-s;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: width 0.8s;
+        content: "";
+      }
+
+      &:hover,
+      &:focus {
+        .phone-app-info-map-link-text {
+          opacity: 1;
+        }
+
+        &::before {
+          width: 330px;
+          background-color: rgba($black, 0.75);
+          color: $red;
+        }
+      }
+    }
+  }
+}

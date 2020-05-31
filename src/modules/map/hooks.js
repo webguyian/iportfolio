@@ -4,7 +4,7 @@ import { useGeolocation, useStorageCache } from 'modules/browser/hooks';
 import { MAP_API } from './constants';
 import { addSavedMarkers, onPlaceSelected, toggleMarker } from './helpers';
 
-export const useGoogleMaps = () => {
+export const useGoogleMaps = center => {
   const coordinates = useGeolocation();
   const ref = useRef();
   const [map, setMap] = useState();
@@ -14,7 +14,7 @@ export const useGoogleMaps = () => {
     if (coordinates) {
       const { latitude, longitude } = coordinates;
       const options = {
-        center: { lat: latitude, lng: longitude },
+        center: center || { lat: latitude, lng: longitude },
         disableDefaultUI: true,
         zoomControl: true,
         streetViewControl: true,

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { Link as RouterLink } from 'react-router-dom';
 
 import Icon from 'components/Icon/Icon';
+import Text from 'components/Text/Text';
 
 const Link = forwardRef((props, ref) => {
   const {
@@ -12,11 +13,16 @@ const Link = forwardRef((props, ref) => {
     children,
     className,
     external,
+    icon,
+    iconSize,
+    state,
     to,
+    withLabel,
     ...otherProps
   } = props;
   const baseClass = 'ui-link';
   const backLinkClass = `${baseClass}--back`;
+  const iconClass = icon && `${baseClass}--with-icon`;
 
   if (back) {
     return (
@@ -35,7 +41,7 @@ const Link = forwardRef((props, ref) => {
     return (
       <a
         href={to}
-        className={baseClass}
+        className={classNames(baseClass, className)}
         target="_blank"
         rel="noopener noreferrer"
         {...otherProps}
@@ -47,12 +53,13 @@ const Link = forwardRef((props, ref) => {
 
   return (
     <RouterLink
-      className={classNames(baseClass, className)}
-      to={to}
+      className={classNames(baseClass, iconClass, className)}
+      to={state ? { pathname: to, state } : to}
       ref={ref}
       {...otherProps}
     >
-      {children}
+      {icon ? <Icon name={icon} size={iconSize} /> : children}
+      {withLabel && <Text className={`${baseClass}-label`}>{children}</Text>}
     </RouterLink>
   );
 });
@@ -65,13 +72,18 @@ Link.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   external: PropTypes.bool,
-  to: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  icon: PropTypes.string,
+  iconSize: PropTypes.string,
+  state: PropTypes.object,
+  to: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  withLabel: PropTypes.bool
 };
 
 Link.defaultProps = {
   back: false,
   external: false,
-  backLabel: 'Back'
+  backLabel: 'Back',
+  withLabel: false
 };
 
 export default Link;
