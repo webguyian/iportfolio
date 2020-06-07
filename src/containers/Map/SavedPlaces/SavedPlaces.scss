@@ -30,7 +30,7 @@ $map-bg-color: #f2f3f4;
         text-align: left;
 
         > .ui-text {
-          margin: 0 0 5px;
+          margin: 0 0 $gutter-xs;
         }
 
         > .ui-link {

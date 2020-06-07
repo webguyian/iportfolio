@@ -14,7 +14,6 @@
 }
 
 @mixin type-display {
-  margin: 0;
   font-family: $type-display;
   font-size: 30px;
   font-weight: $font-weight-bold;
@@ -58,6 +57,12 @@
     radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
   background-color: $black-dark;
   background-size: 16px 16px;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin flex-column {

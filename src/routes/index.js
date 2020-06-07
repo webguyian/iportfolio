@@ -4,6 +4,7 @@ import ClockView from 'views/clock/ClockView';
 import HomescreenView from 'views/homescreen/HomescreenView';
 import MailView from 'views/mail/MailView';
 import MapView from 'views/map/MapView';
+import MusicView from 'views/music/MusicView';
 import NotesView from 'views/notes/NotesView';
 import PhoneView from 'views/phone/PhoneView';
 import RemindersView from 'views/reminders/RemindersView';
@@ -46,6 +47,12 @@ const routes = [
     path: '/map',
     pathKey: 'map',
     component: MapView
+  },
+  {
+    path: '/music',
+    pathKey: 'music',
+    component: MusicView,
+    exact: false
   },
   {
     path: '/notes',

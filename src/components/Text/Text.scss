@@ -5,11 +5,13 @@
 
   &--body {
     @include type-body;
+    margin: 0;
   }
 
   &--display {
     @include type-display;
     display: block;
+    margin: 0;
   }
 
   &--block {

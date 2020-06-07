@@ -667,6 +667,75 @@ exports[`<Homescreen /> renders correctly 1`] = `
       </span>
     </div>
     <div
+      className="ui-app-icon ui-app-icon--music"
+    >
+      <Link
+        className="ui-app-icon-link"
+        to="/music"
+      >
+        <svg
+          clipRule="evenodd"
+          fillRule="evenodd"
+          strokeLinejoin="round"
+          strokeMiterlimit="2"
+          viewBox="0 0 125 140"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M114.748.154c2.534-.461 4.781.115 6.74 1.728 1.958 1.613 2.937 3.687 2.937 6.221v88.653c0 8.18-2.304 14.574-6.912 19.182-4.608 4.493-10.945 6.74-19.01 6.74-5.53 0-10.08-1.44-13.652-4.32-3.571-2.996-5.357-6.74-5.357-11.233 0-5.645 2.247-10.369 6.74-14.171 4.493-3.802 10.311-5.703 17.454-5.703 2.65 0 5.472.461 8.468 1.383.115 0 .23-.058.345-.173.115 0 .173-.058.173-.173V31.26c0-.346-.173-.634-.518-.864-.346-.346-.692-.461-1.037-.346L46.314 42.493c-.922.23-1.383.806-1.383 1.728v69.816c0 8.18-2.304 14.574-6.912 19.183-4.608 4.493-10.945 6.739-19.01 6.739-5.53 0-10.08-1.497-13.652-4.493C1.786 132.586 0 128.899 0 124.406c0-5.645 2.247-10.369 6.74-14.171 4.493-3.801 10.311-5.702 17.454-5.702 2.65 0 5.472.46 8.468 1.382.115 0 .23-.058.345-.173.115 0 .173-.057.173-.172V25.384c0-2.88.864-5.415 2.592-7.603 1.844-2.305 4.148-3.687 6.913-4.148L114.748.154z"
+            fill="url(#_music-gradient)"
+            fillRule="nonzero"
+          />
+          <defs>
+            <linearGradient
+              gradientTransform="scale(342.158) rotate(45.327 .098 -.275)"
+              gradientUnits="userSpaceOnUse"
+              id="_music-gradient"
+              x1="0"
+              x2="1"
+              y1="0"
+              y2="0"
+            >
+              <stop
+                offset="0"
+                stopColor="#fb413e"
+              />
+              <stop
+                offset=".06"
+                stopColor="#fb413e"
+              />
+              <stop
+                offset=".38"
+                stopColor="#ff3c32"
+              />
+              <stop
+                offset=".52"
+                stopColor="#ad69e3"
+                stopOpacity=".75"
+              />
+              <stop
+                offset=".63"
+                stopColor="#5dc4f9"
+              />
+              <stop
+                offset=".96"
+                stopColor="#60c2f8"
+              />
+              <stop
+                offset="1"
+                stopColor="#60c2f8"
+              />
+            </linearGradient>
+          </defs>
+        </svg>
+      </Link>
+      <span
+        className="ui-text ui-text--body ui-app-icon-label"
+      >
+        Music
+      </span>
+    </div>
+    <div
       className="ui-app-icon ui-app-icon--settings"
     >
       <Link

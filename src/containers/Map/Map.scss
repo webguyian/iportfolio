@@ -27,7 +27,7 @@ $map-height: 92%;
     flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
-    padding-bottom: 5px;
+    padding-bottom: $gutter-xs;
     border-top: 1px solid $gray-light;
 
     > .ui-btn--with-icon {
@@ -36,7 +36,7 @@ $map-height: 92%;
       align-items: center;
       justify-content: center;
       min-width: 100px;
-      padding: 5px $gutter;
+      padding: $gutter-xs $gutter;
       color: $gray-medium;
 
       > .ui-btn-label {

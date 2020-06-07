@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MusicLibrary /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="music-library"
+  >
+    <h1
+      class="ui-text ui-text--display music-library-title"
+    >
+      Library
+    </h1>
+    <h2
+      class="ui-text ui-text--display music-library-subtitle"
+    >
+      Recently Added
+    </h2>
+    <div
+      class="loading-wrapper"
+    >
+      <span
+        class="ui-text ui-text--body"
+      >
+        Loading tracks...
+      </span>
+      <div
+        class="loading"
+      >
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+        <div
+          class="loading-tick"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

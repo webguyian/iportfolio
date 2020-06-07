@@ -1,0 +1,48 @@
+.music-library {
+  @include stretch-column-nowrap;
+  padding: 0 $gutter;
+  overflow-y: auto;
+
+  &-title,
+  &-subtitle {
+    margin-bottom: $gutter;
+  }
+
+  &-subtitle {
+    color: $pink;
+    font-size: $font-size-l;
+  }
+
+  &-tracks {
+    @include unstyled-list;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &-track {
+    max-width: 160px;
+    min-height: 200px;
+    margin-bottom: $gutter-m;
+    background-repeat: no-repeat;
+
+    &-cover {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: $border-radius-m;
+      background-color: $gray-dark;
+      text-align: center;
+    }
+
+    &-name,
+    &-artist {
+      margin: $gutter-s 0 0;
+      font-size: $font-size-s;
+    }
+
+    &-artist {
+      color: $gray;
+    }
+  }
+}

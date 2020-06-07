@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MusicPlayer /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="music-player"
+  >
+    <div
+      class="music-player-track-cover"
+    >
+      <i
+        class="ui-icon ui-icon-music fas fa-music fa-10x"
+      />
+    </div>
+    <div
+      class="music-player-track-info"
+    >
+      <h1
+        class="ui-text ui-text--body ui-text--bold music-player-track-name"
+      >
+        Not Playing
+      </h1>
+      <h2
+        class="ui-text ui-text--body music-player-track-artist"
+      />
+    </div>
+    <audio
+      class="music-player-track-audio"
+      controls=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<MusicPlayer /> renders correctly with track 1`] = `
+<DocumentFragment>
+  <div
+    class="music-player"
+  >
+    <div
+      class="music-player-track-cover"
+    >
+      <img
+        alt="Dance Monkey album cover"
+        class="music-player-track-cover-image"
+        src="https://direct.rhapsody.com/imageserver/v2/albums/alb.396711596/images/350x350.jpg"
+      />
+    </div>
+    <div
+      class="music-player-track-info"
+    >
+      <h1
+        class="ui-text ui-text--body ui-text--bold music-player-track-name"
+      >
+        Dance Monkey
+      </h1>
+      <h2
+        class="ui-text ui-text--body music-player-track-artist"
+      >
+        Tones and I
+      </h2>
+    </div>
+    <audio
+      class="music-player-track-audio"
+      controls=""
+    >
+      <source
+        src="https://listen.hs.llnwd.net/g3/9/1/0/8/1/1536018019.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+  </div>
+</DocumentFragment>
+`;

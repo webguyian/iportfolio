@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Music /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="music-app"
+  >
+    <nav
+      class="ui-tab-navigation"
+    >
+      <ul
+        class="ui-tab-navigation-list"
+      >
+        <li
+          class="ui-tab-navigation-list-item"
+        >
+          <a
+            class="ui-tab-navigation-link ui-link"
+            href="/music/library"
+          >
+            <i
+              class="ui-icon ui-icon-music fas fa-music fa-3x"
+            />
+            <span
+              class="ui-text ui-text--body ui-tab-navigation-link-label"
+            >
+              Library
+            </span>
+          </a>
+        </li>
+        <li
+          class="ui-tab-navigation-list-item"
+        >
+          <a
+            class="ui-tab-navigation-link ui-link"
+            href="/music/player"
+          >
+            <i
+              class="ui-icon ui-icon-play-circle fas fa-play-circle fa-3x"
+            />
+            <span
+              class="ui-text ui-text--body ui-tab-navigation-link-label"
+            >
+              Player
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</DocumentFragment>
+`;

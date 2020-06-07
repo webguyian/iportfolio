@@ -1,13 +1,19 @@
 .loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  display: block;
   width: 180px;
   height: 180px;
-  margin: -90px 0 0 -90px;
   transform: scale(0.5);
   border-radius: 30px;
   background: $gray-dark;
+
+  &-wrapper {
+    @include flex-center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-flow: column wrap;
+    transform: translate(-50%, -90px);
+  }
 }
 
 .loading-tick {

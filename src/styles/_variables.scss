@@ -14,6 +14,7 @@ $gray: #a7a7a7;
 $green: #2f582e;
 $green-light: lighten($green, 30%);
 $orange: #ffb824;
+$pink: #f36;
 $purple: #3d228a;
 $purple-dark: #2e1a69;
 $red: #e94741;
@@ -49,6 +50,7 @@ $font-weight-bold: 700;
 
 // Offsets
 $gutter: 15px;
+$gutter-xs: 5px;
 $gutter-s: 8px;
 $gutter-m: $gutter * 2;
 $gutter-l: $gutter * 4;
