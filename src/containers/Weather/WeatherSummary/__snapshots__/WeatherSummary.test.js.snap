@@ -31,7 +31,7 @@ exports[`<WeatherSummary /> renders correctly 1`] = `
         <span
           className="ui-text ui-text--body"
         >
-          3:11PM
+          11:11AM
         </span>
       </div>
       <div
@@ -45,7 +45,7 @@ exports[`<WeatherSummary /> renders correctly 1`] = `
         <span
           className="ui-text ui-text--body"
         >
-          3:11PM
+          11:11AM
         </span>
       </div>
     </div>

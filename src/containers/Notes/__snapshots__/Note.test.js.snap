@@ -20,7 +20,7 @@ exports[`<Note /> renders correctly 1`] = `
     <span
       className="ui-text ui-text--body note-timestamp"
     >
-      October 1, 2019 at 3:11 PM
+      October 1, 2019 at 11:11 AM
     </span>
     <input
       className="note-input note-input--title"
@@ -88,7 +88,7 @@ exports[`<Note /> renders correctly with swipe offset 1`] = `
     <span
       className="ui-text ui-text--body note-timestamp"
     >
-      October 1, 2019 at 3:11 PM
+      October 1, 2019 at 11:11 AM
     </span>
     <input
       className="note-input note-input--title"

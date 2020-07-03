@@ -1,3 +1,5 @@
+process.env.TZ = 'GMT';
+
 module.exports = {
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest'

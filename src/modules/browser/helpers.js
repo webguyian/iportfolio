@@ -21,6 +21,7 @@ export const getOptions = (jwt, overrides = {}) => {
 export const isExpired = (timestamp, expiration, startDate = new Date()) => {
   const [amount, unit] = expiration.split('');
   const number = Number(amount);
+
   let difference;
 
   if (unit === 'H') {

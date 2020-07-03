@@ -2,6 +2,7 @@ import { controls, zero } from './constants';
 
 export const calculate = (current, control, next) => {
   const [digit, nextDigit] = [current, next].map(d => Number(d));
+
   let calculation;
 
   switch (control) {

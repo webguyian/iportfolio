@@ -12,13 +12,13 @@ exports[`<Reminder /> renders correctly 1`] = `
     <input
       checked={false}
       className="reminder-checkbox"
-      id="reminder-1569942660000"
+      id="reminder-1569928260000"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="reminder-label"
-      htmlFor="reminder-1569942660000"
+      htmlFor="reminder-1569928260000"
     >
       <span
         className="ui-text ui-text--accessible"
@@ -55,13 +55,13 @@ exports[`<Reminder /> renders correctly with checked prop 1`] = `
     <input
       checked={true}
       className="reminder-checkbox"
-      id="reminder-1569942660000"
+      id="reminder-1569928260000"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="reminder-label"
-      htmlFor="reminder-1569942660000"
+      htmlFor="reminder-1569928260000"
     >
       <span
         className="ui-text ui-text--accessible"
@@ -97,13 +97,13 @@ exports[`<Reminder /> renders correctly with swipe offset 1`] = `
     <input
       checked={false}
       className="reminder-checkbox"
-      id="reminder-1569942660000"
+      id="reminder-1569928260000"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="reminder-label"
-      htmlFor="reminder-1569942660000"
+      htmlFor="reminder-1569928260000"
     >
       <span
         className="ui-text ui-text--accessible"
@@ -139,13 +139,13 @@ exports[`<Reminder /> renders correctly with swipe offset greater than 80 1`] = 
     <input
       checked={false}
       className="reminder-checkbox"
-      id="reminder-1569942660000"
+      id="reminder-1569928260000"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="reminder-label"
-      htmlFor="reminder-1569942660000"
+      htmlFor="reminder-1569928260000"
     >
       <span
         className="ui-text ui-text--accessible"

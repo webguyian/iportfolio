@@ -27,7 +27,9 @@ class ErrorBoundary extends Component {
 
   detectMotion(e) {
     let acc = e.acceleration;
+
     let lastX, lastY, lastZ;
+
     let moveCounter = 0;
 
     if (!acc.hasOwnProperty('x')) {

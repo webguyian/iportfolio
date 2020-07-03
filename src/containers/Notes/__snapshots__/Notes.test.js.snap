@@ -20,7 +20,7 @@ exports[`<Notes /> handles add note 1`] = `
     <span
       className="ui-text ui-text--body note-timestamp"
     >
-      October 1, 2019 at 3:11 PM
+      October 1, 2019 at 11:11 AM
     </span>
     <input
       className="note-input note-input--title"
@@ -101,7 +101,7 @@ exports[`<Notes /> handles back to notes 1`] = `
     <span
       className="ui-text ui-text--body note-timestamp"
     >
-      October 1, 2019 at 3:11 PM
+      October 1, 2019 at 11:11 AM
     </span>
     <input
       className="note-input note-input--title"
@@ -170,7 +170,7 @@ exports[`<Notes /> handles change note 1`] = `
     <span
       className="ui-text ui-text--body note-timestamp"
     >
-      October 1, 2019 at 3:11 PM
+      October 1, 2019 at 11:11 AM
     </span>
     <input
       className="note-input note-input--title"
@@ -239,7 +239,7 @@ exports[`<Notes /> handles delete for multiple notes 1`] = `
     <span
       className="ui-text ui-text--body note-timestamp"
     >
-      October 1, 2019 at 3:11 PM
+      October 1, 2019 at 11:11 AM
     </span>
     <input
       className="note-input note-input--title"

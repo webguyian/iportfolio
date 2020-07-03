@@ -52,7 +52,7 @@ exports[`<AppContainer /> renders correctly 1`] = `
             <h1
               className="ui-text ui-text--body ui-clock"
             >
-              3:11
+              11:11
             </h1>
             <h1
               className="ui-text ui-text--body ui-date"

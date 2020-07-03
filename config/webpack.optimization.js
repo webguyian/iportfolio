@@ -14,6 +14,7 @@ const optimization = {
   splitChunks: {
     cacheGroups: {
       vendor: {
+        test: /[\\/]node_modules[\\/].*\.js$/,
         name: 'vendor',
         chunks: 'all',
         enforce: true,

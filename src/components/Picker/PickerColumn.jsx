@@ -38,6 +38,7 @@ class PickerColumn extends Component {
 
   computeTranslate = props => {
     const { options, value, itemHeight, columnHeight } = props;
+
     let selectedIndex = options.indexOf(value);
 
     if (selectedIndex < 0) {
@@ -125,6 +126,7 @@ class PickerColumn extends Component {
     setTimeout(() => {
       const { options, itemHeight } = this.props;
       const { scrollerTranslate, minTranslate, maxTranslate } = this.state;
+
       let activeIndex;
 
       if (scrollerTranslate > maxTranslate) {

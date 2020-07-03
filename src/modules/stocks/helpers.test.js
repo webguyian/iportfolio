@@ -5,7 +5,7 @@ import * as helpers from './helpers';
 describe('Stocks helpers', () => {
   describe('handles formatDateTick', () => {
     const cases = [
-      ['1D', mockDate, '3 PM'],
+      ['1D', mockDate, '11 AM'],
       ['1W', mockDate, 'Oct 1'],
       ['1M', mockDate, 'Oct 1'],
       ['3M', mockDate, 'Oct 1'],
@@ -104,8 +104,8 @@ describe('Stocks helpers', () => {
   describe('handles getUnixDates', () => {
     it('gets dates with UNIX timestamp', () => {
       expect(helpers.getUnixDates('1D', mockDate)).toEqual([
-        1511931600,
-        1511931600
+        1542885060,
+        1542885060
       ]);
     });
   });

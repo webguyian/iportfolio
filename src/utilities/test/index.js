@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-export const mockDate = new Date('2019-10-01 11:11:00');
+export const mockDate = new Date('2019-10-01T11:11:00Z');
 export const mockTime = Number(mockDate);
 
 export const TestComponent = ({ callback }) => {
