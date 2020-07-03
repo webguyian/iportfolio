@@ -60,7 +60,7 @@ exports[`<StockNews /> handles slide up 1`] = `
             <span
               className="ui-text ui-text--body stock-news-timestamp"
             >
-              4 months ago
+              less than a minute ago
             </span>
           </div>
           <img
@@ -96,7 +96,7 @@ exports[`<StockNews /> handles slide up 1`] = `
             <span
               className="ui-text ui-text--body stock-news-timestamp"
             >
-              4 months ago
+              less than a minute ago
             </span>
           </div>
           <img
@@ -170,7 +170,7 @@ exports[`<StockNews /> renders correctly with news 1`] = `
             <span
               className="ui-text ui-text--body stock-news-timestamp"
             >
-              4 months ago
+              less than a minute ago
             </span>
           </div>
           <img
@@ -206,7 +206,7 @@ exports[`<StockNews /> renders correctly with news 1`] = `
             <span
               className="ui-text ui-text--body stock-news-timestamp"
             >
-              4 months ago
+              less than a minute ago
             </span>
           </div>
           <img

@@ -7,7 +7,7 @@ import DateTime from 'components/DateTime/DateTime';
 import Link from 'components/Link/Link';
 import Text from 'components/Text/Text';
 
-import { useRefFocus, useSwipeOffset } from 'containers/Notes/hooks';
+import { useRefFocus, useSwipeOffset } from 'modules/notes/hooks';
 
 const Note = props => {
   const { date, onAdd, onBack, onChange, onDelete, title, text } = props;

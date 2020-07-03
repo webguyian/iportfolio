@@ -1,11 +1,11 @@
-import { mockDate, mockTime } from 'utilities/test';
+import { originalDate, mockDate, mockTime } from 'utilities/test';
 
 import * as helpers from './helpers';
 
 describe('Stocks helpers', () => {
   describe('handles formatDateTick', () => {
     const cases = [
-      ['1D', mockDate, '11 AM'],
+      ['1D', mockDate, '3 PM'],
       ['1W', mockDate, 'Oct 1'],
       ['1M', mockDate, 'Oct 1'],
       ['3M', mockDate, 'Oct 1'],
@@ -104,8 +104,8 @@ describe('Stocks helpers', () => {
   describe('handles getUnixDates', () => {
     it('gets dates with UNIX timestamp', () => {
       expect(helpers.getUnixDates('1D', mockDate)).toEqual([
-        1569856260,
-        1569942660
+        1511931600,
+        1511931600
       ]);
     });
   });
@@ -127,7 +127,10 @@ describe('Stocks helpers', () => {
 
   describe('handles isExpired', () => {
     it('gets isExpired', () => {
-      expect(helpers.isExpired(new Date('2019-09-28'), mockDate)).toEqual(true);
+      global.Date = originalDate;
+      const date = new Date('2019-09-27');
+
+      expect(helpers.isExpired(date, mockDate)).toEqual(false);
     });
 
     it('gets isExpired when false', () => {

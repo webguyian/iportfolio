@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  background-color: $black-dark;
 
   &-text {
     @include type-number-display;

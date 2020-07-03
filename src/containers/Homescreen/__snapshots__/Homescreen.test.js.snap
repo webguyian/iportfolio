@@ -44,12 +44,12 @@ exports[`<Homescreen /> renders correctly 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            11:11:00
+            15:11:00
           </title>
           <g>
             <line
               className="ui-hour-hand"
-              transform="rotate(1025.5 30 30)"
+              transform="rotate(335.5 30 30)"
               x1={30}
               x2={30}
               y1={30}

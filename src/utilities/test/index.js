@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-export const mockDate = new Date('2019-10-01 11:11:00 GMT-0400');
+export const mockDate = new Date('2019-10-01 11:11:00');
 export const mockTime = Number(mockDate);
 
 export const TestComponent = ({ callback }) => {
@@ -22,8 +22,10 @@ export const testHookWithRouter = (callback = () => {}) => {
   );
 };
 
-Date.now = jest.fn(() => mockTime);
+export const originalDate = global.Date;
 
+global.Date = jest.fn(() => mockDate);
+global.Date.now = jest.fn(() => mockTime);
 global.fetch = jest.fn().mockResolvedValue({ json: () => Promise.resolve({}) });
 
 export const createMockResponse = data => {

@@ -1,89 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+
+import { useStorageCache } from 'modules/browser/hooks';
 
 import { initialValues } from './constants';
 import { getExpiration, getExpirationValues, getSeconds } from './helpers';
 
-export const useInitialRoute = (match, path) => {
-  const history = useHistory();
-
-  useEffect(() => {
-    if (match.isExact) {
-      history.push(path);
-    }
-  }, []);
-
-  return history;
-};
-
-export const useStorage = (key, currentValue, deleteKey, keepUpdating) => {
-  const getValue = () => {
-    try {
-      // Get item from local storage with key
-      const item = window.localStorage.getItem(key);
-
-      // Parse stored JSON or if none return undefined
-      return item ? JSON.parse(item) : undefined;
-    } catch (error) {
-      // If error return undefined
-      return undefined;
-    }
-  };
-
-  const value = getValue();
-  const localRef = useRef(value);
-  const [storedValue, setStoredValue] = useState(value);
-
-  const setValue = nextValue => {
-    try {
-      // Save to state and local storage
-      setStoredValue(nextValue);
-
-      if (deleteKey && !nextValue[deleteKey]) {
-        // Remove item from local storage
-        window.localStorage.removeItem(key);
-      } else {
-        // Update local storage and include timestamp
-        nextValue.timestamp = Date.now();
-        window.localStorage.setItem(key, JSON.stringify(nextValue));
-      }
-    } catch (error) {
-      // Drop error
-    }
-  };
-
-  useEffect(() => {
-    // Update local value
-    localRef.current = currentValue || storedValue;
-
-    if (keepUpdating) {
-      // Set update value in local storage
-      setValue(localRef.current);
-    }
-  }, [currentValue, storedValue]);
-
-  useEffect(() => {
-    return () => {
-      if (key && localRef.current) {
-        setValue(localRef.current);
-      }
-    };
-  }, []);
-
-  return localRef.current;
-};
-
 export const useLaps = (initialLaps, timer, timerRunning) => {
   const [laps, setLaps] = useState(initialLaps);
   const hasLaps = laps.some(lap => lap > 0);
-  const storage = useStorage(
+  const storage = useStorageCache(
     'stopwatch',
     {
       laps,
       timer,
       timerRunning
     },
-    'timer'
+    s => s.timer < 1
   );
 
   const updateLaps = () => {
@@ -138,7 +70,7 @@ export const useStopwatch = (startTime = 0, start = false) => {
   const [interval, setLocalInterval] = useState(null);
   const [offset, setOffset] = useState(0);
   const timer = useRef(startTime);
-  const storage = useStorage('stopwatch');
+  const storage = useStorageCache('stopwatch');
   const toggleTimer = () => startTimer(!timerStarted);
   const resetTimer = () => {
     timer.current = 0;
@@ -197,7 +129,7 @@ export const useStopwatch = (startTime = 0, start = false) => {
 
 export const useDuration = () => {
   const [values, setValues] = useState(null);
-  const storage = useStorage('duration', values, null, true);
+  const storage = useStorageCache('duration', values);
   const setDuration = (key, value) => {
     setValues({
       ...values,
@@ -291,7 +223,7 @@ export const useTimer = duration => {
   const [running, setRunning] = useState(false);
   const [countdown, setCountdown, startCountdown] = useCountdown();
   const intervalRef = useRef();
-  const storage = useStorage(
+  const storage = useStorageCache(
     'timer',
     {
       ...countdown,
@@ -299,7 +231,7 @@ export const useTimer = duration => {
       running,
       started
     },
-    'allSeconds'
+    s => s.allSeconds < 1
   );
 
   const pause = () => {

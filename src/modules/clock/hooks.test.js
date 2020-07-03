@@ -457,23 +457,7 @@ describe('Clock hooks', () => {
         setDuration('minutes', 1);
       });
 
-      expect(duration).toEqual(90);
-    });
-  });
-
-  describe('useStorage', () => {
-    it('returns storage value', () => {
-      let result;
-
-      const Component = testHook(() => {
-        result = hooks.useStorage('test', 100, 'test');
-      });
-
-      act(() => {
-        Component.update();
-      });
-
-      expect(result).toEqual();
+      expect(duration).toEqual(330);
     });
   });
 });

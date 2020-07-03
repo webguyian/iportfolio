@@ -3,7 +3,7 @@ export const DEFAULT_COORDINATES = {
   longitude: -122.03
 };
 
-export const TOKEN_API = '/api/auth/token';
+export const TOKEN_API = 'https://api-iportfolio.herokuapp.com/api/auth/token';
 
 export const MOCK_TOKEN = {
   expires: 1590934380,

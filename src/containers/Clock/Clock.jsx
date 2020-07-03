@@ -5,7 +5,7 @@ import TabNavigation from 'components/TabNavigation/TabNavigation';
 import Stopwatch from 'containers/Clock/Stopwatch/Stopwatch';
 import Timer from 'containers/Clock/Timer/Timer';
 
-import { useInitialRoute } from './hooks';
+import { useInitialRoute } from 'modules/browser/hooks';
 
 const Clock = props => {
   const { match } = props;

@@ -3,7 +3,7 @@ import { act, create } from 'react-test-renderer';
 import * as hooks from 'react-swipeable';
 
 import { TestComponent } from 'utilities/test';
-import { useRefFocus, useSwipeOffset } from './hooks';
+import { useRefFocus, useSwipeOffset } from 'modules/notes/hooks';
 
 describe('Notes hooks', () => {
   const useSwipeableHook = hooks.useSwipeable;

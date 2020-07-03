@@ -55,13 +55,13 @@ export const getExpiration = (duration, cache) => {
 };
 
 export const getExpirationValues = distance => {
-  const hours = Math.round((distance % (60000 * 60 * 24)) / (60000 * 60));
-  const minutes = Math.round((distance % (60000 * 60)) / 60000);
-  const seconds = Math.round((distance % 60000) / 1000);
+  const hours = Math.floor((distance % (60000 * 60 * 24)) / (60000 * 60));
+  const minutes = Math.floor((distance % (60000 * 60)) / 60000);
+  const seconds = (distance % 60000) / 1000;
 
   return {
     hours,
     minutes,
-    seconds
+    seconds: Math.floor(Number(seconds.toFixed(1)))
   };
 };

@@ -4,9 +4,9 @@ import {
   defaultTimeDisplay,
   initialLaps,
   timeFormat
-} from 'containers/Clock/constants';
-import { getTimeDisplay } from 'containers/Clock/helpers';
-import { useLaps, useStopwatch } from 'containers/Clock/hooks';
+} from 'modules/clock/constants';
+import { getTimeDisplay } from 'modules/clock/helpers';
+import { useLaps, useStopwatch } from 'modules/clock/hooks';
 
 import DateTime from 'components/DateTime/DateTime';
 import Text from 'components/Text/Text';

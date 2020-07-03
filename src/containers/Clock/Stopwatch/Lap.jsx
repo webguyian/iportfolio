@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import DateTime from 'components/DateTime/DateTime';
 import Text from 'components/Text/Text';
 
-import { timeFormat } from 'containers/Clock/constants';
-import { getTimeDisplay } from 'containers/Clock/helpers';
+import { timeFormat } from 'modules/clock/constants';
+import { getTimeDisplay } from 'modules/clock/helpers';
 
 const Lap = props => {
   const { index, label, time } = props;

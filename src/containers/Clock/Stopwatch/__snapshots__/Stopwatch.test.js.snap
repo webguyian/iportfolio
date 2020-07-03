@@ -65,7 +65,7 @@ exports[`<Stopwatch /> renders correctly with timer 1`] = `
   <span
     className="ui-text ui-text--body stopwatch-text"
   >
-    00:01.00
+    11:00.00
   </span>
   <div
     className="timer-controls"

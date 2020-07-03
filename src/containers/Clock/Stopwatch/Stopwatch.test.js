@@ -4,7 +4,7 @@ import { act, create } from 'react-test-renderer';
 import RoundedButton from 'components/Button/RoundedButton';
 import Stopwatch from './Stopwatch';
 
-import * as hooks from 'containers/Clock/hooks';
+import * as hooks from 'modules/clock/hooks';
 
 describe('<Stopwatch />', () => {
   const useLapsHook = hooks.useLaps;

@@ -44,7 +44,7 @@ const NotePreview = props => {
         </Text>
         <div className={`${baseClass}-body`}>
           <Text className={`${baseClass}-date-display`}>
-            <DateTime format="H:mm a" fromNow>
+            <DateTime format="h:mm a" fromNow>
               {note.date}
             </DateTime>
           </Text>

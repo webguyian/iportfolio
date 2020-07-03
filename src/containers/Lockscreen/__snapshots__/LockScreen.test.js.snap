@@ -14,7 +14,7 @@ exports[`<Lockscreen /> handles unlock 1`] = `
     <h1
       className="ui-text ui-text--body ui-clock"
     >
-      11:11
+      3:11
     </h1>
     <h1
       className="ui-text ui-text--body ui-date"
@@ -59,7 +59,7 @@ exports[`<Lockscreen /> renders correctly 1`] = `
     <h1
       className="ui-text ui-text--body ui-clock"
     >
-      11:11
+      3:11
     </h1>
     <h1
       className="ui-text ui-text--body ui-date"

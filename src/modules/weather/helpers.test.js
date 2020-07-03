@@ -4,7 +4,7 @@ import * as helpers from 'modules/weather/helpers';
 describe('Weather helpers', () => {
   it('gets hour', () => {
     expect(helpers.getHour()).toEqual(null);
-    expect(helpers.getHour(1584244800)).toEqual('12AM');
+    expect(helpers.getHour(1584244800)).toEqual('3PM');
   });
 
   it('gets percentage', () => {
@@ -18,11 +18,11 @@ describe('Weather helpers', () => {
 
   it('gets time', () => {
     expect(helpers.getTime()).toEqual(null);
-    expect(helpers.getTime(1584244800)).toEqual('12:00AM');
+    expect(helpers.getTime(1584244800)).toEqual('3:11PM');
   });
 
   it('gets weekday', () => {
-    expect(helpers.getWeekday(1584244800)).toEqual('Sunday');
+    expect(helpers.getWeekday(1584244800)).toEqual('Tuesday');
   });
 
   it('formats temp', () => {

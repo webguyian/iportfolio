@@ -1,7 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { DEFAULT_COORDINATES, TOKEN_API } from './constants';
 import { getOptions, isExpired, isNotExpired } from './helpers';
+
+export const useInitialRoute = (match, path) => {
+  const history = useHistory();
+
+  useEffect(() => {
+    if (match.isExact) {
+      history.push(path);
+    }
+  }, []);
+
+  return history;
+};
 
 export const useLocalStorage = (key, currentValue, deleteFn) => {
   const getValue = () => {
@@ -30,7 +43,10 @@ export const useLocalStorage = (key, currentValue, deleteFn) => {
         // Remove item from local storage
         window.localStorage.removeItem(key);
       } else {
-        if (typeof nextValue === 'object' && !(valueToStore instanceof Array)) {
+        if (
+          typeof valueToStore === 'object' &&
+          !(valueToStore instanceof Array)
+        ) {
           if (valueToStore !== storedValue) {
             // Include timestamp on objects
             valueToStore.timestamp = Date.now();

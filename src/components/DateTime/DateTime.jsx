@@ -102,7 +102,7 @@ class DateTime extends Component {
     });
 
     if (onUpdate) {
-      onUpdate(millis);
+      onUpdate(new Date(millis));
     }
   }
 

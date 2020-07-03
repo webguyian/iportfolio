@@ -6,8 +6,9 @@ import Countdown from 'containers/Clock/Countdown/Countdown';
 import Picker from 'components/Picker/Picker';
 import TimerControls from 'containers/Clock/Timer/TimerControls';
 
-import { labelGroups, optionGroups } from 'containers/Clock/constants';
-import { useInitialRoute, useDuration, useTimer } from 'containers/Clock/hooks';
+import { labelGroups, optionGroups } from 'modules/clock/constants';
+import { useInitialRoute } from 'modules/browser/hooks';
+import { useDuration, useTimer } from 'modules/clock/hooks';
 
 const Timer = props => {
   const { location, match } = props;

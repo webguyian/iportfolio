@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer';
 import { mockTime } from 'utilities/test';
 
 import Note from './Note';
-import * as hooks from './hooks';
+import * as hooks from 'modules/notes/hooks';
 
 describe('<Note />', () => {
   const useSwipeOffsetHook = hooks.useSwipeOffset;

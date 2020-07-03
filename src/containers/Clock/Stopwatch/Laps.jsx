@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { getLapIndex } from 'containers/Clock/helpers';
+import { getLapIndex } from 'modules/clock/helpers';
 
 import Lap from './Lap';
 

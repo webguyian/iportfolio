@@ -7,7 +7,7 @@ exports[`<WeatherHour /> renders correctly 1`] = `
   <span
     className="ui-text ui-text--body weather-hour-time"
   >
-    12AM
+    3PM
   </span>
   <svg
     className="ui-icon ui-icon-clear-day weather-hour-icon"

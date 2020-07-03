@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import Text from 'components/Text/Text';
 
-import { useRadialOffset } from 'containers/Clock/hooks';
+import { useRadialOffset } from 'modules/clock/hooks';
 
 const Countdown = props => {
   const { hours, minutes, seconds, radius, running } = props;
