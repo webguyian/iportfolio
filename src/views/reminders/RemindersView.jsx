@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Reminders from 'containers/Reminders/Reminders';
+import Loading from 'components/Loading/Loading';
+
+const Reminders = React.lazy(() =>
+  import(/* webpackChunkName: "reminders" */ 'containers/Reminders/Reminders')
+);
 
 const RemindersView = props => {
   return (
     <div className="iportfolio-app-view">
-      <Reminders {...props} />
+      <Suspense fallback={<Loading />}>
+        <Reminders {...props} />
+      </Suspense>
     </div>
   );
 };

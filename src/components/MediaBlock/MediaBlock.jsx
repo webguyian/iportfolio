@@ -7,6 +7,7 @@ const MediaBlock = props => {
   const baseClass = 'ui-media-block';
   const alignClass = `${baseClass}--${align}`;
   const isLeft = align === 'left';
+  const hasSecureSrc = src && src.startsWith('https');
   const imgProps = {
     className: `${baseClass}-image`,
     alt,
@@ -15,9 +16,9 @@ const MediaBlock = props => {
 
   return (
     <div className={classNames(baseClass, alignClass, className)}>
-      {src && isLeft ? <img {...imgProps} /> : null}
+      {hasSecureSrc && isLeft ? <img {...imgProps} /> : null}
       <div className={`${baseClass}-content`}>{children}</div>
-      {src && !isLeft ? <img {...imgProps} /> : null}
+      {hasSecureSrc && !isLeft ? <img {...imgProps} /> : null}
     </div>
   );
 };

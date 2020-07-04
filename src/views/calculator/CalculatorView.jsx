@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Calculator from 'containers/Calculator/Calculator';
+import Loading from 'components/Loading/Loading';
+
+const Calculator = React.lazy(() =>
+  import(
+    /* webpackChunkName: "calculator" */ 'containers/Calculator/Calculator'
+  )
+);
 
 const CalculatorView = props => {
   return (
     <div className="iportfolio-app-view">
-      <Calculator {...props} />
+      <Suspense fallback={<Loading />}>
+        <Calculator {...props} />
+      </Suspense>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-export const API_MAIL = 'https://api-iportfolio.herokuapp.com/api/mail';
+export const API_MAIL = `${process.env.API_PREFIX}/api/mail`;
 
 export const defaultBody = '\n\nSent from iPortfolio';
 

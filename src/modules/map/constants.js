@@ -2,8 +2,7 @@ export const MAP_API_KEY = 'AIzaSyAc4ldBsk1nC8zCTpCgjP8la4m_uYjmtQM';
 
 export const MAP_API = `https://maps.googleapis.com/maps/api/js?key=${MAP_API_KEY}&libraries=places`;
 
-export const STATIC_MAP_API =
-  'https://maps.googleapis.com/maps/api/staticmap?center=Philadelphia,PA&zoom=13&size=330x100&maptype=roadmap&key=AIzaSyDTktXdm9hB4VtMG6BL8LshRPac__Zv7mQ&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels%7Cvisibility:off';
+export const STATIC_MAP_API = `https://maps.googleapis.com/maps/api/staticmap?center=Philadelphia,PA&zoom=13&size=330x100&maptype=roadmap&key=${MAP_API_KEY}&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels%7Cvisibility:off`;
 
 export const COORDINATES_PHILADELPHIA = {
   lat: 39.952583,

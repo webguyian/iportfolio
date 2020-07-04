@@ -9,7 +9,14 @@ const optimization = {
       parallel: true,
       sourceMap: true
     }),
-    new OptimizeCSSAssetsPlugin({})
+    new OptimizeCSSAssetsPlugin({
+      cssProcessorOptions: {
+        map: {
+          // Enable CSS source maps
+          inline: false
+        }
+      }
+    })
   ],
   splitChunks: {
     cacheGroups: {
@@ -17,8 +24,7 @@ const optimization = {
         test: /[\\/]node_modules[\\/].*\.js$/,
         name: 'vendor',
         chunks: 'all',
-        enforce: true,
-        reuseExistingChunk: true
+        enforce: true
       }
     }
   }

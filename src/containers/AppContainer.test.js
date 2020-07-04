@@ -1,5 +1,5 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { act, create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
 import AppContainer from './AppContainer';
@@ -11,14 +11,17 @@ describe('<AppContainer />', () => {
     }
   };
 
-  it('renders correctly', () => {
-    const component = create(
-      <MemoryRouter>
-        <AppContainer {...props} />
-      </MemoryRouter>
-    );
-    const tree = component.toJSON();
+  it('renders correctly', async () => {
+    let component;
 
-    expect(tree).toMatchSnapshot();
+    await act(async () => {
+      component = create(
+        <MemoryRouter>
+          <AppContainer {...props} />
+        </MemoryRouter>
+      );
+    });
+   
+    expect(component).toMatchSnapshot();
   });
 });

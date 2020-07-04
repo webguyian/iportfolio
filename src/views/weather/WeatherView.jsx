@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Weather from 'containers/Weather/Weather';
+import Loading from 'components/Loading/Loading';
+
+const Weather = React.lazy(() =>
+  import(/* webpackChunkName: "weather" */ 'containers/Weather/Weather')
+);
 
 const WeatherView = props => {
   return (
     <div className="iportfolio-app-view">
-      <Weather {...props} />
+      <Suspense fallback={<Loading />}>
+        <Weather {...props} />
+      </Suspense>
     </div>
   );
 };

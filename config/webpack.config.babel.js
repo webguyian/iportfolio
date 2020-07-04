@@ -30,7 +30,7 @@ export default {
     path: settings.OUTPUT_DIR,
     filename: '[name].js',
     chunkFilename: '[name].js',
-    publicPath: '/'
+    publicPath: devMode ? undefined : '/iportfolio/'
   },
   plugins,
   resolve: {

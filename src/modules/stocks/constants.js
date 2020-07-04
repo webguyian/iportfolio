@@ -6,13 +6,10 @@ export const initialStocks = [
   { symbol: 'MSFT', displaySymbol: 'MSFT', description: 'MICROSOFT CORP' }
 ];
 
-export const API_CANDLESTICK =
-  'https://api-iportfolio.herokuapp.com/api/stocks/candlestick';
+export const API_CANDLESTICK = `${process.env.API_PREFIX}/api/stocks/candlestick`;
 
-export const API_EXCHANGE =
-  'https://api-iportfolio.herokuapp.com/api/stocks/exchange';
+export const API_EXCHANGE = `${process.env.API_PREFIX}/api/stocks/exchange`;
 
-export const API_NEWS = 'https://api-iportfolio.herokuapp.com/api/stocks/news';
+export const API_NEWS = `${process.env.API_PREFIX}/api/stocks/news`;
 
-export const API_QUOTE =
-  'https://api-iportfolio.herokuapp.com/api/stocks/quote';
+export const API_QUOTE = `${process.env.API_PREFIX}/api/stocks/quote`;

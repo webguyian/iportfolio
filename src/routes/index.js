@@ -2,7 +2,6 @@ import CalculatorView from 'views/calculator/CalculatorView';
 import CalendarView from 'views/calendar/CalendarView';
 import ClockView from 'views/clock/ClockView';
 import HomescreenView from 'views/homescreen/HomescreenView';
-import LockscreenView from 'views/lockscreen/LockscreenView';
 import MailView from 'views/mail/MailView';
 import MapView from 'views/map/MapView';
 import NotesView from 'views/notes/NotesView';
@@ -14,9 +13,8 @@ import WeatherView from 'views/weather/WeatherView';
 const routes = [
   {
     path: '/',
-    pathKey: 'lock',
-    component: LockscreenView,
-    exact: true
+    pathKey: 'home',
+    component: HomescreenView
   },
   {
     path: '/home',

@@ -1,91 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Lockscreen /> handles unlock 1`] = `
-<div
-  className="iportfolio-lockscreen iportfolio-lockscreen--unlocked"
-  onTransitionEnd={[Function]}
->
-  <header
-    className="iportfolio-lockscreen-header"
-  >
-    <i
-      className="ui-icon ui-icon-lock fas fa-lock fa-2x"
-    />
-    <h1
-      className="ui-text ui-text--body ui-clock"
-    >
-      11:11
-    </h1>
-    <h1
-      className="ui-text ui-text--body ui-date"
-    >
-      Tuesday, October 1
-    </h1>
-  </header>
-  <label
-    className="ui-toggle-switch"
-  >
-    <input
-      checked={false}
-      className="ui-toggle-switch-checkbox"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <button
-      className="ui-btn ui-toggle-switch-slider"
-      onTransitionEnd={[Function]}
-      type="button"
-    />
-    <span
-      className="ui-text ui-text--body ui-toggle-switch-label"
-    >
-      slide to unlock
-    </span>
-  </label>
-</div>
-`;
-
 exports[`<Lockscreen /> renders correctly 1`] = `
-<div
-  className="iportfolio-lockscreen"
-  onTransitionEnd={[Function]}
->
-  <header
-    className="iportfolio-lockscreen-header"
+<DocumentFragment>
+  <div
+    class="iportfolio-lockscreen"
   >
-    <i
-      className="ui-icon ui-icon-lock fas fa-lock fa-2x"
-    />
-    <h1
-      className="ui-text ui-text--body ui-clock"
+    <header
+      class="iportfolio-lockscreen-header"
     >
-      11:11
-    </h1>
-    <h1
-      className="ui-text ui-text--body ui-date"
+      <i
+        class="ui-icon ui-icon-lock fas fa-lock fa-2x"
+      />
+      <h1
+        class="ui-text ui-text--body ui-clock"
+      >
+        11:11
+      </h1>
+      <h1
+        class="ui-text ui-text--body ui-date"
+      >
+        Tuesday, October 1
+      </h1>
+    </header>
+    <label
+      class="ui-toggle-switch"
     >
-      Tuesday, October 1
-    </h1>
-  </header>
-  <label
-    className="ui-toggle-switch"
-  >
-    <input
-      checked={false}
-      className="ui-toggle-switch-checkbox"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <button
-      className="ui-btn ui-toggle-switch-slider"
-      onTransitionEnd={[Function]}
-      type="button"
-    />
-    <span
-      className="ui-text ui-text--body ui-toggle-switch-label"
-    >
-      slide to unlock
-    </span>
-  </label>
-</div>
+      <input
+        class="ui-toggle-switch-checkbox"
+        type="checkbox"
+      />
+      <button
+        class="ui-btn ui-toggle-switch-slider"
+        type="button"
+      />
+      <span
+        class="ui-text ui-text--body ui-toggle-switch-label"
+      >
+        slide to unlock
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
 `;

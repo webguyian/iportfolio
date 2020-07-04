@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+import { useLockscreen } from 'modules/lockscreen/hooks';
 
 import DateTime from 'components/DateTime/DateTime';
 import Icon from 'components/Icon/Icon';
@@ -8,18 +10,14 @@ import Text from 'components/Text/Text';
 import ToggleSwitch from 'components/ToggleSwitch/ToggleSwitch';
 
 const Lockscreen = props => {
-  const [unlocked, setUnlocked] = useState(false);
+  const { history } = props;
+  const [unlocked, handleUnlock] = useLockscreen();
   const baseClass = 'iportfolio-lockscreen';
   const unlockedClass = unlocked && `${baseClass}--unlocked`;
-
   const handleRedirect = () => {
-    const { history } = props;
-
-    history.push('/home');
-  };
-
-  const handleUnlock = () => {
-    setUnlocked(true);
+    if (unlocked) {
+      history.push('/home');
+    }
   };
 
   return (

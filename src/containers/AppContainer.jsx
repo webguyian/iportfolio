@@ -7,6 +7,7 @@ import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
 import DeviceFrame from 'components/DeviceFrame/DeviceFrame';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
+import Lockscreen from 'containers/Lockscreen/Lockscreen';
 
 import routes from 'routes';
 
@@ -57,6 +58,7 @@ const AppContainer = props => {
               <Route key={route.pathKey} exact {...route} />
             ))}
           </Switch>
+          <Route path="/" pathKey="lock" exact component={Lockscreen} />
         </ErrorBoundary>
       </DeviceFrame>
     </div>

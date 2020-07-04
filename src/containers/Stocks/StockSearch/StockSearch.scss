@@ -2,10 +2,11 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  min-height: 30px;
   margin: $gutter-s $gutter-s 0;
 
   .stocks-app--with-search & {
-    margin: $gutter-s 4px 0;
+    margin: $gutter-s 4px;
   }
 
   > .ui-icon-search {

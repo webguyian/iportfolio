@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Calendar from 'containers/Calendar/Calendar';
+import Loading from 'components/Loading/Loading';
+
+const Calendar = React.lazy(() =>
+  import(/* webpackChunkName: "calendar" */ 'containers/Calendar/Calendar')
+);
 
 const CalendarView = props => {
   return (
     <div className="iportfolio-app-view">
-      <Calendar {...props} />
+      <Suspense fallback={<Loading />}>
+        <Calendar {...props} />
+      </Suspense>
     </div>
   );
 };

@@ -8,8 +8,8 @@
     "lint": "eslint src/ --ext .jsx,.js --fix",
     "start": "cross-env NODE_ENV=debug webpack-dev-server --config config/webpack.config.babel.js",
     "stylelint": "stylelint src/**/**/*.scss --fix",
-    "test": "jest --coverage=false",
-    "test:all": "jest --coverage --watchAll"
+    "test": "jest --coverage --watchAll",
+    "test:all": "jest --bail --runInBand --coverage=false"
   },
   "keywords": [],
   "author": "Ian McPhail",

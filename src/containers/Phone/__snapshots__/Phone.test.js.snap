@@ -172,7 +172,7 @@ exports[`<Phone /> renders correctly 1`] = `
         </span>
         <img
           alt="Philadelphia, PA"
-          src="https://maps.googleapis.com/maps/api/staticmap?center=Philadelphia,PA&zoom=13&size=330x100&maptype=roadmap&key=AIzaSyDTktXdm9hB4VtMG6BL8LshRPac__Zv7mQ&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels%7Cvisibility:off"
+          src="https://maps.googleapis.com/maps/api/staticmap?center=Philadelphia,PA&zoom=13&size=330x100&maptype=roadmap&key=AIzaSyAc4ldBsk1nC8zCTpCgjP8la4m_uYjmtQM&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels%7Cvisibility:off"
         />
       </Link>
     </div>

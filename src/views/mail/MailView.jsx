@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Mail from 'containers/Mail/Mail';
+import Loading from 'components/Loading/Loading';
+
+const Mail = React.lazy(() =>
+  import(/* webpackChunkName: "mail" */ 'containers/Mail/Mail')
+);
 
 const MailView = props => {
   return (
     <div className="iportfolio-app-view">
-      <Mail {...props} />
+      <Suspense fallback={<Loading />}>
+        <Mail {...props} />
+      </Suspense>
     </div>
   );
 };

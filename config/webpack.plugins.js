@@ -4,11 +4,12 @@ import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
 import webpack from 'webpack';
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 const plugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
-    template: './src/index.html',
-    inject: false
+    template: './src/index.html'
   }),
   new StyleLintPlugin({
     configFile: '.stylelintrc.json',
@@ -21,6 +22,9 @@ const plugins = [
   }),
   new MiniCSSExtractPlugin({
     filename: 'main.css'
+  }),
+  new webpack.EnvironmentPlugin({
+    API_PREFIX: devMode ? '' : 'https://api-iportfolio.herokuapp.com/'
   }),
   new webpack.HotModuleReplacementPlugin()
 ];

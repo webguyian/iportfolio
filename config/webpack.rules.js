@@ -23,15 +23,26 @@ const rules = [
     exclude: /node_modules/,
     use: [
       devMode ? 'style-loader' : MiniCSSExtractPlugin.loader,
-      'css-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true
+        }
+      },
       {
         loader: 'postcss-loader',
         options: {
           ident: 'postcss',
-          plugins: [autoprefixer, flexbugfixes]
+          plugins: [autoprefixer, flexbugfixes],
+          sourceMap: true
         }
       },
-      'sass-loader'
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true
+        }
+      }
     ]
   }
 ];

@@ -36,9 +36,9 @@ export const DEFAULT_LOCATIONS = [
   }
 ];
 
-export const GEOCODE_API = 'https://api-iportfolio.herokuapp.com/api/location';
+export const GEOCODE_API = `${process.env.API_PREFIX}/api/location`;
 
-export const WEATHER_API = 'https://api-iportfolio.herokuapp.com/api/weather';
+export const WEATHER_API = `${process.env.API_PREFIX}/api/weather`;
 
 export const WIND_DIRECTIONS = [
   'N',
