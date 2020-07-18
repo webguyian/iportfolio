@@ -7,7 +7,7 @@ import DateTime from 'components/DateTime/DateTime';
 import Link from 'components/Link/Link';
 import Text from 'components/Text/Text';
 
-import { useSwipeOffset } from 'containers/Reminders/hooks';
+import { useSwipeOffset } from 'modules/reminders/hooks';
 
 const NotePreview = props => {
   const { note, onClick, onDelete } = props;

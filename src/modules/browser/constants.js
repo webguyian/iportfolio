@@ -3,7 +3,7 @@ export const DEFAULT_COORDINATES = {
   longitude: -122.03
 };
 
-export const TOKEN_API = `${process.env.API_PREFIX}/api/auth/token`;
+export const API_TOKEN = `${process.env.API_PREFIX}/api/auth/token`;
 
 export const MOCK_TOKEN = {
   expires: 1590934380,

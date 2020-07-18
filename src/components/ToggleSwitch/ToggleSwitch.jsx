@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { func, string } from 'prop-types';
 import classNames from 'classnames';
 
 import Button from 'components/Button/Button';
@@ -30,8 +30,8 @@ const ToggleSwitch = props => {
 };
 
 ToggleSwitch.propTypes = {
-  label: PropTypes.string,
-  onUpdate: PropTypes.func.isRequired
+  label: string,
+  onUpdate: func.isRequired
 };
 
 ToggleSwitch.defaultProps = {

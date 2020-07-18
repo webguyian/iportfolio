@@ -1,52 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
-export const useLocalStorage = (key, initialValue) => {
-  const getValue = () => {
-    try {
-      // Get item from local storage with key
-      const item = window.localStorage.getItem(key);
-
-      // Parse stored json or if none return initialValue
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      // If error return initialValue
-      return initialValue;
-    }
-  };
-  const [storedValue, setStoredValue] = useState(getValue);
-  const setValue = value => {
-    try {
-      // Allow value to be a function so we have same API as useState
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value;
-
-      // Save state
-      setStoredValue(valueToStore);
-      // Save to local storage
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      // Drop error
-    }
-  };
-
-  return [storedValue, setValue, getValue];
-};
-
-export const useRefFocus = (node = null) => {
-  const ref = useRef(node);
-
-  useEffect(() => {
-    const element = ref && ref.current;
-
-    if (element) {
-      // Add focus to element
-      element.focus();
-    }
-  }, [ref]);
-
-  return ref;
-};
+import { useLocalStorage } from 'modules/browser/hooks';
 
 export const useRefControlledFocus = (focused, node = null) => {
   const ref = useRef(node);
@@ -62,8 +17,42 @@ export const useRefControlledFocus = (focused, node = null) => {
   return ref;
 };
 
-export const useReminders = (reminders, setReminders) => {
+export const useReminders = (initial = []) => {
+  const [reminders, setReminders] = useLocalStorage('reminders', initial);
+  const [focusedInput, setFocusedInput] = useState(null);
   const remindersRef = useRef(reminders);
+  const add = (value = '') => {
+    const id = Date.now();
+
+    setReminders(() => reminders.concat([{ id, checked: false, value }]));
+    setFocusedInput(id);
+  };
+
+  const remove = id => {
+    setReminders(() => reminders.filter(r => r.id !== id));
+    setFocusedInput(null);
+  };
+
+  const update = updated => {
+    const updatedReminders = reminders.map(reminder => {
+      if (reminder.id === updated.id) {
+        return {
+          ...reminder,
+          ...updated
+        };
+      }
+
+      return reminder;
+    });
+
+    setReminders(() => updatedReminders);
+  };
+
+  const actions = {
+    add,
+    remove,
+    update
+  };
 
   useEffect(() => {
     // Update reminders in ref
@@ -82,7 +71,7 @@ export const useReminders = (reminders, setReminders) => {
     };
   }, [remindersRef]);
 
-  return remindersRef;
+  return [reminders, focusedInput, actions];
 };
 
 export const useSwipeOffset = (callback, initial = 0) => {

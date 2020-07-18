@@ -3,9 +3,14 @@ import classNames from 'classnames';
 
 import RoundedButton from 'components/Button/RoundedButton';
 import Text from 'components/Text/Text';
-import { controls, controlLabels, keys, operatorKeys } from './constants';
-import { getSymbols } from './helpers';
-import { useCalculator, useCalculatorRef } from './hooks';
+import {
+  controls,
+  controlLabels,
+  keys,
+  operatorKeys
+} from 'modules/calculator/constants';
+import { getSymbols } from 'modules/calculator/helpers';
+import { useCalculator, useCalculatorRef } from 'modules/calculator/hooks';
 
 const Calculator = () => {
   const baseClass = 'calculator-app';

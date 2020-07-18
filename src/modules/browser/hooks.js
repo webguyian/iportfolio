@@ -1,8 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { DEFAULT_COORDINATES, TOKEN_API } from './constants';
+import { DEFAULT_COORDINATES, API_TOKEN } from './constants';
 import { getOptions, isExpired, isNotExpired } from './helpers';
+
+export const useRefFocus = (node = null) => {
+  const ref = useRef(node);
+
+  useEffect(() => {
+    const element = ref && ref.current;
+
+    if (element) {
+      // Add focus to element
+      element.focus();
+    }
+  }, [ref]);
+
+  return ref;
+};
 
 export const useInitialRoute = (match, path) => {
   const history = useHistory();
@@ -16,17 +31,17 @@ export const useInitialRoute = (match, path) => {
   return history;
 };
 
-export const useLocalStorage = (key, currentValue, deleteFn) => {
+export const useLocalStorage = (key, defaultValue, deleteFn) => {
   const getValue = () => {
     try {
       // Get item from local storage with key
       const item = window.localStorage.getItem(key);
 
-      // Parse stored JSON or if none return currentValue
-      return item ? JSON.parse(item) : currentValue;
+      // Parse stored JSON or if none return defaultValue
+      return item ? JSON.parse(item) : defaultValue;
     } catch (error) {
-      // If error return currentValue
-      return currentValue;
+      // If error return defaultValue
+      return defaultValue;
     }
   };
   const [storedValue, setStoredValue] = useState(getValue);
@@ -84,30 +99,36 @@ export const useStorageCache = (key, currentValue, deleteFn) => {
   return localRef.current;
 };
 
-export const useToken = () => {
+export const useToken = url => {
   const [token, setToken] = useState(null);
   const cache = useStorageCache('jwt', token);
   const fetchData = async () => {
-    const response = await fetch(TOKEN_API);
+    const response = await fetch(API_TOKEN);
     const result = await response.json();
 
     setToken(result);
   };
 
   useEffect(() => {
-    if (!token && cache && isNotExpired(cache)) {
+    if (token) {
+      // Exit early if token exists
+      return;
+    }
+
+    if (cache && isNotExpired(cache)) {
+      // Set token from cache
       setToken(cache);
-    } else if (!token) {
+    } else if (url) {
+      // Call API to get token
       fetchData();
     }
-  }, [cache]);
+  }, [cache, token, url]);
 
   return token;
 };
-
 export const useFetch = (endpoint, overrides) => {
   const [data, setData] = useState(null);
-  const jwt = useToken();
+  const jwt = useToken(endpoint);
 
   const fetchData = async () => {
     const options = getOptions(jwt, overrides);
@@ -156,7 +177,7 @@ export const useFetchWithData = (endpoint, data) => {
 
 export const useFetchAll = urls => {
   const [responses, setResponses] = useState([]);
-  const jwt = useToken();
+  const jwt = useToken(urls && urls[0]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -181,7 +202,7 @@ export const useFetchAll = urls => {
 };
 
 export const useFetchAndCache = (url, key, expiration) => {
-  const [endpoint, setEndpoint] = useState(null);
+  const [endpoint, setEndpoint] = useState('');
   const response = useFetch(endpoint);
   const cache = useStorageCache(key, response);
   const cacheExpired = cache && isExpired(cache.timestamp, expiration);

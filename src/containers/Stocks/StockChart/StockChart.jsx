@@ -14,7 +14,7 @@ const StockChart = props => {
   const { height, hideControls, ratio, stock, width, ...otherProps } = props;
   const symbol = stock.symbol;
   const [range, setRange] = useState('1D');
-  const chartData = stock.chartData || useStockChart(symbol, range);
+  const chartData = useStockChart(symbol, range, stock.chartData);
   const baseClass = 'stock-chart';
   const showControls = !hideControls;
   const gradientId = showControls

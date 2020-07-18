@@ -4,7 +4,8 @@ import classNames from 'classnames';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
-import { useRefControlledFocus, useSwipeOffset } from './hooks';
+
+import { useRefControlledFocus, useSwipeOffset } from 'modules/reminders/hooks';
 
 const Reminder = props => {
   const { checked, focused, id, onAdd, onDelete, onUpdate, value } = props;

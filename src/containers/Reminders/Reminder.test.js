@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer';
 import { mockTime } from 'utilities/test';
 
 import Reminder from './Reminder';
-import * as hooks from './hooks';
+import * as hooks from 'modules/reminders/hooks';
 
 describe('<Reminder />', () => {
   const useSwipeOffsetHook = hooks.useSwipeOffset;

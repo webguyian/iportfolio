@@ -3,36 +3,20 @@ import { act, create } from 'react-test-renderer';
 import * as hooks from 'react-swipeable';
 
 import { TestComponent, mockTime } from 'utilities/test';
-import {
-  useLocalStorage,
-  useRefFocus,
-  useRefControlledFocus,
-  useReminders,
-  useSwipeOffset
-} from './hooks';
+import * as browserHooks from 'modules/browser/hooks';
+import { useRefControlledFocus, useReminders, useSwipeOffset } from './hooks';
 
 describe('Reminders hooks', () => {
   const useSwipeableHook = hooks.useSwipeable;
 
   hooks.useSwipeable = jest.fn();
-
-  const localStorageMock = {
-    getItem: jest.fn(),
-    setItem: jest.fn(),
-    clear: jest.fn()
-  };
-
-  Object.defineProperty(window, 'localStorage', {
-    value: localStorageMock
-  });
+  browserHooks.useLocalStorage = jest.fn();
 
   const ref = {
     id: 'ref',
     focus: jest.fn()
   };
-  const createNodeMock = () => {
-    return ref;
-  };
+  const createNodeMock = () => ref;
   const testHook = callback => {
     return create(<TestComponent callback={callback} />, {
       createNodeMock
@@ -45,132 +29,10 @@ describe('Reminders hooks', () => {
     hooks.useSwipeable.mockImplementation(useSwipeableHook);
   });
 
-  describe('useLocalStorage', () => {
-    let reminders, setReminders;
-
-    it('gets values', () => {
-      testHook(() => {
-        [reminders, setReminders] = useLocalStorage('reminders', []);
-      });
-
-      expect(reminders).toEqual([]);
-      const updatedReminders = [
-        { id: mockTime, checked: false, value: 'Add tests' }
-      ];
-
-      act(() => {
-        setReminders(updatedReminders);
-      });
-
-      expect(reminders).toEqual(updatedReminders);
-    });
-
-    it('sets values', () => {
-      testHook(() => {
-        [reminders, setReminders] = useLocalStorage('reminders', []);
-      });
-
-      const updatedReminders = [
-        { id: mockTime, checked: false, value: 'Add tests' }
-      ];
-
-      act(() => {
-        setReminders(updatedReminders);
-      });
-
-      expect(reminders).toEqual(updatedReminders);
-
-      act(() => {
-        setReminders(() => []);
-      });
-
-      expect(reminders).toEqual([]);
-    });
-
-    it('catches errors with getValue', () => {
-      let getValue, setValue;
-
-      testHook(() => {
-        [reminders, setValue, getValue] = useLocalStorage('reminders', []);
-      });
-
-      const updatedReminders = [
-        { id: mockTime, checked: false, value: 'Add tests' }
-      ];
-
-      act(() => {
-        setValue(updatedReminders);
-      });
-
-      expect(reminders).toEqual(updatedReminders);
-      expect(window.localStorage.getItem).toHaveBeenCalledWith('reminders');
-      window.localStorage.getItem.mockReturnValue(new Error());
-      expect(getValue()).toEqual([]);
-    });
-
-    it('catches errors with setValue', () => {
-      testHook(() => {
-        [reminders, setReminders] = useLocalStorage('reminders', []);
-      });
-
-      const updatedReminders = [
-        { id: mockTime, checked: false, value: 'Add tests' }
-      ];
-
-      act(() => {
-        setReminders(updatedReminders);
-      });
-
-      expect(reminders).toEqual(updatedReminders);
-      expect(window.localStorage.setItem).toHaveBeenCalledWith(
-        'reminders',
-        JSON.stringify(updatedReminders)
-      );
-
-      act(() => {
-        window.localStorage.setItem.mockImplementationOnce(() => {
-          throw Error();
-        });
-
-        setReminders(() => []);
-      });
-
-      expect(reminders).toEqual([]);
-    });
-  });
-
-  describe('useRefFocus', () => {
-    it('returns ref', () => {
-      let buttonRef;
-
-      testHook(() => {
-        buttonRef = useRefFocus();
-      });
-
-      expect(buttonRef.current).toBeNull();
-    });
-
-    it('adds focus to ref', () => {
-      const button = { focus: jest.fn() };
-      let buttonRef;
-
-      const Component = testHook(() => {
-        buttonRef = useRefFocus(button);
-      });
-
-      expect(buttonRef.current).toEqual(button);
-
-      act(() => {
-        Component.update();
-      });
-
-      expect(button.focus).toHaveBeenCalled();
-    });
-  });
-
   describe('useRefControlledFocus', () => {
     it('returns ref', () => {
       const input = { focus: jest.fn() };
+
       let inputRef;
 
       testHook(() => {
@@ -188,6 +50,7 @@ describe('Reminders hooks', () => {
 
     it('adds focus to ref', () => {
       const input = { focus: jest.fn() };
+
       let inputRef;
 
       const Component = testHook(() => {
@@ -209,35 +72,44 @@ describe('Reminders hooks', () => {
   });
 
   describe('useReminders', () => {
-    const reminders = [
+    let reminders;
+    const exampleReminders = [
       { id: mockTime, checked: false, value: 'Add tests' },
       { id: mockTime + 1, checked: false, value: '' }
     ];
     const setReminders = jest.fn();
-    let remindersRef;
 
-    it('updates reminders', () => {
+    it('updates reminders', async () => {
+      browserHooks.useLocalStorage.mockReturnValueOnce([[], setReminders]);
       const Component = testHook(() => {
-        remindersRef = useReminders([], setReminders);
+        [reminders] = useReminders();
       });
 
-      expect(remindersRef.current).toEqual([]);
+      expect(reminders).toEqual([]);
 
-      const callback = () => {
-        remindersRef = useReminders(reminders, setReminders);
-      };
+      await act(async () => {
+        browserHooks.useLocalStorage.mockReturnValueOnce([
+          exampleReminders,
+          setReminders
+        ]);
+        const useCallback = () => {
+          [reminders] = useReminders();
+        };
 
-      act(() => {
-        Component.update(<TestComponent callback={callback} />);
+        Component.update(<TestComponent callback={useCallback} />);
       });
 
-      expect(remindersRef.current).toEqual(reminders);
-      expect(remindersRef.current).toHaveLength(2);
+      expect(reminders).toEqual(exampleReminders);
+      expect(reminders).toHaveLength(2);
     });
 
     it('filters out empty reminders', () => {
+      browserHooks.useLocalStorage.mockReturnValueOnce([
+        exampleReminders,
+        setReminders
+      ]);
       const Component = testHook(() => {
-        remindersRef = useReminders(reminders, setReminders);
+        [reminders] = useReminders();
       });
 
       expect(setReminders).not.toHaveBeenCalled();

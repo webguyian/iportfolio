@@ -219,16 +219,21 @@ export const useStockNews = category => {
   return news;
 };
 
-export const useStockChart = (symbol, range) => {
+export const useStockChart = (symbol, range, chartData) => {
   const [endpoint, setEndpoint] = useState();
   const [updatedResponse, setResponse] = useState(null);
   const response = useFetch(endpoint);
 
   useEffect(() => {
+    if (chartData) {
+      // Exit early when chartData is presetn
+      return;
+    }
+
     const updatedEndpoint = getCandlestickEndpoint(symbol, range);
 
     setEndpoint(updatedEndpoint);
-  }, [symbol, range]);
+  }, [symbol, range, chartData]);
 
   useEffect(() => {
     if (response && response.s === 'ok') {
@@ -238,7 +243,7 @@ export const useStockChart = (symbol, range) => {
     }
   }, [response]);
 
-  return updatedResponse;
+  return chartData || updatedResponse;
 };
 
 export const useStockTicker = (stocks, range = '1D') => {

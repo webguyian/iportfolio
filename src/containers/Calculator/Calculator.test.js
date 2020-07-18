@@ -3,7 +3,7 @@ import { act, create } from 'react-test-renderer';
 
 import Calculator from './Calculator';
 
-import * as hooks from 'containers/Calculator/hooks';
+import * as hooks from 'modules/calculator/hooks';
 
 describe('<Calculator />', () => {
   const originalUseCalculator = hooks.useCalculator;

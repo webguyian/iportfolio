@@ -53,6 +53,7 @@ describe('Stocks hooks', () => {
           value: 'aa'
         }
       };
+
       let searchTerm, searchHandlers;
 
       testHook(() => {
@@ -90,6 +91,7 @@ describe('Stocks hooks', () => {
           value: 'aa'
         }
       };
+
       let hasSearch, searchTerm, searchHandlers;
 
       testHook(() => {
@@ -229,7 +231,7 @@ describe('Stocks hooks', () => {
 
       global.fetch
         .mockReturnValueOnce(mockToken)
-        .mockReturnValue(stockResponse);
+        .mockReturnValueOnce(stockResponse);
 
       const Component = testHook(() => {
         [stocks] = hooks.useStocks(initialStocks);
@@ -260,11 +262,12 @@ describe('Stocks hooks', () => {
     it('returns useStocks from cache', async () => {
       const mockToken = createMockResponse(MOCK_TOKEN);
       const stockResponse = createMockResponse(response);
+
       let stocks;
 
       global.fetch
         .mockReturnValueOnce(mockToken)
-        .mockReturnValue(stockResponse);
+        .mockReturnValueOnce(stockResponse);
       browserHooks.useStorageCache.mockReturnValue({
         stocks: initialStocks.slice(0, 2)
       });
@@ -319,14 +322,13 @@ describe('Stocks hooks', () => {
         pc: 90
       };
 
-      const mockToken = createMockResponse(MOCK_TOKEN);
       const response = createMockResponse(stockData);
-
-      global.fetch.mockReturnValueOnce(mockToken).mockReturnValueOnce(response);
 
       const Component = testHook(() => {
         [stock, setActiveStock] = hooks.useStockDetail();
       });
+
+      global.fetch.mockReturnValueOnce(response);
 
       await act(async () => {
         const callback = () => {
@@ -436,8 +438,11 @@ describe('Stocks hooks', () => {
     it('returns empty stock news', () => {
       let news;
       const mockToken = createMockResponse(MOCK_TOKEN);
+      const mockResponse = createMockResponse([]);
 
-      global.fetch.mockReturnValueOnce(mockToken);
+      global.fetch
+        .mockReturnValueOnce(mockToken)
+        .mockReturnValueOnce(mockResponse);
 
       testHook(() => {
         news = hooks.useStockNews();
@@ -649,6 +654,7 @@ describe('Stocks hooks', () => {
   describe('useStockTicker', () => {
     it('returns empty ticker data', async () => {
       const stocks = initialStocks.slice(0, 2);
+
       let response;
       const mockToken = createMockResponse(MOCK_TOKEN);
       const tickerResponse = createMockResponse({});
@@ -674,6 +680,7 @@ describe('Stocks hooks', () => {
 
     it('returns ticker data', async () => {
       const stocks = initialStocks.slice(0, 2);
+
       let response;
       const mockToken = createMockResponse(MOCK_TOKEN);
       const appleChartData = {
@@ -729,6 +736,7 @@ describe('Stocks hooks', () => {
 
     it('returns ticker data from cache', async () => {
       const stocks = initialStocks.slice(0, 2);
+
       let response;
       const appleChartData = {
         c: [325, 325.3, 325.3423],
@@ -780,6 +788,7 @@ describe('Stocks hooks', () => {
 
     it('returns ticker data not from cache when expired', async () => {
       const stocks = initialStocks.slice(0, 2);
+
       let response;
       const mockToken = createMockResponse(MOCK_TOKEN);
       const appleChartData = {

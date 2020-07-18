@@ -5,15 +5,16 @@ import { mockTime } from 'utilities/test';
 import Reminder from 'containers/Reminders/Reminder';
 import Reminders from './Reminders';
 
-import * as hooks from './hooks';
+import * as browserHooks from 'modules/browser/hooks';
+import * as hooks from 'modules/reminders/hooks';
 
 describe('<Reminders />', () => {
-  const useLocalStorageHook = hooks.useLocalStorage;
-  const useRefFocusHook = hooks.useRefFocus;
+  const useLocalStorageHook = browserHooks.useLocalStorage;
+  const useRefFocusHook = browserHooks.useRefFocus;
   const useRemindersHook = hooks.useReminders;
 
-  hooks.useLocalStorage = jest.fn();
-  hooks.useRefFocus = jest.fn();
+  browserHooks.useLocalStorage = jest.fn();
+  browserHooks.useRefFocus = jest.fn();
   hooks.useReminders = jest.fn();
 
   const buttonRef = {
@@ -27,8 +28,8 @@ describe('<Reminders />', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     // Reset to original implementation before each test
-    hooks.useLocalStorage.mockImplementation(useLocalStorageHook);
-    hooks.useRefFocus.mockImplementation(useRefFocusHook);
+    browserHooks.useLocalStorage.mockImplementation(useLocalStorageHook);
+    browserHooks.useRefFocus.mockImplementation(useRefFocusHook);
     hooks.useReminders.mockImplementation(useRemindersHook);
   });
 
@@ -43,9 +44,9 @@ describe('<Reminders />', () => {
     const component = create(<Reminders />, { createNodeMock });
     const button = component.root.find(el => el.type === 'button');
 
-    expect(hooks.useRefFocus).toHaveBeenCalled();
-    expect(hooks.useLocalStorage).toHaveBeenCalledTimes(1);
-    const [emptyReminders] = hooks.useLocalStorage.mock.results[0].value;
+    expect(browserHooks.useRefFocus).toHaveBeenCalled();
+    expect(browserHooks.useLocalStorage).toHaveBeenCalledTimes(1);
+    const [emptyReminders] = browserHooks.useLocalStorage.mock.results[0].value;
 
     expect(emptyReminders).toHaveLength(0);
 
@@ -54,9 +55,9 @@ describe('<Reminders />', () => {
     });
 
     expect(buttonRef.focus).toHaveBeenCalled();
-    expect(hooks.useLocalStorage).toHaveBeenCalledTimes(2);
+    expect(browserHooks.useLocalStorage).toHaveBeenCalledTimes(2);
 
-    const [reminders] = hooks.useLocalStorage.mock.results[1].value;
+    const [reminders] = browserHooks.useLocalStorage.mock.results[1].value;
 
     expect(reminders).toHaveLength(1);
     expect(reminders[0]).toEqual({ checked: false, id: mockTime, value: '' });
@@ -66,7 +67,7 @@ describe('<Reminders />', () => {
     const component = create(<Reminders />, { createNodeMock });
     const ReminderComponent = component.root.findByType(Reminder);
 
-    const [reminders] = hooks.useLocalStorage.mock.results[0].value;
+    const [reminders] = browserHooks.useLocalStorage.mock.results[0].value;
 
     expect(reminders[0]).toEqual({ checked: false, id: mockTime, value: '' });
     expect(ReminderComponent.props.id).toEqual(mockTime);
@@ -82,7 +83,9 @@ describe('<Reminders />', () => {
       ReminderComponent.props.onUpdate(updated);
     });
 
-    const [updatedReminders] = hooks.useLocalStorage.mock.results[1].value;
+    const [
+      updatedReminders
+    ] = browserHooks.useLocalStorage.mock.results[1].value;
 
     expect(updatedReminders).toHaveLength(1);
     expect(updatedReminders[0]).toEqual({
@@ -96,7 +99,7 @@ describe('<Reminders />', () => {
     const component = create(<Reminders />, { createNodeMock });
     const ReminderComponent = component.root.findByType(Reminder);
 
-    const [reminders] = hooks.useLocalStorage.mock.results[0].value;
+    const [reminders] = browserHooks.useLocalStorage.mock.results[0].value;
 
     expect(reminders).toHaveLength(1);
     expect(ReminderComponent.props.id).toEqual(mockTime);
@@ -105,7 +108,7 @@ describe('<Reminders />', () => {
       ReminderComponent.props.onDelete(mockTime);
     });
 
-    const [emptyReminders] = hooks.useLocalStorage.mock.results[1].value;
+    const [emptyReminders] = browserHooks.useLocalStorage.mock.results[1].value;
 
     expect(emptyReminders).toHaveLength(0);
   });

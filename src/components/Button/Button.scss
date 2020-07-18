@@ -35,7 +35,12 @@
   }
 
   &--with-icon {
+    @include flex-center;
     padding: 2px;
+
+    > .ui-btn-label {
+      margin-left: $gutter-s;
+    }
   }
 
   &-label {
