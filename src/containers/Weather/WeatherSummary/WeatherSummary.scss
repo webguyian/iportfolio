@@ -24,7 +24,7 @@
 
     .ui-text--muted {
       margin: 0;
-      color: rgba($white, 0.5); // stylelint-disable-line
+      color: $gray-light;
       font-size: $font-size-s;
       text-transform: uppercase;
     }

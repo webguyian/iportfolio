@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Text from 'components/Text/Text';
+import WeatherBackground from 'containers/Weather/WeatherBackground/WeatherBackground';
 import WeatherIcons from 'containers/Weather/WeatherIcons/WeatherIcons';
 import WeatherDay from 'containers/Weather/WeatherDay/WeatherDay';
 import WeatherHour from 'containers/Weather/WeatherHour/WeatherHour';
@@ -25,6 +26,7 @@ const WeatherDetail = props => {
 
   return (
     <div className={baseClass}>
+      <WeatherBackground name={currently.icon} />
       <header className={headerClass}>
         <WeatherIcons />
         <Text className={`${headerClass}-location`} element="h1">

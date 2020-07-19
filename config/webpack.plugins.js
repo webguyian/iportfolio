@@ -1,4 +1,5 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
@@ -10,6 +11,9 @@ const plugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     template: './src/index.html'
+  }),
+  new CopyPlugin({
+    patterns: [{ from: './src/assets/video', to: 'assets/video' }]
   }),
   new StyleLintPlugin({
     configFile: '.stylelintrc.json',

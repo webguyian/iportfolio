@@ -3,6 +3,12 @@ $border: 1px solid rgba($white, 0.25);
 .weather-detail {
   padding: 70px $gutter 0;
 
+  &-header,
+  &-body {
+    z-index: 2;
+    position: relative;
+  }
+
   &-header {
     width: 100%;
     margin-bottom: $gutter-l;
@@ -57,7 +63,7 @@ $border: 1px solid rgba($white, 0.25);
 
       &-low {
         margin-left: $gutter;
-        color: $gray;
+        color: $gray-light;
       }
     }
   }
