@@ -26,8 +26,70 @@ exports[`<MusicPlayer /> renders correctly 1`] = `
     </div>
     <audio
       class="music-player-track-audio"
-      controls=""
     />
+    <div
+      class="music-player-controls"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-fast-backward fas fa-fast-backward fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Previous track
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control music-player-control--play"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-play fas fa-play fa-4x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Play
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-fast-forward fas fa-fast-forward fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Next track
+        </span>
+      </button>
+    </div>
+    <div
+      class="music-player-volume-control"
+    >
+      <i
+        class="ui-icon ui-icon-volume-off fas fa-volume-off"
+        title="Volume off"
+      />
+      <input
+        class="music-player-volume-control-slider"
+        max="1"
+        min="0"
+        step="0.1"
+        type="range"
+        value="0.2"
+      />
+      <i
+        class="ui-icon ui-icon-volume-up fas fa-volume-up"
+        title="Volume up"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -62,13 +124,178 @@ exports[`<MusicPlayer /> renders correctly with track 1`] = `
     </div>
     <audio
       class="music-player-track-audio"
-      controls=""
     >
       <source
         src="https://listen.hs.llnwd.net/g3/9/1/0/8/1/1536018019.mp3"
         type="audio/mpeg"
       />
     </audio>
+    <div
+      class="music-player-controls"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-fast-backward fas fa-fast-backward fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Previous track
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control music-player-control--play"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-play fas fa-play fa-4x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Play
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-fast-forward fas fa-fast-forward fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Next track
+        </span>
+      </button>
+    </div>
+    <div
+      class="music-player-volume-control"
+    >
+      <i
+        class="ui-icon ui-icon-volume-off fas fa-volume-off"
+        title="Volume off"
+      />
+      <input
+        class="music-player-volume-control-slider"
+        max="1"
+        min="0"
+        step="0.1"
+        type="range"
+        value="0.2"
+      />
+      <i
+        class="ui-icon ui-icon-volume-up fas fa-volume-up"
+        title="Volume up"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<MusicPlayer /> renders correctly with track playing 1`] = `
+<DocumentFragment>
+  <div
+    class="music-player"
+  >
+    <div
+      class="music-player-track-cover"
+    >
+      <img
+        alt="Dance Monkey album cover"
+        class="music-player-track-cover-image"
+        src="https://direct.rhapsody.com/imageserver/v2/albums/alb.396711596/images/350x350.jpg"
+      />
+    </div>
+    <div
+      class="music-player-track-info"
+    >
+      <h1
+        class="ui-text ui-text--body ui-text--bold music-player-track-name"
+      >
+        Dance Monkey
+      </h1>
+      <h2
+        class="ui-text ui-text--body music-player-track-artist"
+      >
+        Tones and I
+      </h2>
+    </div>
+    <audio
+      class="music-player-track-audio"
+    >
+      <source
+        src="https://listen.hs.llnwd.net/g3/9/1/0/8/1/1536018019.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <div
+      class="music-player-controls"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-fast-backward fas fa-fast-backward fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Previous track
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control music-player-control--play"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-pause fas fa-pause fa-4x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Pause
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon music-player-control"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-fast-forward fas fa-fast-forward fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Next track
+        </span>
+      </button>
+    </div>
+    <div
+      class="music-player-volume-control"
+    >
+      <i
+        class="ui-icon ui-icon-volume-off fas fa-volume-off"
+        title="Volume off"
+      />
+      <input
+        class="music-player-volume-control-slider"
+        max="1"
+        min="0"
+        step="0.1"
+        type="range"
+        value="0.2"
+      />
+      <i
+        class="ui-icon ui-icon-volume-up fas fa-volume-up"
+        title="Volume up"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

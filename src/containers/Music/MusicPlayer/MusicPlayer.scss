@@ -1,7 +1,7 @@
 .music-player {
   @include stretch-column-nowrap;
   align-items: center;
-  padding: $gutter-l $gutter;
+  padding: $gutter-m $gutter $gutter;
 
   &-track {
     &-cover,
@@ -35,5 +35,113 @@
     &-audio {
       margin-top: auto;
     }
+  }
+
+  &-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: $gutter $gutter $gutter-l;
+  }
+
+  &-control {
+    @include circle(45px);
+    z-index: 2;
+    position: relative;
+    color: $white;
+
+    &::after {
+      @include circle(45px);
+      z-index: -1;
+      position: absolute;
+      transition: transform 0.4s, background-color 0.8s;
+      content: "";
+    }
+
+    &--play,
+    &--play::after {
+      width: 55px;
+      height: 55px;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scale(1.75);
+        background-color: $gray-dark;
+      }
+    }
+  }
+
+  &-volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    > .ui-icon {
+      color: $gray;
+    }
+  }
+
+  &-volume-control-slider {
+    width: 80%;
+    margin: $gutter-s 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        outline: 2px solid $blue;
+        background-color: $gray-light;
+      }
+    }
+  }
+
+  &-volume-control-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    border: 0.2px solid $black;
+    border-radius: 1.3px;
+    background: $gray-dark;
+    cursor: pointer;
+  }
+
+  &-volume-control-slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-top: -6px;
+    transition: color 0.4s;
+    border: 2px solid $gray-dark;
+    border-radius: 20px;
+    background: $gray;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+
+  &-volume-control-slider:focus::-webkit-slider-runnable-track {
+    background: $gray-dark;
+  }
+
+  &-volume-control-slider::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    border: 0.2px solid $black;
+    border-radius: 1.3px;
+    background: $gray;
+    cursor: pointer;
+  }
+
+  &-volume-control-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    transition: color 0.4s;
+    border: 2px solid $gray-dark;
+    border-radius: 20px;
+    background: $gray;
+    cursor: pointer;
   }
 }

@@ -67,3 +67,52 @@ exports[`<MusicLibrary /> renders correctly 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`<MusicLibrary /> renders correctly with tracks 1`] = `
+<DocumentFragment>
+  <div
+    class="music-library"
+  >
+    <h1
+      class="ui-text ui-text--display music-library-title"
+    >
+      Library
+    </h1>
+    <h2
+      class="ui-text ui-text--display music-library-subtitle"
+    >
+      Recently Added
+    </h2>
+    <ul
+      class="music-library-tracks"
+    >
+      <li>
+        <div
+          class="music-library-track"
+        >
+          <mock-link
+            state="[object Object]"
+            to="/music/player"
+          >
+            <img
+              alt="Dance Monkey album cover"
+              class="music-library-track-cover"
+              src="https://direct.rhapsody.com/imageserver/v2/albums/alb.396711596/images/160x160.jpg"
+            />
+          </mock-link>
+          <h3
+            class="ui-text ui-text--body music-library-track-name"
+          >
+            Dance Monkey
+          </h3>
+          <h4
+            class="ui-text ui-text--body music-library-track-artist"
+          >
+            Tones and I
+          </h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

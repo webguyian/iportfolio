@@ -22,10 +22,10 @@ const MusicLibrary = () => {
       </Text>
       {tracks.length ? (
         <ul className={`${baseClass}-tracks`}>
-          {tracks.map(track => (
+          {tracks.map((track, index) => (
             <li key={track.id}>
               <div className={trackClass}>
-                <Link to="/music/player" state={{ track }}>
+                <Link to="/music/player" state={{ selected: index }}>
                   <img
                     className={`${trackClass}-cover`}
                     alt={`${track.albumName} album cover`}
