@@ -1,4 +1,7 @@
+/* eslint-disable no-sync */
 import path from 'path';
+import http from 'http';
+import fs from 'fs';
 
 const settings = {
   APP_NAME: '',
@@ -26,7 +29,7 @@ const settings = {
   // Documentation: https://webpack.js.org/configuration/dev-server/#devserver-proxy
   // Example: http://localhost:9000/sdwan/api/content/home/get to http://localhost:9001/content/home/get
   API_PROXY_CONFIG: function() {
-    const apiURL = `https://${this.API_HOST}:${this.API_PORT}`;
+    const apiURL = `http://${this.API_HOST}:${this.API_PORT}`;
 
     return {
       '/api': {
@@ -37,4 +40,46 @@ const settings = {
   }
 };
 
-export default settings;
+// Create mock server
+function handleRequest(request, response) {
+  const method = request.method.toLowerCase();
+  const mockURL = request.url.split('?')[0].replace(settings.API_REGEX, '');
+
+  let file = path.join(settings.API_DIR, mockURL, method) + '.json';
+  const fileExists = fs.existsSync(file);
+
+  if (!fileExists) {
+    const parentPath = mockURL
+      .split('/')
+      .slice(0, -1)
+      .join('/');
+    const parent = path.join(settings.API_DIR, parentPath, method) + '.json';
+    const parentExists = fs.existsSync(parent);
+
+    if (!parentExists) {
+      response.writeHead(404, { 'Content-Type': 'text/html' });
+      response.end(`File: ${file} not found.`);
+      return false;
+    } else {
+      file = parent;
+    }
+  }
+
+  fs.readFile(file, 'utf8', (err, data) => {
+    if (err) {
+      response.writeHead(500, { 'Content-Type': 'text/html' });
+      response.end(err);
+      return false;
+    }
+
+    response.setHeader('Content-Type', 'application/json');
+    response.end(data);
+  });
+}
+
+const start = () => {
+  http.createServer(handleRequest).listen(settings.API_PORT);
+};
+const appSettings = Object.assign({}, { start }, settings);
+
+export default appSettings;

@@ -6,6 +6,11 @@ import settings from './app-settings';
 
 const devMode = process.env.NODE_ENV !== 'production';
 
+// Start API Server
+if (devMode) {
+  settings.start();
+}
+
 export default {
   mode: devMode ? 'development' : 'production',
   entry: ['@babel/polyfill', './src/index.js'],

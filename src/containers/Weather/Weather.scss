@@ -8,6 +8,7 @@
 
   &-bottom-bar {
     display: flex;
+    z-index: 2;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -39,8 +40,8 @@
     .ui-icon-dark-sky {
       width: 20px;
       height: 20px;
-      fill: $gray-medium;
       transition: fill 0.2s;
+      fill: $gray-medium;
 
       &:hover,
       &:focus {

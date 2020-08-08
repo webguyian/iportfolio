@@ -1,0 +1,21 @@
+{
+  "accuracy": 1,
+  "accuracy_type": "rooftop",
+  "address_components": {
+    "city": "Haddonfield",
+    "country": "US",
+    "county": "Camden County",
+    "formatted_street": "Tavistock Blvd",
+    "number": "383",
+    "state": "NJ",
+    "street": "Tavistock",
+    "suffix": "Blvd",
+    "zip": "08033"
+  },
+  "formatted_address": "383 Tavistock Blvd, Haddonfield, NJ 08033",
+  "location": {
+    "lat": 39.878622,
+    "lng": -75.041431
+  },
+  "source": "NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)"
+}

@@ -3,6 +3,7 @@
   "singleQuote": true,
   "trailingComma": "none",
   "parser": "babel",
+  "quoteProps": "as-needed",
   "overrides": [
     {
       "files": "*.scss",

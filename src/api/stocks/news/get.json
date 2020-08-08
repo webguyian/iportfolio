@@ -1,0 +1,222 @@
+[
+  {
+    "category": "top news",
+    "datetime": 1596893945,
+    "headline": "Trump advisors urge delisting of U.S.-listed Chinese firms that fail to meet audit standards",
+    "id": 5103319,
+    "image": "https://image.cnbcfm.com/api/v1/image/106576060-1591987663834gettyimages-1219077954.jpeg?v=1594120502",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Trump administration officials have urged the president to delist Chinese companies that trade on U.S. exchanges and fail to meet U.S. auditing requirements by January 2022.",
+    "url": "https://www.cnbc.com/2020/08/08/trump-advisors-urge-delisting-of-us-listed-chinese-firms-that-fail-to-meet-audit-standards.html"
+  },
+  {
+    "category": "technology",
+    "datetime": 1596891601,
+    "headline": "These are the companies trying to solve the world's plastic waste problem",
+    "id": 5103213,
+    "image": "https://image.cnbcfm.com/api/v1/image/106654671-1596826740566-V100_05_15_14Still016.jpg?v=1596826850",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Since the 1950s, humans have produced about 8.3 billion metric tons of plastic, the grand majority of which has ended up in a landfill. As the waste piles up, a number of companies are exploring alternatives to single-use plastics, experimenting with everything from mushroom packaging to advanced fibers to plastics-free grocery stores. But it may take serious legislative efforts to incentive adoption and slow the rise of the industry overall.",
+    "url": "https://www.cnbc.com/2020/08/08/plastic-alternatives-heres-what-were-doing.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596891257,
+    "headline": "Jerry Falwell Jr. takes indefinite leave of absence from Liberty University",
+    "id": 5103162,
+    "image": "https://image.cnbcfm.com/api/v1/image/106134607-1568746908367gettyimages-1133911188.jpg?v=1596836609",
+    "related": "",
+    "source": "CNBC",
+    "summary": "The university said it asked him to take the leave. Falwell recently appeared in a photograph with a woman and holding a glass of dark liquid.",
+    "url": "https://www.cnbc.com/2020/08/08/jerry-falwell-jr-takes-indefinite-leave-of-absence-from-liberty-university.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596890903,
+    "headline": "'An insidious ploy': Trump admin's decision to cut census short could have dire consequences",
+    "id": 5103161,
+    "image": "https://image.cnbcfm.com/api/v1/image/106019677-1563212332169rtx6zq2h.jpg?v=1563212407",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Undercounting populations like Black Americans and Native tribes could skew the balance of power in the U.S. for years to come.",
+    "url": "https://www.cnbc.com/2020/08/08/trump-admins-decision-to-cut-census-short-could-have-dire-consequences.html"
+  },
+  {
+    "category": "buffet watch",
+    "datetime": 1596890565,
+    "headline": "Buffett buys back $5.1 billion in Berkshire Hathaway stock as operating earnings take hit from coronavirus",
+    "id": 5103107,
+    "image": "https://image.cnbcfm.com/api/v1/image/105894584-15571486323141u8a0031r.jpg?v=1596826906",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Berkshire announced it bought $5.1 billion of its own shares during the second quarter as the pandemic dented the conglomerate's operations.",
+    "url": "https://www.cnbc.com/2020/08/08/berkshire-hathaway-earnings-q2-2020.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596887858,
+    "headline": "How San Francisco succeeded more than other U.S. cities in fighting the coronavirus",
+    "id": 5102957,
+    "image": "https://image.cnbcfm.com/api/v1/image/106629753-1595522611714-gettyimages-1227114506-363310638_1-3.jpeg?v=1595522673",
+    "related": "",
+    "source": "CNBC",
+    "summary": "San Francisco's response wasn't perfect, given a few recent mini surges, but it still did a decent job overall of controlling the pandemic. Here's why.",
+    "url": "https://www.cnbc.com/2020/08/08/how-san-francisco-beat-other-us-cities-in-fighting-the-coronavirus.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596861519,
+    "headline": "Facebook removes small pro-Trump network based in Romania",
+    "id": 5101521,
+    "image": "https://image.cnbcfm.com/api/v1/image/106200881-1571916187563rts2sjc3.jpg?v=1574791596",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Facebook said on Thursday it recently removed a small network of accounts operating from Romania that had been promoting President Donald Trump's re-election campaign.",
+    "url": "https://www.cnbc.com/2020/08/08/facebook-removes-small-pro-trump-network-based-in-romania.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596852196,
+    "headline": "U.S. Postal Service loses $2.2 billion in 3 months as virus woes persist",
+    "id": 5101016,
+    "image": "https://image.cnbcfm.com/api/v1/image/106654403-15968124252020-08-07t140901z_425415342_rc229i9dfkbs_rtrmadp_0_usa-post-office.jpeg?v=1596812475",
+    "related": "",
+    "source": "CNBC",
+    "summary": "The Postal Service is seeking an infusion of at least $10 billion to cover operating losses as well as regulatory changes that would undo a congressional requirement that the agency pre-fund billions of dollars in retiree health benefits.",
+    "url": "https://www.cnbc.com/2020/08/08/us-postal-service-loses-2point2-billion-in-3-months-as-virus-woes-persist.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596848962,
+    "headline": "Trump says he's working on health insurance executive order on pre-existing conditions",
+    "id": 5100817,
+    "image": "https://image.cnbcfm.com/api/v1/image/106652408-15967378862020-08-06t181626z_1660334872_rc2i8i9u0qg7_rtrmadp_0_usa-trump.jpeg?v=1596737944",
+    "related": "",
+    "source": "CNBC",
+    "summary": "President Donald Trump said on Friday he would be working in the next couple of weeks on an executive order to require health insurers to cover pre-existing conditions.",
+    "url": "https://www.cnbc.com/2020/08/07/trump-says-hes-working-on-health-insurance-executive-order-on-pre-existing-conditions.html"
+  },
+  {
+    "category": "business",
+    "datetime": 1596841639,
+    "headline": "Trump to hold news conference after coronavirus stimulus talks fall apart",
+    "id": 5100398,
+    "image": "https://image.cnbcfm.com/api/v1/image/106652413-1596738107568-abdon.jpg?v=1596738143",
+    "related": "",
+    "source": "CNBC",
+    "summary": "President Donald Trump will be holding a press conference from Bedminster, New Jersey Friday evening after another \"disappointing\" meeting between Democrats and the White House on coronavirus aid yielded little progress.",
+    "url": "https://www.cnbc.com/2020/08/07/trump-to-hold-news-conference-after-coronavirus-stimulus-talks-fall-apart.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596838097,
+    "headline": "Banning TikTok and WeChat Is a Slippery Slope, Says Analyst Ives",
+    "id": 1158304,
+    "image": "https://data.bloomberglp.com/company/sites/2/2019/01/logobbg-wht.png",
+    "related": "",
+    "source": "Bloomberg",
+    "summary": "",
+    "url": "https://www.bloomberg.com/news/videos/2020-08-07/banning-tiktok-and-wechat-is-a-slippery-slope-says-analyst-ives-video"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596836828,
+    "headline": "The coronavirus stimulus talks stall out, plus Samsung, Google, and Apple's war for smartphone buyers: CNBC After Hours",
+    "id": 5100145,
+    "image": "https://image.cnbcfm.com/api/v1/image/106654847-AH-YT-Thumb--1--jpg?v=1596834260",
+    "related": "",
+    "source": "CNBC",
+    "summary": "CNBC.com's MacKenzie Sigalos brings you the day's top business news headlines. On today's show, CNBC.com's Todd Haselton explains what the upcoming seasons of smartphone releases might look like in an economy with 10.2% unemployment.",
+    "url": "https://www.cnbc.com/2020/08/07/coronavirus-stimulus-talks-stall-samsung-google-and-apples-war-for-smartphone-buyers-5g.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596834725,
+    "headline": "SpaceX and ULA win billions in Pentagon rocket contracts, beating out Blue Origin, Northrop Grumman",
+    "id": 5099990,
+    "image": "https://image.cnbcfm.com/api/v1/image/105849104-1555082053627rts2hdiz.jpg?v=1555082133",
+    "related": "",
+    "source": "CNBC",
+    "summary": "The U.S. Air Force on Friday awarded rocket builders United Launch Alliance and SpaceX with contracts worth billions to launch national security missions.",
+    "url": "https://www.cnbc.com/2020/08/07/spacex-and-ula-win-2022-pentagon-rocket-launch-contracts.html"
+  },
+  {
+    "category": "technology",
+    "datetime": 1596833463,
+    "headline": "Sensitive to claims of bias, Facebook relaxed misinformation rules for conservative pages",
+    "id": 5099938,
+    "image": "https://image.cnbcfm.com/api/v1/image/106200880-1571916187563rts2sjbo.jpg?v=1571916274",
+    "related": "",
+    "source": "CNBC",
+    "summary": "According to internal discussions, Facebook removed \"strikes\" so that conservative pages were not penalized for violations of misinformation policies, NBC News reported.",
+    "url": "https://www.cnbc.com/2020/08/07/facebook-relaxed-misinformation-rules-for-conservative-pages.html"
+  },
+  {
+    "category": "technology",
+    "datetime": 1596832146,
+    "headline": "WarnerMedia CEO shakes up company with layoffs and focus on HBO Max",
+    "id": 5099833,
+    "image": "https://image.cnbcfm.com/api/v1/image/100355714-jason-kilar-getty.jpg?v=1418831404",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Among the changes, streaming executive Andy Forssell will lead a new HBO Max operating business unit.",
+    "url": "https://www.cnbc.com/2020/08/07/warnermedia-ceo-reorganizes-company-with-layoffs-focus-on-hbo-max.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596832124,
+    "headline": "These are the next catalysts that will drive Peloton shares higher, trader says",
+    "id": 5099885,
+    "image": "https://image.cnbcfm.com/api/v1/image/106589363-1592947146555gettyimages-1217469946.jpeg?v=1596830021",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Peloton shares are up more than 130% this year and hit an all-time high earlier this week. Todd Gordon of Ascent Wealth Partners lays out a way to play the stock into September earnings.",
+    "url": "https://www.cnbc.com/2020/08/07/peloton-shares-trader-lays-out-play-into-september-earnings.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596831081,
+    "headline": "Here's what happened to the stock market on Friday",
+    "id": 5099778,
+    "image": "https://image.cnbcfm.com/api/v1/image/106554417-1590615900393gettyimages-1227220993.jpeg?v=1596825873",
+    "related": "",
+    "source": "CNBC",
+    "summary": "The Dow and S&P 500 eked out their sixth straight gains as a strong jobs report outweighed U.S.-China tensions and concerns about a new fiscal stimulus package.",
+    "url": "https://www.cnbc.com/2020/08/07/what-happened-to-the-stock-market-on-friday-stocks-post-first-losses-of-august.html"
+  },
+  {
+    "category": "technology",
+    "datetime": 1596830908,
+    "headline": "Zillow CEO: Real estate market is beginning 'great reshuffling' as people seek more space at home",
+    "id": 5099779,
+    "image": "https://image.cnbcfm.com/api/v1/image/105753836-1550783800780barton.jpg?v=1596827613",
+    "related": "",
+    "source": "CNBC",
+    "summary": "The pandemic so far has accelerated trends of people fleeing large, expensive U.S. cities, While shopping is up everywhere, Barton said the company is seeing a \"deceleration of migration\" to cities and expects it to accelerate.",
+    "url": "https://www.cnbc.com/2020/08/07/zillow-were-at-the-beginning-of-a-great-reshuffling-to-space.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596825826,
+    "headline": "U.S. adds nearly 1.8 million jobs in July, and three market experts break down what's next",
+    "id": 5099504,
+    "image": "https://image.cnbcfm.com/api/v1/image/106651864-15967195042020-08-05t160159z_1565594261_rc2s7i93py3o_rtrmadp_0_usa-economy.jpeg?v=1596719542",
+    "related": "",
+    "source": "CNBC",
+    "summary": "Stocks were trading lower after a blowout jobs report. Three market pros break down what to watch next.",
+    "url": "https://www.cnbc.com/2020/08/07/stocks-and-jobs-what-to-watch-after-july-payrolls-report.html"
+  },
+  {
+    "category": "top news",
+    "datetime": 1596825246,
+    "headline": "U.S. judge ends decades-old movie theater rules set by Hollywood studios",
+    "id": 5099447,
+    "image": "https://image.cnbcfm.com/api/v1/image/103835079-GettyImages-527012600-1.jpg?v=1533562937",
+    "related": "",
+    "source": "CNBC",
+    "summary": "A federal judge on Friday granted the U.S. government's request to immediately end the Paramount Decrees, a set of antitrust rules from the late 1940s and early 1950s that ended Hollywood's monopoly on producing, distributing and exhibiting movies.",
+    "url": "https://www.cnbc.com/2020/08/07/us-judge-ends-decades-old-movie-theater-rules-governing-hollywood.html"
+  }
+]
