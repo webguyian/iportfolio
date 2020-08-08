@@ -4,6 +4,29 @@ import { useHistory } from 'react-router-dom';
 import { DEFAULT_COORDINATES, API_TOKEN } from './constants';
 import { getOptions, isExpired, isNotExpired } from './helpers';
 
+export const useBreakpoint = breakpoint => {
+  const [matchesBreakpoint, setBreakpoint] = useState(true);
+  const mediaQuery = `(max-width: ${breakpoint}px)`;
+
+  const handleResize = () => {
+    const matches = window.matchMedia(mediaQuery).matches;
+
+    setBreakpoint(matches);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [breakpoint]);
+
+  return matchesBreakpoint;
+};
+
 export const useRefFocus = (node = null) => {
   const ref = useRef(node);
 
@@ -272,4 +295,58 @@ export const useGeolocation = () => {
   }, []);
 
   return coordinates;
+};
+
+export const useVideoCanvas = () => {
+  const canvasRef = useRef(null);
+  const videoRef = useRef(null);
+  const defaultFormat = 'image/png';
+  const getElements = () => {
+    const canvas = canvasRef.current;
+    const context = canvas && canvas.getContext('2d');
+    const video = videoRef.current;
+
+    return {
+      canvas,
+      context,
+      video
+    };
+  };
+
+  const onPlay = () => {
+    const { canvas, context, video } = getElements();
+
+    function step() {
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  };
+
+  const takePhoto = (format = defaultFormat) => {
+    const { canvas, context, video } = getElements();
+
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    return canvas.toDataURL(format);
+  };
+
+  const clearPhoto = (format = defaultFormat) => {
+    const { canvas, context } = getElements();
+
+    context.fillStyle = '#1c1c1e';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    return canvas.toDataURL(format);
+  };
+
+  const actions = {
+    onPlay,
+    takePhoto,
+    clearPhoto
+  };
+
+  return [canvasRef, videoRef, actions];
 };

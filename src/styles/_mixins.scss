@@ -84,10 +84,34 @@
   flex-wrap: nowrap;
 }
 
+@mixin grid-icons($count: auto-fill) {
+  display: grid;
+  grid-template-columns: repeat($count, minmax(65px, 1fr));
+  grid-gap: 20px;
+}
+
 @mixin circle($size) {
   width: $size;
   height: $size;
   border-radius: $border-radius-round;
+}
+
+@mixin inner-circle($size, $background, $border) {
+  position: relative;
+
+  &::before {
+    @include circle($size);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.4s;
+    border: 3px solid $border;
+    background-color: $background;
+    content: "";
+    pointer-events: none;
+  }
 }
 
 @mixin truncate {

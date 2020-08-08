@@ -5,6 +5,10 @@
   background: none;
   cursor: pointer;
 
+  &[disabled] {
+    cursor: default;
+  }
+
   > .ui-icon {
     pointer-events: none;
     cursor: pointer;

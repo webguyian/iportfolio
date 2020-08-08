@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { useBreakpoint } from 'hooks';
+import { useBreakpoint } from 'modules/browser/hooks';
 
 import Icon from 'components/Icon/Icon';
 
@@ -78,7 +78,7 @@ DeviceFrame.propTypes = {
 };
 
 DeviceFrame.defaultProps = {
-  breakpoint: 480,
+  breakpoint: 768,
   color: 'black',
   device: 'iphone-x'
 };

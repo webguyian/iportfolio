@@ -19,12 +19,12 @@ exports[`<Mail /> renders correctly 1`] = `
   <div
     className="mail-app-top-bar"
   >
-    <Link
+    <mock-link
       onClick={[Function]}
       to="/home"
     >
       Cancel
-    </Link>
+    </mock-link>
   </div>
   <div
     className="mail-app-header"
@@ -142,12 +142,12 @@ Sent from iPortfolio"
     >
       Delete Draft
     </button>
-    <Link
+    <mock-link
       className="ui-btn--anchor-block"
       to="/home"
     >
       Save Draft
-    </Link>
+    </mock-link>
     <button
       className="ui-btn ui-btn--anchor-block"
       onClick={[Function]}
@@ -178,12 +178,12 @@ exports[`<Mail /> renders correctly with controls 1`] = `
   <div
     className="mail-app-top-bar"
   >
-    <Link
+    <mock-link
       onClick={[Function]}
       to="/home"
     >
       Cancel
-    </Link>
+    </mock-link>
   </div>
   <div
     className="mail-app-header"
@@ -301,12 +301,12 @@ Sent from iPortfolio"
     >
       Delete Draft
     </button>
-    <Link
+    <mock-link
       className="ui-btn--anchor-block"
       to="/home"
     >
       Save Draft
-    </Link>
+    </mock-link>
     <button
       className="ui-btn ui-btn--anchor-block"
       onClick={[Function]}

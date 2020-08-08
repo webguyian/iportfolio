@@ -5,7 +5,7 @@
   background-color: $black-dark;
 
   &-image {
-    margin: $gutter-m auto;
+    margin: 0 auto $gutter-m;
     text-align: center;
 
     &-caption {

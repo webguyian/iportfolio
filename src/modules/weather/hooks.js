@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   useGeolocation,
@@ -60,24 +60,4 @@ export const useWeatherLocations = locations => {
   }
 
   return locations;
-};
-
-export const useWeatherBackground = () => {
-  const canvasRef = useRef(null);
-  const videoRef = useRef(null);
-  const handlePlay = () => {
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
-
-    function step() {
-      context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-      requestAnimationFrame(step);
-    }
-
-    requestAnimationFrame(step);
-  };
-
-  return [canvasRef, videoRef, handlePlay];
 };

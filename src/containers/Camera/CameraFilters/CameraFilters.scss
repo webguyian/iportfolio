@@ -1,0 +1,29 @@
+.camera-filters {
+  display: flex;
+  flex-flow: column nowrap;
+  transform: translateY(-5px);
+
+  .camera-filter-list {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: $gutter;
+    padding-left: 145px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .camera-filter {
+    margin-left: $gutter;
+    border: 2px solid transparent;
+
+    &--active {
+      border-color: $white;
+    }
+
+    &-label {
+      margin: $gutter-s auto $gutter;
+      font-size: $font-size-s;
+      text-transform: uppercase;
+    }
+  }
+}

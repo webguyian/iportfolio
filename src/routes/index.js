@@ -1,15 +1,16 @@
-import CalculatorView from 'views/calculator/CalculatorView';
-import CalendarView from 'views/calendar/CalendarView';
-import ClockView from 'views/clock/ClockView';
-import HomescreenView from 'views/homescreen/HomescreenView';
-import MailView from 'views/mail/MailView';
-import MapView from 'views/map/MapView';
-import MusicView from 'views/music/MusicView';
-import NotesView from 'views/notes/NotesView';
-import PhoneView from 'views/phone/PhoneView';
-import RemindersView from 'views/reminders/RemindersView';
-import StocksView from 'views/stocks/StocksView';
-import WeatherView from 'views/weather/WeatherView';
+import CalculatorView from 'views/CalculatorView';
+import CalendarView from 'views/CalendarView';
+import CameraView from 'views/CameraView';
+import ClockView from 'views/ClockView';
+import HomescreenView from 'views/HomescreenView';
+import MailView from 'views/MailView';
+import MapView from 'views/MapView';
+import MusicView from 'views/MusicView';
+import NotesView from 'views/NotesView';
+import PhoneView from 'views/PhoneView';
+import RemindersView from 'views/RemindersView';
+import StocksView from 'views/StocksView';
+import WeatherView from 'views/WeatherView';
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: '/calendar',
     pathKey: 'calendar',
     component: CalendarView
+  },
+  {
+    path: '/camera',
+    pathKey: 'camera',
+    component: CameraView
   },
   {
     path: '/clock',

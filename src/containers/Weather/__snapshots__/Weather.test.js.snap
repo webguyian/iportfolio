@@ -12,7 +12,7 @@ exports[`<Weather /> renders correctly 1`] = `
   <div
     className="weather-app-bottom-bar"
   >
-    <Link
+    <mock-link
       external={true}
       to="https://darksky.net/poweredby/"
     >
@@ -31,7 +31,7 @@ exports[`<Weather /> renders correctly 1`] = `
           d="M 643 216 C 631 198 620 181 610 166 590 187 561 222 537 259 502 312 482 370 482 370 L 560 346 C 560 346 519 417 499 491 480 555 482 624 482 624 L 536 599 C 536 599 512 688 510 792 508 883 526 965 535 998 714 980 853 829 855 644 856 484 739 359 643 216 Z"
         />
       </svg>
-    </Link>
+    </mock-link>
   </div>
 </div>
 `;

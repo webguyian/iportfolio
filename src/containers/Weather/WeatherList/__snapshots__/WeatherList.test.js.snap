@@ -7,7 +7,7 @@ exports[`<WeatherList /> renders correctly 1`] = `
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -31,12 +31,12 @@ exports[`<WeatherList /> renders correctly 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -60,12 +60,12 @@ exports[`<WeatherList /> renders correctly 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -89,12 +89,12 @@ exports[`<WeatherList /> renders correctly 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -118,12 +118,12 @@ exports[`<WeatherList /> renders correctly 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -147,7 +147,7 @@ exports[`<WeatherList /> renders correctly 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
 </ul>
 `;
@@ -159,7 +159,7 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to="/weather"
     >
       <span
@@ -176,12 +176,12 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
       >
         43°
       </span>
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -205,12 +205,12 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -234,12 +234,12 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -263,12 +263,12 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -292,12 +292,12 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
   <li
     className="weather-list-item"
   >
-    <Link
+    <mock-link
       to={
         Object {
           "pathname": "/weather",
@@ -321,7 +321,7 @@ exports[`<WeatherList /> renders correctly with current city 1`] = `
       <span
         className="ui-text ui-text--body"
       />
-    </Link>
+    </mock-link>
   </li>
 </ul>
 `;

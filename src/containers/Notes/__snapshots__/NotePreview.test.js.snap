@@ -5,7 +5,7 @@ exports[`<NotePreview /> renders correctly 1`] = `
   className="note-preview"
   onMouseDown={[Function]}
 >
-  <Link
+  <mock-link
     onClick={[Function]}
     to={
       Object {
@@ -35,7 +35,7 @@ exports[`<NotePreview /> renders correctly 1`] = `
         This is a note
       </span>
     </div>
-  </Link>
+  </mock-link>
   <button
     className="ui-btn ui-btn--delete"
     onClick={[Function]}
@@ -50,7 +50,7 @@ exports[`<NotePreview /> renders correctly with swipe offset 1`] = `
 <div
   className="note-preview note-preview--swiped"
 >
-  <Link
+  <mock-link
     onClick={[Function]}
     to={
       Object {
@@ -80,7 +80,7 @@ exports[`<NotePreview /> renders correctly with swipe offset 1`] = `
         This is a note
       </span>
     </div>
-  </Link>
+  </mock-link>
   <button
     className="ui-btn ui-btn--delete"
     onClick={[Function]}
@@ -95,7 +95,7 @@ exports[`<NotePreview /> renders correctly with swipe offset greater than 80 1`]
 <div
   className="note-preview note-preview--swiped note-preview--swiping"
 >
-  <Link
+  <mock-link
     onClick={[Function]}
     to={
       Object {
@@ -125,7 +125,7 @@ exports[`<NotePreview /> renders correctly with swipe offset greater than 80 1`]
         This is a note
       </span>
     </div>
-  </Link>
+  </mock-link>
   <button
     className="ui-btn ui-btn--delete"
     onClick={[Function]}
@@ -141,7 +141,7 @@ exports[`<NotePreview /> renders correctly without title or text 1`] = `
   className="note-preview"
   onMouseDown={[Function]}
 >
-  <Link
+  <mock-link
     onClick={[Function]}
     to={
       Object {
@@ -171,7 +171,7 @@ exports[`<NotePreview /> renders correctly without title or text 1`] = `
         No additional text
       </span>
     </div>
-  </Link>
+  </mock-link>
   <button
     className="ui-btn ui-btn--delete"
     onClick={[Function]}

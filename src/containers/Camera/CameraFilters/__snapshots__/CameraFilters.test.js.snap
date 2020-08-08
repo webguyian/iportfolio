@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CameraFilters /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="camera-filters"
+  >
+    <span
+      class="ui-text ui-text--display camera-filter-label"
+    >
+      Original
+    </span>
+    <svg
+      style="display: none;"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <filter
+        id="svgThreshold"
+      >
+        <fecomponenttransfer>
+          <fefuncr
+            tableValues=" 0 1 1 1"
+            type="discrete"
+          />
+          <fefuncg
+            tableValues=" 0 1 1 1"
+            type="discrete"
+          />
+          <fefuncb
+            tableValues=" 0 1 1 1"
+            type="discrete"
+          />
+        </fecomponenttransfer>
+      </filter>
+      <filter
+        id="svgSharpen"
+      >
+        <feconvolvematrix
+          bias="0"
+          divisor="1"
+          kernelMatrix="-1,-1,-1 -1,9,-1 -1,-1,-1"
+          order="3 3"
+          preserveAlpha="true"
+        />
+      </filter>
+    </svg>
+    <div
+      class="camera-filter-list"
+    >
+      <button
+        aria-label="Original"
+        class="ui-btn camera-filter camera-filter--active"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Grayscale"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Sepia"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Invert"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Saturate"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="High Contrast"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Hue Rotate"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Sharpen"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Blur"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+      <button
+        aria-label="Threshold"
+        class="ui-btn camera-filter"
+        type="button"
+      >
+        <canvas
+          class="camera-filter-canvas"
+          height="75"
+          width="75"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

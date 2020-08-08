@@ -7,7 +7,7 @@ exports[`<Notes /> handles add note 1`] = `
   <div
     className="note-top-bar"
   >
-    <Link
+    <mock-link
       back={true}
       onClick={[Function]}
       to="/notes"
@@ -76,7 +76,7 @@ exports[`<Notes /> handles back to notes 1`] = `
   <div
     className="note-top-bar"
   >
-    <Link
+    <mock-link
       back={true}
       onClick={
         [MockFunction] {
@@ -157,7 +157,7 @@ exports[`<Notes /> handles change note 1`] = `
   <div
     className="note-top-bar"
   >
-    <Link
+    <mock-link
       back={true}
       onClick={[Function]}
       to="/notes"
@@ -226,7 +226,7 @@ exports[`<Notes /> handles delete for multiple notes 1`] = `
   <div
     className="note-top-bar"
   >
-    <Link
+    <mock-link
       back={true}
       onClick={[MockFunction]}
       to="/notes"

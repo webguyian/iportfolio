@@ -1,32 +1,24 @@
 .iportfolio-homescreen {
   @include background-carbon-fibre;
-  @include flex-column;
-  height: 100%;
+  @include stretch-column-nowrap;
 }
 
 .iportfolio-grid {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
+  @include grid-icons;
+  grid-template-rows: repeat(auto-fill, minmax(85px, 1fr));
   margin-top: $gutter-l;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .iportfolio-dock {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  @include grid-icons(4);
   width: 350px;
-  margin: 0 auto 20px;
+  margin: auto auto 20px;
   padding: 10px;
   border-radius: 30px;
   background-color: rgba($black, 0.75);
 
-  > .ui-app-icon {
+  > .ui-app-icon-link {
     margin-bottom: 0;
-
-    &:first-child {
-      margin-left: 0;
-    }
   }
 }

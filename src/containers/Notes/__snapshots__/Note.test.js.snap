@@ -7,7 +7,7 @@ exports[`<Note /> renders correctly 1`] = `
   <div
     className="note-top-bar"
   >
-    <Link
+    <mock-link
       back={true}
       onClick={[MockFunction]}
       to="/notes"
@@ -76,7 +76,7 @@ exports[`<Note /> renders correctly with swipe offset 1`] = `
   <div
     className="note-top-bar"
   >
-    <Link
+    <mock-link
       back={true}
       onClick={[MockFunction]}
       to="/notes"

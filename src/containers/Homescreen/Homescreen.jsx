@@ -50,6 +50,45 @@ const Homescreen = () => {
     );
   };
 
+  const cameraIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <linearGradient
+        id="camera-gradient-1"
+        gradientUnits="userSpaceOnUse"
+        x1="-539.017"
+        y1="626.266"
+        x2="-539.017"
+        y2="624.767"
+        gradientTransform="matrix(60 0 0 -60 32391 37581)"
+      >
+        <stop offset="0" stopColor="#EAEAEA" />
+        <stop offset="1" stopColor="#BABEC3" />
+      </linearGradient>
+      <path
+        d="M63.6 5c9 0 13.5 0 18.4 1.5 5.3 1.9 9.5 6.1 11.4 11.4C95 22.8 95 27.4 95 36.4v27.2c0 9 0 13.5-1.5 18.4-1.9 5.3-6.1 9.5-11.4 11.4-5 1.6-9.5 1.6-18.5 1.6H36.4c-9 0-13.5 0-18.4-1.5-5.4-2-9.5-6.1-11.5-11.5C5 77.2 5 72.7 5 63.6V36.4c0-9 0-13.5 1.5-18.4 2-5.3 6.1-9.5 11.5-11.4C22.8 5 27.3 5 36.4 5h27.2z"
+        fill="url(#camera-gradient-1)"
+      />
+      <path
+        d="M41 24.5h18c1.2 0 2.9.8 3.6 1.8l5 7.3c.5.7 1.3 1.1 2.1 1.1h10.7c2.5 0 4.5 2 4.5 4.5v33c0 2.5-2 4.5-4.5 4.5H19.6c-2.5 0-4.5-2-4.5-4.5v-33c0-2.5 2-4.5 4.5-4.5h10.7c.8 0 1.6-.4 2.1-1.1l5-7.3c.7-1 2.3-1.8 3.6-1.8zm25.9 16c0 1.3 1 2.3 2.3 2.3 1.2 0 2.3-1 2.3-2.3s-1-2.3-2.3-2.3c-1.3 0-2.3 1-2.3 2.3zM34.2 55.3c0 8.8 7.1 15.9 15.8 15.9s15.8-7.1 15.8-15.9S58.7 39.4 50 39.4s-15.8 7.1-15.8 15.9zM21.8 26.8h4.5c1.2 0 2.2 1 2.2 2.3v2.3h-9v-2.3c.1-1.3 1.1-2.3 2.3-2.3zm15.8 28.5c0-6.9 5.5-12.5 12.4-12.5s12.4 5.6 12.4 12.5S56.9 67.8 50 67.8s-12.4-5.6-12.4-12.5z"
+        fill="#353535"
+      />
+      <linearGradient
+        id="camera-gradient-2"
+        gradientUnits="userSpaceOnUse"
+        x1="66.858"
+        y1="40.461"
+        x2="71.361"
+        y2="40.461"
+      >
+        <stop offset="0" stopColor="#FFDB4C" />
+        <stop offset="1" stopColor="#FFCD02" />
+      </linearGradient>
+      <path
+        d="M66.9 40.5c0 1.3 1 2.3 2.3 2.3 1.2 0 2.3-1 2.3-2.3s-1-2.3-2.3-2.3c-1.3 0-2.3 1-2.3 2.3z"
+        fill="url(#camera-gradient-2)"
+      />
+    </svg>
+  );
   const clockIcon = () => {
     return (
       <AppIcon name="Clock">
@@ -530,12 +569,13 @@ const Homescreen = () => {
         <AppIcon id="map" name="Google Maps" theme="light">
           {mapIcon()}
         </AppIcon>
-        <AppIcon name="Weather">{weatherIcon()}</AppIcon>
+        <AppIcon name="Camera">{cameraIcon()}</AppIcon>
+        <AppIcon name="Music">{musicIcon()}</AppIcon>
         <AppIcon name="Reminders">{remindersIcon()}</AppIcon>
         <AppIcon name="Notes">{notesIcon()}</AppIcon>
-        <AppIcon name="Calculator">{calculatorIcon()}</AppIcon>
+        <AppIcon name="Weather">{weatherIcon()}</AppIcon>
         <AppIcon name="Stocks">{stocksIcon()}</AppIcon>
-        <AppIcon name="Music">{musicIcon()}</AppIcon>
+        <AppIcon name="Calculator">{calculatorIcon()}</AppIcon>
         <AppIcon name="Settings">{settingsIcon()}</AppIcon>
       </div>
     );

@@ -65,7 +65,7 @@ describe('<NotePreview />', () => {
 
   it('handles click function', () => {
     const component = create(<NotePreview {...props} />).root;
-    const link = component.find(el => el.type === 'Link');
+    const [link] = component.findAllByType('mock-link');
 
     expect(props.onClick).not.toHaveBeenCalled();
     link.props.onClick();
@@ -75,7 +75,7 @@ describe('<NotePreview />', () => {
   it('handles click function with offset', () => {
     hooks.useSwipeOffset.mockReturnValue([{}, 50]);
     const component = create(<NotePreview {...props} />).root;
-    const link = component.find(el => el.type === 'Link');
+    const [link] = component.findAllByType('mock-link');
 
     expect(props.onClick).not.toHaveBeenCalled();
     const value = link.props.onClick();

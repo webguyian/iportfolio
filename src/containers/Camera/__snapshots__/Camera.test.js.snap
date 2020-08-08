@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Camera /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="camera-app"
+  >
+    <div
+      class="camera-app-top-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon camera-app-control camera-app-control--disabled"
+        disabled=""
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-bolt fas fa-bolt fa-2x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Set flash
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon camera-app-control camera-app-control--enabled"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-history fas fa-history fa-2x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Set timer
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon camera-app-control camera-app-control--enabled"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-swatchbook fas fa-swatchbook fa-2x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Set filter
+        </span>
+      </button>
+    </div>
+    <div
+      class="camera-app-video-container"
+    >
+      <canvas
+        class="camera-app-canvas"
+        height="425"
+        width="375"
+      />
+      <canvas
+        class="camera-app-canvas-overlay"
+        height="425"
+        width="375"
+      />
+      <video
+        autoplay=""
+        class="camera-app-video"
+        playsinline=""
+      />
+    </div>
+    <p
+      class="ui-text ui-text--accessible camera-app-label"
+    >
+      Grant camera access to take photos
+    </p>
+    <div
+      class="camera-app-bottom-bar"
+    >
+      <mock-link
+        to="/photos"
+      >
+        <div
+          class="camera-app-image-placeholder"
+        />
+      </mock-link>
+      <button
+        class="ui-btn ui-btn--rounded"
+        type="button"
+      >
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Capture snapshot
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        disabled=""
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-sync fas fa-sync fa-3x"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Reverse camera
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

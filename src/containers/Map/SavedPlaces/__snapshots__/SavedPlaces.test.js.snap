@@ -50,13 +50,13 @@ exports[`<SavedPlaces /> renders correctly 1`] = `
         >
           456 Cherry Lane
         </span>
-        <Link
+        <mock-link
           external={true}
           onClick={[Function]}
           to="http://theplace.to.b"
         >
           View website
-        </Link>
+        </mock-link>
       </button>
     </li>
   </ul>

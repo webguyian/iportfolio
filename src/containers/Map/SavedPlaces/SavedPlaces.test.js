@@ -36,7 +36,7 @@ describe('<SavedPlaces />', () => {
 
   it('handles link click', () => {
     const component = create(<SavedPlaces {...props} />);
-    const [link] = component.root.findAllByType('Link');
+    const [link] = component.root.findAllByType('mock-link');
     const mockEvent = { stopPropagation: jest.fn() };
 
     expect(mockEvent.stopPropagation).not.toHaveBeenCalled();

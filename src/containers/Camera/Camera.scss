@@ -1,0 +1,96 @@
+/* stylelint-disable a11y/no-outline-none */
+.camera-app {
+  @include stretch-column-nowrap;
+
+  &-top-bar,
+  &-bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: $gutter 0;
+
+    .ui-icon {
+      transition: all 0.4s;
+      color: $white;
+    }
+  }
+
+  &-control {
+    &--active {
+      > .ui-icon {
+        color: $orange;
+      }
+    }
+  }
+
+  &-video-container {
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+    margin-bottom: $gutter;
+  }
+
+  &-canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-video {
+    display: none;
+  }
+
+  &-label {
+    @include type-display;
+    margin: $gutter;
+    text-align: center;
+  }
+
+  &-bottom-bar {
+    margin: auto 0 0;
+  }
+
+  &-image,
+  &-image-placeholder {
+    width: 70px;
+    height: 70px;
+    background-color: $gray-dark;
+  }
+
+  .ui-btn--rounded {
+    @include circle(80px);
+    @include inner-circle(60px, $white, $gray-dark);
+    margin: 0;
+    transition: background-color 0.4s;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-light;
+
+      &::before {
+        background-color: $gray-light;
+      }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &[disabled] {
+      background-color: $gray-medium;
+
+      &::before {
+        background-color: $gray-medium;
+      }
+    }
+  }
+
+  .ui-btn--with-icon[disabled] {
+    > .ui-icon {
+      color: $gray-medium;
+    }
+  }
+}

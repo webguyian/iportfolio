@@ -3,7 +3,7 @@
   flex-flow: column wrap;
 
   &-output {
-    @include type-number(9vw);
+    @include type-number(90px);
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
@@ -16,11 +16,11 @@
     overflow: hidden;
 
     &--8 {
-      font-size: 8vw;
+      font-size: 80px;
     }
 
     &--9 {
-      font-size: 7vw;
+      font-size: 70px;
     }
   }
 

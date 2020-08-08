@@ -1,11 +1,13 @@
+/* stylelint-disable color-no-hex */
 $size: 65px;
 
 .ui-app-icon {
   display: flex;
   position: relative;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   flex-shrink: 0;
-  margin: 0 0 20px 20px;
+  align-items: center;
+  text-align: center;
 
   &-link {
     @include type-body($font-size-s);
@@ -77,6 +79,17 @@ $size: 65px;
     svg {
       width: 60%;
       transform: translate(-2px, 10px);
+    }
+  }
+
+  &--camera {
+    > .ui-app-icon-link {
+      background-color: #bec2c7;
+
+      > svg {
+        width: 110%;
+        transform: translate(-3px, -5px);
+      }
     }
   }
 }

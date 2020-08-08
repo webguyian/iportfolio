@@ -1,4 +1,5 @@
 .iportfolio-app {
+  height: 100%;
   text-align: center;
 
   @include responsive($width-medium) {

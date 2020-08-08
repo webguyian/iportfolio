@@ -54,6 +54,14 @@ global.navigator.geolocation = {
   )
 };
 
+global.navigator.mediaDevices = {
+  getUserMedia: jest.fn(() => {})
+};
+
+global.HTMLMediaElement.prototype.load = jest.fn();
+global.HTMLMediaElement.prototype.play = jest.fn();
+global.HTMLMediaElement.prototype.pause = jest.fn();
+
 const boundsInstance = {
   union: jest.fn(),
   extend: jest.fn()
@@ -87,4 +95,4 @@ jest.mock('react-router-dom', () => ({
   Link: 'Link'
 }));
 
-jest.mock('components/Link/Link', () => 'Link');
+jest.mock('components/Link/Link', () => 'mock-link');

@@ -56,34 +56,34 @@ exports[`<Phone /> renders correctly 1`] = `
       className="phone-app-actions"
     >
       <li>
-        <Link
+        <mock-link
           icon="comment"
           iconSize="lg"
           to="#message"
           withLabel={true}
         >
           message
-        </Link>
+        </mock-link>
       </li>
       <li>
-        <Link
+        <mock-link
           icon="phone-alt"
           iconSize="lg"
           to="#call"
           withLabel={true}
         >
           call
-        </Link>
+        </mock-link>
       </li>
       <li>
-        <Link
+        <mock-link
           icon="envelope"
           iconSize="lg"
           to="/mail"
           withLabel={true}
         >
           mail
-        </Link>
+        </mock-link>
       </li>
     </ul>
   </header>
@@ -98,14 +98,14 @@ exports[`<Phone /> renders correctly 1`] = `
       >
         Email
       </h2>
-      <Link
+      <mock-link
         className="phone-app-info-value"
         data-hover="hello@webguyian.com"
         external={true}
         to="mailto:hello@webguyian.com"
       >
         hello@webguyian.com
-      </Link>
+      </mock-link>
     </div>
     <div
       className="phone-app-info-row"
@@ -115,14 +115,14 @@ exports[`<Phone /> renders correctly 1`] = `
       >
         Website
       </h2>
-      <Link
+      <mock-link
         className="phone-app-info-value"
         data-hover="webguyian.com"
         external={true}
         to="https://webguyian.com"
       >
         webguyian.com
-      </Link>
+      </mock-link>
     </div>
     <div
       className="phone-app-info-row"
@@ -132,14 +132,14 @@ exports[`<Phone /> renders correctly 1`] = `
       >
         Github
       </h2>
-      <Link
+      <mock-link
         className="phone-app-info-value"
         data-hover="github.com/webguyian"
         external={true}
         to="https://github.com/webguyian"
       >
         github.com/webguyian
-      </Link>
+      </mock-link>
     </div>
     <div
       className="phone-app-info-row"
@@ -149,7 +149,7 @@ exports[`<Phone /> renders correctly 1`] = `
       >
         Location
       </h2>
-      <Link
+      <mock-link
         className="phone-app-info-map-link"
         state={
           Object {
@@ -174,7 +174,7 @@ exports[`<Phone /> renders correctly 1`] = `
           alt="Philadelphia, PA"
           src="https://maps.googleapis.com/maps/api/staticmap?center=Philadelphia,PA&zoom=13&size=330x100&maptype=roadmap&key=AIzaSyAc4ldBsk1nC8zCTpCgjP8la4m_uYjmtQM&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:labels%7Cvisibility:off"
         />
-      </Link>
+      </mock-link>
     </div>
   </div>
 </div>
