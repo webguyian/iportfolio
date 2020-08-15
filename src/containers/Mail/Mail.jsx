@@ -1,4 +1,5 @@
 import React from 'react';
+import { object } from 'prop-types';
 import classNames from 'classnames';
 
 import Button from 'components/Button/Button';
@@ -8,10 +9,12 @@ import Text from 'components/Text/Text';
 
 import { useMail } from 'modules/mail/hooks';
 
-const Mail = () => {
-  const [fields, setField, state, handlers] = useMail();
+const Mail = props => {
+  const { location } = props;
+  const [fields, setField, state, handlers] = useMail(location.state);
   const baseClass = 'mail-app';
   const headerClass = `${baseClass}-header`;
+  const attachmentClass = `${baseClass}-attachment`;
   const controlsClass = `${baseClass}-controls`;
   const showControlsClass = state.showControls && `${controlsClass}--show`;
   const title = fields.subject || 'New Message';
@@ -76,6 +79,15 @@ const Mail = () => {
         type="textarea"
         value={fields.body}
       />
+      <div className={attachmentClass}>
+        {fields.attachment && (
+          <img
+            className={`${attachmentClass}-image`}
+            alt="Attached image"
+            src={fields.attachment}
+          />
+        )}
+      </div>
       <div className={classNames(controlsClass, showControlsClass)}>
         <Button modifier="anchor-block" onClick={handlers.onDelete}>
           Delete Draft
@@ -89,6 +101,10 @@ const Mail = () => {
       </div>
     </form>
   );
+};
+
+Mail.propTypes = {
+  location: object.isRequired
 };
 
 export default Mail;

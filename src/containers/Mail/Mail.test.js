@@ -6,6 +6,7 @@ import * as hooks from 'modules/mail/hooks';
 import Mail from './Mail';
 
 describe('<Mail />', () => {
+  const props = { location: {} };
   const useMail = hooks.useMail;
 
   hooks.useMail = jest.fn();
@@ -26,7 +27,7 @@ describe('<Mail />', () => {
   it('renders correctly', () => {
     const component = create(
       <MemoryRouter>
-        <Mail />
+        <Mail {...props} />
       </MemoryRouter>
     );
 
@@ -55,7 +56,7 @@ describe('<Mail />', () => {
 
     const component = create(
       <MemoryRouter>
-        <Mail />
+        <Mail {...props} />
       </MemoryRouter>
     );
 

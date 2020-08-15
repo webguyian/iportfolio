@@ -1,4 +1,6 @@
 /* eslint-disable no-sync */
+import fs from 'fs';
+import path from 'path';
 import optimization from './webpack.optimization';
 import plugins from './webpack.plugins';
 import rules from './webpack.rules';
@@ -22,6 +24,8 @@ export default {
     host: settings.HOST,
     hot: true,
     https: true,
+    key: fs.readFileSync(path.join(__dirname, '/cert/key.pem')),
+    cert: fs.readFileSync(path.join(__dirname, '/cert/cert.pem')),
     open: true,
     overlay: true,
     port: settings.APP_PORT,

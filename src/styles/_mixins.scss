@@ -40,6 +40,20 @@
   color: $color;
 }
 
+@mixin type-icon($icon) {
+  position: relative;
+
+  &::after {
+    display: inline-block;
+    font-family: $type-icon;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    content: $icon;
+  }
+}
+
 @mixin accessibly-hidden {
   position: absolute !important;
   width: 1px;
@@ -57,6 +71,13 @@
     radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
   background-color: $black-dark;
   background-size: 16px 16px;
+}
+
+@mixin flex-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: $gutter 0;
 }
 
 @mixin flex-center {
@@ -99,7 +120,7 @@
 @mixin inner-circle($size, $background, $border) {
   position: relative;
 
-  &::before {
+  &::after {
     @include circle($size);
     display: block;
     position: absolute;

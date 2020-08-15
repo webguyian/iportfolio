@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import { array, bool } from 'prop-types';
 import classNames from 'classnames';
 import { NavLink, Route } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import Icon from 'components/Icon/Icon';
 import Text from 'components/Text/Text';
 
 const TabNavigation = props => {
-  const { tabs } = props;
+  const { showNav, tabs } = props;
   const baseClass = 'ui-tab-navigation';
   const linkClass = `${baseClass}-link`;
   const activeClass = `${linkClass}--active`;
@@ -20,29 +20,36 @@ const TabNavigation = props => {
           <Route key={tab.icon} path={tab.path} component={tab.component} />
         ) : null
       )}
-      <nav className={baseClass}>
-        <ul className={`${baseClass}-list`}>
-          {tabs.map(tab => (
-            <li key={tab.icon} className={`${baseClass}-list-item`}>
-              <NavLink
-                className={classNames(linkClass, 'ui-link')}
-                activeClassName={activeClass}
-                to={tab.path}
-                exact
-              >
-                <Icon name={tab.icon} size="3x" />
-                <Text className={labelClass}>{tab.label}</Text>
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {showNav && (
+        <nav className={baseClass}>
+          <ul className={`${baseClass}-list`}>
+            {tabs.map(tab => (
+              <li key={tab.icon} className={`${baseClass}-list-item`}>
+                <NavLink
+                  className={classNames(linkClass, 'ui-link')}
+                  activeClassName={activeClass}
+                  to={tab.path}
+                  exact
+                >
+                  <Icon name={tab.icon} size="3x" />
+                  <Text className={labelClass}>{tab.label}</Text>
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </Fragment>
   );
 };
 
 TabNavigation.propTypes = {
-  tabs: PropTypes.array.isRequired
+  showNav: bool,
+  tabs: array.isRequired
+};
+
+TabNavigation.defaultProps = {
+  showNav: true
 };
 
 export default TabNavigation;

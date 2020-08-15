@@ -122,50 +122,6 @@ exports[`<AppContainer /> renders correctly 1`] = `
               </span>
             </div>
             <div
-              className="ui-app-icon ui-app-icon--google-maps"
-            >
-              <mock-link
-                className="ui-app-icon-link"
-                state={
-                  Object {
-                    "theme": "light",
-                  }
-                }
-                to="/map"
-              >
-                <svg
-                  viewBox="0 0 150 150"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M89.77,10.4c-4.4-1.39-9.08-2.15-13.94-2.15c-14.18,0-26.87,6.41-35.33,16.48l21.8,18.34L89.77,10.4z"
-                    fill="#1a73e8"
-                  />
-                  <path
-                    d="M40.49,24.73c-6.74,8.02-10.81,18.37-10.81,29.66c0,8.68,1.73,15.71,4.57,22.01l28.04-33.33L40.49,24.73z"
-                    fill="#ea4335"
-                  />
-                  <path
-                    d="M75.83,36.75c9.75,0,17.65,7.9,17.65,17.65c0,4.34-1.57,8.32-4.17,11.39c0,0,13.94-16.58,27.47-32.66 c-5.59-10.75-15.28-19.02-27-22.73L62.29,43.07C65.53,39.2,70.39,36.75,75.83,36.75"
-                    fill="#4285f4"
-                  />
-                  <path
-                    d="M75.83,72.04c-9.75,0-17.65-7.9-17.65-17.65c0-4.31,1.55-8.26,4.11-11.33L34.25,76.4 c4.79,10.63,12.76,19.16,20.97,29.91L89.3,65.79C86.07,69.61,81.23,72.04,75.83,72.04"
-                    fill="#fbbc04"
-                  />
-                  <path
-                    d="M88.63,117.37c15.39-24.07,33.34-35,33.34-62.98c0-7.67-1.88-14.9-5.19-21.26l-61.55,73.18 c2.61,3.42,5.24,7.06,7.81,11.07c9.36,14.46,6.76,23.13,12.8,23.13C81.86,140.51,79.27,131.83,88.63,117.37"
-                    fill="#34a853"
-                  />
-                </svg>
-              </mock-link>
-              <span
-                className="ui-text ui-text--body ui-app-icon-label"
-              >
-                Google Maps
-              </span>
-            </div>
-            <div
               className="ui-app-icon ui-app-icon--camera"
             >
               <mock-link
@@ -229,6 +185,303 @@ exports[`<AppContainer /> renders correctly 1`] = `
                 className="ui-text ui-text--body ui-app-icon-label"
               >
                 Camera
+              </span>
+            </div>
+            <div
+              className="ui-app-icon ui-app-icon--photos"
+            >
+              <mock-link
+                className="ui-app-icon-link"
+                to="/photos"
+              >
+                <svg
+                  viewBox="0 0 120 120"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-a"
+                      x2="120"
+                      y1="60"
+                      y2="60"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#fefefe"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#fefefe"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-b"
+                      x1="59.99"
+                      x2="59.99"
+                      y1="54.57"
+                      y2="9.84"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#f5b650"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#f5b650"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-c"
+                      x1="59.99"
+                      x2="59.99"
+                      y1="66.42"
+                      y2="110.1"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#76a5dc"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#76a5dc"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientTransform="rotate(-90 87.99 60)"
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-d"
+                      x1="63.99"
+                      x2="111.99"
+                      y1="60"
+                      y2="60"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#d4ec64"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#d4ec64"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientTransform="rotate(-90 31.99 60)"
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-e"
+                      x1="55.43"
+                      x2="7.43"
+                      y1="60"
+                      y2="60"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#ee6ca7"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#ee6ca7"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientTransform="rotate(-45 79.783 40.203)"
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-f"
+                      x1="64.45"
+                      x2="95.71"
+                      y1="54.91"
+                      y2="24.93"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#eae532"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#eae532"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientTransform="rotate(-45 40.186 79.804)"
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-g"
+                      x1="56.03"
+                      x2="23.29"
+                      y1="64.71"
+                      y2="95.9"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#aa7adb"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#aa7adb"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientTransform="rotate(-135 79.787 79.797)"
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-h"
+                      x1="64.52"
+                      x2="94.81"
+                      y1="64.19"
+                      y2="95.15"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#7bd464"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#7bd464"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      gradientTransform="rotate(-135 40.19 40.203)"
+                      gradientUnits="userSpaceOnUse"
+                      id="photos-bg-i"
+                      x1="55.23"
+                      x2="24.6"
+                      y1="55.24"
+                      y2="24.62"
+                    >
+                      <stop
+                        offset="0"
+                        stopColor="#fc6852"
+                      />
+                      <stop
+                        offset="1"
+                        stopColor="#fc6852"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <g>
+                    <rect
+                      fill="url(#photos-bg-a)"
+                      height="120"
+                      rx="26"
+                      width="120"
+                    />
+                    <rect
+                      fill="url(#photos-bg-b)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      width="32"
+                      x="43.99"
+                      y="8"
+                    />
+                    <rect
+                      fill="url(#photos-bg-c)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      width="32"
+                      x="43.99"
+                      y="64"
+                    />
+                    <rect
+                      fill="url(#photos-bg-d)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      transform="rotate(90 87.99 60)"
+                      width="32"
+                      x="71.99"
+                      y="36"
+                    />
+                    <rect
+                      fill="url(#photos-bg-e)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      transform="rotate(90 31.99 60)"
+                      width="32"
+                      x="15.99"
+                      y="36"
+                    />
+                    <rect
+                      fill="url(#photos-bg-f)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      transform="rotate(45 79.785 40.208)"
+                      width="32"
+                      x="63.79"
+                      y="16.2"
+                    />
+                    <rect
+                      fill="url(#photos-bg-g)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      transform="rotate(45 40.196 79.8)"
+                      width="32"
+                      x="24.19"
+                      y="55.8"
+                    />
+                    <rect
+                      fill="url(#photos-bg-h)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      transform="rotate(135 79.786 79.8)"
+                      width="32"
+                      x="63.79"
+                      y="55.8"
+                    />
+                    <rect
+                      fill="url(#photos-bg-i)"
+                      height="48"
+                      rx="16"
+                      style={
+                        Object {
+                          "mixBlendMode": "multiply",
+                        }
+                      }
+                      transform="rotate(135 40.187 40.2)"
+                      width="32"
+                      x="24.19"
+                      y="16.2"
+                    />
+                  </g>
+                </svg>
+              </mock-link>
+              <span
+                className="ui-text ui-text--body ui-app-icon-label"
+              >
+                Photos
               </span>
             </div>
             <div
@@ -569,6 +822,50 @@ exports[`<AppContainer /> renders correctly 1`] = `
                 className="ui-text ui-text--body ui-app-icon-label"
               >
                 Notes
+              </span>
+            </div>
+            <div
+              className="ui-app-icon ui-app-icon--google-maps"
+            >
+              <mock-link
+                className="ui-app-icon-link"
+                state={
+                  Object {
+                    "theme": "light",
+                  }
+                }
+                to="/map"
+              >
+                <svg
+                  viewBox="0 0 150 150"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M89.77,10.4c-4.4-1.39-9.08-2.15-13.94-2.15c-14.18,0-26.87,6.41-35.33,16.48l21.8,18.34L89.77,10.4z"
+                    fill="#1a73e8"
+                  />
+                  <path
+                    d="M40.49,24.73c-6.74,8.02-10.81,18.37-10.81,29.66c0,8.68,1.73,15.71,4.57,22.01l28.04-33.33L40.49,24.73z"
+                    fill="#ea4335"
+                  />
+                  <path
+                    d="M75.83,36.75c9.75,0,17.65,7.9,17.65,17.65c0,4.34-1.57,8.32-4.17,11.39c0,0,13.94-16.58,27.47-32.66 c-5.59-10.75-15.28-19.02-27-22.73L62.29,43.07C65.53,39.2,70.39,36.75,75.83,36.75"
+                    fill="#4285f4"
+                  />
+                  <path
+                    d="M75.83,72.04c-9.75,0-17.65-7.9-17.65-17.65c0-4.31,1.55-8.26,4.11-11.33L34.25,76.4 c4.79,10.63,12.76,19.16,20.97,29.91L89.3,65.79C86.07,69.61,81.23,72.04,75.83,72.04"
+                    fill="#fbbc04"
+                  />
+                  <path
+                    d="M88.63,117.37c15.39-24.07,33.34-35,33.34-62.98c0-7.67-1.88-14.9-5.19-21.26l-61.55,73.18 c2.61,3.42,5.24,7.06,7.81,11.07c9.36,14.46,6.76,23.13,12.8,23.13C81.86,140.51,79.27,131.83,88.63,117.37"
+                    fill="#34a853"
+                  />
+                </svg>
+              </mock-link>
+              <span
+                className="ui-text ui-text--body ui-app-icon-label"
+              >
+                Google Maps
               </span>
             </div>
             <div

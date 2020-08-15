@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import * as hooks from 'hooks';
+import * as hooks from 'modules/browser/hooks';
 
 import DeviceFrame from './DeviceFrame';
 

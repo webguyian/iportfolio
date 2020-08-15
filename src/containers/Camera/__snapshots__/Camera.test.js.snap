@@ -77,7 +77,7 @@ exports[`<Camera /> renders correctly 1`] = `
       class="camera-app-bottom-bar"
     >
       <mock-link
-        to="/photos"
+        to="/photos/gallery"
       >
         <div
           class="camera-app-image-placeholder"

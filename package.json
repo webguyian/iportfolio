@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config config/webpack.config.babel.js",
     "lint": "eslint src/ --ext .jsx,.js --fix",
-    "start": "cross-env NODE_ENV=debug webpack-dev-server --config config/webpack.config.babel.js --host 0.0.0.0",
+    "start": "cross-env NODE_ENV=debug webpack-dev-server --config config/webpack.config.babel.js",
     "stylelint": "stylelint src/**/**/*.scss --fix",
     "test": "jest --coverage --watchAll",
     "test:all": "jest --bail --runInBand --coverage=false"

@@ -1,7 +1,6 @@
 .mail-app {
   @include stretch-column-nowrap;
-  position: relative;
-  top: $gutter;
+  margin-top: $gutter;
   transition: top 0.4s;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -68,23 +67,38 @@
 
   &-body {
     height: 100%;
+    min-height: 100px;
     max-height: 515px;
     overflow-y: auto;
   }
 
+  &-attachment {
+    @include flex-center;
+  }
+
+  &-attachment-image {
+    max-width: 350px;
+  }
+
   &-overlay {
     position: fixed;
-    left: 28px;
-    width: 375px;
+    left: 0;
+    width: 100%;
     height: 760px;
-    background: linear-gradient(180deg, rgba($black-dark, 0.8) 55%, rgba($black-dark, 0.5) 95%, rgba($black-dark, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba($black-dark, 0.8) 55%,
+      rgba($black-dark, 0.5) 95%,
+      rgba($black-dark, 0) 100%
+    );
   }
 
   &-controls {
-    position: relative;
-    bottom: 30px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
     padding: 0 8px;
-    transform: translateY(110%);
+    transform: translateY(calc(100% + 10px));
     transition: transform 0.4s;
 
     &--show {

@@ -8,6 +8,7 @@ import MapView from 'views/MapView';
 import MusicView from 'views/MusicView';
 import NotesView from 'views/NotesView';
 import PhoneView from 'views/PhoneView';
+import PhotosView from 'views/PhotosView';
 import RemindersView from 'views/RemindersView';
 import StocksView from 'views/StocksView';
 import WeatherView from 'views/WeatherView';
@@ -70,6 +71,12 @@ const routes = [
     path: '/phone',
     pathKey: 'phone',
     component: PhoneView
+  },
+  {
+    path: '/photos',
+    pathKey: 'photos',
+    component: PhotosView,
+    exact: false
   },
   {
     path: '/reminders',

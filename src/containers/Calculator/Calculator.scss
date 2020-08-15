@@ -7,9 +7,9 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
-    width: 365px;
+    width: 100%;
     height: 300px;
-    padding: 0 10px 10px;
+    padding: 0 $gutter-m 10px;
     line-height: 1;
     text-align: right;
     white-space: nowrap;

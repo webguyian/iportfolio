@@ -14,13 +14,13 @@ const settings = {
   // Path to output files to during production
   OUTPUT_DIR: path.join(__dirname, '../dist'),
   // Domain to use for webpack dev server
-  HOST: 'localhost',
+  HOST: 'webguyian.com',
   // Domain to use for API server
-  API_HOST: 'localhost',
+  API_HOST: 'webguyian.com',
   // Used with HOST to determine URL of webpack's dev server
   APP_PORT: 8000,
   // Used with HOST to determine URL of the mock API server
-  API_PORT: 4001,
+  API_PORT: 8001,
   // Regex applied to mock API server requests to point to correct JSON files
   // Matches are replaced with an empty string ('')
   // Example: /api/content/home/get to /content/home/get

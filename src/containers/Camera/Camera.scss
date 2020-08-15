@@ -4,10 +4,7 @@
 
   &-top-bar,
   &-bottom-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: $gutter 0;
+    @include flex-bar;
 
     .ui-icon {
       transition: all 0.4s;
@@ -63,15 +60,15 @@
     @include circle(80px);
     @include inner-circle(60px, $white, $gray-dark);
     margin: 0;
-    transition: background-color 0.4s;
+    transition: background-color 0.3s;
     background-color: $white;
 
     &:hover,
     &:focus {
-      background-color: $gray-light;
+      background-color: $gray;
 
-      &::before {
-        background-color: $gray-light;
+      &::after {
+        background-color: $gray;
       }
     }
 
@@ -82,8 +79,15 @@
     &[disabled] {
       background-color: $gray-medium;
 
-      &::before {
+      &::after {
         background-color: $gray-medium;
+      }
+    }
+
+    &::after {
+      &:hover,
+      &:focus {
+        background-color: $gray;
       }
     }
   }

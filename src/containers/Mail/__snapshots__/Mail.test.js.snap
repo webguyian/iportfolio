@@ -133,6 +133,9 @@ Sent from iPortfolio"
     />
   </div>
   <div
+    className="mail-app-attachment"
+  />
+  <div
     className="mail-app-controls"
   >
     <button
@@ -291,6 +294,9 @@ exports[`<Mail /> renders correctly with controls 1`] = `
 Sent from iPortfolio"
     />
   </div>
+  <div
+    className="mail-app-attachment"
+  />
   <div
     className="mail-app-controls"
   >

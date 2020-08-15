@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhotoView /> renders correctly 1`] = `<DocumentFragment />`;
+
+exports[`<PhotoView /> renders correctly with controls 1`] = `
+<DocumentFragment>
+  <div
+    class="photo-view"
+  >
+    <div
+      class="photo-view-top-bar"
+    >
+      <mock-link
+        back="true"
+        to="/photos/gallery"
+      />
+      <span
+        class="ui-text ui-text--body"
+      >
+        0 seconds ago
+      </span>
+      <button
+        class="ui-btn ui-btn--edit"
+        disabled=""
+        type="button"
+      >
+        Edit
+      </button>
+    </div>
+    <div
+      class="photo-view-image-wrapper"
+    >
+      <img
+        alt="Photo taken Sep 29, 2019 at 12:00 AM"
+        class="photo-view-image"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      />
+    </div>
+    <div
+      class="photo-view-controls photo-view-controls--show"
+    >
+      <button
+        class="ui-btn ui-btn--anchor-block"
+        type="button"
+      >
+        Delete Photo
+      </button>
+      <button
+        class="ui-btn ui-btn--anchor-block"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+    <div
+      class="photo-view-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-envelope fas fa-envelope"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Share
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-heart fas fa-heart"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Unfavorite
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-trash-alt fas fa-trash-alt"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Delete
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<PhotoView /> renders correctly with photo 1`] = `
+<DocumentFragment>
+  <div
+    class="photo-view"
+  >
+    <div
+      class="photo-view-top-bar"
+    >
+      <mock-link
+        back="true"
+        to="/photos/gallery"
+      />
+      <span
+        class="ui-text ui-text--body"
+      >
+        0 seconds ago
+      </span>
+      <button
+        class="ui-btn ui-btn--edit"
+        disabled=""
+        type="button"
+      >
+        Edit
+      </button>
+    </div>
+    <div
+      class="photo-view-image-wrapper"
+    >
+      <img
+        alt="Photo taken Sep 29, 2019 at 12:00 AM"
+        class="photo-view-image"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      />
+    </div>
+    <div
+      class="photo-view-controls"
+    >
+      <button
+        class="ui-btn ui-btn--anchor-block"
+        type="button"
+      >
+        Delete Photo
+      </button>
+      <button
+        class="ui-btn ui-btn--anchor-block"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+    <div
+      class="photo-view-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-envelope fas fa-envelope"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Share
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-heart fas fa-heart"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Unfavorite
+        </span>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-trash-alt fas fa-trash-alt"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Delete
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<PhotoView /> renders correctly with unfavorited photo 1`] = `
+<DocumentFragment>
+  <div
+    class="photo-view"
+  >
+    <div
+      class="photo-view-top-bar"
+    >
+      <mock-link
+        back="true"
+        to="/photos/gallery"
+      />
+      <span
+        class="ui-text ui-text--body"
+      >
+        0 seconds ago
+      </span>
+      <button
+        class="ui-btn ui-btn--edit"
+        disabled=""
+        type="button"
+      >
+        Edit
+      </button>
+    </div>
+    <div
+      class="photo-view-image-wrapper"
+    >
+      <img
+        alt="Photo taken Sep 29, 2019 at 12:00 AM"
+        class="photo-view-image"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      />
+    </div>
+    <div
+      class="photo-view-controls"
+    >
+      <button
+        class="ui-btn ui-btn--anchor-block"
+        type="button"
+      >
+        Delete Photo
+      </button>
+      <button
+        class="ui-btn ui-btn--anchor-block"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+    <div
+      class="photo-view-bottom-bar"
+    >
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-envelope fas fa-envelope"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Share
+        </span>
+      </button>
+      <button
+        class="ui-btn"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-heart fa-w-16"
+          data-icon="heart"
+          data-prefix="far"
+          focusable="false"
+          role="img"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+      <button
+        class="ui-btn ui-btn--with-icon"
+        type="button"
+      >
+        <i
+          class="ui-icon ui-icon-trash-alt fas fa-trash-alt"
+        />
+        <span
+          class="ui-text ui-text--accessible"
+        >
+          Delete
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

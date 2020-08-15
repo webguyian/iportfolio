@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import isEqual from 'lodash/isEqual';
 
 import { useFetchWithData, useStorageCache } from 'modules/browser/hooks';
-import { API_MAIL, defaultBody, initialValues } from './constants';
+import { API_MAIL, defaultBody, defaultValues } from './constants';
 
 export const useFields = initial => {
   const [fields, setFields] = useState(initial);
@@ -36,7 +36,7 @@ export const useEventHandlers = (pristine, fields, setFields, setControls) => {
     setData(fields);
   };
   const onDelete = () => {
-    setFields(initialValues);
+    setFields(defaultValues);
     setRedirect(true);
   };
   const eventHandlers = {
@@ -63,7 +63,8 @@ export const useEventHandlers = (pristine, fields, setFields, setControls) => {
   return eventHandlers;
 };
 
-export const useMail = () => {
+export const useMail = populateFields => {
+  const initialValues = populateFields || defaultValues;
   const [fields, setFields, setField] = useFields(initialValues);
   const [invalid, setInvalid] = useState(false);
   const [pristine, setPristine] = useState(true);
@@ -95,7 +96,7 @@ export const useMail = () => {
       setInvalid(true);
     }
 
-    if (isEqual(fields, initialValues)) {
+    if (isEqual(fields, defaultValues)) {
       setPristine(true);
     } else {
       setPristine(false);

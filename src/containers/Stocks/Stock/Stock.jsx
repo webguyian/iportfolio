@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { useSwipeOffset } from 'hooks';
 import { formatPrice, getPercentage } from 'modules/stocks/helpers';
+import { useSwipeOffset } from 'modules/stocks/hooks';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';

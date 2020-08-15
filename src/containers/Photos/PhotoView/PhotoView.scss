@@ -1,0 +1,106 @@
+.photo-view {
+  @include stretch-column-nowrap;
+  position: relative;
+  background-color: $black-darker;
+
+  &-top-bar,
+  &-bottom-bar {
+    @include flex-bar;
+    background-color: $black-dark;
+  }
+
+  &-top-bar {
+    justify-content: space-between;
+    padding: $gutter;
+
+    > .ui-link--back,
+    > .ui-btn {
+      margin-right: 0;
+      color: $blue;
+      font-size: $font-size-m;
+      cursor: pointer;
+    }
+
+    > .ui-link--back {
+      &:hover,
+      &:focus {
+        color: lighten($blue, 10%);
+      }
+    }
+  }
+
+  &-bottom-bar {
+    z-index: 2;
+    position: relative;
+    margin-top: auto;
+
+    .ui-icon,
+    .svg-inline--fa {
+      width: 28px;
+      height: 28px;
+      color: $blue;
+      font-size: 28px;
+    }
+  }
+
+  &-image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-image {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .ui-btn {
+    &:hover,
+    &:focus {
+      > .ui-icon,
+      > .svg-inline--fa {
+        color: lighten($blue, 10%);
+      }
+    }
+
+    &[disabled] {
+      color: $gray-medium;
+    }
+
+    &--edit {
+      padding: 0 $gutter;
+    }
+  }
+
+  &-controls {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    padding: 0 8px;
+    transform: translateY(calc(100% + 70px));
+    transition: transform 0.4s;
+
+    &--show {
+      transform: translateY(0);
+    }
+
+    > .ui-btn--anchor-block {
+      transition: background-color 0.2s;
+      border-radius: $border-radius-l;
+      background-color: $gray-dark;
+      color: $blue;
+
+      &:hover,
+      &:focus {
+        background-color: darken($gray-dark, 2%);
+      }
+
+      &:first-child {
+        color: $red;
+      }
+
+      &:last-child {
+        margin-top: 8px;
+      }
+    }
+  }
+}

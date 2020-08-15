@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhotoGallery /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="photo-gallery"
+  >
+    <h1
+      class="ui-text ui-text--display"
+    >
+      Photos
+    </h1>
+    <div
+      class="photo-gallery-empty"
+    >
+      <p
+        class="ui-text ui-text--body ui-text--bold photo-gallery-empty-message"
+      >
+        No photos found.
+      </p>
+      <p
+        class="ui-text ui-text--body photo-gallery-empty-message"
+      >
+        Take snapshots from the Camera app.
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<PhotoGallery /> renders correctly with current photo 1`] = `<DocumentFragment />`;
+
+exports[`<PhotoGallery /> renders correctly with photos 1`] = `
+<DocumentFragment>
+  <div
+    class="photo-gallery"
+  >
+    <h1
+      class="ui-text ui-text--display"
+    >
+      Photos
+    </h1>
+    <div
+      class="photo-gallery-grid"
+    >
+      <mock-link
+        classname="photo-gallery-photo-frame photo-gallery-photo-frame--favorite"
+        state="[object Object]"
+        to="/photos/gallery/0"
+      >
+        <img
+          alt="Photo taken Oct 1, 2019 at 11:11 AM"
+          class="photo-gallery-photo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+        />
+      </mock-link>
+    </div>
+  </div>
+</DocumentFragment>
+`;

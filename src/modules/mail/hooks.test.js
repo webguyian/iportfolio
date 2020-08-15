@@ -4,7 +4,7 @@ import * as router from 'react-router-dom';
 
 import { TestComponent, testHookWithRouter } from 'utilities/test';
 
-import { initialValues } from './constants';
+import { defaultValues } from './constants';
 import * as hooks from './hooks';
 
 describe('Mail hooks', () => {
@@ -40,7 +40,7 @@ describe('Mail hooks', () => {
         response = hooks.useMail();
       });
 
-      expect(response[0]).toEqual(initialValues);
+      expect(response[0]).toEqual(defaultValues);
       expect(response[1]).toEqual(expect.any(Function));
       expect(response[2]).toEqual(state);
       expect(response[3]).toEqual(eventHandlers);
@@ -74,7 +74,7 @@ describe('Mail hooks', () => {
         );
       });
 
-      expect(response[0]).toEqual(initialValues);
+      expect(response[0]).toEqual(defaultValues);
       expect(response[1]).toEqual(expect.any(Function));
       expect(response[2]).toEqual(state);
       expect(response[3]).toEqual(eventHandlers);

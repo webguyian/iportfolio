@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Photos /> renders FavoritesGallery 1`] = `
+<DocumentFragment>
+  <div
+    class="photo-gallery"
+  >
+    <h1
+      class="ui-text ui-text--display"
+    >
+      Favorites
+    </h1>
+    <div
+      class="photo-gallery-empty"
+    >
+      <p
+        class="ui-text ui-text--body ui-text--bold photo-gallery-empty-message"
+      >
+        No favorites found.
+      </p>
+      <p
+        class="ui-text ui-text--body photo-gallery-empty-message"
+      >
+        Tap the heart to favorite some of your photos.
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Photos /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="photos-app"
+  />
+</DocumentFragment>
+`;

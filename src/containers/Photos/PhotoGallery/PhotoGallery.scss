@@ -1,0 +1,53 @@
+.photo-gallery {
+  @include stretch-column-nowrap;
+  max-height: 700px;
+  overflow-y: auto;
+
+  > .ui-text--display {
+    @include type-title;
+  }
+
+  &-grid {
+    display: grid;
+    padding: 0 $gutter;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: $gutter;
+  }
+
+  &-photo-frame {
+    max-width: 185px;
+    animation: loading-scale-in 0.4s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+    &--favorite {
+      @include type-icon("\f004");
+      max-width: 185px;
+      animation: loading-scale-in 0.4s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+      &::after {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+      }
+    }
+  }
+
+  &-photo {
+    max-width: 100%;
+  }
+
+  &-empty {
+    margin: auto $gutter-m;
+  }
+
+  &-empty-message {
+    margin-bottom: $gutter;
+    font-size: $font-size-l;
+    text-align: center;
+  }
+}
+
+@keyframes loading-scale-in {
+  from {
+    transform: scale(0.25);
+  }
+}

@@ -1,0 +1,10 @@
+.photos-app {
+  @include stretch-column-nowrap;
+
+  .ui-tab-navigation-link--active {
+    > .ui-icon,
+    > .ui-tab-navigation-link-label {
+      color: $blue;
+    }
+  }
+}

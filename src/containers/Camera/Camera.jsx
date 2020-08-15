@@ -7,16 +7,13 @@ import RoundedButton from 'components/Button/RoundedButton';
 import Text from 'components/Text/Text';
 import CameraFilters from './CameraFilters/CameraFilters';
 
-import { useCamera, useCameraFilters } from 'modules/camera/hooks';
+import { useCamera } from 'modules/camera/hooks';
 
 const Camera = () => {
   const [elements, actions, controls] = useCamera();
+  const { photo } = elements;
   const { flash, timer, filter, swap } = controls;
   const filterState = filter.state;
-  const [filters, activeFilter, onFilterClick] = useCameraFilters(
-    elements,
-    filterState
-  );
   const baseClass = 'camera-app';
   const videoClass = `${baseClass}-video`;
   const controlClass = `${baseClass}-control`;
@@ -76,9 +73,9 @@ const Camera = () => {
       </div>
       {filterState === 'active' ? (
         <CameraFilters
-          filters={filters}
-          activeFilter={activeFilter}
-          onFilterClick={onFilterClick}
+          filters={elements.filters}
+          activeFilter={elements.activeFilter}
+          onFilterClick={actions.onFilter}
         />
       ) : (
         <Text className={`${baseClass}-label`} element="p" type="accessible">
@@ -86,13 +83,18 @@ const Camera = () => {
         </Text>
       )}
       <div className={`${baseClass}-bottom-bar`}>
-        <Link to="/photos">
-          {elements.image ? (
-            <img className={`${baseClass}-image`} src={elements.image} />
-          ) : (
+        {photo ? (
+          <Link
+            to={`/photos/gallery/${photo.metadata.index}`}
+            state={{ theme: 'black-dark' }}
+          >
+            <img className={`${baseClass}-image`} src={photo.image} />
+          </Link>
+        ) : (
+          <Link to="/photos/gallery">
             <div className={`${baseClass}-image-placeholder`} />
-          )}
-        </Link>
+          </Link>
+        )}
         <RoundedButton
           disabled={elements.button === 'disabled'}
           onClick={actions.onClick}
