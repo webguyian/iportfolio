@@ -9,6 +9,7 @@ describe('Clock hooks', () => {
   describe('useLaps', () => {
     it('returns lap values', () => {
       const timer = 1000;
+
       let result;
 
       testHook(() => {
@@ -24,6 +25,7 @@ describe('Clock hooks', () => {
 
     it('updates laps', () => {
       const timer = 1000;
+
       let result;
 
       testHook(() => {
@@ -41,6 +43,7 @@ describe('Clock hooks', () => {
 
     it('adds new lap', () => {
       const timer = 1000;
+
       let result;
 
       testHook(() => {
@@ -59,6 +62,7 @@ describe('Clock hooks', () => {
 
     it('returns initial laps', () => {
       const timer = 1000;
+
       let result;
 
       testHook(() => {
@@ -397,6 +401,7 @@ describe('Clock hooks', () => {
         duration: 100
       };
       const radius = 175;
+
       let result;
 
       const Component = testHook(() => {
@@ -416,6 +421,7 @@ describe('Clock hooks', () => {
         duration: 100
       };
       const radius = 175;
+
       let result;
 
       const Component = testHook(() => {

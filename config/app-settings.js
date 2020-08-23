@@ -14,9 +14,9 @@ const settings = {
   // Path to output files to during production
   OUTPUT_DIR: path.join(__dirname, '../dist'),
   // Domain to use for webpack dev server
-  HOST: 'webguyian.com',
+  HOST: 'localhost',
   // Domain to use for API server
-  API_HOST: 'webguyian.com',
+  API_HOST: 'localhost',
   // Used with HOST to determine URL of webpack's dev server
   APP_PORT: 8000,
   // Used with HOST to determine URL of the mock API server
@@ -28,7 +28,7 @@ const settings = {
   // Proxy calls to webpack's dev server to the mock API server
   // Documentation: https://webpack.js.org/configuration/dev-server/#devserver-proxy
   // Example: http://localhost:9000/sdwan/api/content/home/get to http://localhost:9001/content/home/get
-  API_PROXY_CONFIG: function() {
+  API_PROXY_CONFIG: function () {
     const apiURL = `http://${this.API_HOST}:${this.API_PORT}`;
 
     return {
@@ -49,10 +49,7 @@ function handleRequest(request, response) {
   const fileExists = fs.existsSync(file);
 
   if (!fileExists) {
-    const parentPath = mockURL
-      .split('/')
-      .slice(0, -1)
-      .join('/');
+    const parentPath = mockURL.split('/').slice(0, -1).join('/');
     const parent = path.join(settings.API_DIR, parentPath, method) + '.json';
     const parentExists = fs.existsSync(parent);
 

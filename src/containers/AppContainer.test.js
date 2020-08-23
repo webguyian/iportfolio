@@ -21,7 +21,7 @@ describe('<AppContainer />', () => {
         </MemoryRouter>
       );
     });
-   
+
     expect(component).toMatchSnapshot();
   });
 });

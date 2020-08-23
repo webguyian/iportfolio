@@ -3,11 +3,10 @@ import { act, create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
 import { mockTime } from 'utilities/test';
+import * as hooks from 'modules/notes/hooks';
 
 import Notes from './Notes';
 import Note from './Note';
-import NotePreview from './NotePreview';
-import * as hooks from 'modules/notes/hooks';
 
 describe('<Notes />', () => {
   const useRefFocus = hooks.useRefFocus;

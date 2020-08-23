@@ -27,6 +27,7 @@ describe('Map hooks', () => {
   describe('useGoogleMaps', () => {
     it('returns initial values', () => {
       const ref = React.createRef();
+
       let response;
 
       ref.current = undefined;
@@ -41,6 +42,7 @@ describe('Map hooks', () => {
     it('returns values', () => {
       const ref = React.createRef();
       const mapState = new window.google.maps.Map();
+
       let response;
 
       ref.current = undefined;

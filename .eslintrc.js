@@ -21,6 +21,7 @@ module.exports = {
   },
   rules: {
     'accessor-pairs': 2,
+    'arrow-parens': [2, 'as-needed'],
     'block-scoped-var': 2,
     'callback-return': 0,
     camelcase: 2,
@@ -82,6 +83,7 @@ module.exports = {
     'no-func-assign': 2,
     'no-implicit-coercion': 2,
     'no-implied-eval': 2,
+    'no-import-assign': 0,
     'no-inline-comments': 0,
     'no-inner-declarations': 2,
     'no-invalid-regexp': 2,
@@ -112,6 +114,7 @@ module.exports = {
     'no-process-env': 0,
     'no-process-exit': 2,
     'no-proto': 2,
+    'no-prototype-builtins': 0,
     'no-redeclare': 2,
     'no-regex-spaces': 2,
     'no-restricted-modules': 2,

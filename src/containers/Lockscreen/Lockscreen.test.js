@@ -13,6 +13,7 @@ describe('<Lockscreen />', () => {
 
     await act(async () => {
       const result = render(<Lockscreen {...props} />);
+
       component = result.asFragment();
     });
 

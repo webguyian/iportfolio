@@ -21,7 +21,6 @@ describe('<Calendar />', () => {
     hooks.useGoToToday.mockImplementation(useGoToToday);
   });
 
-
   it('renders correctly', () => {
     hooks.useCalendar.mockReturnValue([
       getInitialCalendar(),
@@ -35,10 +34,7 @@ describe('<Calendar />', () => {
   });
 
   it('renders correctly with year view', () => {
-    hooks.useGoToToday.mockReturnValue([
-      { current: {} },
-      jest.fn()
-    ]);
+    hooks.useGoToToday.mockReturnValue([{ current: {} }, jest.fn()]);
     const component = create(<Calendar />);
     const button = component.root.findByProps({ icon: 'chevron-left' });
     const mockEvent = {

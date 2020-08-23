@@ -88,6 +88,7 @@ describe('<Stocks />', () => {
       displaySymbol: 'AAPL',
       description: 'APPLE INC'
     };
+
     let activeStocks = initialStocks.slice(0);
     const setStocks = stocks => {
       activeStocks = stocks;
