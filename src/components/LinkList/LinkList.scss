@@ -1,0 +1,39 @@
+.ui-link-list {
+  @include unstyled-list;
+  display: grid;
+  grid-gap: $gutter-s 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin-bottom: $gutter-l;
+
+  &-item-link {
+    @include focus-outline;
+    display: block;
+    padding: $gutter-s;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      .ui-link-list-item-link-icon {
+        transform: scale(1.09);
+      }
+    }
+
+    &-icon {
+      @include circle(100px, $border-radius-m);
+      @include flex-center;
+      transition: transform 0.2s ease-in;
+
+      > abbr {
+        @include type-display($font-size-xl);
+        text-decoration: none;
+      }
+    }
+
+    &-label {
+      @include type-body(12px);
+      display: block;
+      margin-top: $gutter-s;
+    }
+  }
+}

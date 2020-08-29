@@ -13,9 +13,9 @@
   font-weight: $font-weight-bold;
 }
 
-@mixin type-display {
+@mixin type-display($font-size: 30px) {
   font-family: $type-display;
-  font-size: 30px;
+  font-size: $font-size;
   font-weight: $font-weight-bold;
   letter-spacing: 0.025em;
 }
@@ -111,10 +111,10 @@
   grid-gap: 20px;
 }
 
-@mixin circle($size) {
+@mixin circle($size, $radius: $border-radius-round) {
   width: $size;
   height: $size;
-  border-radius: $border-radius-round;
+  border-radius: $radius;
 }
 
 @mixin inner-circle($size, $background, $border) {

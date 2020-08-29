@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 
 import TabNavigation from 'components/TabNavigation/TabNavigation';
 import Stopwatch from 'containers/Clock/Stopwatch/Stopwatch';
@@ -35,7 +35,7 @@ const Clock = props => {
 };
 
 Clock.propTypes = {
-  match: PropTypes.object.isRequired
+  match: object.isRequired
 };
 
 export default Clock;

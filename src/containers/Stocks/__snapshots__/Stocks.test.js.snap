@@ -30,14 +30,14 @@ exports[`<Stocks /> handles deleting stocks 1`] = `
     </button>
   </header>
   <form
-    className="stock-search"
+    className="ui-search-field"
   >
     <i
       className="ui-icon ui-icon-search fas fa-search"
     />
     <input
       aria-label="Search"
-      className="stock-search-input"
+      className="ui-search-field-input"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -252,14 +252,14 @@ exports[`<Stocks /> handles toggling edit 1`] = `
     </button>
   </header>
   <form
-    className="stock-search"
+    className="ui-search-field"
   >
     <i
       className="ui-icon ui-icon-search fas fa-search"
     />
     <input
       aria-label="Search"
-      className="stock-search-input"
+      className="ui-search-field-input"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -474,14 +474,14 @@ exports[`<Stocks /> renders correctly 1`] = `
     </button>
   </header>
   <form
-    className="stock-search"
+    className="ui-search-field"
   >
     <i
       className="ui-icon ui-icon-search fas fa-search"
     />
     <input
       aria-label="Search"
-      className="stock-search-input"
+      className="ui-search-field-input"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -696,14 +696,14 @@ exports[`<Stocks /> renders correctly with search term 1`] = `
     </button>
   </header>
   <form
-    className="stock-search"
+    className="ui-search-field"
   >
     <i
       className="ui-icon ui-icon-search fas fa-search"
     />
     <input
       aria-label="Search"
-      className="stock-search-input"
+      className="ui-search-field-input"
       onBlur={[MockFunction]}
       onChange={[MockFunction]}
       onFocus={[MockFunction]}
@@ -757,14 +757,14 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
     </button>
   </header>
   <form
-    className="stock-search"
+    className="ui-search-field"
   >
     <i
       className="ui-icon ui-icon-search fas fa-search"
     />
     <input
       aria-label="Search"
-      className="stock-search-input"
+      className="ui-search-field-input"
       onBlur={[MockFunction]}
       onChange={[MockFunction]}
       onFocus={[MockFunction]}

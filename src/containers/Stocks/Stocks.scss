@@ -15,6 +15,14 @@
     .stocks-app-list {
       max-height: none;
     }
+
+    .ui-search-field {
+      margin: $gutter-s 4px;
+
+      > .ui-btn--anchor {
+        display: block; // Show cancel button
+      }
+    }
   }
 
   &--with-detail {

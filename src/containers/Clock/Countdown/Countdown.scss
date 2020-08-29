@@ -16,7 +16,7 @@ $stroke-width: 8px;
   border-radius: $border-radius-round;
 
   &-text {
-    @include type-number-display(8vw);
+    @include type-number-display($font-size-xxl);
     margin: 0;
 
     &--with-hours {

@@ -19,7 +19,9 @@
 @import "components/ErrorBoundary/ErrorBoundary";
 @import "components/Flip/Flip";
 @import "components/FormField/FormField";
+@import "components/LinkList/LinkList";
 @import "components/Picker/Picker";
+@import "components/SearchField/SearchField";
 @import "components/TabNavigation/TabNavigation";
 @import "components/ToggleSwitch/ToggleSwitch";
 
@@ -50,10 +52,10 @@
 @import "containers/Photos/Photos";
 @import "containers/Photos/PhotoGallery/PhotoGallery";
 @import "containers/Photos/PhotoView/PhotoView";
+@import "containers/Safari/Safari";
 @import "containers/Stocks/Stocks";
 @import "containers/Stocks/Stock/Stock";
 @import "containers/Stocks/StockChart/StockChart";
-@import "containers/Stocks/StockSearch/StockSearch";
 @import "containers/Stocks/StockNews/StockNews";
 @import "containers/Stocks/StockTicker/StockTicker";
 @import "containers/Stocks/Stock/StockDetail";

@@ -10,6 +10,7 @@ import NotesView from 'views/NotesView';
 import PhoneView from 'views/PhoneView';
 import PhotosView from 'views/PhotosView';
 import RemindersView from 'views/RemindersView';
+import SafariView from 'views/SafariView';
 import StocksView from 'views/StocksView';
 import WeatherView from 'views/WeatherView';
 
@@ -82,6 +83,11 @@ const routes = [
     path: '/reminders',
     pathKey: 'reminders',
     component: RemindersView
+  },
+  {
+    path: '/safari',
+    pathKey: 'safari',
+    component: SafariView
   },
   {
     path: '/stocks',

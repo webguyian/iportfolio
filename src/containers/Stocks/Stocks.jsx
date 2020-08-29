@@ -12,11 +12,11 @@ import {
 
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
+import SearchField from 'components/SearchField/SearchField';
 import Text from 'components/Text/Text';
 
 import Stock from 'containers/Stocks/Stock/Stock';
 import StockDetail from 'containers/Stocks/Stock/StockDetail';
-import StockSearch from 'containers/Stocks/StockSearch/StockSearch';
 import StockNews from 'containers/Stocks/StockNews/StockNews';
 
 const Stocks = () => {
@@ -66,7 +66,7 @@ const Stocks = () => {
           {actionLabel}
         </Button>
       </header>
-      <StockSearch {...searchHandlers} />
+      <SearchField {...searchHandlers} />
       <ul className={`${baseClass}-list`}>
         {visibleStocks.map(stock => (
           <Stock

@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Safari /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="safari-app"
+  >
+    <form
+      class="ui-search-field"
+    >
+      <i
+        class="ui-icon ui-icon-search fas fa-search"
+      />
+      <input
+        aria-label="Search or enter website name"
+        class="ui-search-field-input"
+        placeholder="Search or enter website name"
+        value=""
+      />
+      <button
+        class="ui-btn ui-btn--anchor"
+        type="button"
+      >
+        Cancel
+      </button>
+    </form>
+    <div
+      class="safari-app-content"
+    >
+      <h1
+        class="ui-text ui-text--display"
+      >
+        Favorites
+      </h1>
+      <ul
+        class="ui-link-list"
+      >
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://css-tricks.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(255, 138, 0);"
+            >
+              <abbr
+                title="CSS-Tricks"
+              >
+                CT
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              CSS-Tricks
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://www.echojs.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(175, 29, 29);"
+            >
+              <abbr
+                title="Echo JS"
+              >
+                EJ
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Echo JS
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://frontendfront.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(45, 191, 128);"
+            >
+              <abbr
+                title="Front-end Front"
+              >
+                FE
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Front-end Front
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://alligator.io/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(223, 166, 18);"
+            >
+              <abbr
+                title="Alligator.io"
+              >
+                AL
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Alligator.io
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://news.ycombinator.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(255, 102, 0);"
+            >
+              <abbr
+                title="Hacker News"
+              >
+                HN
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Hacker News
+            </span>
+          </mock-link>
+        </li>
+      </ul>
+      <h2
+        class="ui-text ui-text--display"
+      >
+        Frequently Visited
+      </h2>
+      <ul
+        class="ui-link-list"
+      >
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://developer.mozilla.org/en-US/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(131, 208, 242);"
+            >
+              <abbr
+                title="MDN"
+              >
+                MD
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              MDN
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://stackoverflow.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(244, 128, 36);"
+            >
+              <abbr
+                title="Stack Overflow"
+              >
+                SO
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Stack Overflow
+            </span>
+          </mock-link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Safari /> renders correctly with search 1`] = `
+<DocumentFragment>
+  <div
+    class="safari-app safari-app--with-search"
+  >
+    <form
+      class="ui-search-field"
+    >
+      <i
+        class="ui-icon ui-icon-search fas fa-search"
+      />
+      <input
+        aria-label="Search or enter website name"
+        class="ui-search-field-input"
+        placeholder="Search or enter website name"
+        value=""
+      />
+      <button
+        class="ui-btn ui-btn--anchor"
+        type="button"
+      >
+        Cancel
+      </button>
+    </form>
+    <div
+      class="safari-app-content"
+    >
+      <h1
+        class="ui-text ui-text--display"
+      >
+        Favorites
+      </h1>
+      <ul
+        class="ui-link-list"
+      >
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://css-tricks.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(255, 138, 0);"
+            >
+              <abbr
+                title="CSS-Tricks"
+              >
+                CT
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              CSS-Tricks
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://www.echojs.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(175, 29, 29);"
+            >
+              <abbr
+                title="Echo JS"
+              >
+                EJ
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Echo JS
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://frontendfront.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(45, 191, 128);"
+            >
+              <abbr
+                title="Front-end Front"
+              >
+                FE
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Front-end Front
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://alligator.io/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(223, 166, 18);"
+            >
+              <abbr
+                title="Alligator.io"
+              >
+                AL
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Alligator.io
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://news.ycombinator.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(255, 102, 0);"
+            >
+              <abbr
+                title="Hacker News"
+              >
+                HN
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Hacker News
+            </span>
+          </mock-link>
+        </li>
+      </ul>
+      <h2
+        class="ui-text ui-text--display"
+      >
+        Frequently Visited
+      </h2>
+      <ul
+        class="ui-link-list"
+      >
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://developer.mozilla.org/en-US/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(131, 208, 242);"
+            >
+              <abbr
+                title="MDN"
+              >
+                MD
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              MDN
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
+            to="https://stackoverflow.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(244, 128, 36);"
+            >
+              <abbr
+                title="Stack Overflow"
+              >
+                SO
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              Stack Overflow
+            </span>
+          </mock-link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;

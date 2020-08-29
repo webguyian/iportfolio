@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkList /> renders correctly 1`] = `
+<DocumentFragment>
+  <ul
+    class="ui-link-list"
+  >
+    <li
+      class="ui-link-list-item"
+    >
+      <mock-link
+        classname="ui-link-list-item-link"
+        external="true"
+        to="https://developer.mozilla.org/en-US/"
+      >
+        <div
+          class="ui-link-list-item-link-icon"
+          style="background-color: rgb(131, 208, 242);"
+        >
+          <abbr
+            title="MDN"
+          >
+            MD
+          </abbr>
+        </div>
+        <span
+          class="ui-text ui-text--body ui-link-list-item-link-label"
+        >
+          MDN
+        </span>
+      </mock-link>
+    </li>
+    <li
+      class="ui-link-list-item"
+    >
+      <mock-link
+        classname="ui-link-list-item-link"
+        external="true"
+        to="https://stackoverflow.com/"
+      >
+        <div
+          class="ui-link-list-item-link-icon"
+          style="background-color: rgb(244, 128, 36);"
+        >
+          <abbr
+            title="Stack Overflow"
+          >
+            SO
+          </abbr>
+        </div>
+        <span
+          class="ui-text ui-text--body ui-link-list-item-link-label"
+        >
+          Stack Overflow
+        </span>
+      </mock-link>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

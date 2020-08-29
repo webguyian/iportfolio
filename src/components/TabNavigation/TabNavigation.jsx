@@ -29,7 +29,6 @@ const TabNavigation = props => {
                   className={classNames(linkClass, 'ui-link')}
                   activeClassName={activeClass}
                   to={tab.path}
-                  exact
                 >
                   <Icon name={tab.icon} size="3x" />
                   <Text className={labelClass}>{tab.label}</Text>
