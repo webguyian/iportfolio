@@ -19,7 +19,7 @@ const Phone = () => {
   const infoClass = `${baseClass}-info`;
   const actions = [
     {
-      to: '#message',
+      to: '/messages',
       icon: 'comment',
       label: 'message'
     },

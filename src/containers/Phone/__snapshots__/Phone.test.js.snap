@@ -59,7 +59,7 @@ exports[`<Phone /> renders correctly 1`] = `
         <mock-link
           icon="comment"
           iconSize="lg"
-          to="#message"
+          to="/messages"
           withLabel={true}
         >
           message

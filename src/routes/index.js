@@ -5,6 +5,7 @@ import ClockView from 'views/ClockView';
 import HomescreenView from 'views/HomescreenView';
 import MailView from 'views/MailView';
 import MapView from 'views/MapView';
+import MessagesView from 'views/MessagesView';
 import MusicView from 'views/MusicView';
 import NotesView from 'views/NotesView';
 import PhoneView from 'views/PhoneView';
@@ -55,6 +56,11 @@ const routes = [
     path: '/map',
     pathKey: 'map',
     component: MapView
+  },
+  {
+    path: '/messages',
+    pathKey: 'messages',
+    component: MessagesView
   },
   {
     path: '/music',

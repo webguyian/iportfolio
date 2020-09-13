@@ -195,6 +195,12 @@ export const useFetchWithData = (endpoint, data) => {
     setUrl(endpoint);
   }, [endpoint, data]);
 
+  useEffect(() => {
+    if (response) {
+      setUrl('');
+    }
+  }, [response]);
+
   return response;
 };
 

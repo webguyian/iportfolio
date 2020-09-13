@@ -1369,6 +1369,11 @@ exports[`<Homescreen /> renders correctly 1`] = `
     >
       <mock-link
         className="ui-app-icon-link"
+        state={
+          Object {
+            "theme": "black-dark",
+          }
+        }
         to="/messages"
       >
         <svg

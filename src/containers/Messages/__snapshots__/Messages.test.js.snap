@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Messages /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="messages-app"
+  >
+    <div
+      class="messages-app-header"
+    >
+      <mock-link
+        to="/phone"
+      >
+        <div
+          class="ui-avatar"
+        >
+          <img
+            alt="Ian Mac"
+            class="ui-avatar-image"
+            src="https://github.com/webguyian.png?size=50"
+          />
+        </div>
+        <span
+          class="ui-text ui-text--body"
+        >
+          Web Guy Ian
+        </span>
+      </mock-link>
+    </div>
+    <div
+      class="messages-app-list-container"
+    >
+      <ul
+        class="messages-app-list"
+      />
+    </div>
+    <footer
+      class="messages-app-footer"
+    >
+      <form
+        autocomplete="off"
+        class="messages-app-form"
+      >
+        <input
+          class="messages-app-form-input"
+          name="message"
+          placeholder="iMessage"
+          type="text"
+        />
+        <button
+          class="ui-btn ui-btn--with-icon ui-btn--rounded"
+          type="submit"
+        >
+          <i
+            class="ui-icon ui-icon-arrow-up fas fa-arrow-up"
+          />
+          <span
+            class="ui-text ui-text--accessible"
+          />
+        </button>
+      </form>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Messages /> renders correctly with messages 1`] = `
+<DocumentFragment>
+  <div
+    class="messages-app"
+  >
+    <div
+      class="messages-app-header"
+    >
+      <mock-link
+        to="/phone"
+      >
+        <div
+          class="ui-avatar"
+        >
+          <img
+            alt="Ian Mac"
+            class="ui-avatar-image"
+            src="https://github.com/webguyian.png?size=50"
+          />
+        </div>
+        <span
+          class="ui-text ui-text--body"
+        >
+          Web Guy Ian
+        </span>
+      </mock-link>
+    </div>
+    <div
+      class="messages-app-list-container"
+    >
+      <ul
+        class="messages-app-list"
+      >
+        <li
+          class="messages-app-list-item messages-app-list-item--from"
+        >
+          <span
+            class="messages-app-list-item-message"
+          >
+            Hey there! How are you?
+          </span>
+        </li>
+        <li
+          class="messages-app-list-item messages-app-list-item--to"
+        >
+          <span
+            class="messages-app-list-item-message"
+          >
+            Hi. Good, and you?
+          </span>
+        </li>
+        <li
+          class="messages-app-list-item messages-app-list-item--from"
+        >
+          <span
+            class="messages-app-list-item-message"
+          >
+            I am ok, what's up?
+          </span>
+        </li>
+        <li
+          class="messages-app-list-item messages-app-list-item--to"
+        >
+          <span
+            class="messages-app-list-item-message"
+          >
+            Just checking out your site.
+          </span>
+        </li>
+      </ul>
+    </div>
+    <footer
+      class="messages-app-footer"
+    >
+      <form
+        autocomplete="off"
+        class="messages-app-form"
+      >
+        <input
+          class="messages-app-form-input"
+          name="message"
+          placeholder="iMessage"
+          type="text"
+        />
+        <button
+          class="ui-btn ui-btn--with-icon ui-btn--rounded"
+          type="submit"
+        >
+          <i
+            class="ui-icon ui-icon-arrow-up fas fa-arrow-up"
+          />
+          <span
+            class="ui-text ui-text--accessible"
+          />
+        </button>
+      </form>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
