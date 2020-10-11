@@ -30,7 +30,7 @@ export const addSavedMarkers = (places, map) => {
       new maps.Marker({
         map,
         icon: goldStar,
-        id: place.id,
+        id: place.place_id,
         placeInfo: place,
         position: place.geometry.location,
         saved: true
@@ -70,7 +70,7 @@ export const onPlaceSelected = (searchBox, map) => {
       new maps.Marker({
         map,
         icon: fadedStar,
-        id: place.id,
+        id: place.place_id,
         placeInfo: place,
         position: place.geometry.location
       })

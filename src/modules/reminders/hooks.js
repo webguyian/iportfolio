@@ -21,10 +21,10 @@ export const useReminders = (initial = []) => {
   const [reminders, setReminders] = useLocalStorage('reminders', initial);
   const [focusedInput, setFocusedInput] = useState(null);
   const remindersRef = useRef(reminders);
-  const add = (value = '') => {
+  const add = () => {
     const id = Date.now();
 
-    setReminders(() => reminders.concat([{ id, checked: false, value }]));
+    setReminders(() => reminders.concat([{ id, checked: false, value: '' }]));
     setFocusedInput(id);
   };
 

@@ -98,6 +98,6 @@ describe('<Reminder />', () => {
     expect(props.onAdd).not.toHaveBeenCalled();
     form.props.onSubmit(mockEvent);
     expect(mockEvent.preventDefault).toHaveBeenCalled();
-    expect(props.onAdd).toHaveBeenCalledWith(component.props.id);
+    expect(props.onAdd).toHaveBeenCalled();
   });
 });

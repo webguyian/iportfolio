@@ -41,12 +41,13 @@ const Link = forwardRef((props, ref) => {
     return (
       <a
         href={to}
-        className={classNames(baseClass, className)}
+        className={classNames(baseClass, iconClass, className)}
         target="_blank"
         rel="noopener noreferrer"
         {...otherProps}
       >
-        {children}
+        {icon ? <Icon name={icon} size={iconSize} /> : children}
+        {withLabel && <Text className={`${baseClass}-label`}>{children}</Text>}
       </a>
     );
   }

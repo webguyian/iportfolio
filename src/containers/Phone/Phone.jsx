@@ -21,17 +21,20 @@ const Phone = () => {
     {
       to: '/messages',
       icon: 'comment',
-      label: 'message'
+      label: 'message',
+      external: false
     },
     {
-      to: '#call',
+      to: 'tel:+12013053245',
       icon: 'phone-alt',
-      label: 'call'
+      label: 'call',
+      external: true
     },
     {
       to: '/mail',
       icon: 'envelope',
-      label: 'mail'
+      label: 'mail',
+      external: false
     }
   ];
   const links = [
@@ -69,7 +72,13 @@ const Phone = () => {
         <ul className={actionsClass}>
           {actions.map(action => (
             <li key={action.icon}>
-              <Link to={action.to} icon={action.icon} iconSize="lg" withLabel>
+              <Link
+                to={action.to}
+                external={action.external}
+                icon={action.icon}
+                iconSize="lg"
+                withLabel
+              >
                 {action.label}
               </Link>
             </li>

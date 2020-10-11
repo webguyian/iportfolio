@@ -30,7 +30,7 @@ export const isExpired = (timestamp, expiration, startDate = new Date()) => {
     difference = differenceInDays(startDate, new Date(timestamp));
   }
 
-  return difference > number;
+  return difference >= number;
 };
 
 export const isNotExpired = (cache, today = new Date()) => {

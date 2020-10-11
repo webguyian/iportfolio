@@ -5,8 +5,6 @@ import * as hooks from 'modules/stocks/hooks';
 import StockNews from './StockNews';
 
 describe('<StockNews />', () => {
-  hooks.useStockNews = jest.fn();
-
   const news = [
     {
       category: 'top news',
@@ -38,6 +36,9 @@ describe('<StockNews />', () => {
         'https://www.reuters.com/article/us-china-health-usa-sandiego/coronavirus-case-confirmed-in-california-takes-u-s-total-to-13-idUSKBN20505I'
     }
   ];
+  const values = [news, false, jest.fn(), {}];
+
+  hooks.useStockNews = jest.fn(() => values);
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -50,14 +51,14 @@ describe('<StockNews />', () => {
   });
 
   it('renders correctly with news', () => {
-    hooks.useStockNews.mockReturnValue(news);
+    hooks.useStockNews.mockReturnValue(values);
     const component = create(<StockNews draggable />);
 
     expect(component).toMatchSnapshot();
   });
 
   it('handles slide up', () => {
-    hooks.useStockNews.mockReturnValue(news);
+    hooks.useStockNews.mockReturnValue([news, true, jest.fn(), {}]);
     const component = create(<StockNews draggable />);
     const button = component.root.findByProps({
       className: 'stock-news-drag-handle'

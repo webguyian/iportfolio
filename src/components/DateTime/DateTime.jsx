@@ -1,114 +1,56 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+import { node, string, object, bool, func } from 'prop-types';
 import { format as formatDate, isToday, isYesterday } from 'date-fns';
 
-class DateTime extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    format: PropTypes.string,
-    fromDate: PropTypes.object,
-    fromNow: PropTypes.bool,
-    onUpdate: PropTypes.func,
-    relativeFormat: PropTypes.string,
-    stopped: PropTypes.bool,
-    yesterdayLabel: PropTypes.string
-  };
+import { useDateTime } from 'modules/datetime/hooks';
 
-  static defaultProps = {
-    format: 'h:mm',
-    fromNow: false,
-    relativeFormat: 'M/d/yy',
-    stopped: false,
-    yesterdayLabel: 'Yesterday'
-  };
+const DateTime = props => {
+  const {
+    children,
+    format,
+    fromDate,
+    fromNow,
+    relativeFormat,
+    stopped,
+    onUpdate,
+    yesterdayLabel
+  } = props;
+  const millis = useDateTime(stopped, onUpdate, children);
+  const date = new Date(millis);
 
-  constructor(props) {
-    super(props);
-
-    this.tick = this.tick.bind(this);
-
-    this.state = {
-      millis: props.children || Date.now(),
-      request: 0
-    };
-  }
-
-  componentDidMount() {
-    const { children, stopped } = this.props;
-
-    if (!children && !stopped) {
-      this.setState({
-        request: requestAnimationFrame(this.tick)
-      });
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    const { children, stopped } = this.props;
-    const { request } = this.state;
-
-    if (stopped && !prevProps.stopped) {
-      cancelAnimationFrame(request);
+  if (fromNow) {
+    if (isYesterday(date)) {
+      return yesterdayLabel;
     }
 
-    if (!children && !stopped && prevProps.stopped) {
-      this.setState({
-        request: requestAnimationFrame(this.tick)
-      });
-    }
+    const updatedFormat = isToday(date) ? format : relativeFormat;
+
+    return formatDate(date, updatedFormat);
   }
 
-  componentWillUnmount() {
-    const { request } = this.state;
-
-    cancelAnimationFrame(request);
+  if (fromDate) {
+    return formatDate(fromDate, format);
   }
 
-  get date() {
-    const {
-      format,
-      fromDate,
-      fromNow,
-      relativeFormat,
-      yesterdayLabel
-    } = this.props;
-    const { millis } = this.state;
-    const date = new Date(millis);
+  return formatDate(date, format);
+};
 
-    if (fromNow) {
-      if (isYesterday(date)) {
-        return yesterdayLabel;
-      }
+DateTime.propTypes = {
+  children: node,
+  format: string,
+  fromDate: object,
+  fromNow: bool,
+  onUpdate: func,
+  relativeFormat: string,
+  stopped: bool,
+  yesterdayLabel: string
+};
 
-      const updatedFormat = isToday(date) ? format : relativeFormat;
-
-      return formatDate(date, updatedFormat);
-    }
-
-    if (fromDate) {
-      return formatDate(fromDate, format);
-    }
-
-    return formatDate(date, format);
-  }
-
-  tick() {
-    const { onUpdate } = this.props;
-    const millis = Date.now();
-
-    this.setState({
-      millis,
-      request: requestAnimationFrame(this.tick)
-    });
-
-    if (onUpdate) {
-      onUpdate(new Date(millis));
-    }
-  }
-
-  render() {
-    return this.date;
-  }
-}
+DateTime.defaultProps = {
+  format: 'h:mm',
+  fromNow: false,
+  relativeFormat: 'M/d/yy',
+  stopped: false,
+  yesterdayLabel: 'Yesterday'
+};
 
 export default DateTime;

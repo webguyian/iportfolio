@@ -9,12 +9,12 @@ describe('<SavedPlaces />', () => {
     onClick: jest.fn(),
     places: [
       {
-        id: 'a',
+        id: 'place-a',
         name: 'Place A',
         formatted_address: '123 Apple Road'
       },
       {
-        id: 'b',
+        id: 'place-b',
         name: 'Place B',
         formatted_address: '456 Cherry Lane',
         website: 'http://theplace.to.b'

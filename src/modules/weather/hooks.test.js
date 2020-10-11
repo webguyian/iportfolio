@@ -191,7 +191,7 @@ describe('Weather hooks', () => {
         }
       ];
 
-      browserHooks.useFetchAllAndCache.mockReturnValueOnce(locationResponse);
+      browserHooks.useFetchAllAndCache.mockReturnValue(locationResponse);
 
       await act(async () => {
         testHook(() => {

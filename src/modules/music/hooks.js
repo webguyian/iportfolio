@@ -54,6 +54,10 @@ export const usePlayer = location => {
     }
   };
 
+  const handleEnd = () => {
+    setPlaying(false);
+  };
+
   useEffect(() => {
     if (!tracks || !tracks.length) {
       // Exit early
@@ -66,6 +70,15 @@ export const usePlayer = location => {
       setTrack(tracks[selected]);
     }
   }, [tracks, location.state]);
+
+  useEffect(() => {
+    if (!audioRef.current) {
+      // Exit early
+      return;
+    }
+
+    audioRef.current.addEventListener('ended', handleEnd);
+  }, [audioRef.current]);
 
   useEffect(() => {
     if (!audioRef.current) {

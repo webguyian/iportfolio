@@ -49,15 +49,20 @@ export const useCurrentWeather = () => {
 };
 
 export const useWeatherLocations = locations => {
+  const [data, setData] = useState(locations);
   const endpoints = locations.map(getWeatherEndpoint);
   const response = useFetchAllAndCache(endpoints, 'weather-locations', '2H');
 
-  if (response.length) {
-    return locations.map((location, index) => ({
-      ...location,
-      ...response[index]
-    }));
-  }
+  useEffect(() => {
+    if (response.length) {
+      const updatedData = locations.map((location, index) => ({
+        ...location,
+        ...response[index]
+      }));
 
-  return locations;
+      setData(updatedData);
+    }
+  }, [response]);
+
+  return data;
 };

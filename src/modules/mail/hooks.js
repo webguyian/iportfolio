@@ -2,7 +2,11 @@ import { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import isEqual from 'lodash/isEqual';
 
-import { useFetchWithData, useStorageCache } from 'modules/browser/hooks';
+import {
+  useFetchWithData,
+  useStorageCache,
+  useSwipeVertical
+} from 'modules/browser/hooks';
 import { API_MAIL, defaultBody, defaultValues } from './constants';
 
 export const useFields = initial => {
@@ -22,6 +26,12 @@ export const useEventHandlers = (pristine, fields, setFields, setControls) => {
   const [redirect, setRedirect] = useState(false);
   const history = useHistory();
   const response = useFetchWithData(API_MAIL, data);
+  const handleSwipe = eventInfo => {
+    if (eventInfo.dir === 'Down') {
+      history.push('/home');
+    }
+  };
+  const swipeHandlers = useSwipeVertical(handleSwipe, 100);
   const onCancel = useCallback(
     event => {
       if (!pristine) {
@@ -40,6 +50,7 @@ export const useEventHandlers = (pristine, fields, setFields, setControls) => {
     setRedirect(true);
   };
   const eventHandlers = {
+    swipe: swipeHandlers,
     onCancel,
     onConfirmCancel: setControls.bind(null, false),
     onDelete,

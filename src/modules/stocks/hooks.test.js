@@ -445,7 +445,7 @@ describe('Stocks hooks', () => {
         .mockReturnValueOnce(mockResponse);
 
       testHook(() => {
-        news = hooks.useStockNews();
+        [news] = hooks.useStockNews();
       });
 
       expect(news).toEqual([]);
@@ -454,7 +454,7 @@ describe('Stocks hooks', () => {
     it('returns general stock news', async () => {
       let news;
       const Component = testHook(() => {
-        news = hooks.useStockNews();
+        [news] = hooks.useStockNews();
       });
 
       const mockToken = createMockResponse(MOCK_TOKEN);
@@ -464,7 +464,7 @@ describe('Stocks hooks', () => {
 
       await act(async () => {
         const callback = () => {
-          news = hooks.useStockNews();
+          [news] = hooks.useStockNews();
         };
 
         Component.update(<TestComponent callback={callback} />);
@@ -476,7 +476,7 @@ describe('Stocks hooks', () => {
     it('returns company stock news', async () => {
       let news;
       const Component = testHook(() => {
-        news = hooks.useStockNews('AAPL');
+        [news] = hooks.useStockNews('AAPL');
       });
       const newsData = [
         {
@@ -533,7 +533,7 @@ describe('Stocks hooks', () => {
 
       await act(async () => {
         const callback = () => {
-          news = hooks.useStockNews('AAPL');
+          [news] = hooks.useStockNews('AAPL');
         };
 
         Component.update(<TestComponent callback={callback} />);
@@ -550,12 +550,12 @@ describe('Stocks hooks', () => {
       });
       helpers.isExpiredNews.mockReturnValue(false);
       const Component = testHook(() => {
-        news = hooks.useStockNews();
+        [news] = hooks.useStockNews();
       });
 
       await act(async () => {
         const callback = () => {
-          news = hooks.useStockNews();
+          [news] = hooks.useStockNews();
         };
 
         Component.update(<TestComponent callback={callback} />);
@@ -576,12 +576,12 @@ describe('Stocks hooks', () => {
 
       global.fetch.mockReturnValueOnce(mockToken).mockReturnValueOnce(response);
       const Component = testHook(() => {
-        news = hooks.useStockNews();
+        [news] = hooks.useStockNews();
       });
 
       await act(async () => {
         const callback = () => {
-          news = hooks.useStockNews();
+          [news] = hooks.useStockNews();
         };
 
         Component.update(<TestComponent callback={callback} />);

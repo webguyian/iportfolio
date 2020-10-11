@@ -153,7 +153,8 @@ describe('Map hooks', () => {
         get: jest.fn(() => false),
         set: jest.fn(),
         setIcon: jest.fn(),
-        setMap: jest.fn()
+        setMap: jest.fn(),
+        id: 'marker1'
       };
 
       act(() => {
@@ -167,7 +168,8 @@ describe('Map hooks', () => {
           {
             ...marker,
             name: 'marker2',
-            saved: true
+            saved: true,
+            id: 'marker2'
           }
         ];
 

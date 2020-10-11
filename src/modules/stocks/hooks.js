@@ -4,7 +4,8 @@ import { useSwipeable } from 'react-swipeable';
 import {
   useFetch,
   useFetchWithData,
-  useStorageCache
+  useStorageCache,
+  useSwipeVertical
 } from 'modules/browser/hooks';
 import {
   API_CANDLESTICK,
@@ -188,12 +189,24 @@ export const useStockDetail = () => {
 export const useStockNews = category => {
   const [endpoint, setEndpoint] = useState('');
   const [news, setNews] = useState([]);
+  const [visible, setVisible] = useState(false);
   const response = useFetch(endpoint);
   const cache = useStorageCache(
     'stock-news',
     { news: response },
     res => !res.news.length
   );
+  const handleSlideUp = () => {
+    setVisible(visibility => !visibility);
+  };
+  const handleSwipe = eventInfo => {
+    if (eventInfo.dir === 'Down') {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+  };
+  const handlers = useSwipeVertical(handleSwipe);
 
   useEffect(() => {
     const cachedNews = cache && cache.news;
@@ -217,7 +230,7 @@ export const useStockNews = category => {
     }
   }, [response]);
 
-  return news;
+  return [news, visible, handleSlideUp, handlers];
 };
 
 export const useStockChart = (symbol, range, chartData) => {

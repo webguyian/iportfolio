@@ -20,7 +20,11 @@ const Mail = props => {
   const title = fields.subject || 'New Message';
 
   return (
-    <form className={baseClass} onSubmit={handlers.onSubmit}>
+    <form
+      className={baseClass}
+      onSubmit={handlers.onSubmit}
+      {...handlers.swipe}
+    >
       {state.showControls && <div className={`${baseClass}-overlay`} />}
       <Button
         className={`${baseClass}-drag-handle`}

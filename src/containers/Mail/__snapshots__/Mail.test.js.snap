@@ -3,6 +3,7 @@
 exports[`<Mail /> renders correctly 1`] = `
 <form
   className="mail-app"
+  onMouseDown={[Function]}
   onSubmit={[Function]}
 >
   <button
@@ -165,6 +166,7 @@ Sent from iPortfolio"
 exports[`<Mail /> renders correctly with controls 1`] = `
 <form
   className="mail-app"
+  onMouseDown={[Function]}
   onSubmit={[Function]}
 >
   <button

@@ -32,8 +32,9 @@ const rules = [
       {
         loader: 'postcss-loader',
         options: {
-          ident: 'postcss',
-          plugins: [autoprefixer, flexbugfixes],
+          postcssOptions: {
+            plugins: [autoprefixer, flexbugfixes]
+          },
           sourceMap: true
         }
       },

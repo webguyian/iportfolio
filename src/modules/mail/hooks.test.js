@@ -33,7 +33,11 @@ describe('Mail hooks', () => {
         onCancel: expect.any(Function),
         onConfirmCancel: expect.any(Function),
         onDelete: expect.any(Function),
-        onSubmit: expect.any(Function)
+        onSubmit: expect.any(Function),
+        swipe: {
+          onMouseDown: expect.any(Function),
+          ref: expect.any(Function)
+        }
       };
 
       testHookWithRouter(() => {
@@ -56,7 +60,11 @@ describe('Mail hooks', () => {
         onCancel: expect.any(Function),
         onConfirmCancel: expect.any(Function),
         onDelete: expect.any(Function),
-        onSubmit: expect.any(Function)
+        onSubmit: expect.any(Function),
+        swipe: {
+          onMouseDown: expect.any(Function),
+          ref: expect.any(Function)
+        }
       };
       const Component = testHookWithRouter(() => {
         response = hooks.useMail();

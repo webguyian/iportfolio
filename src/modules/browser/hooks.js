@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 
 import { DEFAULT_COORDINATES, API_TOKEN } from './constants';
 import { getOptions, isExpired, isNotExpired } from './helpers';
@@ -133,7 +134,7 @@ export const useToken = url => {
   };
 
   useEffect(() => {
-    if (token) {
+    if (!url || token) {
       // Exit early if token exists
       return;
     }
@@ -149,6 +150,7 @@ export const useToken = url => {
 
   return token;
 };
+
 export const useFetch = (endpoint, overrides) => {
   const [data, setData] = useState(null);
   const jwt = useToken(endpoint);
@@ -205,8 +207,8 @@ export const useFetchWithData = (endpoint, data) => {
 };
 
 export const useFetchAll = urls => {
-  const [responses, setResponses] = useState([]);
   const jwt = useToken(urls && urls[0]);
+  const [responses, setResponses] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -225,7 +227,7 @@ export const useFetchAll = urls => {
     if (urls && urls.length && jwt) {
       fetchData();
     }
-  }, [urls]);
+  }, [urls, jwt]);
 
   return responses;
 };
@@ -355,4 +357,30 @@ export const useVideoCanvas = () => {
   };
 
   return [canvasRef, videoRef, actions];
+};
+
+export const useSwipeVertical = (callback, offset = 80) => {
+  const handleSwipeUp = eventInfo => {
+    const { deltaY } = eventInfo;
+
+    if (deltaY > offset) {
+      callback(eventInfo);
+    }
+  };
+
+  const handleSwipeDown = eventInfo => {
+    const { deltaY } = eventInfo;
+
+    if (deltaY < -offset) {
+      callback(eventInfo);
+    }
+  };
+
+  const handlers = useSwipeable({
+    onSwipedUp: handleSwipeUp,
+    onSwipedDown: handleSwipeDown,
+    trackMouse: true
+  });
+
+  return handlers;
 };

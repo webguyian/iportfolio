@@ -26,7 +26,8 @@ const Reminder = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    onAdd(id);
+
+    onAdd();
   };
 
   return (

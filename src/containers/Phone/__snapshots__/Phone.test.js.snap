@@ -57,6 +57,7 @@ exports[`<Phone /> renders correctly 1`] = `
     >
       <li>
         <mock-link
+          external={false}
           icon="comment"
           iconSize="lg"
           to="/messages"
@@ -67,9 +68,10 @@ exports[`<Phone /> renders correctly 1`] = `
       </li>
       <li>
         <mock-link
+          external={true}
           icon="phone-alt"
           iconSize="lg"
-          to="#call"
+          to="tel:+12013053245"
           withLabel={true}
         >
           call
@@ -77,6 +79,7 @@ exports[`<Phone /> renders correctly 1`] = `
       </li>
       <li>
         <mock-link
+          external={false}
           icon="envelope"
           iconSize="lg"
           to="/mail"

@@ -1371,7 +1371,7 @@ exports[`<Homescreen /> renders correctly 1`] = `
         className="ui-app-icon-link"
         state={
           Object {
-            "theme": "black-dark",
+            "theme": "faded-dark",
           }
         }
         to="/messages"

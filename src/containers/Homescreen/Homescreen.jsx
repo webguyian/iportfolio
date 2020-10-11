@@ -788,7 +788,7 @@ const Homescreen = () => {
         <AppIcon name="mail" noLabel>
           {mailIcon()}
         </AppIcon>
-        <AppIcon name="messages" theme="black-dark" noLabel>
+        <AppIcon name="messages" theme="faded-dark" noLabel>
           {messengerIcon()}
         </AppIcon>
       </div>

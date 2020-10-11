@@ -9,6 +9,8 @@
   &-bottom-bar {
     display: flex;
     z-index: 2;
+    position: absolute;
+    bottom: 0;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -27,13 +29,17 @@
       &:hover,
       &:focus {
         > .ui-icon-list {
-          color: $white;
+          color: $gray;
+        }
+
+        > .ui-icon-dark-sky {
+          fill: $gray;
         }
       }
 
       > .ui-icon-list {
         transition: color 0.2s;
-        color: $gray-medium;
+        color: $white;
       }
     }
 
@@ -41,12 +47,7 @@
       width: 20px;
       height: 20px;
       transition: fill 0.2s;
-      fill: $gray-medium;
-
-      &:hover,
-      &:focus {
-        fill: $white;
-      }
+      fill: $white;
     }
 
     &-footer {

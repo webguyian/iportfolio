@@ -781,7 +781,168 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
   </form>
   <ul
     className="stocks-app-list"
-  />
+  >
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AAPL
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            APPLE INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            AMZN
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            AMAZON.COM INC
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            FB
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            FACEBOOK INC-CLASS A
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            GOOG
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            ALPHABET INC-CL C
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            MSFT
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
   <StockTicker
     onClick={[Function]}
     stocks={

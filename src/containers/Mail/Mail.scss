@@ -27,6 +27,7 @@
 
   &-header {
     padding: $gutter 0 8px $gutter;
+    user-select: none;
 
     &-title {
       display: flex;

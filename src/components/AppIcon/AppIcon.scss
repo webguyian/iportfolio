@@ -92,4 +92,14 @@ $size: 65px;
       }
     }
   }
+
+  &--mail {
+    > .ui-app-icon-link {
+      background-color: $black;
+
+      > svg {
+        width: 100%;
+      }
+    }
+  }
 }

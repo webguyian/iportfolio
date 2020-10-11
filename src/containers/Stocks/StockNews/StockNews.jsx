@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { string, number, bool } from 'prop-types';
 import classNames from 'classnames';
 
 import { formatTimestamp } from 'modules/stocks/helpers';
@@ -12,23 +12,19 @@ import Text from 'components/Text/Text';
 
 const StocksNews = props => {
   const { category, displayCount, draggable } = props;
-  const [visible, setVisible] = useState(false);
-  const news = useStockNews(category);
+  const [news, visible, handleSlideUp, handlers] = useStockNews(category);
   const baseClass = 'stock-news';
   const visibleClass = visible && `${baseClass}--visible`;
   const accessibleLabel = visible ? 'drag down' : 'drag up';
   const count = displayCount || (news && news.length);
   const stories = news && news.slice(0, count);
-  const handleSlideUp = () => {
-    setVisible(visibility => !visibility);
-  };
 
   if (!news || !news.length) {
     return null;
   }
 
   return (
-    <aside className={classNames(baseClass, visibleClass)}>
+    <aside className={classNames(baseClass, visibleClass)} {...handlers}>
       {draggable && (
         <Button
           className={`${baseClass}-drag-handle`}
@@ -74,9 +70,9 @@ const StocksNews = props => {
 };
 
 StocksNews.propTypes = {
-  category: PropTypes.string,
-  displayCount: PropTypes.number,
-  draggable: PropTypes.bool
+  category: string,
+  displayCount: number,
+  draggable: bool
 };
 
 StocksNews.defaultProps = {

@@ -91,6 +91,12 @@
   }
 }
 
+.iportfolio-app-device--faded-dark {
+  .device-content {
+    background-color: rgba($black-dark, 0.85);
+  }
+}
+
 .iportfolio-app-device--light {
   .device-header-bars {
     color: $black-darker;
