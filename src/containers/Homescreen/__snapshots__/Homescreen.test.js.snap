@@ -17,7 +17,7 @@ exports[`<Homescreen /> renders correctly 1`] = `
         <span
           className="ui-text ui-text--body ui-app-icon-weekday"
         >
-          Tuesday
+          Tue
         </span>
         <span
           className="ui-text ui-text--body ui-app-icon-day"

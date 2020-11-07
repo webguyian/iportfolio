@@ -41,7 +41,7 @@ const Homescreen = () => {
     return (
       <AppIcon name="Calendar">
         <Text className="ui-app-icon-weekday">
-          <DateTime format="EEEE" />
+          <DateTime format="EE" />
         </Text>
         <Text className="ui-app-icon-day">
           <DateTime format="d" />
