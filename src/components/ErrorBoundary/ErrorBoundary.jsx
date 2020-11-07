@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
 
+import { isIE } from 'modules/browser/helpers';
+
 class ErrorBoundary extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired
@@ -13,7 +15,8 @@ class ErrorBoundary extends Component {
     super(props);
 
     this.state = {
-      hasError: false
+      hasError: false,
+      message: 'Shake vigorously to refresh.'
     };
   }
 
@@ -23,6 +26,13 @@ class ErrorBoundary extends Component {
 
   componentDidMount() {
     window.addEventListener('devicemotion', this.detectMotion, false);
+
+    if (isIE()) {
+      this.setState({
+        hasError: true,
+        message: "You're using an outdated and unsupported browser."
+      });
+    }
   }
 
   detectMotion(e) {
@@ -75,7 +85,7 @@ class ErrorBoundary extends Component {
 
   render() {
     const { children } = this.props;
-    const { hasError } = this.state;
+    const { hasError, message } = this.state;
     const baseClass = 'ui-error';
 
     if (hasError) {
@@ -93,7 +103,7 @@ class ErrorBoundary extends Component {
             Something went terribly wrong.
           </Text>
           <Text className={`${baseClass}-message`} element="p">
-            Shake vigorously to refresh.
+            {message}
           </Text>
         </div>
       );

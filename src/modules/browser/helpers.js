@@ -63,3 +63,10 @@ export const getMobileOperatingSystem = () => {
 
   return null;
 };
+
+/**
+ * Detect IE11 and IE10
+ *
+ * @returns {Boolean}
+ */
+export const isIE = () => /Trident\/|MSIE/.test(window.navigator.userAgent);

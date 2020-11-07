@@ -11,4 +11,9 @@
   &-heading {
     margin: $gutter 0;
   }
+
+  &-message {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
