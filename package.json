@@ -89,14 +89,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "Firefox ESR"
+    "defaults"
   ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "jest --bail --changedSince=master --coverage=false"
+      "pre-push": "jest --bail --changedSince=main --coverage=false"
     }
   },
   "lint-staged": {
