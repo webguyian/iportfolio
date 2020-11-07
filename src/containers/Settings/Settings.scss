@@ -1,0 +1,187 @@
+$settings-border: 1px solid rgba($gray-medium, 0.5);
+
+.settings-app {
+  @include stretch-column-nowrap;
+
+  > .ui-text--display {
+    @include type-title;
+    transition: all 0.4s;
+  }
+
+  > .ui-text--body {
+    @include blurred-header;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all 0.4s;
+    font-weight: $font-weight-semibold;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &--scrolled {
+    > .ui-text--display {
+      position: absolute;
+      margin: $gutter-s 0;
+      font-size: $font-size-default;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    > .ui-text--body {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .settings-app-body {
+      padding-top: 35px;
+    }
+  }
+
+  &-featured-item {
+    @include settings-item;
+    display: flex;
+    padding: $gutter-s 20px;
+
+    &-content-name {
+      margin-bottom: $gutter-xs;
+      font-size: $font-size-l;
+    }
+
+
+    > .ui-avatar {
+      width: 55px;
+      height: 55px;
+      margin-right: $gutter;
+    }
+  }
+
+  &-body {
+    display: flex;
+    max-height: 100%;
+    overflow-y: auto;
+
+    &--active {
+      .settings-app-list-container,
+      .settings-app-subview {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  &-list-container,
+  &-subview {
+    transition: transform 0.4s;
+  }
+
+  &-list-container {
+    flex: 0 0 100%;
+  }
+
+  &-subview {
+    flex: 1 0 100%;
+    width: 375px;
+  }
+
+  &-list {
+    @include unstyled-list;
+    margin-top: $gutter-m;
+
+    &--general {
+      .ui-app-icon-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+      }
+    }
+
+    &-item {
+      @include focus-outline;
+      @include settings-item;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      color: $white;
+      text-align: left;
+
+      &-label {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+      }
+    }
+
+    &-item-link {
+      &:hover,
+      &:focus {
+        background-color: $black-medium;
+      }
+
+      .settings-app-list-item-label {
+        @include type-icon("\f054");
+
+        &::after {
+          position: absolute;
+          right: $gutter;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  .ui-app-icon {
+    margin-right: $gutter;
+
+    &-link {
+      width: 35px;
+      height: 35px;
+      margin-bottom: 0;
+    }
+
+    .ui-icon {
+      font-size: 18px;
+    }
+
+    .ui-clock-face {
+      width: 30px;
+      height: 30px;
+      min-height: 30px;
+    }
+
+    &--bluetooth {
+      svg {
+        height: 22px;
+      }
+    }
+
+    &--camera {
+      svg {
+        transform: translate(-1px, -2px);
+      }
+    }
+
+    &--google-maps {
+      svg {
+        width: 30px;
+        margin-top: 1px;
+      }
+    }
+
+    &--music {
+      svg {
+        transform: translate(-1px, 7px);
+      }
+    }
+  }
+}
+
+@keyframes fade-out {
+  to {
+    margin: $gutter-s 0;
+    font-size: $font-size-default;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -23,6 +23,7 @@
 @import "components/Picker/Picker";
 @import "components/SearchField/SearchField";
 @import "components/TabNavigation/TabNavigation";
+@import "components/ToggleCheckbox/ToggleCheckbox";
 @import "components/ToggleSwitch/ToggleSwitch";
 
 // Container styles
@@ -54,6 +55,8 @@
 @import "containers/Photos/PhotoGallery/PhotoGallery";
 @import "containers/Photos/PhotoView/PhotoView";
 @import "containers/Safari/Safari";
+@import "containers/Settings/Settings";
+@import "containers/Settings/Setting";
 @import "containers/Stocks/Stocks";
 @import "containers/Stocks/Stock/Stock";
 @import "containers/Stocks/StockChart/StockChart";

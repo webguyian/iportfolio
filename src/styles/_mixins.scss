@@ -168,3 +168,20 @@
     outline: 0;
   }
 }
+
+@mixin settings-item {
+  padding: $gutter-s $gutter;
+  transition: background-color 0.2s;
+  border-top: $settings-border;
+  border-bottom: $settings-border;
+  background-color: $black-medium;
+}
+
+@mixin blurred-header {
+  z-index: 2;
+  width: 100%;
+  padding: $gutter-s 0;
+  background-color: rgba($black-dark, 0.85);
+  text-align: center;
+  backdrop-filter: blur(4px);
+}

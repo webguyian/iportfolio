@@ -35,50 +35,6 @@ class ErrorBoundary extends Component {
     }
   }
 
-  detectMotion(e) {
-    let acc = e.acceleration;
-
-    let lastX, lastY, lastZ;
-
-    let moveCounter = 0;
-
-    if (!acc.hasOwnProperty('x')) {
-      acc = e.accelerationIncludingGravity;
-    }
-
-    if (!acc.x) {
-      return;
-    }
-
-    if (Math.abs(acc.x) >= 1 && Math.abs(acc.y) >= 1 && Math.abs(acc.z) >= 1) {
-      if (!lastX) {
-        lastX = acc.x;
-        lastY = acc.y;
-        lastZ = acc.z;
-        return;
-      }
-
-      const deltaX = Math.abs(acc.x - lastX);
-      const deltaY = Math.abs(acc.y - lastY);
-      const deltaZ = Math.abs(acc.z - lastZ);
-
-      if (deltaX + deltaY + deltaZ > 3) {
-        moveCounter++;
-      } else {
-        moveCounter = Math.max(0, --moveCounter);
-      }
-
-      if (moveCounter > 2) {
-        window.location.reload();
-        return;
-      }
-
-      lastX = acc.x;
-      lastY = acc.y;
-      lastZ = acc.z;
-    }
-  }
-
   refresh() {
     window.location.reload();
   }

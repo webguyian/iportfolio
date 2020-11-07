@@ -1,0 +1,59 @@
+.ui-toggle-checkbox {
+  display: inline-block;
+  cursor: pointer;
+
+  &--disabled {
+    cursor: default;
+  }
+
+  > input {
+    @include accessibly-hidden;
+
+    &:checked {
+      & + i {
+        background: $green-bright;
+      }
+
+      & + i::after {
+        transform: translateX(20px);
+      }
+    }
+
+    &:disabled {
+      & + i {
+        opacity: 0.5;
+      }
+    }
+
+    &:focus {
+      & + i {
+        outline: 2px solid $blue;
+      }
+    }
+  }
+
+  > i {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    padding: 2px;
+    transition: 0.25s 0.1s;
+    border-radius: 13px;
+    background-color: $gray-medium;
+    vertical-align: middle;
+    box-sizing: initial;
+
+    &::after {
+      display: block;
+      position: absolute;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      transition: 0.25s;
+      border-radius: $border-radius-round;
+      background: $white;
+      content: " ";
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBoundary /> renders correctly with error 1`] = `
+<DocumentFragment>
+  <div
+    class="ui-error"
+  >
+    <button
+      class="ui-btn ui-btn--with-icon ui-error-btn"
+      type="button"
+    >
+      <i
+        class="ui-icon ui-icon-skull-crossbones fas fa-skull-crossbones fa-3x"
+      />
+      <span
+        class="ui-text ui-text--accessible"
+      >
+        Click to refresh
+      </span>
+    </button>
+    <h1
+      class="ui-text ui-text--display ui-error-heading"
+    >
+      Something went terribly wrong.
+    </h1>
+    <p
+      class="ui-text ui-text--body ui-error-message"
+    >
+      Shake vigorously to refresh.
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ErrorBoundary /> renders correctly without error 1`] = `
+<DocumentFragment>
+  <div>
+    Component goes here
+  </div>
+</DocumentFragment>
+`;

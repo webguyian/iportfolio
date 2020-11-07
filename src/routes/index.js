@@ -12,6 +12,7 @@ import PhoneView from 'views/PhoneView';
 import PhotosView from 'views/PhotosView';
 import RemindersView from 'views/RemindersView';
 import SafariView from 'views/SafariView';
+import SettingsView from 'views/SettingsView';
 import StocksView from 'views/StocksView';
 import WeatherView from 'views/WeatherView';
 
@@ -94,6 +95,12 @@ const routes = [
     path: '/safari',
     pathKey: 'safari',
     component: SafariView
+  },
+  {
+    path: '/settings',
+    pathKey: 'settings',
+    component: SettingsView,
+    exact: false
   },
   {
     path: '/stocks',

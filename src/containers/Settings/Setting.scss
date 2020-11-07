@@ -1,0 +1,80 @@
+.setting {
+  @include stretch-column-nowrap;
+
+  &-nav {
+    padding: $gutter-s 0;
+  }
+
+  &-view-container {
+    display: flex;
+    height: 100%;
+
+    .setting--active & {
+      transform: translateX(-100%);
+    }
+  }
+
+  &-view {
+    flex: 1 0 100%;
+    width: 375px;
+  }
+
+  &-subview {
+    flex: 0 1 100%;
+    width: 375px;
+
+    .setting--active & {
+      flex: 1 0 100%;
+    }
+  }
+
+  .ui-link--back {
+    color: $blue-light;
+  }
+
+  .ui-text--display {
+    margin-top: $gutter;
+    margin-bottom: $gutter-xs;
+    font-size: $font-size-m;
+  }
+
+  &-label {
+    color: $gray;
+    font-size: $font-size-m;
+    font-variant: small-caps;
+    text-transform: lowercase;
+  }
+
+  &-btn {
+    @include settings-item;
+    margin: $gutter-xs 0 $gutter;
+    color: $red;
+
+    &[disabled] {
+      color: $gray-medium;
+    }
+  }
+
+  &-item {
+    @include settings-item;
+    display: block;
+
+    &-link {
+      @include type-icon("\f054");
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: $gutter;
+        color: $gray;
+      }
+    }
+  }
+
+  &-credit {
+    max-height: 90%;
+    padding: 0 $gutter-s;
+    white-space: pre-line;
+    overflow: auto;
+  }
+}

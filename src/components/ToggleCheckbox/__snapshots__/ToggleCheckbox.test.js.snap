@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleCheckbox /> renders correctly 1`] = `
+<DocumentFragment>
+  <label
+    class="ui-toggle-checkbox"
+  >
+    <input
+      checked=""
+      type="checkbox"
+    />
+    <i />
+    <span
+      class="ui-text ui-text--accessible"
+    >
+      On
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<ToggleCheckbox /> renders correctly disabled 1`] = `
+<DocumentFragment>
+  <label
+    class="ui-toggle-checkbox ui-toggle-checkbox--disabled"
+  >
+    <input
+      disabled=""
+      type="checkbox"
+    />
+    <i />
+    <span
+      class="ui-text ui-text--accessible"
+    >
+      Off
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<ToggleCheckbox /> renders correctly unchecked 1`] = `
+<DocumentFragment>
+  <label
+    class="ui-toggle-checkbox"
+  >
+    <input
+      type="checkbox"
+    />
+    <i />
+    <span
+      class="ui-text ui-text--accessible"
+    >
+      Off
+    </span>
+  </label>
+</DocumentFragment>
+`;

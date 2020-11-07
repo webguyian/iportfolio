@@ -3,7 +3,7 @@
 $black: #000;
 $black-dark: #1c1c1e;
 $black-darker: #0c0c0c;
-$black-medium: #222;
+$black-medium: #1b1c1e;
 $blue-bright: #2649f7;
 $blue-light: #0b9eee;
 $blue: #07f;
@@ -12,6 +12,7 @@ $gray-medium: #4d4d4d;
 $gray-light: #d6d6d6;
 $gray: #a7a7a7;
 $green: #2f582e;
+$green-bright: #17d162;
 $green-light: lighten($green, 30%);
 $orange: #ffb824;
 $pink: #f36;
@@ -50,6 +51,7 @@ $font-size-xs: 10px;
 // Font weights
 $font-weight-light: 300;
 $font-weight-regular: 400;
+$font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 // Offsets

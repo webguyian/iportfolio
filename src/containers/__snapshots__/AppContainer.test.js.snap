@@ -1421,7 +1421,7 @@ exports[`<AppContainer /> renders correctly 1`] = `
                   <defs>
                     <linearGradient
                       gradientUnits="userSpaceOnUse"
-                      id="messenger"
+                      id="messagesGradient"
                       x1="60"
                       x2="60"
                       y2="120"
@@ -1437,7 +1437,7 @@ exports[`<AppContainer /> renders correctly 1`] = `
                     </linearGradient>
                   </defs>
                   <rect
-                    fill="url(#messenger)"
+                    fill="url(#messagesGradient)"
                     height="120"
                     rx="26"
                     width="120"

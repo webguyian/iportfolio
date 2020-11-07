@@ -28,6 +28,7 @@ module.exports = {
     'jest.config.js',
     '<rootDir>/src/index.js',
     '<rootDir>/src/views',
+    '<rootDir>/src/components/App.jsx',
     '_snapshots_'
   ],
   coverageReporters: ['html'],

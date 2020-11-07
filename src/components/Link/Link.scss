@@ -3,6 +3,7 @@
   text-decoration: none;
 
   &--back {
+    @include focus-outline;
     margin-right: auto;
     color: $yellow;
   }
