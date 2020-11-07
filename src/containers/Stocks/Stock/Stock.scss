@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: $gutter 2px;
   border-bottom: 1px solid $gray-dark;
+  overflow: hidden;
 
   &-btn {
     display: flex;
