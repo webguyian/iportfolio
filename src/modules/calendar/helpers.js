@@ -92,3 +92,7 @@ export const isCurrentMonth = month => {
 
   return Boolean(match);
 };
+
+export const getYearFromId = id => {
+  return Number(id.split('-')[1]);
+};

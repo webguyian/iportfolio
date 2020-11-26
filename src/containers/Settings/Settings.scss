@@ -49,7 +49,6 @@ $settings-border: 1px solid rgba($gray-medium, 0.5);
       font-size: $font-size-l;
     }
 
-
     > .ui-avatar {
       width: 55px;
       height: 55px;
@@ -60,6 +59,7 @@ $settings-border: 1px solid rgba($gray-medium, 0.5);
   &-body {
     display: flex;
     max-height: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
 
     &--active {

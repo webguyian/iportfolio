@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { getInitialCalendar, getYear } from './helpers';
+import { getInitialCalendar, getYear, getYearFromId } from './helpers';
 
 export const useYearView = () => {
   const [id, setId] = useState(null);
@@ -15,7 +15,7 @@ export const useYearView = () => {
       let target;
 
       if (id.startsWith('goto')) {
-        const yearId = `year-${id.split('-')[1]}`;
+        const yearId = `year-${getYearFromId(id)}`;
 
         target = document.getElementById(yearId);
       } else {
@@ -28,11 +28,11 @@ export const useYearView = () => {
     }
   }, [id]);
 
-  return [yearView, toggleView];
+  return [yearView, id, toggleView];
 };
 
 export const useCalendar = () => {
-  const [yearView, toggleView] = useYearView();
+  const [yearView, yearId, toggleView] = useYearView();
   const [scrollId, setScrollId] = useState(null);
   const yearRef = useRef(null);
   const calendar = getInitialCalendar();
@@ -41,11 +41,20 @@ export const useCalendar = () => {
     const { isIntersecting, target } = entries[0];
 
     if (isIntersecting) {
-      const id = target.id.split('-')[1];
+      const id = getYearFromId(target.id);
 
       setScrollId(id);
     }
   };
+
+  useEffect(() => {
+    if (yearId) {
+      const newId = getYearFromId(yearId);
+
+      // Update scrollId
+      setScrollId(newId);
+    }
+  }, [yearId]);
 
   useEffect(() => {
     const yearElement = yearRef.current;
