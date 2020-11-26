@@ -4,6 +4,7 @@ exports[`<DeviceFrame /> renders correctly 1`] = `
 <div>
   <div
     className="device-content"
+    onMouseDown={[Function]}
   >
     <div
       className="device-header-container"
@@ -37,6 +38,7 @@ exports[`<DeviceFrame /> renders correctly on mobile 1`] = `
 <div>
   <div
     className="device-content"
+    onMouseDown={[Function]}
   >
     <div
       className="device-header-container"
@@ -75,6 +77,7 @@ exports[`<DeviceFrame /> renders correctly with leftIndicator 1`] = `
   >
     <div
       className="device-content"
+      onMouseDown={[Function]}
     >
       <div
         className="device-header-container"

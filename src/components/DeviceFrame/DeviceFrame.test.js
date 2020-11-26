@@ -1,5 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 
 import * as hooks from 'modules/browser/hooks';
 
@@ -17,20 +18,32 @@ describe('<DeviceFrame />', () => {
   });
 
   it('renders correctly', () => {
-    const component = create(<DeviceFrame />);
+    const component = create(
+      <MemoryRouter>
+        <DeviceFrame />
+      </MemoryRouter>
+    );
 
     expect(component).toMatchSnapshot();
   });
 
   it('renders correctly with leftIndicator', () => {
-    const component = create(<DeviceFrame leftIndicator={<span>8:30</span>} />);
+    const component = create(
+      <MemoryRouter>
+        <DeviceFrame leftIndicator={<span>8:30</span>} />
+      </MemoryRouter>
+    );
 
     expect(component).toMatchSnapshot();
   });
 
   it('renders correctly on mobile', () => {
     hooks.useBreakpoint.mockReturnValue(true);
-    const component = create(<DeviceFrame />);
+    const component = create(
+      <MemoryRouter>
+        <DeviceFrame />
+      </MemoryRouter>
+    );
 
     expect(component).toMatchSnapshot();
   });
