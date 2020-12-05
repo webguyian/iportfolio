@@ -13,7 +13,10 @@ const plugins = [
     template: './src/index.html'
   }),
   new CopyPlugin({
-    patterns: [{ from: './src/assets/video', to: 'assets/video' }]
+    patterns: [
+      { from: './src/assets', to: 'assets' },
+      { from: './src/manifest.json' }
+    ]
   }),
   new StyleLintPlugin({
     configFile: '.stylelintrc.json',

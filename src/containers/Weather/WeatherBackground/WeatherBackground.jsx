@@ -7,7 +7,7 @@ const WeatherBackground = props => {
   const { name } = props;
   const baseClass = 'weather-background';
   const [canvasRef, videoRef, actions] = useVideoCanvas();
-  const src = `assets/video/${name}.mp4`;
+  const src = `assets/videos/${name}.mp4`;
 
   return (
     <div className={baseClass}>
