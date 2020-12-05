@@ -1,5 +1,5 @@
 const cacheName = 'iportfolio-v1';
-const staticAssets = ['./index.html', './main.css', './main.js', './vendor.js'];
+const staticAssets = ['./', './main.css', './main.js', './vendor.js'];
 
 // async function cacheFirst(req) {
 //   const cache = await caches.open(cacheName);

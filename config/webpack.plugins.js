@@ -15,7 +15,8 @@ const plugins = [
   new CopyPlugin({
     patterns: [
       { from: './src/assets', to: 'assets' },
-      { from: './src/manifest.json' }
+      { from: './src/manifest.json' },
+      { from: './src/sw.js' }
     ]
   }),
   new StyleLintPlugin({

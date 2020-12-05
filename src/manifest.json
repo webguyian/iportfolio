@@ -1,7 +1,7 @@
 {
   "name": "iPortfolio",
   "short_name": "iPortfolio",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#404040",
   "description": "Portfolio for Ian Mac",
@@ -10,7 +10,8 @@
     {
       "src": "./assets/images/app-icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
