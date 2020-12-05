@@ -2,8 +2,6 @@ import autoprefixer from 'autoprefixer';
 import flexbugfixes from 'postcss-flexbugs-fixes';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 
-const devMode = process.env.NODE_ENV !== 'production';
-
 const rules = [
   {
     test: /\.jsx?$/,
@@ -22,7 +20,7 @@ const rules = [
     test: /\.(sa|sc|c)ss$/,
     exclude: /node_modules/,
     use: [
-      devMode ? 'style-loader' : MiniCSSExtractPlugin.loader,
+      MiniCSSExtractPlugin.loader,
       {
         loader: 'css-loader',
         options: {

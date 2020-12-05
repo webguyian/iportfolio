@@ -12,4 +12,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
+});
+
 export default App;
