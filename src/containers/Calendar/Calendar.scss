@@ -4,7 +4,7 @@
   &-top-bar,
   &-bottom-bar {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     padding: 8px $gutter;
 

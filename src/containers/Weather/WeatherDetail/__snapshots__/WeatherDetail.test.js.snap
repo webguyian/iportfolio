@@ -15,6 +15,7 @@ exports[`<WeatherDetail /> renders correctly 1`] = `
       className="weather-background-video"
       loop={true}
       onPlay={[Function]}
+      playsInline={true}
       src="assets/videos/cloudy.mp4"
     />
   </div>

@@ -15,7 +15,7 @@ exports[`<Messages /> renders correctly 1`] = `
           class="ui-avatar"
         >
           <img
-            alt="Ian Mac"
+            alt="Profile photo of Ian Mac"
             class="ui-avatar-image"
             src="https://github.com/webguyian.png?size=50"
           />
@@ -23,7 +23,7 @@ exports[`<Messages /> renders correctly 1`] = `
         <span
           class="ui-text ui-text--body"
         >
-          Web Guy Ian
+          Ian Mac
         </span>
       </mock-link>
     </div>
@@ -79,7 +79,7 @@ exports[`<Messages /> renders correctly with messages 1`] = `
           class="ui-avatar"
         >
           <img
-            alt="Ian Mac"
+            alt="Profile photo of Ian Mac"
             class="ui-avatar-image"
             src="https://github.com/webguyian.png?size=50"
           />
@@ -87,7 +87,7 @@ exports[`<Messages /> renders correctly with messages 1`] = `
         <span
           class="ui-text ui-text--body"
         >
-          Web Guy Ian
+          Ian Mac
         </span>
       </mock-link>
     </div>

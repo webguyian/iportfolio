@@ -22,10 +22,10 @@ const Messages = () => {
       <div className={`${baseClass}-header`}>
         <Link to="/phone">
           <Avatar
-            alt="Ian Mac"
+            alt="Profile photo of Ian Mac"
             src="https://github.com/webguyian.png?size=50"
           />
-          <Text>Web Guy Ian</Text>
+          <Text>Ian Mac</Text>
         </Link>
       </div>
       <div className={`${listClass}-container`} ref={containerRef}>

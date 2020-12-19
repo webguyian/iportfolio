@@ -19,6 +19,7 @@ const WeatherBackground = props => {
         onPlay={actions.onPlay}
         ref={videoRef}
         src={src}
+        playsInline
       ></video>
     </div>
   );

@@ -5,6 +5,7 @@
   left: 0;
   width: 101%;
   height: 100%;
+  pointer-events: none;
 
   &::before {
     display: block;
