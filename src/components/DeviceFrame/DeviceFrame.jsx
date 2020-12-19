@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { useBreakpoint } from 'modules/browser/hooks';
-import { useSwipeHome } from 'modules/lockscreen/hooks';
 
 import Icon from 'components/Icon/Icon';
 
@@ -20,7 +19,6 @@ const DeviceFrame = props => {
   const deviceClass = `${baseClass}-${device}`;
   const colorClass = `${baseClass}-${color}`;
   const isMobile = useBreakpoint(breakpoint);
-  const handlers = useSwipeHome();
 
   const header = () => {
     const headerBarsClass = 'device-header-bars';
@@ -45,7 +43,7 @@ const DeviceFrame = props => {
   if (isMobile) {
     return (
       <div className={className}>
-        <div className="device-content" {...handlers}>
+        <div className="device-content">
           {header()}
           {children}
         </div>
@@ -56,7 +54,7 @@ const DeviceFrame = props => {
   return (
     <div className={classNames(className, baseClass, deviceClass, colorClass)}>
       <div className="device-frame">
-        <div className="device-content" {...handlers}>
+        <div className="device-content">
           {header()}
           {children}
         </div>

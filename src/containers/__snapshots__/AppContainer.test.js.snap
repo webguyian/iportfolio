@@ -12,7 +12,6 @@ exports[`<AppContainer /> renders correctly 1`] = `
     >
       <div
         className="device-content"
-        onMouseDown={[Function]}
       >
         <div
           className="device-header-container"
