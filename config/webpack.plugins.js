@@ -32,7 +32,7 @@ const plugins = [
     filename: 'main.css'
   }),
   new webpack.EnvironmentPlugin({
-    API_PREFIX: devMode ? '' : 'https://api-iportfolio.herokuapp.com'
+    API_PREFIX: devMode ? '' : 'https://iportfolio.webguyian.com'
   }),
   new webpack.HotModuleReplacementPlugin()
 ];
