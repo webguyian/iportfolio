@@ -27,7 +27,6 @@ export const useLockscreen = () => {
 
       // Hide iOS URL address bar
       node.style.cssText = 'top: 100px;';
-      document.body.style.cssText = 'overflow: hidden;';
       window.scrollTo(0, 100);
     }
   }, []);
