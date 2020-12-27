@@ -44,7 +44,7 @@
   }
 
   &-input {
-    @include no-outline;
+    @include focus-outline;
     min-width: 320px;
     min-height: 35px;
     padding: 4px;
