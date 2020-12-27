@@ -19,6 +19,11 @@ export const useLockscreen = () => {
   };
 
   useEffect(() => {
+    // Hide iOS URL address bar
+    window.scrollTo(0, 1);
+  }, []);
+
+  useEffect(() => {
     if (unlocked && !data) {
       setEndpoint(API_UNLOCK);
     }

@@ -8,6 +8,8 @@ describe('<Lockscreen />', () => {
     history: { push: jest.fn() }
   };
 
+  window.scrollTo = jest.fn();
+
   it('renders correctly', async () => {
     let component;
 
