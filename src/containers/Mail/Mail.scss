@@ -2,12 +2,12 @@
   @include stretch-column-nowrap;
   position: relative;
   margin-top: $gutter;
-  transition: top 0.4s;
+  transition: transform 0.4s;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: $black-dark;
   text-align: left;
-  animation: slide-up 0.4s linear;
+  // animation: slide-up 0.4s linear;
 
   &-drag-handle {
     display: block;
@@ -96,15 +96,13 @@
   }
 
   &-controls {
-    position: absolute;
-    bottom: 10px;
     width: 100%;
     padding: 0 8px;
     transform: translateY(calc(100% + 10px));
     transition: transform 0.4s;
 
     &--show {
-      transform: translateY(0);
+      transform: translateY(-30px);
     }
 
     > .ui-btn--anchor-block {
@@ -139,6 +137,10 @@
 
 @keyframes slide-up {
   from {
-    top: 550px;
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(500px);
   }
 }

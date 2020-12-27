@@ -23,14 +23,8 @@ export const useLockscreen = () => {
     const os = getMobileOperatingSystem();
 
     if (os === 'iOS') {
-      const node = document.querySelector('.iportfolio-app');
-
       // Hide iOS URL address bar
-      node.style.cssText = 'top: 100px;';
-
-      setTimeout(() => {
-        window.scrollTo(0, 100);
-      }, 500);
+      window.scrollTo(0, 1);
     }
   }, []);
 

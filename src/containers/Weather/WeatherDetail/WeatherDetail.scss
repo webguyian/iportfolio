@@ -47,13 +47,9 @@ $border: 1px solid rgba($white, 0.25);
   }
 
   &-daily {
-    max-height: 370px;
+    max-height: 280px;
     padding-bottom: $gutter;
     overflow-y: auto;
-
-    @media (min-height: 700px) {
-      max-height: 52vh;
-    }
 
     @include responsive($width-medium) {
       max-height: 390px;
