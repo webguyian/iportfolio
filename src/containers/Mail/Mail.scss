@@ -1,5 +1,6 @@
 .mail-app {
   @include stretch-column-nowrap;
+  position: relative;
   margin-top: $gutter;
   transition: top 0.4s;
   border-top-left-radius: 10px;
