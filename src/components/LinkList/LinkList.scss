@@ -4,7 +4,7 @@
   grid-gap: $gutter-s 0;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  margin-bottom: $gutter-l;
+  margin-bottom: $gutter-m;
 
   &-item-link {
     @include focus-outline;
