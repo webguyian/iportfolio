@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { getMobileOperatingSystem } from 'modules/browser/helpers';
 import { useFetchAndCache, useSwipeVertical } from 'modules/browser/hooks';
 import { API_UNLOCK } from './constants';
 
@@ -19,8 +20,16 @@ export const useLockscreen = () => {
   };
 
   useEffect(() => {
-    // Hide iOS URL address bar
-    window.scrollTo(0, 1);
+    const os = getMobileOperatingSystem();
+
+    if (os === 'iOS') {
+      const node = document.querySelector('.iportfolio-app');
+
+      // Hide iOS URL address bar
+      node.style.cssText = 'top: 100px;';
+      document.body.style.cssText = 'overflow: hidden;';
+      window.scrollTo(0, 100);
+    }
   }, []);
 
   useEffect(() => {
