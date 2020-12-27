@@ -14,7 +14,7 @@ async function networkFirst(req) {
   try {
     const fresh = await fetch(req);
 
-    if (req.url.indexOf('http') === 0) {
+    if (req.url.indexOf('http') === 0 && req.destination !== 'video') {
       cache.put(req, fresh.clone());
     }
 

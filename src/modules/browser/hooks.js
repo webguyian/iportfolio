@@ -330,7 +330,9 @@ export const useVideoCanvas = () => {
       requestAnimationFrame(step);
     }
 
-    requestAnimationFrame(step);
+    if (!video.paused) {
+      requestAnimationFrame(step);
+    }
   };
 
   const takePhoto = (format = defaultFormat) => {
