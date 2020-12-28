@@ -1,6 +1,5 @@
 .setting {
   @include stretch-column-nowrap;
-  padding: 0 $gutter;
 
   &-nav {
     padding: $gutter-s 0;
@@ -9,10 +8,6 @@
   &-view-container {
     display: flex;
     height: 100%;
-
-    .setting--active & {
-      transform: translateX(-102%);
-    }
   }
 
   &-view {
@@ -73,6 +68,7 @@
   }
 
   &-credit {
+    width: 350px;
     max-height: 90%;
     padding: 0 $gutter-s;
     white-space: pre-line;

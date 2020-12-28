@@ -1,4 +1,4 @@
-const cacheName = 'iportfolio-v1.3';
+const cacheName = 'iportfolio-v1.6';
 const staticAssets = ['./', './main.css', './main.js', './vendor.js'];
 
 // async function cacheFirst(req) {
