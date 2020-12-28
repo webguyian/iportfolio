@@ -1,5 +1,6 @@
 .setting {
   @include stretch-column-nowrap;
+  padding: 0 $gutter;
 
   &-nav {
     padding: $gutter-s 0;
@@ -10,7 +11,7 @@
     height: 100%;
 
     .setting--active & {
-      transform: translateX(-100%);
+      transform: translateX(-102%);
     }
   }
 

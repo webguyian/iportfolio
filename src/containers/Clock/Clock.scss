@@ -11,7 +11,11 @@
 
   &-text {
     @include type-number-display;
-    margin: auto 0 100px;
+    margin: auto 0 50px;
     text-align: center;
+
+    @include responsive($width-medium) {
+      margin-bottom: 100px;
+    }
   }
 }
