@@ -16,6 +16,9 @@ const plugins = [
     patterns: [
       { from: './src/assets', to: 'assets' },
       { from: './src/manifest.json' },
+      { from: './src/favicon.ico' },
+      { from: './src/favicon-16x16.png' },
+      { from: './src/favicon-32x32.png' },
       { from: './src/sw.js' }
     ]
   }),
