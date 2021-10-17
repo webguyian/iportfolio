@@ -104,8 +104,7 @@ describe('Stocks helpers', () => {
   describe('handles getUnixDates', () => {
     it('gets dates with UNIX timestamp', () => {
       expect(helpers.getUnixDates('1D', mockDate)).toEqual([
-        1542885060,
-        1542885060
+        1542885060, 1542885060
       ]);
     });
   });

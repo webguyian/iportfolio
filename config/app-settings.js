@@ -27,7 +27,6 @@ const settings = {
   API_REGEX: /\/api/gi,
   // Proxy calls to webpack's dev server to the mock API server
   // Documentation: https://webpack.js.org/configuration/dev-server/#devserver-proxy
-  // Example: http://localhost:9000/sdwan/api/content/home/get to http://localhost:9001/content/home/get
   API_PROXY_CONFIG: function () {
     const apiURL = `http://${this.API_HOST}:${this.API_PORT}`;
 

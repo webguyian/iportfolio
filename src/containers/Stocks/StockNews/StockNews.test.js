@@ -18,8 +18,7 @@ describe('<StockNews />', () => {
       source: 'Reuters',
       summary:
         'Vanessa Bryant said in an Instagram post on Monday that she was both grieving and angry over the loss of her husband, NBA star Kobe Bryant, and 13-year-old Gianna in a helicopter crash last month.',
-      url:
-        'https://www.reuters.com/article/us-people-bryant/kobe-bryants-wife-vanessa-wishes-this-nightmare-would-be-over-idUSKBN20507K'
+      url: 'https://www.reuters.com/article/us-people-bryant/kobe-bryants-wife-vanessa-wishes-this-nightmare-would-be-over-idUSKBN20507K'
     },
     {
       category: 'top news',
@@ -32,8 +31,7 @@ describe('<StockNews />', () => {
       source: 'Reuters',
       summary:
         'The 13th case of coronavirus in the United States was detected in California in an individual under federal quarantine after returning from Wuhan, China, the U.S. Centers for Disease Control and Prevention (CDC) said on Monday.',
-      url:
-        'https://www.reuters.com/article/us-china-health-usa-sandiego/coronavirus-case-confirmed-in-california-takes-u-s-total-to-13-idUSKBN20505I'
+      url: 'https://www.reuters.com/article/us-china-health-usa-sandiego/coronavirus-case-confirmed-in-california-takes-u-s-total-to-13-idUSKBN20505I'
     }
   ];
   const values = [news, false, jest.fn(), {}];

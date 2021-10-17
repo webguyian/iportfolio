@@ -152,11 +152,8 @@ describe('Reminders hooks', () => {
         trackMouse: true
       });
 
-      const {
-        onSwipedLeft,
-        onSwipedRight,
-        onSwiping
-      } = hooks.useSwipeable.mock.calls[0][0];
+      const { onSwipedLeft, onSwipedRight, onSwiping } =
+        hooks.useSwipeable.mock.calls[0][0];
       const eventInfo = {
         deltaX: 50,
         dir: 'Right'

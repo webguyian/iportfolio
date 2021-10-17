@@ -387,8 +387,7 @@ describe('Stocks hooks', () => {
         source: 'Crypto News Monitor',
         summary:
           'This article was originally posted on Trustnodes - a trusted site covering numerous topics related to cryptocurrency and a great selection of news and editorial […]',
-        url:
-          'https://cryptonewsmonitor.com/2020/02/15/hacker-makes-360000-eth-from-a-flash-loan-single-transaction-involving-fulcrum-compound-dydx-and-uniswap/'
+        url: 'https://cryptonewsmonitor.com/2020/02/15/hacker-makes-360000-eth-from-a-flash-loan-single-transaction-involving-fulcrum-compound-dydx-and-uniswap/'
       },
       {
         category: 'company news',
@@ -401,8 +400,7 @@ describe('Stocks hooks', () => {
         source: 'Daily Mail Online',
         summary:
           'No fewer than 40,000 passengers have been affected by travel disruption so far as budget airline easyJet cancels 234 flights. British Airways has cancelled around 20 to 30 flights due to the storm.',
-        url:
-          'https://www.dailymail.co.uk/news/article-8007601/Storm-Dennis-causes-UK-chaos-50-000-airline-passengers.html'
+        url: 'https://www.dailymail.co.uk/news/article-8007601/Storm-Dennis-causes-UK-chaos-50-000-airline-passengers.html'
       },
       {
         category: 'company news',
@@ -416,8 +414,7 @@ describe('Stocks hooks', () => {
         source: 'TechSpot',
         summary:
           'Apparently, Activision Blizzard\'s games were allowed to be on GeForce Now -- but only during the Beta. When the service "graduated" to its 90-day free trial period for founders, Nvidia assumed that its agreement with Activision Blizzard would still hold.…',
-        url:
-          'https://www.techspot.com/news/84031-activision-blizzard-games-pulled-geforce-now-due-misunderstanding.html'
+        url: 'https://www.techspot.com/news/84031-activision-blizzard-games-pulled-geforce-now-due-misunderstanding.html'
       },
       {
         category: 'company news',
@@ -430,8 +427,7 @@ describe('Stocks hooks', () => {
         source: 'Small Business Trends',
         summary:
           'The FTC recently punished a company for using deceptive advertising to dupe some small businesses on the exclusivity of what they were buying.',
-        url:
-          'https://smallbiztrends.com/2020/02/deceptive-advertising-case.html'
+        url: 'https://smallbiztrends.com/2020/02/deceptive-advertising-case.html'
       }
     ];
 
@@ -491,8 +487,7 @@ describe('Stocks hooks', () => {
           source: 'Mac Rumors',
           summary:
             'It was a fairly interesting week for rumors this week, with reports claiming new 5G iPad models will be coming around the same time as 5G iPhones, likely in the September–October timeframe, while a mysterious "AirPod Pro Lite" has been mentioned as being in the works. Subscribe to the MacRumors YouTube channel for more videos. The HomePod turned two years old this week, and Apple is still dealing with the fallout of the Wuhan coronavirus epidemic, which aside from the human toll has impacted both Apple\'s retail sales and product manufacturing. Read on for details on these stories and more that topped the news this week. 5G iPad Pro Models With A14 Series Chip Said to Launch in Fall 2020 A report this week claims that Apple plans to release its first iPhone and iPad models with 5G connectivity in the second half of 2020 . An announcement in September or October is possible. The new iPhone and iPad models are expected to be equipped with 5nm-based A14 chips — likely A14X for the iPad Pro — and support a combination of mmWave and sub-6GHz variants of 5G.',
-          url:
-            'https://www.macrumors.com/2020/02/15/top-stories-5g-iphone-ipad-airpods-pro-lite/'
+          url: 'https://www.macrumors.com/2020/02/15/top-stories-5g-iphone-ipad-airpods-pro-lite/'
         },
         {
           category: 'company news',
@@ -506,8 +501,7 @@ describe('Stocks hooks', () => {
           source: 'CNET',
           summary:
             "iPhone SE 2 cases have started popping up online in anticipation of Apple's rumored March event, where the company is expected to announce the sequel to the cheaper iPhone SE.",
-          url:
-            'https://www.cnet.com/news/iphone-9-se-2-is-real-according-to-case-makers/'
+          url: 'https://www.cnet.com/news/iphone-9-se-2-is-real-according-to-case-makers/'
         },
         {
           category: 'company news',
@@ -521,8 +515,7 @@ describe('Stocks hooks', () => {
           source: 'CNET',
           summary:
             "Many people were shocked -- shocked! -- by the $5,000-plus price tag Apple gave its Pro Display XDR monitor (not to mention that $1,000 stand). But given that the monitor is targeted at professionals who are used to paying through the nose for their gear, the price really isn't so shocking. CNET's Lori Grunin has been testing the Pro Display XDR for a few days and tried to find out exactly who it's for.",
-          url:
-            'https://www.cnet.com/videos/apples-pro-display-xdr-is-a-good-deal/'
+          url: 'https://www.cnet.com/videos/apples-pro-display-xdr-is-a-good-deal/'
         }
       ];
 

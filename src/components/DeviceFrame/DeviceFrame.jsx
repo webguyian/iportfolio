@@ -7,14 +7,8 @@ import { useBreakpoint } from 'modules/browser/hooks';
 import Icon from 'components/Icon/Icon';
 
 const DeviceFrame = props => {
-  const {
-    breakpoint,
-    className,
-    children,
-    color,
-    device,
-    leftIndicator
-  } = props;
+  const { breakpoint, className, children, color, device, leftIndicator } =
+    props;
   const baseClass = 'device';
   const deviceClass = `${baseClass}-${device}`;
   const colorClass = `${baseClass}-${color}`;

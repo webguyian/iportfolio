@@ -166,8 +166,7 @@ describe('Map helpers', () => {
             'https://lh3.ggpht.com/-yklbhwOB31Y/AAAAAAAAAAI/AAAAAAAAAAA/Kne5XL3mn4M/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg',
           rating: 5,
           relative_time_description: 'a month ago',
-          text:
-            'I loved the Café. Eating here with my family felt very surreal. So much technological history was made in the buildings around where I was eating a meatball sub. I felt just a little bit more emotionally connected to the phone in my pocket... oh and the food was good too!',
+          text: 'I loved the Café. Eating here with my family felt very surreal. So much technological history was made in the buildings around where I was eating a meatball sub. I felt just a little bit more emotionally connected to the phone in my pocket... oh and the food was good too!',
           time: 1583205839
         },
         {
@@ -179,8 +178,7 @@ describe('Map helpers', () => {
             'https://lh4.ggpht.com/-SD_t0iZoJ2M/AAAAAAAAAAI/AAAAAAAAAAA/GU43-q3PMyI/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg',
           rating: 5,
           relative_time_description: '2 months ago',
-          text:
-            "It's so awesome to visit and feel the energy of this place. It was totally worth it. Great job Steve Jobs may your saul rest in peace",
+          text: "It's so awesome to visit and feel the energy of this place. It was totally worth it. Great job Steve Jobs may your saul rest in peace",
           time: 1581392455
         },
         {
@@ -192,8 +190,7 @@ describe('Map helpers', () => {
             'https://lh4.ggpht.com/-Mm8p5lrMngA/AAAAAAAAAAI/AAAAAAAAAAA/Lm4I8OUy2u4/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg',
           rating: 3,
           relative_time_description: 'a month ago',
-          text:
-            'Enthusiastic staff. They sell (overpriced) shirts, mugs, and other unique items not found in any other Apple store. Worth a visit if you’re an Apple fan.',
+          text: 'Enthusiastic staff. They sell (overpriced) shirts, mugs, and other unique items not found in any other Apple store. Worth a visit if you’re an Apple fan.',
           time: 1581961455
         },
         {
@@ -205,8 +202,7 @@ describe('Map helpers', () => {
             'https://lh4.ggpht.com/-EfCgdnUxCKA/AAAAAAAAAAI/AAAAAAAAAAA/HSocQfvWtX4/s128-c0x00000000-cc-rp-mo/photo.jpg',
           rating: 5,
           relative_time_description: 'a month ago',
-          text:
-            'Not much crowded. Plenty of retail store employees. Not as fancy as Apple Park visitor center but better for quick visit.',
+          text: 'Not much crowded. Plenty of retail store employees. Not as fancy as Apple Park visitor center but better for quick visit.',
           time: 1582013141
         },
         {
@@ -218,8 +214,7 @@ describe('Map helpers', () => {
             'https://lh5.ggpht.com/-hYQjg3UUhL4/AAAAAAAAAAI/AAAAAAAAAAA/hcBa7LpUfZo/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg',
           rating: 3,
           relative_time_description: '4 months ago',
-          text:
-            "It's  average. Just like any other apple store. It is popular with the tourist. They love taking pictures of the apple sign outside the store ╮(╯▽╰)╭",
+          text: "It's  average. Just like any other apple store. It is popular with the tourist. They love taking pictures of the apple sign outside the store ╮(╯▽╰)╭",
           time: 1575406781
         }
       ],

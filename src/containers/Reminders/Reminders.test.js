@@ -83,9 +83,8 @@ describe('<Reminders />', () => {
       ReminderComponent.props.onUpdate(updated);
     });
 
-    const [
-      updatedReminders
-    ] = browserHooks.useLocalStorage.mock.results[1].value;
+    const [updatedReminders] =
+      browserHooks.useLocalStorage.mock.results[1].value;
 
     expect(updatedReminders).toHaveLength(1);
     expect(updatedReminders[0]).toEqual({
