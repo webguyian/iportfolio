@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 const MediaBlock = props => {
   const { align, alt, children, className, src } = props;
@@ -15,7 +15,7 @@ const MediaBlock = props => {
   };
 
   return (
-    <div className={classNames(baseClass, alignClass, className)}>
+    <div className={cx(baseClass, alignClass, className)}>
       {hasSecureSrc && isLeft ? <img {...imgProps} /> : null}
       <div className={`${baseClass}-content`}>{children}</div>
       {hasSecureSrc && !isLeft ? <img {...imgProps} /> : null}

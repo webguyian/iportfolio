@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
@@ -32,22 +32,19 @@ const Note = props => {
       <div className={`${baseClass}-top-bar`}>
         <Link back to="/notes" onClick={onBack} />
       </div>
-      <div
-        className={classNames(`${baseClass}-body`, offsetClass)}
-        {...handlers}
-      >
+      <div className={cx(`${baseClass}-body`, offsetClass)} {...handlers}>
         <Text className={`${baseClass}-timestamp`}>
           <DateTime format={timestampFormat}>{date}</DateTime>
         </Text>
         <input
-          className={classNames(inputClass, titleInputClass)}
+          className={cx(inputClass, titleInputClass)}
           onChange={({ target }) => onChange('title', target.value)}
           onKeyUp={handleKeyUp}
           ref={titleInput}
           value={title}
         />
         <textarea
-          className={classNames(inputClass, textInputClass)}
+          className={cx(inputClass, textInputClass)}
           onChange={({ target }) => onChange('text', target.value)}
           ref={textInput}
           value={text}

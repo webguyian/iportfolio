@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Icon from 'components/Icon/Icon';
 import Text from 'components/Text/Text';
@@ -21,7 +21,7 @@ const Button = forwardRef((props, ref) => {
 
   return (
     <button
-      className={classNames(baseClass, iconClass, modifierClass, className)}
+      className={cx(baseClass, iconClass, modifierClass, className)}
       ref={ref}
       {...otherProps}
     >

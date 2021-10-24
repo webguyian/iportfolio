@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';
@@ -23,7 +23,7 @@ const Camera = () => {
     <div className={baseClass}>
       <div className={`${baseClass}-top-bar`}>
         <Button
-          className={classNames(controlClass, getControlStateClass(flash))}
+          className={cx(controlClass, getControlStateClass(flash))}
           icon="bolt"
           size="2x"
           disabled={flash.state === 'disabled'}
@@ -32,7 +32,7 @@ const Camera = () => {
           Set flash
         </Button>
         <Button
-          className={classNames(controlClass, getControlStateClass(timer))}
+          className={cx(controlClass, getControlStateClass(timer))}
           icon="history"
           size="2x"
           disabled={timer.state === 'disabled'}
@@ -41,7 +41,7 @@ const Camera = () => {
           Set timer
         </Button>
         <Button
-          className={classNames(controlClass, getControlStateClass(filter))}
+          className={cx(controlClass, getControlStateClass(filter))}
           icon="swatchbook"
           size="2x"
           disabled={filterState === 'disabled'}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 const FormField = props => {
   const {
@@ -23,7 +23,7 @@ const FormField = props => {
 
   if (isTextarea) {
     return (
-      <div className={classNames(baseClass, className)}>
+      <div className={cx(baseClass, className)}>
         <textarea
           className={`${baseClass}-textarea`}
           id={id}

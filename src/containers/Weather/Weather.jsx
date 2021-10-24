@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useRouteMatch } from 'react-router-dom';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Icon from 'components/Icon/Icon';
 import Link from 'components/Link/Link';
@@ -22,7 +22,7 @@ const Weather = () => {
   const detailClass = isDetail && `${baseClass}--detail`;
 
   return (
-    <div className={classNames(baseClass, detailClass)}>
+    <div className={cx(baseClass, detailClass)}>
       {listMatch && <WeatherList current={currentCity} />}
       {isDetail && <WeatherDetail data={data} />}
       {!data && (

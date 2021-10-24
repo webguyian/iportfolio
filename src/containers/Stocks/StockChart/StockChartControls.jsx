@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 
@@ -15,7 +15,7 @@ const StockChartControls = props => {
       {options.map(control => (
         <li
           key={control}
-          className={classNames(optionClass, control === active && activeClass)}
+          className={cx(optionClass, control === active && activeClass)}
         >
           <Button onClick={onClick.bind(null, control)}>{control}</Button>
         </li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 const Icon = props => {
   const { className, label, name, size, svg } = props;
@@ -11,7 +11,7 @@ const Icon = props => {
   if (svg) {
     return (
       <svg
-        className={classNames(baseClass, className)}
+        className={cx(baseClass, className)}
         role="presentation"
         focusable="false"
       >
@@ -22,7 +22,7 @@ const Icon = props => {
 
   return (
     <i
-      className={classNames(baseClass, iconClass, sizeClass, className)}
+      className={cx(baseClass, iconClass, sizeClass, className)}
       title={label}
     />
   );

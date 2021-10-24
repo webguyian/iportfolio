@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { getLapIndex } from 'modules/clock/helpers';
 
@@ -20,7 +20,7 @@ const Laps = props => {
     <ul className={lapListClass}>
       {laps.map((lap, index) => (
         <li
-          className={classNames(`${lapListClass}-item`, {
+          className={cx(`${lapListClass}-item`, {
             [maxClass]: lap === max,
             [minClass]: lap === min
           })}

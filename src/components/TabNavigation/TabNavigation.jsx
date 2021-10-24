@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { array, bool } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 import { NavLink, Route } from 'react-router-dom';
 
 import Icon from 'components/Icon/Icon';
@@ -26,7 +26,7 @@ const TabNavigation = props => {
             {tabs.map(tab => (
               <li key={tab.icon} className={`${baseClass}-list-item`}>
                 <NavLink
-                  className={classNames(linkClass, 'ui-link')}
+                  className={cx(linkClass, 'ui-link')}
                   activeClassName={activeClass}
                   to={tab.path}
                 >

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { formatPrice, getPercentage } from 'modules/stocks/helpers';
 
@@ -28,7 +28,7 @@ const Stock = props => {
           <Text className={`${baseClass}-price`} modifier="bold">
             {formatPrice(price)}
           </Text>
-          <Text className={classNames(differenceClass, modifierClass)}>
+          <Text className={cx(differenceClass, modifierClass)}>
             {getPercentage(price, previousPrice)}
           </Text>
         </div>

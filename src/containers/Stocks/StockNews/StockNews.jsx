@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, number, bool } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { formatTimestamp } from 'modules/stocks/helpers';
 import { useStockNews } from 'modules/stocks/hooks';
@@ -24,7 +24,7 @@ const StocksNews = props => {
   }
 
   return (
-    <aside className={classNames(baseClass, visibleClass)} {...handlers}>
+    <aside className={cx(baseClass, visibleClass)} {...handlers}>
       {draggable && (
         <Button
           className={`${baseClass}-drag-handle`}

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
@@ -23,7 +23,7 @@ const Map = props => {
   const activeBtnClass = 'ui-btn--active';
 
   return (
-    <div className={classNames(baseClass, streetViewClass)}>
+    <div className={cx(baseClass, streetViewClass)}>
       {map && <MapSearch inputRef={inputRef} />}
       <div className={`${baseClass}-container`} ref={mapRef}>
         <Text className="ui-text--loading" element="h2">
@@ -35,7 +35,7 @@ const Map = props => {
       )}
       <div className={`${baseClass}-bottom-bar`}>
         <Button
-          className={classNames(view.map && activeBtnClass)}
+          className={cx(view.map && activeBtnClass)}
           icon="map-marker-alt"
           size="2x"
           onClick={showSavedView.bind(null, false)}
@@ -44,7 +44,7 @@ const Map = props => {
           Explore
         </Button>
         <Button
-          className={classNames(view.saved && activeBtnClass)}
+          className={cx(view.saved && activeBtnClass)}
           icon="bookmark"
           size="2x"
           onClick={showSavedView.bind(null, true)}

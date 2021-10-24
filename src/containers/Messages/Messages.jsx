@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { useMessages } from 'modules/messages/hooks';
 
@@ -33,7 +33,7 @@ const Messages = () => {
           {messages.map(message => (
             <li
               key={message.id}
-              className={classNames(
+              className={cx(
                 listItemClass,
                 message.from ? messageFromClass : messageToClass
               )}

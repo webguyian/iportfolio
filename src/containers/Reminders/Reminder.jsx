@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
@@ -32,7 +32,7 @@ const Reminder = props => {
 
   return (
     <form
-      className={classNames(baseClass, checkedClass, swipedClass, swipingClass)}
+      className={cx(baseClass, checkedClass, swipedClass, swipingClass)}
       onSubmit={handleSubmit}
       {...handlers}
     >

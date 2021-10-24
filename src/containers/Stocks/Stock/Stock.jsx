@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { formatPrice, getPercentage } from 'modules/stocks/helpers';
 import { useSwipeOffset } from 'modules/stocks/hooks';
@@ -37,10 +37,7 @@ const Stock = props => {
   };
 
   return (
-    <li
-      className={classNames(baseClass, swipedClass, swipingClass)}
-      {...handlers}
-    >
+    <li className={cx(baseClass, swipedClass, swipingClass)} {...handlers}>
       <Button className={`${baseClass}-btn`} onClick={setStockDetail}>
         <div className={`${baseClass}-name`}>
           <Text className={`${baseClass}-symbol`} modifier="bold">
@@ -51,7 +48,7 @@ const Stock = props => {
         {price && !hidePrice && (
           <div className={`${baseClass}-value`}>
             <Text className={`${baseClass}-price`}>{formatPrice(price)}</Text>
-            <Text className={classNames(differenceClass, modifierClass)}>
+            <Text className={cx(differenceClass, modifierClass)}>
               {getPercentage(price, previousPrice)}
             </Text>
           </div>

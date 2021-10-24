@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { initialStocks } from 'modules/stocks/constants';
 import {
@@ -52,7 +52,7 @@ const Stocks = () => {
   };
 
   return (
-    <div className={classNames(baseClass, withDetailClass, withSearchClass)}>
+    <div className={cx(baseClass, withDetailClass, withSearchClass)}>
       <header className={`${baseClass}-header`}>
         <div className={`${baseClass}-header-content`}>
           <Text className={`${baseClass}-title`} element="h1" type="display">

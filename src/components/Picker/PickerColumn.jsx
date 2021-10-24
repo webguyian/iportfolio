@@ -1,7 +1,7 @@
 /* eslint-disable no-invalid-this */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 class PickerColumn extends Component {
   static propTypes = {
@@ -176,10 +176,7 @@ class PickerColumn extends Component {
       return (
         <div
           key={index}
-          className={classNames(
-            itemClass,
-            option === value && itemSelectedClass
-          )}
+          className={cx(itemClass, option === value && itemSelectedClass)}
           onClick={this.handleItemClick.bind(this, option)}
         >
           {option}

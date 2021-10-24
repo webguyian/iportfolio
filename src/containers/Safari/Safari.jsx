@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import LinkList from 'components/LinkList/LinkList';
 import SearchField from 'components/SearchField/SearchField';
@@ -14,7 +14,7 @@ const Safari = () => {
   const searchClass = hasSearch && `${baseClass}--with-search`;
 
   return (
-    <div className={classNames(baseClass, searchClass)}>
+    <div className={cx(baseClass, searchClass)}>
       <SearchField placeholder="Search or enter website name" {...actions} />
       <div className={`${baseClass}-content`}>
         <Text element="h1" type="display">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import AppIcon from 'components/AppIcon/AppIcon';
 import Avatar from 'components/Avatar/Avatar';
@@ -22,7 +22,7 @@ const Settings = () => {
   const scrolledClass = scrolled ? `${baseClass}--scrolled` : false;
 
   return (
-    <div className={classNames(baseClass, scrolledClass)}>
+    <div className={cx(baseClass, scrolledClass)}>
       <Text element="h1" type="display">
         Settings
       </Text>
@@ -54,7 +54,7 @@ const Settings = () => {
                     <Text element="p">Web Developer</Text>
                   </div>
                 </div>
-                <ul className={classNames(listClass, `${listClass}--general`)}>
+                <ul className={cx(listClass, `${listClass}--general`)}>
                   {settings.map(setting => (
                     <li key={setting.id} className={`${listClass}-item`}>
                       <AppIcon

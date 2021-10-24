@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, object } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Link from 'components/Link/Link';
 import Text from 'components/Text/Text';
@@ -39,7 +39,7 @@ const PhotoGallery = props => {
           {photos.map((photo, index) => (
             <Link
               key={photo.metadata.dateCreated}
-              className={classNames(
+              className={cx(
                 frameClass,
                 photo.metadata.favorited && favoriteClass
               )}

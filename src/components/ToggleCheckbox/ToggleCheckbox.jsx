@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Text from 'components/Text/Text';
 
@@ -10,7 +10,7 @@ const ToggleCheckbox = props => {
   const disabledClass = disabled && `${baseClass}--disabled`;
 
   return (
-    <label className={classNames(baseClass, disabledClass)}>
+    <label className={cx(baseClass, disabledClass)}>
       <input type="checkbox" defaultChecked={checked} disabled={disabled} />
       <i></i>
       <Text type="accessible">{checked ? 'On' : 'Off'}</Text>

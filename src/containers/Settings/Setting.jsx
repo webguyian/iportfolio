@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { func, object } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 import { Route, Switch } from 'react-router-dom';
 
 import Button from 'components/Button/Button';
@@ -18,7 +18,7 @@ const Setting = props => {
   const backFn = state.active ? () => actions.onNavigate() : onClick;
 
   return (
-    <div className={classNames(baseClass, activeClass)}>
+    <div className={cx(baseClass, activeClass)}>
       <nav className={`${baseClass}-nav`}>
         <Link back to={backLink} onClick={backFn} ref={backBtnRef} />
       </nav>

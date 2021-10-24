@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import RoundedButton from 'components/Button/RoundedButton';
 import Text from 'components/Text/Text';
@@ -50,7 +50,7 @@ const Calculator = () => {
   return (
     <div className={baseClass}>
       <output
-        className={classNames(outputClass, lengthClass)}
+        className={cx(outputClass, lengthClass)}
         onClick={handleClickOutput}
       >
         {display}

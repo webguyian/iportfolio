@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { weekdays } from 'modules/calendar/constants';
 import { useCalendar, useGoToToday } from 'modules/calendar/hooks';
@@ -13,7 +13,7 @@ const Calendar = () => {
   const yearViewClass = yearView && `${baseClass}--year-view`;
 
   return (
-    <div className={classNames(baseClass, yearViewClass)}>
+    <div className={cx(baseClass, yearViewClass)}>
       {!yearView && (
         <div className={`${baseClass}-top-bar`}>
           <Button

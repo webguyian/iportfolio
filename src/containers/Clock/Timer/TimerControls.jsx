@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import RoundedButton from 'components/Button/RoundedButton';
 
@@ -25,12 +25,12 @@ const TimerControls = props => {
 
   return (
     <div className={baseClass}>
-      <div className={classNames(controlClass, controlDisabledClass)}>
+      <div className={cx(controlClass, controlDisabledClass)}>
         <RoundedButton disabled={disabled} onClick={secondaryAction}>
           {!timerRunning && hasLaps ? resetLabel : secondaryLabel}
         </RoundedButton>
       </div>
-      <div className={classNames(controlClass, controlStateClass)}>
+      <div className={cx(controlClass, controlStateClass)}>
         <RoundedButton onClick={primaryAction}>
           {timerRunning ? stopLabel : startLabel}
         </RoundedButton>

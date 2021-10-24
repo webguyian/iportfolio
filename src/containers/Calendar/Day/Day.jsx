@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Text from 'components/Text/Text';
 
@@ -10,7 +10,7 @@ const Day = props => {
   const todayClass = isToday && `${baseClass}--today`;
 
   return (
-    <li className={classNames(baseClass, todayClass)}>
+    <li className={cx(baseClass, todayClass)}>
       {day && <Text className={`${baseClass}-text`}>{day}</Text>}
     </li>
   );

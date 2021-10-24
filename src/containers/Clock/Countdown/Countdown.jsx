@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Text from 'components/Text/Text';
 
@@ -28,7 +28,7 @@ const Countdown = props => {
       <svg className={`${baseClass}-svg`}>
         <circle style={style} r={radius} cx={radius} cy={radius}></circle>
       </svg>
-      <Text element="h2" className={classNames(textClass, textWithHours)}>
+      <Text element="h2" className={cx(textClass, textWithHours)}>
         {`${displayHours}${displayMinutes}:${displaySeconds}`}
       </Text>
     </div>

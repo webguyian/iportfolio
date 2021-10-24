@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { useBreakpoint } from 'modules/browser/hooks';
 
@@ -46,7 +46,7 @@ const DeviceFrame = props => {
   }
 
   return (
-    <div className={classNames(className, baseClass, deviceClass, colorClass)}>
+    <div className={cx(className, baseClass, deviceClass, colorClass)}>
       <div className="device-frame">
         <div className="device-content">
           {header()}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, node, string } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 import kebabCase from 'lodash/kebabCase';
 
 import Link from 'components/Link/Link';
@@ -14,7 +14,7 @@ const AppIcon = props => {
   const style = color ? { backgroundColor: color } : undefined;
 
   return (
-    <div className={classNames(baseClass, nameClass)}>
+    <div className={cx(baseClass, nameClass)}>
       {noLink ? (
         <Text className={`${baseClass}-link`} style={style}>
           {children}

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 import { Link as RouterLink } from 'react-router-dom';
 
 import Icon from 'components/Icon/Icon';
@@ -27,7 +27,7 @@ const Link = forwardRef((props, ref) => {
   if (back) {
     return (
       <RouterLink
-        className={classNames(baseClass, backLinkClass, className)}
+        className={cx(baseClass, backLinkClass, className)}
         to={to}
         ref={ref}
         {...otherProps}
@@ -41,7 +41,7 @@ const Link = forwardRef((props, ref) => {
     return (
       <a
         href={to}
-        className={classNames(baseClass, iconClass, className)}
+        className={cx(baseClass, iconClass, className)}
         target="_blank"
         rel="noopener noreferrer"
         {...otherProps}
@@ -54,7 +54,7 @@ const Link = forwardRef((props, ref) => {
 
   return (
     <RouterLink
-      className={classNames(baseClass, iconClass, className)}
+      className={cx(baseClass, iconClass, className)}
       to={state ? { pathname: to, state } : to}
       ref={ref}
       {...otherProps}

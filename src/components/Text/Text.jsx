@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 const Text = props => {
   const { className, element, modifier, type, ...otherProps } = props;
@@ -8,7 +8,7 @@ const Text = props => {
   const modifierClass = modifier && `ui-text--${modifier}`;
 
   return React.createElement(element, {
-    className: classNames(baseClass, modifierClass, className),
+    className: cx(baseClass, modifierClass, className),
     ...otherProps
   });
 };

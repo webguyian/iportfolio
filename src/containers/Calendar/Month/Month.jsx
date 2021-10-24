@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { getWeeks, isCurrentMonth } from 'modules/calendar/helpers';
 import Button from 'components/Button/Button';
@@ -14,7 +14,7 @@ const Month = props => {
   const weeks = getWeeks(month);
   const baseClass = 'ui-month';
   const currentMonthClass = currentMonth && `${baseClass}--current`;
-  const className = classNames(baseClass, currentMonthClass);
+  const className = cx(baseClass, currentMonthClass);
   const titleClass = `${baseClass}-title`;
   const offsetClass = `${titleClass}--offset-${offset}`;
 
@@ -22,7 +22,7 @@ const Month = props => {
   const render = () => (
     <Fragment>
       <Text
-        className={classNames(titleClass, offsetClass)}
+        className={cx(titleClass, offsetClass)}
         element="h2"
         modifier="bold"
       >

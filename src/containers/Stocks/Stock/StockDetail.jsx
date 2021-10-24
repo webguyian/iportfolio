@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import { formatPrice, getPercentage } from 'modules/stocks/helpers';
 
@@ -52,7 +52,7 @@ const StockDetail = props => {
             <Text className={`${baseClass}-price`}>
               {formatPrice(stock.price)}
             </Text>
-            <Text className={classNames(differenceClass, modifierClass)}>
+            <Text className={cx(differenceClass, modifierClass)}>
               {getPercentage(stock.price, stock.previousPrice)}
             </Text>
             {showAdd && (

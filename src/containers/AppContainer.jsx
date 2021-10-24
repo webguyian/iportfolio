@@ -1,7 +1,7 @@
 import React from 'react';
 import { object } from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
@@ -41,7 +41,7 @@ const AppContainer = props => {
   return (
     <div className={baseClass}>
       <DeviceFrame
-        className={classNames(deviceClass, themeClass)}
+        className={cx(deviceClass, themeClass)}
         leftIndicator={<LeftIndicator />}
       >
         <ErrorBoundary>

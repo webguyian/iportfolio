@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { func, string } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
@@ -16,7 +16,7 @@ const ToggleSwitch = props => {
   };
 
   return (
-    <label className={classNames(baseClass, activeClass)}>
+    <label className={cx(baseClass, activeClass)}>
       <input
         className={`${baseClass}-checkbox`}
         type="checkbox"

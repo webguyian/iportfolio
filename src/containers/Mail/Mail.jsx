@@ -1,6 +1,6 @@
 import React from 'react';
 import { object } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import FormField from 'components/FormField/FormField';
@@ -92,7 +92,7 @@ const Mail = props => {
           />
         )}
       </div>
-      <div className={classNames(controlsClass, showControlsClass)}>
+      <div className={cx(controlsClass, showControlsClass)}>
         <Button modifier="anchor-block" onClick={handlers.onDelete}>
           Delete Draft
         </Button>

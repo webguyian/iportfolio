@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import DateTime from 'components/DateTime/DateTime';
@@ -27,10 +27,7 @@ const NotePreview = props => {
   };
 
   return (
-    <div
-      className={classNames(baseClass, swipedClass, swipingClass)}
-      {...handlers}
-    >
+    <div className={cx(baseClass, swipedClass, swipingClass)} {...handlers}>
       <Link
         to={{ pathname: `/notes/${note.id}`, state: { id: note.id } }}
         onClick={handleClick}

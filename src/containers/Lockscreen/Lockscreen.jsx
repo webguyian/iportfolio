@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import DateTime from 'components/DateTime/DateTime';
 import Icon from 'components/Icon/Icon';
@@ -15,7 +15,7 @@ const Lockscreen = () => {
 
   return (
     <div
-      className={classNames(baseClass, unlockedClass)}
+      className={cx(baseClass, unlockedClass)}
       onTransitionEnd={handleUnlock}
     >
       <header className={`${baseClass}-header`}>

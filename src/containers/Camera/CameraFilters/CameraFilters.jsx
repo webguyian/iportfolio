@@ -1,6 +1,6 @@
 import React from 'react';
 import { object, func, string } from 'prop-types';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Button from 'components/Button/Button';
 import Text from 'components/Text/Text';
@@ -44,7 +44,7 @@ const CameraFilters = props => {
       <div className={`${filterClass}-list`}>
         {filters.current.map(filter => (
           <Button
-            className={classNames(
+            className={cx(
               filterClass,
               filter.label === activeFilter && activeClass
             )}
