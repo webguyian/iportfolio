@@ -1,16 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 export const useSettings = () => {
-  const [active, setActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const scrollRef = useRef();
-  const handleClick = setting => {
-    if (setting) {
-      setActive(s => !s);
-    } else {
-      setActive(false);
-    }
-  };
+
   const handleScroll = () => {
     const { scrollTop } = scrollRef.current;
     const el = document.body.querySelector('.iportfolio-app-device');
@@ -26,10 +19,6 @@ export const useSettings = () => {
       el.classList.remove(activeClass);
     }
   };
-  const state = {
-    active,
-    scrolled
-  };
 
   useEffect(() => {
     const ref = scrollRef.current;
@@ -43,7 +32,7 @@ export const useSettings = () => {
     };
   }, [scrollRef.current]);
 
-  return [state, scrollRef, handleClick];
+  return [scrolled, scrollRef];
 };
 
 export const useSetting = setting => {
