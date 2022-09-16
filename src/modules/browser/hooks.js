@@ -206,6 +206,57 @@ export const useFetchWithData = (endpoint, data) => {
   return response;
 };
 
+export const useFetchWithFormData = (endpoint, data) => {
+  const [url, setUrl] = useState('');
+  const [options, setOptions] = useState(null);
+  const response = useFetch(url, options);
+
+  useEffect(() => {
+    if (!endpoint || !data) {
+      return;
+    }
+
+    const setData = async () => {
+      const formData = new FormData();
+
+      for (const key of Object.keys(data)) {
+        if (key === 'attachment') {
+          // Covert base64 data to blob
+          const blob = await fetch(data[key]).then(res => res.blob());
+
+          formData.append(key, blob, 'image.png');
+        } else {
+          formData.append(key, data[key]);
+        }
+      }
+
+      const jwt = JSON.parse(window.localStorage.getItem('jwt'));
+      const requestOptions = {
+        method: 'POST',
+        withCredentials: true,
+        credentials: 'include',
+        headers: {
+          Authorization: `Bearer ${jwt.token}`
+        },
+        body: formData
+      };
+
+      setOptions(requestOptions);
+      setUrl(endpoint);
+    };
+
+    setData();
+  }, [endpoint, data]);
+
+  useEffect(() => {
+    if (response) {
+      setUrl('');
+    }
+  }, [response]);
+
+  return response;
+};
+
 export const useFetchAll = urls => {
   const jwt = useToken(urls && urls[0]);
   const [responses, setResponses] = useState([]);
