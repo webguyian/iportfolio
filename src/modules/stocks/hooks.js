@@ -7,11 +7,7 @@ import {
   useStorageCache,
   useSwipeVertical
 } from 'modules/browser/hooks';
-import {
-  API_CANDLESTICK,
-  API_EXCHANGE,
-  API_QUOTE
-} from 'modules/stocks/constants';
+import { API_CANDLESTICK, API_QUOTE } from 'modules/stocks/constants';
 import {
   getCandlestickEndpoint,
   getResolution,
@@ -23,6 +19,8 @@ import {
   updateChartData,
   rehydrateChartData
 } from 'modules/stocks/helpers';
+
+import EXCHANGE_DATA from 'api/stocks/exchange/get.json';
 
 export const useSearch = () => {
   const [value, setValue] = useState('');
@@ -86,16 +84,10 @@ export const useStockSearch = (allStocks, searchTerm) => {
 
 export const useStockExchange = () => {
   const [allStocks, setAllStocks] = useState([]);
-  const exchangeResponse = useFetch(API_EXCHANGE);
 
   useEffect(() => {
-    if (!exchangeResponse) {
-      // Exit early if no response
-      return;
-    }
-
-    setAllStocks(exchangeResponse);
-  }, [exchangeResponse]);
+    setAllStocks(EXCHANGE_DATA);
+  }, []);
 
   return allStocks;
 };
