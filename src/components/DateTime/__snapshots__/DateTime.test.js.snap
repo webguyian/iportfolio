@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DateTime /> renders correctly 1`] = `
+<DocumentFragment>
+  11:11
+</DocumentFragment>
+`;

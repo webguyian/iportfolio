@@ -26,6 +26,7 @@ export const originalDate = global.Date;
 
 global.Date = jest.fn(() => mockDate);
 global.Date.now = jest.fn(() => mockTime);
+global.Date.UTC = jest.fn(() => 1572606660000);
 global.fetch = jest.fn().mockResolvedValue({ json: () => Promise.resolve({}) });
 
 export const createMockResponse = data => {
