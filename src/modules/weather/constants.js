@@ -36,9 +36,9 @@ export const DEFAULT_LOCATIONS = [
   }
 ];
 
-export const GEOCODE_API = `${process.env.API_PREFIX}/api/location`;
+export const API_GEOCODE = `${process.env.API_PREFIX}/api/location`;
 
-export const WEATHER_API = `${process.env.API_PREFIX}/api/weather`;
+export const API_WEATHER = `${process.env.API_PREFIX}/api/weather`;
 
 export const WIND_DIRECTIONS = [
   'N',

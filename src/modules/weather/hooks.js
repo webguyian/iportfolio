@@ -5,7 +5,7 @@ import {
   useFetchAndCache,
   useFetchAllAndCache
 } from 'modules/browser/hooks';
-import { GEOCODE_API, WEATHER_API } from './constants';
+import { API_GEOCODE, API_WEATHER } from './constants';
 import { getWeatherEndpoint } from './helpers';
 
 export const useLocation = (coordinates, key) => {
@@ -19,7 +19,7 @@ export const useLocation = (coordinates, key) => {
 
     const { latitude, longitude } = coordinates;
 
-    setEndpoint(`${GEOCODE_API}/${latitude},${longitude}`);
+    setEndpoint(`${API_GEOCODE}/${latitude},${longitude}`);
   });
 
   if (!response) {
@@ -42,7 +42,7 @@ export const useCurrentWeather = () => {
 
     const { latitude, longitude } = coordinates;
 
-    setEndpoint(`${WEATHER_API}/${latitude},${longitude}`);
+    setEndpoint(`${API_WEATHER}/${latitude},${longitude}`);
   }, [coordinates]);
 
   return [weather, city];

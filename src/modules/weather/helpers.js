@@ -1,6 +1,6 @@
 import { format, fromUnixTime } from 'date-fns';
 
-import { WEATHER_API, WIND_DIRECTIONS } from './constants';
+import { API_WEATHER, WIND_DIRECTIONS } from './constants';
 
 export const getHour = time => {
   if (!time) {
@@ -55,7 +55,7 @@ export const getTemp = location => {
 export const getWeatherEndpoint = location => {
   const { lat, lon } = location.coordinates;
 
-  return `${WEATHER_API}/${lat},${lon}`;
+  return `${API_WEATHER}/${lat},${lon}`;
 };
 
 export const getWindDirection = bearing => {

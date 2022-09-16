@@ -1,4 +1,4 @@
-import { WEATHER_API } from 'modules/weather/constants';
+import { API_WEATHER } from 'modules/weather/constants';
 import * as helpers from 'modules/weather/helpers';
 
 describe('Weather helpers', () => {
@@ -50,7 +50,7 @@ describe('Weather helpers', () => {
     };
 
     expect(helpers.getWeatherEndpoint(location)).toEqual(
-      `${WEATHER_API}/37.323,-122.0322`
+      `${API_WEATHER}/37.323,-122.0322`
     );
   });
 
