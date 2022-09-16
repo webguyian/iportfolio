@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import isEqual from 'lodash/isEqual';
 
 import {
-  useFetchWithData,
+  useFetchWithFormData,
   useStorageCache,
   useSwipeVertical
 } from 'modules/browser/hooks';
@@ -25,7 +25,7 @@ export const useEventHandlers = (pristine, fields, setFields, setControls) => {
   const [data, setData] = useState();
   const [redirect, setRedirect] = useState(false);
   const history = useHistory();
-  const response = useFetchWithData(API_MAIL, data);
+  const response = useFetchWithFormData(API_MAIL, data);
   const handleSwipe = eventInfo => {
     if (eventInfo.dir === 'Down') {
       history.push('/home');

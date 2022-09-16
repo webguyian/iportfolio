@@ -219,7 +219,7 @@ export const useFetchWithFormData = (endpoint, data) => {
     const setData = async () => {
       const formData = new FormData();
 
-      for (const key of Object.keys(data)) {
+      Object.keys(data).forEach(async key => {
         if (key === 'attachment') {
           // Covert base64 data to blob
           const blob = await fetch(data[key]).then(res => res.blob());
@@ -228,7 +228,7 @@ export const useFetchWithFormData = (endpoint, data) => {
         } else {
           formData.append(key, data[key]);
         }
-      }
+      });
 
       const jwt = JSON.parse(window.localStorage.getItem('jwt'));
       const requestOptions = {
