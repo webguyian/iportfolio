@@ -35,9 +35,6 @@ exports[`<Setting /> renders correctly 1`] = `
           Media Devices
         </span>
       </div>
-      <div
-        class="setting-subview"
-      />
     </div>
   </div>
 </DocumentFragment>

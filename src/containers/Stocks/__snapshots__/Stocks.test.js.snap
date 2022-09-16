@@ -134,38 +134,6 @@ exports[`<Stocks /> handles deleting stocks 1`] = `
           <span
             className="ui-text ui-text--body ui-text--bold stock-symbol"
           >
-            FB
-          </span>
-          <span
-            className="ui-text ui-text--body stock-description"
-          >
-            FACEBOOK INC-CLASS A
-          </span>
-        </div>
-      </button>
-      <button
-        className="ui-btn ui-btn--delete"
-        onClick={[Function]}
-        type="button"
-      >
-        Delete
-      </button>
-    </li>
-    <li
-      className="stock"
-      onMouseDown={[Function]}
-    >
-      <button
-        className="ui-btn stock-btn"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="stock-name"
-        >
-          <span
-            className="ui-text ui-text--body ui-text--bold stock-symbol"
-          >
             GOOG
           </span>
           <span
@@ -204,6 +172,38 @@ exports[`<Stocks /> handles deleting stocks 1`] = `
             className="ui-text ui-text--body stock-description"
           >
             MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            META
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            META PLATFORMS INC-CLASS A
           </span>
         </div>
       </button>
@@ -356,38 +356,6 @@ exports[`<Stocks /> handles toggling edit 1`] = `
           <span
             className="ui-text ui-text--body ui-text--bold stock-symbol"
           >
-            FB
-          </span>
-          <span
-            className="ui-text ui-text--body stock-description"
-          >
-            FACEBOOK INC-CLASS A
-          </span>
-        </div>
-      </button>
-      <button
-        className="ui-btn ui-btn--delete"
-        onClick={[Function]}
-        type="button"
-      >
-        Delete
-      </button>
-    </li>
-    <li
-      className="stock stock--swiped"
-      onMouseDown={[Function]}
-    >
-      <button
-        className="ui-btn stock-btn"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="stock-name"
-        >
-          <span
-            className="ui-text ui-text--body ui-text--bold stock-symbol"
-          >
             GOOG
           </span>
           <span
@@ -426,6 +394,38 @@ exports[`<Stocks /> handles toggling edit 1`] = `
             className="ui-text ui-text--body stock-description"
           >
             MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock stock--swiped"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            META
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            META PLATFORMS INC-CLASS A
           </span>
         </div>
       </button>
@@ -578,38 +578,6 @@ exports[`<Stocks /> renders correctly 1`] = `
           <span
             className="ui-text ui-text--body ui-text--bold stock-symbol"
           >
-            FB
-          </span>
-          <span
-            className="ui-text ui-text--body stock-description"
-          >
-            FACEBOOK INC-CLASS A
-          </span>
-        </div>
-      </button>
-      <button
-        className="ui-btn ui-btn--delete"
-        onClick={[Function]}
-        type="button"
-      >
-        Delete
-      </button>
-    </li>
-    <li
-      className="stock"
-      onMouseDown={[Function]}
-    >
-      <button
-        className="ui-btn stock-btn"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="stock-name"
-        >
-          <span
-            className="ui-text ui-text--body ui-text--bold stock-symbol"
-          >
             GOOG
           </span>
           <span
@@ -648,6 +616,38 @@ exports[`<Stocks /> renders correctly 1`] = `
             className="ui-text ui-text--body stock-description"
           >
             MICROSOFT CORP
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            META
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            META PLATFORMS INC-CLASS A
           </span>
         </div>
       </button>
@@ -861,38 +861,6 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
           <span
             className="ui-text ui-text--body ui-text--bold stock-symbol"
           >
-            FB
-          </span>
-          <span
-            className="ui-text ui-text--body stock-description"
-          >
-            FACEBOOK INC-CLASS A
-          </span>
-        </div>
-      </button>
-      <button
-        className="ui-btn ui-btn--delete"
-        onClick={[Function]}
-        type="button"
-      >
-        Delete
-      </button>
-    </li>
-    <li
-      className="stock"
-      onMouseDown={[Function]}
-    >
-      <button
-        className="ui-btn stock-btn"
-        onClick={[Function]}
-        type="button"
-      >
-        <div
-          className="stock-name"
-        >
-          <span
-            className="ui-text ui-text--body ui-text--bold stock-symbol"
-          >
             GOOG
           </span>
           <span
@@ -942,6 +910,38 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
         Delete
       </button>
     </li>
+    <li
+      className="stock"
+      onMouseDown={[Function]}
+    >
+      <button
+        className="ui-btn stock-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="stock-name"
+        >
+          <span
+            className="ui-text ui-text--body ui-text--bold stock-symbol"
+          >
+            META
+          </span>
+          <span
+            className="ui-text ui-text--body stock-description"
+          >
+            META PLATFORMS INC-CLASS A
+          </span>
+        </div>
+      </button>
+      <button
+        className="ui-btn ui-btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </li>
   </ul>
   <StockTicker
     onClick={[Function]}
@@ -958,11 +958,6 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
           "symbol": "AMZN",
         },
         Object {
-          "description": "FACEBOOK INC-CLASS A",
-          "displaySymbol": "FB",
-          "symbol": "FB",
-        },
-        Object {
           "description": "ALPHABET INC-CL C",
           "displaySymbol": "GOOG",
           "symbol": "GOOG",
@@ -971,6 +966,11 @@ exports[`<Stocks /> renders correctly with stock detail 1`] = `
           "description": "MICROSOFT CORP",
           "displaySymbol": "MSFT",
           "symbol": "MSFT",
+        },
+        Object {
+          "description": "META PLATFORMS INC-CLASS A",
+          "displaySymbol": "META",
+          "symbol": "META",
         },
       ]
     }
