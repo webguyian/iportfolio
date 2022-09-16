@@ -39,7 +39,7 @@ const plugins = [
     filename: 'main.css'
   }),
   new webpack.EnvironmentPlugin({
-    API_PREFIX: devMode ? '' : 'https://iportfolio.webguyian.com'
+    API_PREFIX: devMode ? '' : 'https://iportfolio-api.vercel.app'
   }),
   new webpack.HotModuleReplacementPlugin()
 ];
