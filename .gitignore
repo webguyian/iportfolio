@@ -21,6 +21,10 @@ npm-debug.log*
 # Testing
 coverage
 
+# Analysis
+.sonar
+.scannerwork
+
 # OS generated files
 ._*
 .DS_Store
