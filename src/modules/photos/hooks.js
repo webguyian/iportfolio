@@ -18,7 +18,7 @@ export const usePhotos = () => {
 
 export const usePhoto = selection => {
   const history = useHistory();
-  const [photos, setPhotos] = usePhotos('photos');
+  const [photos, setPhotos] = usePhotos();
   const [showControls, setControls] = useState(false);
   const match = photos.find(
     photo => getCreatedDate(photo) === getCreatedDate(selection)

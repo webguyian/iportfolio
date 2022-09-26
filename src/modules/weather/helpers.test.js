@@ -27,7 +27,7 @@ describe('Weather helpers', () => {
 
   it('formats temp', () => {
     expect(helpers.formatTemp(48.46)).toEqual('48°');
-    expect(helpers.formatTemp(48.46, false)).toEqual(48);
+    expect(helpers.formatTemp(48.46, false)).toEqual('48');
   });
 
   it('gets temp', () => {

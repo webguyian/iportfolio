@@ -1,12 +1,5 @@
-const cacheName = 'iportfolio-v1.6';
+const cacheName = 'iportfolio-v1.7';
 const staticAssets = ['./', './main.css', './main.js', './vendor.js'];
-
-// async function cacheFirst(req) {
-//   const cache = await caches.open(cacheName);
-//   const cachedResponse = await cache.match(req);
-
-//   return cachedResponse || fetch(req);
-// }
 
 async function networkFirst(req) {
   const cache = await caches.open(cacheName);

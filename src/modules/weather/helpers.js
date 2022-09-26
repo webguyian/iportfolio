@@ -41,7 +41,7 @@ export const getWeekday = time => {
 export const formatTemp = (temperature, withSymbol = true) => {
   const temp = Math.round(temperature);
 
-  return withSymbol ? `${temp}°` : temp;
+  return withSymbol ? `${temp}°` : `${temp}`;
 };
 
 export const getTemp = location => {
