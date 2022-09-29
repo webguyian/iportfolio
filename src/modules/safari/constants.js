@@ -1,5 +1,11 @@
 export const favorites = [
   {
+    abbr: 'AP',
+    color: '#7e1d81',
+    name: 'The A11y Project',
+    url: 'https://www.a11yproject.com/'
+  },
+  {
     abbr: 'CT',
     color: '#ff8a00',
     name: 'CSS-Tricks',
@@ -16,12 +22,6 @@ export const favorites = [
     color: '#2dbf80',
     name: 'Front-end Front',
     url: 'https://frontendfront.com/'
-  },
-  {
-    abbr: 'AL',
-    color: '#dfa612',
-    name: 'Alligator.io',
-    url: 'https://alligator.io/'
   },
   {
     abbr: 'HN',

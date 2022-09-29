@@ -41,6 +41,31 @@ exports[`<Safari /> renders correctly 1`] = `
           <mock-link
             classname="ui-link-list-item-link"
             external="true"
+            to="https://www.a11yproject.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(126, 29, 129);"
+            >
+              <abbr
+                title="The A11y Project"
+              >
+                AP
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              The A11y Project
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
             to="https://css-tricks.com/"
           >
             <div
@@ -107,31 +132,6 @@ exports[`<Safari /> renders correctly 1`] = `
               class="ui-text ui-text--body ui-link-list-item-link-label"
             >
               Front-end Front
-            </span>
-          </mock-link>
-        </li>
-        <li
-          class="ui-link-list-item"
-        >
-          <mock-link
-            classname="ui-link-list-item-link"
-            external="true"
-            to="https://alligator.io/"
-          >
-            <div
-              class="ui-link-list-item-link-icon"
-              style="background-color: rgb(223, 166, 18);"
-            >
-              <abbr
-                title="Alligator.io"
-              >
-                AL
-              </abbr>
-            </div>
-            <span
-              class="ui-text ui-text--body ui-link-list-item-link-label"
-            >
-              Alligator.io
             </span>
           </mock-link>
         </li>
@@ -266,6 +266,31 @@ exports[`<Safari /> renders correctly with search 1`] = `
           <mock-link
             classname="ui-link-list-item-link"
             external="true"
+            to="https://www.a11yproject.com/"
+          >
+            <div
+              class="ui-link-list-item-link-icon"
+              style="background-color: rgb(126, 29, 129);"
+            >
+              <abbr
+                title="The A11y Project"
+              >
+                AP
+              </abbr>
+            </div>
+            <span
+              class="ui-text ui-text--body ui-link-list-item-link-label"
+            >
+              The A11y Project
+            </span>
+          </mock-link>
+        </li>
+        <li
+          class="ui-link-list-item"
+        >
+          <mock-link
+            classname="ui-link-list-item-link"
+            external="true"
             to="https://css-tricks.com/"
           >
             <div
@@ -332,31 +357,6 @@ exports[`<Safari /> renders correctly with search 1`] = `
               class="ui-text ui-text--body ui-link-list-item-link-label"
             >
               Front-end Front
-            </span>
-          </mock-link>
-        </li>
-        <li
-          class="ui-link-list-item"
-        >
-          <mock-link
-            classname="ui-link-list-item-link"
-            external="true"
-            to="https://alligator.io/"
-          >
-            <div
-              class="ui-link-list-item-link-icon"
-              style="background-color: rgb(223, 166, 18);"
-            >
-              <abbr
-                title="Alligator.io"
-              >
-                AL
-              </abbr>
-            </div>
-            <span
-              class="ui-text ui-text--body ui-link-list-item-link-label"
-            >
-              Alligator.io
             </span>
           </mock-link>
         </li>
