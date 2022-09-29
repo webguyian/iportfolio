@@ -6,6 +6,11 @@ import { TestComponent, mockTime } from 'utilities/test';
 import * as browserHooks from 'modules/browser/hooks';
 import { useRefControlledFocus, useReminders, useSwipeOffset } from './hooks';
 
+jest.mock('react-swipeable', () => ({
+  __esModule: true,
+  ...jest.requireActual('react-swipeable')
+}));
+
 describe('Reminders hooks', () => {
   const useSwipeableHook = hooks.useSwipeable;
 

@@ -1,327 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<WeatherList /> renders correctly 1`] = `
-<ul
-  className="weather-list"
->
-  <li
-    className="weather-list-item"
+<DocumentFragment>
+  <ul
+    class="weather-list"
   >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Austin",
-              "coordinates": Object {
-                "lat": 30.2672,
-                "lon": -97.7431,
-              },
-            },
-          },
-        }
-      }
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Austin
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Cupertino",
-              "coordinates": Object {
-                "lat": 37.323,
-                "lon": -122.0322,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Austin
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Cupertino
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Orlando",
-              "coordinates": Object {
-                "lat": 28.5383,
-                "lon": -81.3792,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Cupertino
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Orlando
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Philadelphia",
-              "coordinates": Object {
-                "lat": 39.9526,
-                "lon": -75.1652,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Orlando
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Philadelphia
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Juneau",
-              "coordinates": Object {
-                "lat": 58.3019,
-                "lon": -134.4197,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Philadelphia
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Juneau
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-</ul>
+        <span
+          class="ui-text ui-text--body"
+        >
+          Juneau
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+  </ul>
+</DocumentFragment>
 `;
 
 exports[`<WeatherList /> renders correctly with current city 1`] = `
-<ul
-  className="weather-list"
->
-  <li
-    className="weather-list-item"
+<DocumentFragment>
+  <ul
+    class="weather-list"
   >
-    <mock-link
-      to="/weather"
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="/weather"
       >
-        New York City
-         
-        <i
-          className="ui-icon ui-icon-location-arrow fas fa-location-arrow"
+        <span
+          class="ui-text ui-text--body"
+        >
+          New York City 
+          <i
+            class="ui-icon ui-icon-location-arrow fas fa-location-arrow"
+          />
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        >
+          43°
+        </span>
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
+    >
+      <mock-link
+        to="[object Object]"
+      >
+        <span
+          class="ui-text ui-text--body"
+        >
+          Austin
+        </span>
+        <span
+          class="ui-text ui-text--body"
         />
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      >
-        43°
-      </span>
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Austin",
-              "coordinates": Object {
-                "lat": 30.2672,
-                "lon": -97.7431,
-              },
-            },
-          },
-        }
-      }
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Austin
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Cupertino",
-              "coordinates": Object {
-                "lat": 37.323,
-                "lon": -122.0322,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Cupertino
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Cupertino
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Orlando",
-              "coordinates": Object {
-                "lat": 28.5383,
-                "lon": -81.3792,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Orlando
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Orlando
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Philadelphia",
-              "coordinates": Object {
-                "lat": 39.9526,
-                "lon": -75.1652,
-              },
-            },
-          },
-        }
-      }
+        <span
+          class="ui-text ui-text--body"
+        >
+          Philadelphia
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+    <li
+      class="weather-list-item"
     >
-      <span
-        className="ui-text ui-text--body"
+      <mock-link
+        to="[object Object]"
       >
-        Philadelphia
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-  <li
-    className="weather-list-item"
-  >
-    <mock-link
-      to={
-        Object {
-          "pathname": "/weather",
-          "state": Object {
-            "data": Object {
-              "city": "Juneau",
-              "coordinates": Object {
-                "lat": 58.3019,
-                "lon": -134.4197,
-              },
-            },
-          },
-        }
-      }
-    >
-      <span
-        className="ui-text ui-text--body"
-      >
-        Juneau
-      </span>
-      <span
-        className="ui-text ui-text--body"
-      />
-    </mock-link>
-  </li>
-</ul>
+        <span
+          class="ui-text ui-text--body"
+        >
+          Juneau
+        </span>
+        <span
+          class="ui-text ui-text--body"
+        />
+      </mock-link>
+    </li>
+  </ul>
+</DocumentFragment>
 `;

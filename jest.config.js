@@ -6,6 +6,9 @@ module.exports = {
   },
   modulePaths: ['<rootDir>/src'],
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/(config|public)/'],
+  transformIgnorePatterns: [
+    '/node_modules/(?!d3|d3-array|d3-scale|internmap|delaunator|robust-predicates)'
+  ],
   testRegex: '((\\.|/)(test|spec))\\.jsx?$',
   coverageThreshold: {
     global: {

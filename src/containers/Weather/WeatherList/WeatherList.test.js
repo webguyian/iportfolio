@@ -1,27 +1,31 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 
 import WeatherList from './WeatherList';
 
 describe('<WeatherList />', () => {
-  // Override prop error
-  console.error = jest.fn();
+  it('renders correctly', async () => {
+    const { asFragment, findByText } = render(<WeatherList />);
 
-  it('renders correctly', () => {
-    const component = create(<WeatherList />);
+    await findByText('Austin');
 
-    expect(component).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly with current city', () => {
+  it('renders correctly with current city', async () => {
     const current = {
       city: 'New York City',
       currently: {
         temperature: 43
       }
     };
-    const component = create(<WeatherList current={current} />);
 
-    expect(component).toMatchSnapshot();
+    const { asFragment, findByText } = render(
+      <WeatherList current={current} />
+    );
+
+    await findByText('New York City');
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

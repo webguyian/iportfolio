@@ -106,7 +106,9 @@ describe('Mail hooks', () => {
         );
       });
 
-      let [fields, setField] = response;
+      let fields = response[0];
+
+      let setField = response[1];
 
       expect(fields.from).toEqual('');
 
@@ -116,7 +118,8 @@ describe('Mail hooks', () => {
         setField('body', 'This is a test.');
       });
 
-      [fields, setField] = response;
+      fields = response[0];
+      setField = response[1];
 
       expect(fields.from).toEqual('test@tester.com');
     });
@@ -142,7 +145,8 @@ describe('Mail hooks', () => {
         );
       });
 
-      const [, setField, , eventHandlers] = response;
+      const setField = response[1];
+      const eventHandlers = response[3];
 
       expect(eventHandlers.onCancel).toBeDefined();
       expect(mockEvent.preventDefault).not.toHaveBeenCalled();

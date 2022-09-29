@@ -5,6 +5,11 @@ import * as hooks from 'react-swipeable';
 import { TestComponent } from 'utilities/test';
 import { useRefFocus, useSwipeOffset } from 'modules/notes/hooks';
 
+jest.mock('react-swipeable', () => ({
+  __esModule: true,
+  ...jest.requireActual('react-swipeable')
+}));
+
 describe('Notes hooks', () => {
   const useSwipeableHook = hooks.useSwipeable;
 

@@ -20,7 +20,6 @@ describe('<Stocks />', () => {
   hooks.useStockExchange = jest.fn();
   hooks.useSearch = jest.fn();
   hooks.useStockDetail = jest.fn();
-
   const searchHandlers = {
     onBlur: jest.fn(),
     onCancel: jest.fn(),
@@ -46,7 +45,6 @@ describe('<Stocks />', () => {
       hooks.useStockExchange.mockReturnValue(initialStocks);
       component = create(<Stocks />);
     });
-
     expect(component).toMatchSnapshot();
   });
 
@@ -59,7 +57,6 @@ describe('<Stocks />', () => {
       hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
       component = create(<Stocks />);
     });
-
     expect(component).toMatchSnapshot();
   });
 
@@ -76,7 +73,6 @@ describe('<Stocks />', () => {
       hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
       hooks.useStockDetail.mockReturnValue([activeStock, jest.fn()]);
     });
-
     const component = create(<Stocks />);
 
     expect(component).toMatchSnapshot();
@@ -100,7 +96,6 @@ describe('<Stocks />', () => {
       hooks.useSearch.mockReturnValue(['aa', searchHandlers, true]);
       hooks.useStockDetail.mockReturnValue([activeStock, jest.fn()]);
     });
-
     const component = create(<Stocks />);
     const detail = component.root.findByType(StockDetail);
 
@@ -116,14 +111,12 @@ describe('<Stocks />', () => {
   it('handles deleting stocks', async () => {
     hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
     hooks.useStockExchange.mockReturnValue(initialStocks);
-
     const component = create(<Stocks />);
     const stock = component.root.findByProps({ symbol: 'AAPL' });
 
     await act(async () => {
       stock.props.onDelete();
     });
-
     expect(component).toMatchSnapshot();
   });
 
@@ -132,16 +125,16 @@ describe('<Stocks />', () => {
       hooks.useStocks.mockReturnValue([initialStocks, jest.fn()]);
       hooks.useStockExchange.mockReturnValue(initialStocks);
     });
-
     const component = create(<Stocks />);
-    const [button] = component.root.findAllByProps({
+    const all = component.root.findAllByProps({
       modifier: 'anchor'
     });
+
+    const button = all[0];
 
     await act(async () => {
       button.props.onClick();
     });
-
     expect(component).toMatchSnapshot();
   });
 });

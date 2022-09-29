@@ -216,7 +216,7 @@ describe('Browser hooks', () => {
       expect(response).toEqual([]);
     });
 
-    xit('fetches data', async () => {
+    it('fetches data', async () => {
       const endpoints = ['http://example.endpoint', 'http://example.endpoint'];
       const mockToken = createMockResponse(MOCK_TOKEN);
       const responseData = { data: [10, 20, 30] };
